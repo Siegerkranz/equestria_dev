@@ -75,6 +75,17 @@ ideas = {
 					has_government = communism
 					GRW = { exists = no }
 				}
+				custom_trigger_tooltip = {
+					tooltip = prywhen_not_selected_theresa
+					NOT = {
+						has_idea = GRW_Theresa_2
+					}
+				}
+				hidden_trigger = {
+					NOT = {
+						has_idea = GRW_Theresa_2
+					}
+				}
 			}
 			traits = { army_chief_offensive_2 }
 			ai_will_do = {
@@ -122,6 +133,7 @@ ideas = {
 	air_chief = {
 		
 		GRW_Andor = {
+			picture = unknown_advisor
 			allowed = {
 				OR = {
 					original_tag = GRW
@@ -136,7 +148,7 @@ ideas = {
 		}
 		
 		GRW_Duskfluffian = {
-			
+			picture = unknown_advisor
 			allowed = {
 				OR = {
 					original_tag = GRW
@@ -154,7 +166,7 @@ ideas = {
 	
 	navy_chief = {
 		GRW_Searaider = {
-			
+			picture = unknown_advisor
 			allowed = {
 				OR = {
 					original_tag = GRW
@@ -168,6 +180,7 @@ ideas = {
 		}
 		
 		GRW_Sailor_Pirate = {
+			picture = unknown_advisor
 			allowed = {
 				OR = {
 					original_tag = GRW
@@ -195,6 +208,17 @@ ideas = {
 				OR = {
 					has_government = communism
 					GRW = { exists = no }
+				}
+				custom_trigger_tooltip = {
+					tooltip = prywhen_not_selected_theresa
+					NOT = {
+						has_idea = GRW_Theresa
+					}
+				}
+				hidden_trigger = {
+					NOT = {
+						has_idea = GRW_Theresa
+					}
 				}
 			}
 			
@@ -293,33 +317,32 @@ ideas = {
 			traits = { air_warfare_theorist }
 		}
 		
-		GRW_advisor18 = {
-			
-			allowed = {
-				OR = {
-					original_tag = GRW
-					original_tag = BRF
-				}
-			}
-			research_bonus = {
-				rocketry = 0.10
-			}
-			available = {
-				custom_trigger_tooltip = {
-					tooltip = prywhen_civil_war_is_over_ttlp
-					hidden_trigger = {
-						OR = {
-							has_completed_focus = GRW_victory_in_civil_war
-							has_completed_focus = BRF_victory
-						}
-					}
-				}
-			}
-			available = {
-				has_completed_focus = GRW_rockets
-			}
-			traits = { rocket_scientist }
-		}
+		#GRW_advisor18 = {
+		#	allowed = {
+		#		OR = {
+		#			original_tag = GRW
+		#			original_tag = BRF
+		#		}
+		#	}
+		#	research_bonus = {
+		#		rocketry = 0.10
+		#	}
+		#	available = {
+		#		custom_trigger_tooltip = {
+		#			tooltip = prywhen_civil_war_is_over_ttlp
+		#			hidden_trigger = {
+		#				OR = {
+		#					has_completed_focus = GRW_victory_in_civil_war
+		#					has_completed_focus = BRF_victory
+		#				}
+		#			}
+		#		}
+		#	}
+		#	available = {
+		#		has_completed_focus = GRW_rockets
+		#	}
+		#	traits = { rocket_scientist }
+		#}
 		
 	}
 	
@@ -328,7 +351,7 @@ ideas = {
 		designer = yes
 		
 		GRW_tank_manufacturer= {
-			
+			picture = generic_tank_manufacturer_3
 			allowed = {
 				OR = {
 					original_tag = GRW
@@ -348,7 +371,7 @@ ideas = {
 		}
 		
 		GRW_medium_tank_manufacturer = {
-			
+			picture = generic_tank_manufacturer_1
 			allowed = {
 				OR = {
 					original_tag = GRW
@@ -411,7 +434,7 @@ ideas = {
 		}
 		
 		GRW_motorized_manufacturer = {
-			
+			picture = generic_motorized_equipment_manufacturer_3
 			allowed = {
 				OR = {
 					original_tag = GRW
@@ -486,6 +509,7 @@ ideas = {
 		designer = yes
 		
 		GRW_aircraft_manufacturer = {
+			picture = generic_air_manufacturer_1
 			allowed = {
 				OR = {
 					original_tag = GRW
@@ -501,6 +525,7 @@ ideas = {
 		}
 		
 		GRW_med_aircraft_manufacturer = {
+			picture = generic_air_manufacturer_3
 			allowed = {
 				OR = {
 					original_tag = GRW
@@ -520,6 +545,7 @@ ideas = {
 		designer = yes
 		
 		GRW_naval_manufacturer = {
+			picture = generic_naval_manufacturer_2
 			allowed = {
 				OR = {
 					original_tag = GRW
@@ -535,6 +561,7 @@ ideas = {
 		}
 		
 		GRW_naval_manufacturer2 = {
+			picture = generic_naval_manufacturer_3
 			allowed = {
 				OR = {
 					original_tag = GRW
