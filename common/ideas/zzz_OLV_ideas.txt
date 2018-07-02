@@ -1,0 +1,87 @@
+ideas = {
+    political_advisor = {
+        olv_fascist_demagogue = {
+			
+			allowed = {
+				original_tag = OLV	
+			}
+			
+            available = {
+				has_completed_focus = olv_democracy
+				}
+
+			traits = {
+                fascist_demagogue
+            }
+		
+			do_effect = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+
+        olv_harmonic_crusader = {
+			
+			allowed = {
+				original_tag = OLV	
+			}
+			
+            available = {
+				has_completed_focus = olv_democracy
+				}
+
+			traits = {
+                fascist_demagogue
+            }
+		
+			do_effect = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+
+        olv_civindustry = {
+			
+			allowed = {
+				original_tag = OLV	
+			}
+			
+            available = {
+				has_completed_focus = olv_democracy
+				}
+
+			traits = {
+                fascist_demagogue
+            }
+		
+			do_effect = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+
+        olv_military_industry = {
+			
+			allowed = {
+				original_tag = OLV	
+			}
+			
+            available = {
+				has_completed_focus = olv_democracy
+				}
+
+			traits = {
+                fascist_demagogue
+            }
+		
+			do_effect = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+    }
+}

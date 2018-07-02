@@ -44,6 +44,314 @@ focus_tree = {
         }
     }
 
+    focus = {
+        id = olv_democracy
+        relative_position_id = olv_political
+        x = -10
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_political
+        }
+        completion_reward = {
+
+        }
+        mutually_exclusive = {
+            focus = olv_statusquo
+            focus = olv_relgion
+        }
+    }
+
+    focus = {
+        id = olv_harmony1
+        relative_position_id = olv_democracy
+        x = -2
+        y = 1
+        cost = 3
+        prerequisite = {
+            focus = olv_democracy
+        }
+        mutually_exclusive = {
+            focus = olv_fascist1
+        }
+    }
+
+    focus = {
+        id = olv_harmony2
+        relative_position_id = olv_harmony1
+        x = 0
+        y = 1
+        cost = 5
+        prerequisite = {
+            focus = olv_harmony1
+        }
+    }
+
+    focus = {
+        id = olv_harmonyunify
+        relative_position_id = olv_harmony2
+        x = -1
+        y = 1
+        cost = 5
+        prerequisite = {
+            focus = olv_harmony2
+        }
+    }
+
+    focus = {
+        id = olv_harmonyeducate
+        relative_position_id = olv_harmony2
+        x = 1
+        y = 1
+        cost = 5
+        prerequisite = {
+            focus = olv_harmony2
+        }
+    }
+
+    focus = {
+        id = olv_reconcile
+        relative_position_id = olv_harmony2
+        x = 0
+        y = 2
+        cost = 10
+        prerequisite = {
+            focus = olv_harmonyeducate
+        }
+        prerequisite = {
+            focus = olv_harmonyunify
+        }
+    }
+
+    focus = {
+        id = olv_newage
+        relative_position_id = olv_reconcile
+        x = 0
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_reconcile
+        }
+    }
+
+    focus = {
+        id = olv_fascist1
+        relative_position_id = olv_democracy
+        x = 2
+        y = 1
+        cost = 3
+        prerequisite = {
+            focus = olv_democracy
+        }
+        mutually_exclusive = {
+            focus = olv_harmony1
+        }
+    }
+    
+    focus = {
+        id = olv_fascist2
+        relative_position_id = olv_fascist1
+        x = 0
+        y = 1
+        cost = 5
+        prerequisite = {
+            focus = olv_fascist1
+        }
+    }
+
+    focus = {
+        id = olv_fascistunify
+        relative_position_id = olv_fascist2
+        x = -1
+        y = 1
+        cost = 5
+        prerequisite = {
+            focus = olv_fascist2
+        }
+    }
+
+    focus = {
+        id = olv_fascisteducate
+        relative_position_id = olv_fascist2
+        x = 1
+        y = 1
+        cost = 5
+        prerequisite = {
+            focus = olv_fascist2
+        }
+    }
+
+    focus = {
+        id = olv_fascistunify
+        relative_position_id = olv_fascist2
+        x = -1
+        y = 1
+        cost = 5
+        prerequisite = {
+            focus = olv_fascist2
+        }
+    }
+
+    focus = {
+        id = olv_zeebpurge
+        relative_position_id = olv_fascist2
+        x = 0
+        y = 2
+        cost = 10
+        prerequisite = {
+            focus = olv_fascistunify
+        }
+        prerequisite = {
+            focus = olv_fascisteducate
+        }
+    }
+
+    focus = {
+        id = olv_newempire
+        relative_position_id = olv_zeebpurge
+        x = 0
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_zeebpurge
+        }
+    }
+
+    focus = {
+        id = olv_statusquo
+        relative_position_id = olv_political
+        x = -5
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_political
+        }
+        mutually_exclusive = {
+            focus = olv_democracy
+            focus = olv_relgion
+        }
+    }
+
+    focus = {
+        id = olv_challengejarls
+        relative_position_id = olv_statusquo
+        x = 0
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_statusquo
+        }
+    }
+
+    focus = {
+        id = olv_tribaleducation
+        relative_position_id = olv_challengejarls
+        x = 0
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_challengejarls
+        }
+    }
+
+    focus = {
+        id = olv_zebraphobia
+        relative_position_id = olv_tribaleducation
+        x = 0
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_tribaleducation
+        }
+    }
+
+    focus = {
+        id = olv_isolationism
+        relative_position_id = olv_zebraphobia
+        x = 0
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_zebraphobia
+        }
+    }
+
+    focus = {
+        id = olv_relgion
+        relative_position_id = olv_political
+        x = -2
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_political
+        }
+        mutually_exclusive = {
+            focus = olv_statusquo
+            focus = olv_democracy
+        }
+    }
+
+    focus = {
+        id = olv_beliefs
+        relative_position_id = olv_relgion
+        x = 0
+        y = 1
+        cost = 5
+        prerequisite = {
+            focus = olv_relgion
+        }
+    }
+
+    focus = {
+        id = olv_religiouseducation
+        relative_position_id = olv_beliefs
+        x = 0
+        y = 1
+        cost = 5
+        prerequisite = {
+            focus = olv_beliefs
+        }
+    }
+
+    focus = {
+        id = olv_missionaries
+        relative_position_id = olv_religiouseducation
+        x = 0
+        y = 1
+        cost = 5
+        prerequisite = {
+            focus = olv_religiouseducation
+        }
+    }
+
+    focus = {
+        id = olv_darkage
+        relative_position_id = olv_missionaries
+        x = -1
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_missionaries
+        }
+        mutually_exclusive = {
+            focus = olv_brightage
+        }
+    }
+
+    focus = {
+        id = olv_brightage
+        relative_position_id = olv_missionaries
+        x = 1
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_missionaries
+        }
+        mutually_exclusive = {
+            focus = olv_darkage
+        }
+    }
+
     #################################################
 	###### Military Tree ############################
 	#################################################
