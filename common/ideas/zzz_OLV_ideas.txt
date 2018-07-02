@@ -32,12 +32,12 @@ ideas = {
 				}
 
 			traits = {
-                fascist_demagogue
+                democratic_reformer
             }
 		
 			do_effect = {
 				NOT = {
-					has_government = fascism
+					has_government = democractic
 				}
 			}
 		}
@@ -53,14 +53,8 @@ ideas = {
 				}
 
 			traits = {
-                fascist_demagogue
+                captain_of_industry
             }
-		
-			do_effect = {
-				NOT = {
-					has_government = fascism
-				}
-			}
 		}
 
         olv_military_industry = {
@@ -74,14 +68,8 @@ ideas = {
 				}
 
 			traits = {
-                fascist_demagogue
+                armaments_organizer
             }
-		
-			do_effect = {
-				NOT = {
-					has_government = fascism
-				}
-			}
 		}
     }
 }
