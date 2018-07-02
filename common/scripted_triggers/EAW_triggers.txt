@@ -623,7 +623,7 @@ country_with_custom_advisors = {
 		original_tag = GFF
 		original_tag = BUF
 		original_tag = WAT
-		original_tag = FAR
+		original_tag = FBK
 		original_tag = GRW
 		original_tag = BRF
 		original_tag = YAK
@@ -702,11 +702,11 @@ owns_big_griffon_city = {
 		owns_state = 384
 		owns_state = 389
 		owns_state = 674
-		owns_state = 387
+		#owns_state = 387
 		owns_state = 617
-		owns_state = 619
-		owns_state = 645
-		owns_state = 637
+		#owns_state = 619
+		#owns_state = 645
+		#owns_state = 637
 	}
 }
 is_big_griffon_core = {

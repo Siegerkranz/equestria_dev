@@ -27,7 +27,7 @@ country_event = { #Launch
 
          option = {      
             name = greneclyf.1.a 
-        	RIV = { country_event = { days = 15 id = greneclyf.5 } }
+        	LCT = { country_event = { days = 15 id = greneclyf.5 } }
         	GRI = { country_event = { days = 32 id = greneclyf.8 } }
         	add_equipment_to_stockpile = {
                 type = convoy_1
@@ -37,7 +37,7 @@ country_event = { #Launch
 			 }	
 	}
 
-country_event = { #FAR Response
+country_event = { #FBK Response
 		 id = greneclyf.2
          title = greneclyf.2.t
          desc = greneclyf.2.d
@@ -57,7 +57,7 @@ country_event = { #FAR Response
         	 }
 	}
 
-country_event = { #FAR Positive
+country_event = { #FBK Positive
 		 id = greneclyf.3
          title = greneclyf.3.t
          desc = greneclyf.3.d
@@ -71,12 +71,41 @@ country_event = { #FAR Positive
                 type = convoy_1
                 amount = 1 
              }       
-          	hidden_effect = { NCH = { add_to_variable = { var = gytha_sanity value = 1 } } 
-        }
-	}
+          	
+			FBK = {
+
+				add_ideas = NCH_trading_with_NCH_harmonic
+				set_country_flag = NCH_trading_with_flag
+				
+			}
+			NCH = {
+				if = {
+					limit = {
+						has_idea = NCH_trade_1
+					}
+					swap_ideas = {add_idea = NCH_trade_2 remove_idea = NCH_trade_1}
+				}
+				if = {
+					limit = {
+						has_idea = NCH_trade_2
+					}
+					swap_ideas = {add_idea = NCH_trade_3 remove_idea = NCH_trade_2}
+				}
+				if = {
+					limit = {
+						has_idea = NCH_trade_3
+					}
+					swap_ideas = {add_idea = NCH_trade_4 remove_idea = NCH_trade_3}
+				}
+				else = {
+					add_ideas = NCH_trade_1
+				}
+			}
+		}
 }
 
-country_event = { #FAR Negative
+
+country_event = { #FBK Negative
 		 id = greneclyf.4
          title = greneclyf.4.t
          desc = greneclyf.4.d
@@ -91,10 +120,11 @@ country_event = { #FAR Negative
                 amount = 1  
         	}
         	ai_chance = { factor = 100 }
+			hidden_effect = { NCH = { add_to_variable = { var = gytha_sanity value = 1 } } }
         }
 	}
 
-country_event = { #RIV Response
+country_event = { #LCT Response
 		 id = greneclyf.5
          title = greneclyf.5.t
          desc = greneclyf.5.d
@@ -114,7 +144,7 @@ country_event = { #RIV Response
         }
 	}	
 
-country_event = { #RIV Positive
+country_event = { #LCT Positive
 		 id = greneclyf.6
          title = greneclyf.6.t
          desc = greneclyf.6.d
@@ -128,12 +158,40 @@ country_event = { #RIV Positive
                 type = convoy_1
                 amount = 2
              }
-             ai_chance = { factor = 100 }  
-        	
+             ai_chance = { factor = 100 }
+
+			LCT = {
+				add_ideas = NCH_trading_with_NCH_harmonic
+				set_country_flag = NCH_trading_with_flag
+			}
+			
+			NCH = {
+				if = {
+					limit = {
+						has_idea = NCH_trade_1
+					}
+					swap_ideas = {add_idea = NCH_trade_2 remove_idea = NCH_trade_1}
+				}
+				if = {
+					limit = {
+						has_idea = NCH_trade_2
+					}
+					swap_ideas = {add_idea = NCH_trade_3 remove_idea = NCH_trade_2}
+				}
+				if = {
+					limit = {
+						has_idea = NCH_trade_3
+					}
+					swap_ideas = {add_idea = NCH_trade_4 remove_idea = NCH_trade_3}
+				}
+				else = {
+					add_ideas = NCH_trade_1
+				}
+			}
 		}
 	}
 
-country_event = { #RIV Negative
+country_event = { #LCT Negative
 		 id = greneclyf.7
          title = greneclyf.7.t
          desc = greneclyf.7.d
@@ -147,11 +205,11 @@ country_event = { #RIV Negative
                 type = convoy_1
                 amount = 2  
              }
-			hidden_effect = { NCH = { add_to_variable = { var = gytha_sanity value = 1 } }
+			hidden_effect = { NCH = { add_to_variable = { var = gytha_sanity value = 1 } }}
            	ai_chance = { factor = 100 }
 		}
-	}
 }
+
 
 country_event = { #GRI Response
 		 id = greneclyf.8
@@ -176,21 +234,49 @@ country_event = { #GRI Response
 	}
 
 country_event = { #GRI Positive
-		 id = greneclyf.9
-         title = greneclyf.9.t
-         desc = greneclyf.9.d
-         picture = GFX_event_gytha
-
-         is_triggered_only = yes
-
-         option = {      
-            name = greneclyf.9.a 
-            add_equipment_to_stockpile = {
-                type = convoy_1
-                amount = 2  
-         }
-            ai_chance = { factor = 100 }
-
+	 id = greneclyf.9
+        title = greneclyf.9.t
+        desc = greneclyf.9.d
+        picture = GFX_event_gytha
+    
+        is_triggered_only = yes
+    
+        option = {      
+           name = greneclyf.9.a 
+           add_equipment_to_stockpile = {
+               type = convoy_1
+               amount = 2  
+        }
+           ai_chance = { factor = 100 }
+		
+	GRI = {
+		add_ideas = NCH_trading_with_NCH_harmonic
+		set_country_flag = NCH_trading_with_flag
+	}
+	
+		NCH = {
+			if = {
+				limit = {
+					has_idea = NCH_trade_1
+				}
+				swap_ideas = {add_idea = NCH_trade_2 remove_idea = NCH_trade_1}
+			}
+			if = {
+				limit = {
+					has_idea = NCH_trade_2
+				}
+				swap_ideas = {add_idea = NCH_trade_3 remove_idea = NCH_trade_2}
+			}
+			if = {
+				limit = {
+					has_idea = NCH_trade_3
+				}
+				swap_ideas = {add_idea = NCH_trade_4 remove_idea = NCH_trade_3}
+			}
+			else = {
+				add_ideas = NCH_trade_1
+			}
+		}
 	}
 }
 
@@ -270,6 +356,45 @@ country_event = { #EQS Positive
 		amount = 2  
 		}
 		ai_chance = { factor = 100 }
+		EQS = {
+			if = {
+				limit = {
+					NCH = {
+						has_country_flag = NCH_CHN_Submarine_Flag
+					}
+				}
+				add_ideas = NCH_trading_with_NCH_fascist
+				set_country_flag = NCH_trading_with_flag
+				
+			}
+			else = {
+				add_ideas = NCH_trading_with_NCH_harmonic
+				set_country_flag = NCH_trading_with_flag
+			}
+		}
+		NCH = {
+			if = {
+				limit = {
+					has_idea = NCH_trade_1
+				}
+				swap_ideas = {add_idea = NCH_trade_2 remove_idea = NCH_trade_1}
+			}
+			if = {
+				limit = {
+					has_idea = NCH_trade_2
+				}
+				swap_ideas = {add_idea = NCH_trade_3 remove_idea = NCH_trade_2}
+			}
+			if = {
+				limit = {
+					has_idea = NCH_trade_3
+				}
+				swap_ideas = {add_idea = NCH_trade_4 remove_idea = NCH_trade_3}
+			}
+			else = {
+				add_ideas = NCH_trade_1
+			}
+		}
 	}
 }
 
@@ -284,13 +409,14 @@ country_event = { #EQS Negative
 	option = {      
 		name = greneclyf.14.a 
 		add_equipment_to_stockpile = {
-		type = convoy_1
-		amount = 4  
+			type = convoy_1
+			amount = 4  
 		}
 		hidden_effect = {
 			NCH = { add_to_variable = { var = gytha_sanity value = 1 } }
-			ai_chance = { factor = 100 }
+			
 		}
+		ai_chance = { factor = 100 }
 	}
 }
 
@@ -307,6 +433,7 @@ country_event = { #CHN Response
         	NCH = { country_event = { days = 10 id = greneclyf.16 } }
            	ai_chance = { factor = 100 }
            	CHN = { destroy_ships = { type = submarine count = 1 } }
+
         }
 
          option = { #Refuse     
@@ -326,10 +453,25 @@ country_event = { #CHN Positive
 
          option = {      
             name = greneclyf.16.a 
-            add_idea = 
-            ai_chance = { factor = 100 }
 
-	}
+            ai_chance = { factor = 100 }
+			NCH = {
+				set_country_flag = NCH_CHN_Submarine_Flag
+				add_ideas = NCH_changeling_submarine
+			}
+			every_country = {
+				if = {
+					limit = {
+						has_country_flag = NCH_trading_with_flag
+					}
+					swap_ideas = {
+						remove_idea = NCH_trading_with_NCH_harmonic
+						add_idea = NCH_trading_with_NCH_fascist
+					}
+				}
+			}
+
+		}
 }
 
 country_event = { #CHN Negative
@@ -349,45 +491,50 @@ country_event = { #CHN Negative
 ###CRISIS OF FAITH###
 
 country_event = { #Fascist Gytha 
-         id = greneclyf.00
-         title = greneclyf.00.t
-         desc = greneclyf.00.d
-         picture = GFX_event_maddened_gytha
-
-         is_triggered_only = yes
-
-         option = {      
-            name = greneclyf.00.a
-
-		}
+    id = greneclyf.18
+    title = greneclyf.18.t
+    desc = greneclyf.18.d
+    picture = GFX_event_maddened_gytha
+    
+    is_triggered_only = yes
+	
+	trigger = {
+		check_variable = {gytha_sanity = 3}
 	}
-
-###CHN PATH - ACCEPTED###
-
-country_event = { #Fascist Gytha - Accepted  
-         id = greneclyf.01
-         title = greneclyf.01.t
-         desc = greneclyf.01.d
-         picture = GFX_event_maddened_gytha
-
-         is_triggered_only = yes
-
-         option = {      
-            name = greneclyf.01.a
-		}
+    
+    option = {      
+        name = greneclyf.18.a
+		complete_national_focus = NCH_crisis_of_faith
+		set_country_flag = NCH_having_crisis_flag
 	}
+}
 
-###CHRYSALIS PATH###
-
-country_event = { #Fascist Gytha - Seduced  
-         id = greneclyf.02
-         title = greneclyf.02.t
-         desc = greneclyf.02.d
-         picture = GFX_event_chrysalis_and_gytha
-
-         is_triggered_only = yes
-
-         option = {      
-            name = greneclyf.02.a
-		}
-	}
+####CHN PATH - ACCEPTED###
+#
+#country_event = { #Fascist Gytha - Accepted  
+#         id = greneclyf.01
+#         title = greneclyf.01.t
+#         desc = greneclyf.01.d
+#         picture = GFX_event_maddened_gytha
+#
+#         is_triggered_only = yes
+#
+#         option = {      
+#            name = greneclyf.01.a
+#		}
+#	}
+#
+####CHRYSALIS PATH###
+#
+#country_event = { #Fascist Gytha - Seduced  
+#         id = greneclyf.02
+#         title = greneclyf.02.t
+#         desc = greneclyf.02.d
+#         picture = GFX_event_chrysalis_and_gytha
+#
+#         is_triggered_only = yes
+#
+#         option = {      
+#            name = greneclyf.02.a
+#		}
+#	}

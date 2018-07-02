@@ -27,7 +27,7 @@ set_cosmetic_tag = RIV_federation_mem
 
 add_ideas = {
 	pre_industrial_society
-    poor_science_base
+    better_science_base
 	limited_conscription
 	NIM_trials_of_the_cyclone
 	NIM_nimbusian_general_staff
@@ -36,9 +36,11 @@ add_ideas = {
 	poverty5
 }
 
+set_country_flag = better_science_base_unlocked
+
 set_convoys = 200
-set_stability = 0.8
-set_war_support = 0.5
+set_stability = 0.7
+set_war_support = 0.48
 
 set_politics = {
 

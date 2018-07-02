@@ -104,21 +104,11 @@ on_actions = {
 			}
 			every_country = {
 				limit = { 
+					is_on_equestrian_continent = no
 					OR = {
-						NOT = { is_on_equestrian_continent = yes } 
+						has_idea = dummy_idea_science
 						NOT = {
-							AND = {
-								has_idea = proper_science_base
-								has_country_flag = proper_science_base_unclocked
-							}
-							AND = {
-								has_idea = big_science_base
-								has_country_flag = big_science_base_unlocked
-							}
-							AND = {
-								has_idea = better_science_base
-								has_country_flag = better_science_base_unlocked
-							}
+							has_idea_with_trait = science_idea
 						}
 					}
 				}
@@ -129,14 +119,17 @@ on_actions = {
 						NOT = { owns_big_griffon_city = yes }
 						NOT = { owns_major_griffon_city = yes }
 					}
+					#log = "[Root.GetName] better_science_base"
 					add_ideas = better_science_base
 					else = {
 						if = {
 							limit = { owns_big_griffon_city = yes }
+							#log = "[Root.GetName] big_science_base"
 							add_ideas = big_science_base
 							else = {
 								if = {
 									limit = { owns_major_griffon_city = yes }
+									#log = "[Root.GetName] proper_science_base"
 									add_ideas = proper_science_base
 									else = {
 										if = {
@@ -149,6 +142,7 @@ on_actions = {
 												}
 												is_griffon_continent_country = yes
 											}
+											#log = "[Root.GetName] poor_science_base"
 											add_ideas = poor_science_base
 										}
 									}
@@ -175,6 +169,7 @@ on_actions = {
 						}
 					}
 				}
+				#log = "[Root.GetName] proper_science_base"
 				add_ideas = proper_science_base
 			}
 
@@ -1932,6 +1927,7 @@ on_actions = {
 			log = "ROOT: [Root.GetName] FROM: [From.GetName] on_annex"
 			if = {
 				limit = {
+					NOT = { has_country_flag = recovery_idea_bypass }
 					OR = {
 						original_tag = FROM
 						AND = {
@@ -2052,6 +2048,7 @@ on_actions = {
 					set_politics = { ruling_party = democratic }
 					save_global_event_target_as = equestria
 				}
+				set_country_flag = { flag = SOL_next_civ_war_delay value = 1 days = 180 }
 				break = yes
 			}
 			if = {
@@ -2164,6 +2161,7 @@ on_actions = {
 			}
 		}
 	}
+	# ROOT is capitulated country, FROM is winner
 	on_capitulation = {
 		effect = {
 			log = "ROOT: [Root.GetName] FROM: [From.GetName] on_capitulation"
@@ -2172,13 +2170,6 @@ on_actions = {
 					tag = EQP
 				}
 				EQS = { annex_country = { target = EQP } }
-			}
-			if = {
-				limit = {
-					tag = GRI
-					is_major = yes
-				}
-				set_major = no
 			}
 			if = {
 				limit = {
@@ -2348,7 +2339,7 @@ on_actions = {
 			log = "ROOT: [Root.GetName] FROM: [From.GetName] on_subject_free"
 			if = {
 				limit = {
-					has_country_flag = griffon_empire_puppet
+					has_cosmetic_tag = GRI_SUBJECT
 				}
 				country_event = griffonian.2
 				break = yes
@@ -2524,7 +2515,7 @@ on_actions = {
 					original_tag = GRI
 					has_government = democratic
 				}
-				any_country = {
+				every_country = {
 					limit = {
 						has_opinion_modifier = RIV_hates_the_empire
 						has_government = democratic
