@@ -74,6 +74,33 @@ focus_tree = {
         mutually_exclusive = {
             focus = olv_fascist1
         }
+        available = {
+            OR = {
+                democratic > 0.25
+                has_government = democratic
+            }
+        }
+        completion_reward = {
+            if = {
+                limit = {
+                    fascism > 0.20
+                }
+    
+                country_event  = {
+                    id = olv.3
+                }
+    
+            if = {
+                limit = {
+                    democratic < 0.20
+                }
+        
+                country_event = {
+                    id = blablahcivilwar
+                    }
+                }
+            }
+        }
     }
 
     focus = {
@@ -145,6 +172,12 @@ focus_tree = {
         }
         mutually_exclusive = {
             focus = olv_harmony1
+        }
+        available = {
+            OR = {
+                fascism > 0.25
+                has_government = fascism
+            }
         }
     }
     

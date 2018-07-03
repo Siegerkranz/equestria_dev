@@ -16,6 +16,83 @@ country_event = {
     }
 }
 
+#Harmony Events
+country_event = { #Harmony1 focus peaceful
+    id = olv.2
+    immediate = {log = "[Root.GetName]: event olv.2"}#auto-logging
+    title = olv.2.t
+    desc = olv.2.d
+    picture =
+
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    option = {
+        name = olv.2.a
+        set_politics = {
+            ruling_party = democratic
+            elections_allowed = no
+        }
+    }
+}
+
+country_event = {
+    id = olv.3 #nonpeaceful
+    immediate = {log = "[Root.GetName]: event olv.3"}#auto-logging
+    title = olv.3.t
+    desc = olv.3.d
+    picture = 
+
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    option = {
+        name = olv.3.a
+        set_politics = {
+            ruling_party = fascism
+            elections_allowed = no
+        }
+        start_civil_war = {
+            ruling_party = democratic
+            ideology = ROOT
+            capital = 579
+            states = { 
+                579
+            }
+        }
+    }
+}
+
+#Fascistevents
+
+country_event = {
+    id = olv.5 #nonpeaceful
+    immediate = {log = "[Root.GetName]: event olv.5"}#auto-logging
+    title = olv.5.t
+    desc = olv.5.d
+    picture = 
+
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    option = {
+        name = olv.5.a
+        set_politics = {
+            ruling_party = democratic
+            elections_allowed = no
+        }
+        start_civil_war = {
+            ruling_party = fascism
+            ideology = ROOT
+            capital = 579
+            states = { 
+                579
+            }
+        }
+    }
+}
+
+#Education Events
 country_event = {
     id = olv.1
     immediate = {log = "[Root.GetName]: event olv.1"}#Auto-logging
