@@ -1602,6 +1602,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/Olenia/OLE_war_industrialist.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_OLE_perkele_chief"
+		texturefile = "gfx/interface/ideas/Olenia/OLE_perkele_chief.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_OLE_huunnittelija"
 		texturefile = "gfx/interface/ideas/Olenia/OLE_huunnittelija.dds"
 	}
@@ -3052,8 +3056,20 @@ spriteTypes = {
 		name = "GFX_idea_GRW_Duskfluffian"
 		texturefile = "gfx/interface/ideas/GRW_Duskfluffian.dds"
 	}
-	SpriteType = {
+ 	SpriteType = {
 		name = "GFX_idea_FAT_republican_struggle"
 		texturefile = "gfx/interface/ideas/idea_FAT_republican_struggle.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_CCN_Velvet"
+		texturefile = "gfx/interface/ideas/idea_velvet.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_CCN_Thorax"
+		texturefile = "gfx/interface/ideas/idea_thorax.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_magical_corruption"
+		texturefile = "gfx/interface/ideas/idea_magical_corruption.tga"
 	}
 }

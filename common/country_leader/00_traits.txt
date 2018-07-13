@@ -703,7 +703,14 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	silent_workgriffon = {
+		random = yes
+		political_power_factor = 0.15
 
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	prince_of_terror = {
 
 		enemy_partisan_effect = -0.25
@@ -3198,7 +3205,7 @@ leader_traits = {
 			factor = 1
 			modifier = {
 				factor = 2
-				check_variable = { resource_produced@steel < 10 }
+				check_variable = { resource@steel < 10 }
 			}
 		}
 	}

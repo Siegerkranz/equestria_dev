@@ -1,0 +1,55 @@
+focus_tree = {
+	id = GRY_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			original_tag = GRY
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1475 }
+	
+	focus = {
+		id = GRY_raid_brodfeld
+		icon = GFX_focus_rom_abdicate
+		x = 3
+		y = 0
+		cost = 1
+		mutually_exclusive = {
+			focus = GRY_raid_radicals
+		}
+		completion_reward = {
+			set_country_flag = GRY_raiding_brodfeld
+		}
+	}
+	
+	focus = {
+		id = GRY_raid_radicals
+		icon = GFX_goal_broken_red_star
+		x = 5
+		y = 0
+		cost = 1
+		mutually_exclusive = {
+			focus = GRY_raid_brodfeld
+		}
+		completion_reward = {
+			set_country_flag = GRY_raiding_radicals
+		}
+	}
+	
+
+	
+	focus = {
+	id = GRY_prywhen_response
+	icon = GFX_goal_generic_war_with_comintern
+	x = 12
+	y = 0
+	cost = 3
+	available = {
+	 has_global_flag = prywhen_civil_war_is_over
+	}
+	completion_reward = {}
+	}
+}

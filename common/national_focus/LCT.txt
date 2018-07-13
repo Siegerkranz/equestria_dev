@@ -132,7 +132,7 @@ focus_tree = {
 			create_country_leader = {
 				name = "Grand Prince Heavenly Snow"
 				desc = "POLITICS_PRINCE_SNOW_DESC"
-				picture = "PrinceSnow.dds"
+				picture = "Heavenly_Snow.tga"
 				expire = "1081.1.1"
 				ideology = fascism_ideology
 				traits = { heir_of_blessed_sowrd }
@@ -1084,15 +1084,33 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
+					LNS = {
+						owns_state = 540
+						owns_state = 505
+						owns_state = 552
+					}
+				}
+				LNS = { country_event = lakecity.13 }
+				add_named_threat = { threat = 1 name = LCT_buckrovic_incident }
+			}
+			else_if = {
+				limit = {
+					LNS = {
+						owns_state = 540
+						owns_state = 505
+						owns_state = 552
+					}
+				}
+				LNS = { country_event = lakecity.13 }
+				add_named_threat = { threat = 1 name = LCT_buckrovic_incident }
+			}
+			else = {
+				limit = {
 					LNS = { exists = no }
 				}
 				add_state_claim = 540
 				add_state_claim = 505
 				add_state_claim = 552
-			}
-			else = {
-				LNS = { country_event = lakecity.13 }
-				add_named_threat = { threat = 1 name = LCT_buckrovic_incident }
 			}
 		}
 	}
@@ -1547,7 +1565,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = LCT_reclaim_river
 
-		cost = 10
+		cost = 20
 
 		ai_will_do = {
 			factor = 10
@@ -1632,7 +1650,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = LCT_strike_at_the_source
 
-		cost = 10
+		cost = 20
 
 		ai_will_do = {
 			factor = 3
@@ -2272,7 +2290,7 @@ focus_tree = {
 	
 	focus = {
 		id = LCT_expand_frontier
-		icon = GFX_goal_offensive_army
+		icon = GFX_goal_generic_more_territorial_claims
 		prerequisite = { focus = LCT_fan_fanaticism focus = LCT_balustar_arms focus = LCT_focus_on_offence }
 		x = 0
 		y = 1

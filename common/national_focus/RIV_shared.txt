@@ -128,7 +128,7 @@ shared_focus = {
 	}
 
 	available = {
-		
+		amount_research_slots > 2		
 	}
 	
 	bypass = {
@@ -193,7 +193,9 @@ shared_focus = {
 	}
 
 	available = {
-
+		num_of_civilian_factories > 5
+		has_tribal_society = no
+		has_agrarian_society = no
 	}
 	
 	bypass = {
@@ -260,6 +262,9 @@ shared_focus = {
 
 	available = {
 		NOT = { original_tag = DEP }
+		num_of_civilian_factories > 5
+		has_tribal_society = no
+		has_agrarian_society = no
 	}
 	
 	bypass = {
@@ -268,6 +273,10 @@ shared_focus = {
 				has_completed_focus = RIV_develop_DEP
 			}
 			DEP = { exists = no }
+			has_war_with = DEP
+			NOT = {
+				is_in_faction_with = DEP
+			}
 		}
 	}
 
@@ -345,6 +354,9 @@ shared_focus = {
 
 	available = {
 		NOT = { original_tag = DEP }
+		num_of_civilian_factories > 5
+		has_tribal_society = no
+		has_agrarian_society = no
 	}
 	
 	bypass = {
@@ -353,6 +365,10 @@ shared_focus = {
 				has_completed_focus = RIV_build_roads_in_DEP
 			}
 			DEP = { exists = no }
+			has_war_with = DEP
+			NOT = {
+				is_in_faction_with = DEP
+			}
 		}
 	}
 
@@ -427,6 +443,9 @@ shared_focus = {
 
 	available = {
 		NOT = { original_tag = DEP }
+		num_of_civilian_factories > 5
+		has_tribal_society = no
+		has_agrarian_society = no
 	}
 	
 	bypass = {
@@ -435,6 +454,10 @@ shared_focus = {
 				has_completed_focus = RIV_development_grants_DEP
 			}
 			DEP = { exists = no }
+			has_war_with = DEP
+			NOT = {
+				is_in_faction_with = DEP
+			}
 		}
 	}
 
@@ -489,6 +512,9 @@ shared_focus = {
 
 	available = {
 		NOT = { original_tag = FRE }
+		num_of_civilian_factories > 5
+		has_tribal_society = no
+		has_agrarian_society = no
 	}
 	
 	bypass = {
@@ -579,6 +605,9 @@ shared_focus = {
 
 	available = {
 		NOT = { original_tag = FRE }
+		num_of_civilian_factories > 5
+		has_tribal_society = no
+		has_agrarian_society = no
 	}
 	
 	bypass = {
@@ -665,6 +694,9 @@ shared_focus = {
 
 	available = {
 		NOT = { original_tag = FRE }
+		num_of_civilian_factories > 5
+		has_tribal_society = no
+		has_agrarian_society = no
 	}
 	
 	bypass = {
@@ -730,7 +762,9 @@ shared_focus = {
 	}
 
 	available = {
-
+		num_of_civilian_factories > 5
+		has_tribal_society = no
+		has_agrarian_society = no
 	}
 	
 	bypass = {
@@ -804,6 +838,9 @@ shared_focus = {
 	available = {
 		has_idea = RIV_rcsc_member
 		has_idea = RIV_rdc
+		num_of_civilian_factories > 5
+		has_tribal_society = no
+		has_agrarian_society = no
 	}
 	
 	bypass = {
@@ -1043,6 +1080,9 @@ shared_focus = {
 
 	available = {
 		has_idea = RIV_rdc
+		num_of_civilian_factories > 5
+		has_tribal_society = no
+		has_agrarian_society = no
 	}
 	
 	bypass = {
@@ -1073,6 +1113,9 @@ shared_focus = {
 				add_idea = RIV_rdc2
 			}
 		}
+
+		set_country_flag = RIV_etf_founder
+		set_global_flag = RIV_etf_founded
 
 		custom_effect_tooltip = RIV_fed_race_plus_tt
 		add_to_variable = { var = RIV_fed_race value = 1 }
@@ -1115,6 +1158,9 @@ shared_focus = {
 
 	available = {
 		has_idea = RIV_rec_member1
+		num_of_civilian_factories > 5
+		has_tribal_society = no
+		has_agrarian_society = no
 	}
 	
 	bypass = {
@@ -1140,7 +1186,8 @@ shared_focus = {
 			}
 			country_event = riverfed.16
 		}
-
+		set_country_flag = RIV_social_fund_founder
+		set_global_flag = RIV_social_fund_founded
 		custom_effect_tooltip = RIV_fed_race_plus_tt
 		add_to_variable = { var = RIV_fed_race value = 1 }
 	}
@@ -1183,7 +1230,8 @@ shared_focus = {
 	}
 
 	available = {
-
+		has_tribal_society = no
+		has_agrarian_society = no
 	}
 	
 	bypass = {
@@ -1207,6 +1255,9 @@ shared_focus = {
 			}
 			country_event = riverfed.17
 		}
+
+		set_country_flag = RIV_beings_rights_founder
+		set_global_flag = RIV_beings_rights_founded
 
 		custom_effect_tooltip = RIV_fed_race_plus_tt
 		add_to_variable = { var = RIV_fed_race value = 1 }
@@ -1253,6 +1304,9 @@ shared_focus = {
 	available = {
 		has_idea = RIV_rec_member2
 		has_idea = RIV_rdc2
+		num_of_civilian_factories > 5
+		has_tribal_society = no
+		has_agrarian_society = no
 	}
 	
 	bypass = {
@@ -1278,6 +1332,8 @@ shared_focus = {
 			}
 			country_event = riverfed.18
 		}
+		set_country_flag = RIV_river_parliament_founder
+		set_global_flag = RIV_river_parliament_founded
 
 		custom_effect_tooltip = RIV_fed_race_plus_tt
 		add_to_variable = { var = RIV_fed_race value = 1 }
@@ -1322,6 +1378,9 @@ shared_focus = {
 
 	available = {
 		has_idea = RIV_rec_member3
+		num_of_civilian_factories > 5
+		has_tribal_society = no
+		has_agrarian_society = no
 	}
 	
 	bypass = {
@@ -1347,7 +1406,8 @@ shared_focus = {
 			}
 			country_event = riverfed.19
 		}
-
+		set_country_flag = RIV_free_movement_founder
+		set_global_flag = RIV_free_movement_founded
 		custom_effect_tooltip = RIV_fed_race_plus_tt
 		add_to_variable = { var = RIV_fed_race value = 1 }
 	}
@@ -1391,7 +1451,9 @@ shared_focus = {
 	}
 
 	available = {
-		
+		num_of_civilian_factories > 10
+		has_tribal_society = no
+		has_agrarian_society = no
 	}
 	
 	bypass = {
@@ -1414,7 +1476,8 @@ shared_focus = {
 			}
 			country_event = riverfed.20
 		}
-
+		set_country_flag = RIV_centeral_bank_founder
+		set_global_flag = RIV_centeral_bank_founded
 		custom_effect_tooltip = RIV_fed_race_plus_tt
 		add_to_variable = { var = RIV_fed_race value = 1 }
 	}
@@ -1458,6 +1521,9 @@ shared_focus = {
 
 	available = {
 		has_idea = RIV_centeral_bank_idea
+		num_of_civilian_factories > 10
+		has_tribal_society = no
+		has_agrarian_society = no
 	}
 	
 	bypass = {
@@ -1483,6 +1549,9 @@ shared_focus = {
 			}
 			country_event = riverfed.21
 		}
+
+		set_country_flag = RIV_rivbit_founder
+		set_global_flag = RIV_rivbit_founded
 
 		custom_effect_tooltip = RIV_fed_race_plus_tt
 		add_to_variable = { var = RIV_fed_race value = 1 }
@@ -1529,6 +1598,9 @@ shared_focus = {
 	available = {
 		has_idea = RIV_rec_member4
 		has_idea = RIV_rivbit_idea
+		num_of_civilian_factories > 10
+		has_tribal_society = no
+		has_agrarian_society = no
 	}
 	
 	bypass = {
@@ -1550,12 +1622,12 @@ shared_focus = {
 		
 		every_other_country = {
 			limit = {
-				has_idea = RIV_rivbit_idea
 				has_idea = RIV_rec_member4
 			}
 			country_event = riverfed.22
 		}
-
+		set_country_flag = RIV_the_river_union_founder
+		set_global_flag = RIV_the_river_union_founded
 		custom_effect_tooltip = RIV_fed_race_plus_tt
 		add_to_variable = { var = RIV_fed_race value = 1 }
 	}
@@ -1604,7 +1676,10 @@ shared_focus = {
 				has_idea = RIV_river_union_member1
 				has_idea = RIV_river_union_member2
 			}	
-		}			
+		}
+		num_of_civilian_factories > 10
+		has_tribal_society = no
+		has_agrarian_society = no	
 	}
 	
 	bypass = {
@@ -1620,7 +1695,8 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus RIV_river_army"
 		add_ideas = RIV_river_army_idea
-		
+		set_country_flag = RIV_river_army_founder
+		set_global_flag = RIV_river_army_founded
 		every_other_country = {
 			limit = {
 				or = {
@@ -1674,6 +1750,9 @@ shared_focus = {
 
 	available = {
 		has_idea = RIV_river_union_member1
+		num_of_civilian_factories > 10
+		has_tribal_society = no
+		has_agrarian_society = no
 	}
 	
 	bypass = {
@@ -1699,6 +1778,8 @@ shared_focus = {
 			}
 			country_event = riverfed.24
 		}
+		set_country_flag = RIV_river_government_founder
+		set_global_flag = RIV_river_government_founded
 
 		custom_effect_tooltip = RIV_fed_race_plus_tt
 		add_to_variable = { var = RIV_fed_race value = 1 }
@@ -1772,6 +1853,8 @@ shared_focus = {
 
 		set_cosmetic_tag = RIV
 		set_country_flag = river_federation_founder
+		set_global_flag = river_federation_founded
+		save_global_event_target_as = RivFed
 		
 		every_other_country = {
 			limit = {
@@ -1781,6 +1864,23 @@ shared_focus = {
 				}				
 			}
 			country_event = riverfed.25
+		}
+
+		#hidden_effect = {
+			every_other_country = {
+				limit = { is_in_faction_with = ROOT }
+				set_country_flag = riv_fed_faction_member
+			}
+			dismantle_faction = yes
+			create_faction = river_united_faction
+			every_other_country = {
+				limit = { has_country_flag = riv_fed_faction_member }
+				clr_country_flag = riv_fed_faction_member
+				ROOT = { add_to_faction = PREV }
+			} 
+		#}
+		effect_tooltip = {
+			create_faction = river_united_faction
 		}
 	}
 }
@@ -1927,6 +2027,9 @@ shared_focus = {
 		NOT = {
 			original_tag = FIR
 		}
+		num_of_civilian_factories > 5
+		has_tribal_society = no
+		has_agrarian_society = no
 	}
 	
 	ai_will_do = {
@@ -2030,6 +2133,9 @@ shared_focus = {
 		NOT = {
 			original_tag = FBK
 		}
+		num_of_civilian_factories > 5
+		has_tribal_society = no
+		has_agrarian_society = no
 	}
 	
 	ai_will_do = {
@@ -2134,6 +2240,9 @@ shared_focus = {
 		NOT = {
 			original_tag = WAT
 		}
+		num_of_civilian_factories > 5
+		has_tribal_society = no
+		has_agrarian_society = no
 	}
 	ai_will_do = {
 		factor = 2
