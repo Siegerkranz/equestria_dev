@@ -33,6 +33,7 @@ set_technology = {
 	tech_jager = 1
 	tech_recon = 1
 	tech_engineers = 1
+	synth_oil_experiments = 1
 	transport = 1
 }
 
@@ -69,8 +70,10 @@ set_politics = {
 add_ideas = {
 	canterlot_defeat
 	political_divisions
+	limited_exports
+	CHN_GRI_Attache_For_CHN
 }
-
+add_timed_idea = { idea = CHN_synthetic_armament days = 650 }
 set_stability = 0.6
 
 create_country_leader = {
@@ -138,7 +141,7 @@ create_corps_commander = {
 	logistics_skill = 1
 	female = yes
 }
-create_corps_commander = {
+create_corps_commander = { #Some fucking idiot
 	name = "Vect"
 	portrait_path = "gfx/leaders/CHN/Vect.dds"
 	traits = { infiltrator }
@@ -189,7 +192,7 @@ create_corps_commander = {
 	name = "Opteris"
 	desc = "Brigadier General Opteris, Commander of the 2nd Army."
 	portrait_path = "gfx/leaders/CHN/Phalanx.dds"
-	traits = { ranger infiltrator }
+	traits = { infiltrator ranger }
 	skill = 2
 	id = 606
 	attack_skill = 1
@@ -201,7 +204,7 @@ create_corps_commander = {
 	name = "Ersatz"
 	desc = "Lieutenant General Ersatz, Commander of the Changeling Army Special Operations Taskforce."
 	portrait_path = "gfx/leaders/CHN/Larx.dds"
-	traits = { fortress_buster infiltrator }
+	traits = { infiltrator fortress_buster }
 	skill = 2
 	id = 607
 	attack_skill = 3
@@ -223,7 +226,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Azure Lore"
 	portrait_path = "gfx/leaders/CHN/Azure.tga"
-	traits = { arrow }
+	traits = { infiltrator arrow }
 	id = 611
 	skill = 2
 	attack_skill = 2

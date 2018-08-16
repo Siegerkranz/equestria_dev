@@ -1,0 +1,914 @@
+﻿add_namespace = diamond_mountain
+add_namespace = diamond_mountain_news
+
+### DMT cracks down on Harmony/Communism ###
+country_event = {
+	id = diamond_mountain.1
+	immediate = {log = "[Root.GetName]: event diamond_mountain.1"}#Auto-logging
+	title = diamond_mountain.1.t
+	desc = {
+		text = diamond_mountain.1.d.communism
+		trigger = { has_government = communism }
+	}
+	desc = {
+		text = diamond_mountain.1.d.democratic
+		trigger = { has_government = democratic }
+	}
+	#picture = GFX_event_lake_city
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			has_government = communism
+			has_government = democratic
+		}
+	}
+
+	option = { #Unnaceptable!
+		name = diamond_mountain.1.a
+		add_opinion_modifier = { target = DMT modifier = disapproves_of_crackdown }
+	}
+}
+
+### DMT Slaves Fight in the Lower Levels
+country_event = {
+	id = diamond_mountain.2
+	immediate = {log = "[Root.GetName]: event diamond_mountain.2"}#Auto-logging
+	title = diamond_mountain.2.t
+	desc = diamond.2.d
+	#picture = GFX_event_lake_city
+
+	is_triggered_only = yes
+
+	option = { #Unnaceptable!
+		name = diamond_mountain.2.a
+		add_political_power = -20
+		add_stability = -0.02
+		hidden_effect = {
+			country_event = { id = diamond_mountain.80 }
+		}
+	}
+}
+
+### DMT Fate of the Royals
+country_event = {
+	id = diamond_mountain.3
+	immediate = {log = "[Root.GetName]: event diamond_mountain.3"}#Auto-logging
+	title = diamond_mountain.3.t
+	desc = diamond.3.d
+	#picture = GFX_event_lake_city
+
+	is_triggered_only = yes
+
+	option = { #Bannish Molly
+		name = diamond_mountain.3.a
+		set_global_flag = DMT_molly_banished
+		add_political_power = 25
+		if = {
+			limit = {
+				RCT = {
+					exists = yes
+					has_government = democratic
+				}
+			}
+			RCT = {
+				country_event = diamond_mountain.4
+			}
+		}
+		else_if = {
+			limit = {
+				LCT = {
+					exists = yes
+					has_government = democratic
+				}
+			}
+			LCT = {
+				country_event = diamond_mountain.4
+			}
+		}
+		else_if = {
+			limit = {
+				WIT = {
+					exists = yes
+					has_government = democratic
+				}
+			}
+			WIT = {
+				country_event = diamond_mountain.4
+			}
+		}
+		else_if = {
+			limit = {
+				NIM = {
+					exists = yes
+					has_government = democratic
+				}
+			}
+			NIM = {
+				country_event = diamond_mountain.4
+			}
+		}
+		else_if = {
+			limit = {
+				BAK = {
+					exists = yes
+					has_government = democratic
+				}
+			}
+			BAK = {
+				country_event = diamond_mountain.4
+			}
+		}
+		else_if = {
+			limit = {
+				FRE = {
+					exists = yes
+					has_government = democratic
+				}
+			}
+			FRE = {
+				country_event = diamond_mountain.4
+			}
+		}
+		else_if = {
+			limit = {
+				FBK = {
+					exists = yes
+					has_government = democratic
+				}
+			}
+			FBK = {
+				country_event = diamond_mountain.4
+			}
+		}
+		else_if = {
+			limit = {
+				FIR = {
+					exists = yes
+					has_government = democratic
+				}
+			}
+			FIR = {
+				country_event = diamond_mountain.4
+			}
+		}
+		else_if = {
+			limit = {
+				EQS = {
+					exists = yes
+					has_government = democratic
+				}
+			}
+			EQS = {
+				country_event = diamond_mountain.4
+			}
+		}
+		else_if = {
+			limit = {
+				EQC = {
+					exists = yes
+					has_government = democratic
+				}
+			}
+			EQC = {
+				country_event = diamond_mountain.4
+			}
+		}
+	}
+
+	option = { #Bannish Both
+		name = diamond_mountain.3.b
+		set_global_flag = DMT_molly_banished
+		set_global_flag = DMT_rover_bannished
+		add_stability = -0.05
+		add_political_power = 25
+		if = {
+			limit = {
+				RCT = {
+					exists = yes
+					has_government = democratic
+				}
+			}
+			RCT = {
+				country_event = diamond_mountain.4
+			}
+		}
+		else_if = {
+			limit = {
+				LCT = {
+					exists = yes
+					has_government = democratic
+				}
+			}
+			LCT = {
+				country_event = diamond_mountain.4
+			}
+		}
+		else_if = {
+			limit = {
+				WIT = {
+					exists = yes
+					has_government = democratic
+				}
+			}
+			WIT = {
+				country_event = diamond_mountain.4
+			}
+		}
+		else_if = {
+			limit = {
+				NIM = {
+					exists = yes
+					has_government = democratic
+				}
+			}
+			NIM = {
+				country_event = diamond_mountain.4
+			}
+		}
+		else_if = {
+			limit = {
+				BAK = {
+					exists = yes
+					has_government = democratic
+				}
+			}
+			BAK = {
+				country_event = diamond_mountain.4
+			}
+		}
+		else_if = {
+			limit = {
+				FRE = {
+					exists = yes
+					has_government = democratic
+				}
+			}
+			FRE = {
+				country_event = diamond_mountain.4
+			}
+		}
+		else_if = {
+			limit = {
+				FBK = {
+					exists = yes
+					has_government = democratic
+				}
+			}
+			FBK = {
+				country_event = diamond_mountain.4
+			}
+		}
+		else_if = {
+			limit = {
+				FIR = {
+					exists = yes
+					has_government = democratic
+				}
+			}
+			FIR = {
+				country_event = diamond_mountain.4
+			}
+		}
+		else_if = {
+			limit = {
+				EQS = {
+					exists = yes
+					has_government = democratic
+				}
+			}
+			EQS = {
+				country_event = diamond_mountain.4
+			}
+		}
+		else_if = {
+			limit = {
+				EQC = {
+					exists = yes
+					has_government = democratic
+				}
+			}
+			EQC = {
+				country_event = diamond_mountain.4
+			}
+		}
+		#King
+		if = {
+			limit = {
+				RCT = {
+					exists = yes
+					has_government = fascism
+				}
+			}
+			RCT = {
+				country_event = diamond_mountain.5
+			}
+		}
+		else_if = {
+			limit = {
+				LCT = {
+					exists = yes
+					has_government = fascism
+				}
+			}
+			LCT = {
+				country_event = diamond_mountain.5
+			}
+		}
+		else_if = {
+			limit = {
+				WIT = {
+					exists = yes
+					has_government = fascism
+				}
+			}
+			WIT = {
+				country_event = diamond_mountain.5
+			}
+		}
+		else_if = {
+			limit = {
+				NIM = {
+					exists = yes
+					has_government = fascism
+				}
+			}
+			NIM = {
+				country_event = diamond_mountain.5
+			}
+		}
+		else_if = {
+			limit = {
+				BAK = {
+					exists = yes
+					has_government = fascism
+				}
+			}
+			BAK = {
+				country_event = diamond_mountain.5
+			}
+		}
+		else_if = {
+			limit = {
+				FRE = {
+					exists = yes
+					has_government = fascism
+				}
+			}
+			FRE = {
+				country_event = diamond_mountain.5
+			}
+		}
+		else_if = {
+			limit = {
+				FBK = {
+					exists = yes
+					has_government = fascism
+				}
+			}
+			FBK = {
+				country_event = diamond_mountain.5
+			}
+		}
+		else_if = {
+			limit = {
+				BAR = {
+					exists = yes
+					has_government = fascism
+				}
+			}
+			BAR = {
+				country_event = diamond_mountain.5
+			}
+		}
+		else_if = {
+			limit = {
+				FIR = {
+					exists = yes
+					has_government = fascism
+				}
+			}
+			FIR = {
+				country_event = diamond_mountain.5
+			}
+		}
+		else_if = {
+			limit = {
+				OLE = {
+					exists = yes
+					has_government = fascism
+				}
+			}
+			OLE = {
+				country_event = diamond_mountain.5
+			}
+		}
+		else_if = {
+			limit = {
+				CHN = {
+					exists = yes
+					has_government = fascism
+				}
+			}
+			CHN = {
+				country_event = diamond_mountain.5
+			}
+		}
+		else_if = {
+			limit = {
+				EQS = {
+					exists = yes
+					has_government = fascism
+				}
+			}
+			EQS = {
+				country_event = diamond_mountain.5
+			}
+		}
+		else_if = {
+			limit = {
+				EQC = {
+					exists = yes
+					has_government = fascism
+				}
+			}
+			EQC = {
+				country_event = diamond_mountain.5
+			}
+		}
+	}
+
+	option = { #Execute Both
+		name = diamond_mountain.3.c
+		add_stability = -0.1
+		add_political_power = 50
+	}
+}
+
+### Molly in Exile
+country_event = {
+	id = diamond_mountain.4
+	immediate = {log = "[Root.GetName]: event diamond_mountain.4"}#Auto-logging
+	title = diamond_mountain.4.t
+	desc = diamond.4.d
+	#picture = GFX_event_lake_city
+
+	is_triggered_only = yes
+
+	option = { #Bannish Molly
+		name = diamond_mountain.4.a
+		add_ideas = DMT_molly_in_exile
+	}
+}
+
+### The King in Exiel
+country_event = {
+	id = diamond_mountain.5
+	immediate = {log = "[Root.GetName]: event diamond_mountain.5"}#Auto-logging
+	title = diamond_mountain.5.t
+	desc = diamond.5.d
+	#picture = GFX_event_lake_city
+
+	is_triggered_only = yes
+
+	option = { #Bannish Rover
+		name = diamond_mountain.5.a
+		add_ideas = DMT_rover_in_exile
+	}
+}
+
+#Slave Problems Event
+#Hidden dispatch event
+country_event = {
+	id = diamond_mountain.80
+	
+	is_triggered_only = yes
+
+	hidden = yes
+
+	immediate = {
+		random_list = {
+			25 = { country_event = { id = diamond_mountain.81 days = 70 random = 30 } } # Slaves Sabotarge Factory
+			25 = { country_event = { id = diamond_mountain.82 days = 70 random = 30 } } # Slaves Sabotarge Arms Factory
+			25 = { country_event = { id = diamond_mountain.83 days = 70 random = 30 } } # Slaves Rebel in the Mines
+			25 = { country_event = { id = diamond_mountain.84 days = 70 random = 30 } } # 
+		}
+	}
+}
+
+# Slave Problems Event - Slaves Sabotarge facotry
+country_event = {
+	id = diamond_mountain.81
+	title = diamond_mountain.81.t
+	desc = diamond_mountain.81.d
+	#picture = GFX_report_event_ROM_mistress
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_idea = DMT_risk_of_rebellion
+	}
+
+	option = { #
+		name = diamond_mountain.81.a
+		random_owned_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				industrial_complex > 0
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 0.6
+			}
+		}
+		hidden_effect = {
+			country_event = { id = diamond_mountain.80 }
+		}
+	}
+}
+
+# Slave Problems Event - Slaves Sabotarge Arms facotry
+country_event = {
+	id = diamond_mountain.82
+	title = diamond_mountain.82.t
+	desc = diamond_mountain.82.d
+	#picture = GFX_report_event_ROM_mistress
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_idea = DMT_risk_of_rebellion
+	}
+
+	option = { #
+		name = diamond_mountain.82.a
+		random_owned_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				arms_factory > 0
+			}
+			damage_building = {
+				type = arms_factory
+				damage = 0.6
+			}
+		}
+		hidden_effect = {
+			country_event = { id = diamond_mountain.80 }
+		}
+	}
+}
+
+# Slave Problems Event - Slaves Sabotarge the Mines
+country_event = {
+	id = diamond_mountain.83
+	title = diamond_mountain.83.t
+	desc = diamond_mountain.83.d
+	#picture = GFX_report_event_ROM_mistress
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_idea = DMT_risk_of_rebellion
+	}
+
+	option = { #Pay for it
+		name = diamond_mountain.83.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = 5
+				has_war = no
+				amount_taken_ideas = {
+					amount < 3
+					slots = { political_advisor }
+				}
+			}
+			modifier = {
+				add = 5
+				has_war = no
+				amount_taken_ideas = {
+					amount < 2
+					slots = { political_advisor }
+				}
+			}
+			modifier = {
+				add = 5
+				has_war = no
+				amount_taken_ideas = {
+					amount < 1
+					slots = { political_advisor }
+				}
+			}			
+			modifier = {
+				add = 5
+				amount_taken_ideas = {
+					amount < 1
+					slots = { army_chief }
+				}
+			}
+
+		}
+		add_timed_idea = { idea = DMT_major_slave_rebellion days = 70 }
+		hidden_effect = {
+			country_event = { id = diamond_mountain.80 }
+		}
+	}
+	option = { #Negotiate a deal
+		name = diamond_mountain.83.b
+		ai_chance = {
+			base = 4
+			modifier = {
+				add = -2
+				date < 1010.01.02
+				has_war = no
+			}
+			modifier = {
+				add = 20
+				OR = {
+					has_war = yes
+					any_other_country = {
+						OR = {
+							is_justifying_wargoal_against = ROOT
+							has_wargoal_against = ROOT
+						}
+					}
+				}
+			}
+			modifier = {
+				add = 20
+				date > 1010.01.02
+			}
+		}
+		add_political_power = -90
+		add_timed_idea = { idea = DMT_mild_slave_rebellion days = 70 }
+		hidden_effect = {
+			country_event = { id = diamond_mountain.80 }
+		}
+	}
+}
+
+# Slave Problems Event - Something?
+country_event = {
+	id = diamond_mountain.84
+	title = diamond_mountain.84.t
+	desc = diamond_mountain.84.d
+	#picture = GFX_report_event_ROM_mistress
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_idea = DMT_risk_of_rebellion
+	}
+
+	option = { #
+		name = diamond_mountain.84.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				add = 5
+				has_war = no
+				amount_taken_ideas = {
+					amount < 3
+					slots = { political_advisor }
+				}
+			}
+			modifier = {
+				add = 5
+				has_war = no
+				amount_taken_ideas = {
+					amount < 2
+					slots = { political_advisor }
+				}
+			}
+			modifier = {
+				add = 5
+				has_war = no
+				amount_taken_ideas = {
+					amount < 1
+					slots = { political_advisor }
+				}
+			}
+			modifier = {
+				add = 5
+				amount_taken_ideas = {
+					amount < 1
+					slots = { army_chief }
+				}
+			}
+		}
+		add_stability = -0.05
+		add_popularity = { ideology = communism popularity = 0.05 }
+		add_popularity = { ideology = democratic popularity = 0.05 }
+		hidden_effect = {
+			country_event = { id = diamond_mountain.80 }
+		}
+	}
+	option = { #
+		name = diamond_mountain.84.b
+		ai_chance = {
+			base = 3
+		}
+		add_political_power = -90
+		hidden_effect = {
+			country_event = { id = diamond_mountain.80 }
+		}
+	}
+}
+
+### DMT Major Slave Rebellion
+country_event = {
+	id = diamond_mountain.85
+	immediate = {log = "[Root.GetName]: event diamond_mountain.85"}#Auto-logging
+	title = diamond_mountain.85.t
+	desc = diamond.85.d
+	#picture = GFX_event_lake_city
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_idea = DMT_risk_of_rebellion
+	}
+
+	option = { #Send in the Guard
+		name = diamond_mountain.85.a
+		add_political_power = -100
+		add_stability = -0.1
+		hidden_effect = {
+			country_event = { id = diamond_mountain.85 days = 200 random = 30 }
+		}
+		
+	}
+
+	option = { #Let the Local Lords handle it
+		name = diamond_mountain.85.b
+		add_stability = -0.1
+		hidden_effect = {
+			country_event = { id = diamond_mountain.86 days = 40 random = 30 }
+		}
+	}
+}
+
+### DMT Slave Uprising
+country_event = {
+	id = diamond_mountain.86
+	immediate = {log = "[Root.GetName]: event diamond_mountain.86"}#Auto-logging
+	title = diamond_mountain.86.t
+	desc = diamond.86.d
+	#picture = GFX_event_lake_city
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_idea = DMT_risk_of_rebellion
+	}
+
+	option = { #Destroy them!
+		name = diamond_mountain.86.a
+		add_stability = -0.15
+		add_political_power = -100
+		hidden_effect = {
+			country_event = { id = diamond_mountain.87 days = 40 random = 30 }
+		}
+	}
+
+	option = { #Crush them!
+		name = diamond_mountain.86.b
+		add_stability = -0.25
+		add_political_power = -200
+		remove_ideas = DMT_risk_of_rebellion
+	}
+}
+
+### DMT the Second Battle of the Diamond Mountain
+country_event = {
+	id = diamond_mountain.87
+	immediate = {log = "[Root.GetName]: event diamond_mountain.87"}#Auto-logging
+	title = diamond_mountain.87.t
+	desc = diamond.87.d
+	#picture = GFX_event_lake_city
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_idea = DMT_risk_of_rebellion
+	}
+
+	option = { #The Slaves Win
+		name = diamond_mountain.87.a
+		kill_country_leader = yes
+		add_stability = -0.2
+		set_politics = {
+			ruling_party = communism
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.1
+		}
+		remove_ideas = DMT_risk_of_rebellion
+	}
+
+	option = { #The King Wins
+		name = diamond_mountain.87.b
+		add_stability = 0.1
+		add_political_power = -90
+		remove_ideas = DMT_risk_of_rebellion
+	}
+}
+
+### DMT Major Ant-Slavery Demenstration
+country_event = {
+	id = diamond_mountain.88
+	immediate = {log = "[Root.GetName]: event diamond_mountain.88"}#Auto-logging
+	title = diamond_mountain.88.t
+	desc = diamond.88.d
+	#picture = GFX_event_lake_city
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_idea = DMT_risk_of_rebellion
+	}
+
+	option = { #Ignore them
+		name = diamond_mountain.88.a
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}
+		hidden_effect = {
+			country_event = { id = diamond_mountain.89 days = 40 random = 30 }
+		}
+	}
+
+	option = { #Send in the Guards
+		name = diamond_mountain.88.b
+		add_stability = -0.03
+		hidden_effect = {
+			country_event = { id = diamond_mountain.88 days = 300 random = 30 }
+		}
+	}
+}
+
+### DMT Princess Molly Speaks out against her Father
+country_event = {
+	id = diamond_mountain.89
+	immediate = {log = "[Root.GetName]: event diamond_mountain.89"}#Auto-logging
+	title = diamond_mountain.89.t
+	desc = diamond.89.d
+	#picture = GFX_event_lake_city
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_idea = DMT_risk_of_rebellion
+	}
+
+	option = { #Let her speak
+		name = diamond_mountain.89.a
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+		hidden_effect = {
+			country_event = { id = diamond_mountain.90 days = 40 random = 30 }
+		}
+	}
+
+	option = { #Send her to her room!
+		name = diamond_mountain.89.b
+		add_political_power = -10
+	}
+}
+
+### DMT Molly attempts to take the crown
+country_event = {
+	id = diamond_mountain.90
+	immediate = {log = "[Root.GetName]: event diamond_mountain.90"}#Auto-logging
+	title = diamond_mountain.90.t
+	desc = diamond.90.d
+	#picture = GFX_event_lake_city
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_idea = DMT_risk_of_rebellion
+	}
+
+	option = { #Let Her
+		name = diamond_mountain.90.a
+		add_stability = -0.1
+		set_politics = {
+			ruling_party = democratic
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.1
+		}
+	}
+
+	option = { #Don't let her
+		name = diamond_mountain.90.b
+		add_political_power = -90
+	}
+}

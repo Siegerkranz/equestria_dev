@@ -1,3 +1,69 @@
+reapply_secondary_cosmetic_tags = {
+	if = {
+		limit = { original_tag = FEA }
+		if = {
+			limit = { has_country_flag = FEA_STW_union }
+			set_cosmetic_tag = FEA_STW_union
+			break = yes
+		}
+		if = {
+			limit = { has_country_flag = FEA_socdem_takeover_tag }
+			set_cosmetic_tag = FEA_socdem_takeover_tag
+			break = yes
+		}
+		if = {
+			limit = { has_country_flag = FEA_c_takeover_tag }
+			set_cosmetic_tag = FEA_c_takeover_tag
+			break = yes
+		}
+		if = {
+			limit = {
+				OR = {
+					has_focus_tree = feathisia_focus_PvdA_led_coalition
+					has_focus_tree = feathisia_focus_PvdA_led_coalition_imperial
+				}
+				OR = {
+					has_idea = FEA_beloved_monarch
+					has_idea = FEA_beloved_monarch_2
+					has_idea = FEA_beloved_monarch_3
+				}
+				OR = {
+					is_subject = no
+					overlord = { NOT = { has_government = communism } }
+				}
+			}
+			if = {
+				limit = { is_subject_of = event_target:griffonian_empire }
+				set_cosmetic_tag = FEA_PvdA_old_flag_GRI_Puppet
+				else = { set_cosmetic_tag = FEA_PvdA_old_flag }
+			}
+			break = yes
+		}
+		break = yes
+	}
+	# JER
+	if = {
+		limit = { original_tag = JER }
+		if = {
+			limit = { has_country_flag = JER_federation_democratic }
+			set_cosmetic_tag = JER_federation_democratic
+			break = yes
+		}
+		if = {
+			limit = { has_country_flag = JER_state }
+			set_cosmetic_tag = JER_state
+			break = yes
+		}
+		if = {
+			limit = { has_country_leader = { ruling_only = yes name = "Victor Allard" } }
+			set_cosmetic_tag = JER_soviet
+			break = yes
+		}
+		set_cosmetic_tag = JER_REPUBLIC
+		break = yes
+	}
+}
+
 5x_chance_to_remove_arms_factory = {
 	chance_to_remove_arms_factory = yes
 	chance_to_remove_arms_factory = yes
@@ -49,6 +115,271 @@ chance_to_remove_dockyard = {
 	}
 }
 
+FBK_add_1_resistance = {
+	if = {
+		limit = {
+			NOT = {
+				has_idea = FBK_modernisation_resistance_1
+				has_idea = FBK_modernisation_resistance_2
+				has_idea = FBK_modernisation_resistance_3
+				has_idea = FBK_modernisation_resistance_4
+				has_idea = FBK_modernisation_resistance_5
+				has_idea = FBK_modernisation_resistance_6
+				has_idea = FBK_modernisation_resistance_7
+				has_idea = FBK_modernisation_resistance_8
+				has_idea = FBK_modernisation_resistance_9
+				has_idea = FBK_modernisation_resistance_10
+			}
+		}		
+		add_ideas = FBK_modernisation_resistance_1
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_1}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_2 remove_idea = FBK_modernisation_resistance_1}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_2}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_3 remove_idea = FBK_modernisation_resistance_2}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_3}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_4 remove_idea = FBK_modernisation_resistance_3}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_4}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_5 remove_idea = FBK_modernisation_resistance_4}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_5}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_6 remove_idea = FBK_modernisation_resistance_5}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_6}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_7 remove_idea = FBK_modernisation_resistance_6}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_7}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_8 remove_idea = FBK_modernisation_resistance_7}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_8}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_9 remove_idea = FBK_modernisation_resistance_9}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_9}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_10 remove_idea = FBK_modernisation_resistance_9}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_10}
+		country_event = { id = FBK.50}
+	}
+}
+
+FBK_add_2_resistance = {
+	if = {
+		limit = {
+			NOT = {
+				has_idea = FBK_modernisation_resistance_1
+				has_idea = FBK_modernisation_resistance_2
+				has_idea = FBK_modernisation_resistance_3
+				has_idea = FBK_modernisation_resistance_4
+				has_idea = FBK_modernisation_resistance_5
+				has_idea = FBK_modernisation_resistance_6
+				has_idea = FBK_modernisation_resistance_7
+				has_idea = FBK_modernisation_resistance_8
+				has_idea = FBK_modernisation_resistance_9
+				has_idea = FBK_modernisation_resistance_10
+			}
+		}		
+		add_ideas = FBK_modernisation_resistance_2
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_1}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_3 remove_idea = FBK_modernisation_resistance_1}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_2}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_4 remove_idea = FBK_modernisation_resistance_2}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_3}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_5 remove_idea = FBK_modernisation_resistance_3}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_4}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_6 remove_idea = FBK_modernisation_resistance_4}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_5}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_7 remove_idea = FBK_modernisation_resistance_5}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_6}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_8 remove_idea = FBK_modernisation_resistance_6}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_7}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_9 remove_idea = FBK_modernisation_resistance_7}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_8}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_10 remove_idea = FBK_modernisation_resistance_9}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_9}
+		country_event = { id = FBK.50}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_10}
+		country_event = { id = FBK.50}
+	}
+}
+
+FBK_add_3_resistance = {
+	if = {
+		limit = {
+			NOT = {
+				has_idea = FBK_modernisation_resistance_1
+				has_idea = FBK_modernisation_resistance_2
+				has_idea = FBK_modernisation_resistance_3
+				has_idea = FBK_modernisation_resistance_4
+				has_idea = FBK_modernisation_resistance_5
+				has_idea = FBK_modernisation_resistance_6
+				has_idea = FBK_modernisation_resistance_7
+				has_idea = FBK_modernisation_resistance_8
+				has_idea = FBK_modernisation_resistance_9
+				has_idea = FBK_modernisation_resistance_10
+			}
+		}
+		add_ideas = FBK_modernisation_resistance_3
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_1}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_4 remove_idea = FBK_modernisation_resistance_1}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_2}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_5 remove_idea = FBK_modernisation_resistance_2}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_3}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_6 remove_idea = FBK_modernisation_resistance_3}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_4}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_7 remove_idea = FBK_modernisation_resistance_4}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_5}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_8 remove_idea = FBK_modernisation_resistance_5}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_6}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_9 remove_idea = FBK_modernisation_resistance_6}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_7}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_10 remove_idea = FBK_modernisation_resistance_7}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_8}
+		country_event = { id = FBK.50}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_9}
+		country_event = { id = FBK.50}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_10}
+		country_event = { id = FBK.50}
+	}
+}
+
+FBK_remove_1_resistance = {
+	if = {
+		limit = {has_idea = FBK_modernisation_resistance_1}
+		remove_ideas = FBK_modernisation_resistance_1
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_2}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_1 remove_idea = FBK_modernisation_resistance_2}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_3}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_2 remove_idea = FBK_modernisation_resistance_3}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_4}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_3 remove_idea = FBK_modernisation_resistance_4}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_5}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_4 remove_idea = FBK_modernisation_resistance_5}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_6}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_5 remove_idea = FBK_modernisation_resistance_6}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_7}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_6 remove_idea = FBK_modernisation_resistance_7}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_8}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_7 remove_idea = FBK_modernisation_resistance_9}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_9}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_8 remove_idea = FBK_modernisation_resistance_9}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_10}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_9 remove_idea = FBK_modernisation_resistance_10}
+	}
+}
+
+FBK_remove_2_resistance = {
+	if = {
+		limit = {has_idea = FBK_modernisation_resistance_1}
+		remove_ideas = FBK_modernisation_resistance_1
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_2}
+		remove_ideas = FBK_modernisation_resistance_2
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_3}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_1 remove_idea = FBK_modernisation_resistance_3}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_4}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_2 remove_idea = FBK_modernisation_resistance_4}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_5}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_3 remove_idea = FBK_modernisation_resistance_5}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_6}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_4 remove_idea = FBK_modernisation_resistance_6}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_7}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_5 remove_idea = FBK_modernisation_resistance_7}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_8}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_6 remove_idea = FBK_modernisation_resistance_9}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_9}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_7 remove_idea = FBK_modernisation_resistance_9}
+	}
+	else_if = {
+		limit = {has_idea = FBK_modernisation_resistance_10}
+	 swap_ideas = { add_idea = FBK_modernisation_resistance_8 remove_idea = FBK_modernisation_resistance_10}
+	}
+}
 
 decrease_illiteracy = {
 	if = {
@@ -879,5 +1210,39 @@ modify_var_stg_construction_2 = {
 			NOT = { has_idea = incomplete_industrialization }
 		}
 		add_to_variable = { var = palace_construction value = 5 }
+	}
+}
+
+lushi_remove_unemployment = {
+	if = {
+		limit = { has_idea = LUS_unemployment }
+		swap_ideas = { add_idea = LUS_unemployment_2 remove_idea = LUS_unemployment }
+	}
+	else_if = {
+		limit = { has_idea = LUS_unemployment_2 }
+		swap_ideas = { add_idea = LUS_unemployment_3 remove_idea = LUS_unemployment_2 }
+	}
+	else_if = {
+		limit = { has_idea = LUS_unemployment_3 }
+		swap_ideas = { add_idea = LUS_unemployment_4 remove_idea = LUS_unemployment_3 }
+	}
+	else_if = {
+		limit = { has_idea = LUS_unemployment_4 }
+		remove_ideas = LUS_unemployment_4
+	}
+}
+
+decrease_deficit = {
+	if = {
+		limit = { has_idea = RCT_deficit_spending1 }
+		swap_ideas = { add_idea = RCT_deficit_spending2 remove_idea = RCT_deficit_spending1 }
+	}
+	else_if = {
+		limit = { has_idea = RCT_deficit_spending2 }
+		swap_ideas = { add_idea = RCT_deficit_spending3 remove_idea = RCT_deficit_spending2 }
+	}
+	else_if = {
+		limit = { has_idea = RCT_deficit_spending3 }
+		remove_ideas = RCT_deficit_spending3
 	}
 }

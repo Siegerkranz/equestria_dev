@@ -80,6 +80,75 @@ defined_text = { # Country
 		localization_key = EAW_WS_STG
 	}
 	text = {
+		trigger = { 
+			OR = {
+				original_tag = YAK
+				original_tag = JAK
+			}
+		}
+		localization_key = EAW_WS_YAK
+	}
+	text = {
+		trigger = { 
+			OR = {
+				original_tag = PLR
+				original_tag = PNG
+			}
+		}
+		localization_key = EAW_WS_PLR
+	}
+	text = {
+		trigger = { original_tag = JER }
+		localization_key = EAW_WS_JER
+	}
+	text = {
+		trigger = { original_tag = TRD }
+		localization_key = EAW_WS_TRD
+	}
+	text = {
+		trigger = { original_tag = MNC }
+		localization_key = EAW_WS_MNC
+	}
+	text = {
+		trigger = { original_tag = AET }
+		localization_key = EAW_WS_AET
+	}
+	text = {
+		trigger = { original_tag = GRW }
+		localization_key = EAW_WS_GRW
+	}
+	text = {
+		trigger = { original_tag = BAN }
+		localization_key = EAW_WS_BAN
+	}
+	text = {
+		trigger = { original_tag = FAL }
+		localization_key = EAW_WS_FAL
+	}
+	text = {
+		trigger = { original_tag = FEA }
+		localization_key = EAW_WS_FEA
+	}
+	text = {
+		trigger = { 
+			OR = {
+				original_tag = RIV
+				original_tag = "FAR"
+				original_tag = WAT
+				original_tag = FIR
+				#original_tag = RCT
+				#original_tag = LCT
+				#original_tag = NIM
+				#original_tag = DMT
+				#original_tag = BAK
+				#original_tag = WIT
+				#original_tag = DEP
+				#original_tag = FRE
+			}
+		}
+		localization_key = EAW_WS_RIV
+	}
+	text = {
 		trigger = { tag = LCT }
 		localization_key = EAW_WS_LCT
 	}
@@ -170,6 +239,75 @@ defined_text = {
 	text = {
 		trigger = { original_tag = STG }
 		localization_key = EAW_WS_STG_desc
+	}
+	text = {
+		trigger = { 
+			OR = {
+				original_tag = YAK
+				original_tag = JAK
+			}
+		}
+		localization_key = EAW_WS_YAK_desc
+	}
+	text = {
+		trigger = { 
+			OR = {
+				original_tag = PLR
+				original_tag = PNG
+			}
+		}
+		localization_key = EAW_WS_PLR_desc
+	}
+	text = {
+		trigger = { original_tag = JER }
+		localization_key = EAW_WS_JER_desc
+	}
+	text = {
+		trigger = { original_tag = TRD }
+		localization_key = EAW_WS_TRD_desc
+	}
+	text = {
+		trigger = { original_tag = MNC }
+		localization_key = EAW_WS_MNC_desc
+	}
+	text = {
+		trigger = { original_tag = AET }
+		localization_key = EAW_WS_AET_desc
+	}
+	text = {
+		trigger = { original_tag = GRW }
+		localization_key = EAW_WS_GRW_desc
+	}
+	text = {
+		trigger = { original_tag = BAN }
+		localization_key = EAW_WS_BAN_desc
+	}
+	text = {
+		trigger = { original_tag = FAL }
+		localization_key = EAW_WS_FAL_desc
+	}
+	text = {
+		trigger = { original_tag = FEA }
+		localization_key = EAW_WS_FEA_desc
+	}
+	text = {
+		trigger = { 
+			OR = {
+				original_tag = RIV
+				original_tag = "FAR"
+				original_tag = WAT
+				original_tag = FIR
+				#original_tag = RCT
+				#original_tag = LCT
+				#original_tag = NIM
+				#original_tag = DMT
+				#original_tag = BAK
+				#original_tag = WIT
+				#original_tag = DEP
+				#original_tag = FRE
+			}
+		}
+		localization_key = EAW_WS_RIV_desc
 	}
 	text = {
 		trigger = { tag = LCT }

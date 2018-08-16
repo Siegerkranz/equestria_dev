@@ -12,15 +12,18 @@ focus_tree = {
 	
 	continuous_focus_position = { x = 50 y = 1475 }
 	
-	shared_focus = FBK_start_modernise
-	shared_focus = FBK_buy_guns
+	shared_focus = FBK_gradual_approach
+	shared_focus = FBK_rapid_industrialisation
+	shared_focus = FBK_standard_recruitment
+	shared_focus = FBK_state_weaponry
+	shared_focus = FBK_proper_pay
 	shared_focus = FBK_navy
 	shared_focus = FBK_airforce
 	
 	focus = {
 		id = FBK_council
 		icon = GFX_goal_generic_neutrality_focus
-		x = 16
+		x = 19
 		y = 0
 		cost = 10
 		available_if_capitulated = yes
@@ -33,7 +36,7 @@ focus_tree = {
 		id = FBK_cenhelm
 		icon = GFX_goal_support_democracy
 		prerequisite = { focus = FBK_council }
-		x = 11
+		x = 13
 		y = 1
 		cost = 1
 		available_if_capitulated = yes
@@ -49,7 +52,7 @@ focus_tree = {
 		id = FBK_friend_north
 		icon = GFX_focus_generic_diplomatic_treaty
 		prerequisite = { focus = FBK_cenhelm }
-		x = 8
+		x = 10
 		y = 2
 		cost = 5
 		completion_reward = {
@@ -69,7 +72,7 @@ focus_tree = {
 		id = FBK_friend_RIV
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = FBK_cenhelm }
-		x = 14
+		x = 16
 		y = 2
 		cost = 5
 		completion_reward = {
@@ -86,7 +89,7 @@ focus_tree = {
 		id = FBK_trade_WAT
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = FBK_friend_north }
-		x = 6
+		x = 8
 		y = 3
 		cost = 5
 		completion_reward = {
@@ -98,7 +101,7 @@ focus_tree = {
 		id = FBK_trade_FIR
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = FBK_friend_north }
-		x = 8
+		x = 10
 		y = 3
 		cost = 5
 		completion_reward = {
@@ -110,7 +113,12 @@ focus_tree = {
 		id = FBK_trade_NCH
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = FBK_friend_north }
-		x = 10
+		bypass = {
+			NCH = {
+				 has_country_flag = NCH_having_crisis_flag
+			}
+		}
+		x = 12
 		y = 3
 		cost = 5
 		completion_reward = {
@@ -121,13 +129,11 @@ focus_tree = {
 	focus = {
 		id = FBK_arteries_of_wealth
 		icon = GFX_goal_generic_construct_infrastructure
-		available = {
-			has_completed_focus = FBK_stone_roads
-		}
+
 		prerequisite ={ focus = FBK_trade_WAT }
 		prerequisite ={ focus = FBK_trade_FIR }
 		prerequisite ={ focus = FBK_trade_NCH }
-		x = 8
+		x = 10
 		y = 4
 		cost = 5
 		completion_reward = {
@@ -162,7 +168,7 @@ focus_tree = {
 		id = FBK_fishing_tradition
 		icon = GFX_goal_generic_amphibious_assault
 		prerequisite = { focus = FBK_arteries_of_wealth }
-		x = 8
+		x = 10
 		y = 5
 		cost = 5
 		completion_reward = {
@@ -174,12 +180,17 @@ focus_tree = {
 		id = FBK_purchase_textbooks
 		icon = GFX_goal_griffon_books
 		prerequisite = { focus = FBK_friend_RIV }
-		available = {
-			has_completed_focus = FBK_schools_1
-		}
-		x = 12
+		x = 14
 		y = 3
 		cost = 10
+		bypass = {
+		 NOT = {
+		  has_idea = lack_of_scientists
+		  has_idea = lack_of_scientists1
+		  has_idea = lack_of_scientists2
+		  has_idea = lack_of_scientists3
+		 }
+		}
 		completion_reward = {
 			decrease_illiteracy = yes
 		}
@@ -188,11 +199,11 @@ focus_tree = {
 		id = FBK_federal_grant
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = FBK_friend_RIV }
-		x = 14
+		x = 16
 		y = 3
 		cost = 5
 		completion_reward = {
-			increase_society_development_gradual = yes
+
 			455 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -208,7 +219,7 @@ focus_tree = {
 		id = FBK_nimbusian_officers
 		icon = GFX_focus_generic_commonwealth_build_infantry
 		prerequisite = { focus = FBK_friend_RIV }
-		x = 16
+		x = 18
 		y = 3
 		cost = 5
 		completion_reward = {
@@ -216,19 +227,6 @@ focus_tree = {
 			add_ideas = FBK_nimbusian_officers_idea
 		}
 	}
-	focus = {
-		id = FBK_river_trade
-		icon = GFX_goal_generic_positive_trade_relations
-		prerequisite = { focus = FBK_purchase_textbooks }
-		prerequisite = { focus = FBK_federal_grant }
-		prerequisite = { focus = FBK_nimbusian_officers }
-		x = 14
-		y = 4
-		cost = 5
-		completion_reward = {
-			add_ideas = FBK_river_trade_idea
-		}
-	}
 	
 	focus = {
 		id = FBK_river_trade
@@ -236,7 +234,7 @@ focus_tree = {
 		prerequisite = { focus = FBK_purchase_textbooks }
 		prerequisite = { focus = FBK_federal_grant }
 		prerequisite = { focus = FBK_nimbusian_officers }
-		x = 14
+		x = 16
 		y = 4
 		cost = 5
 		completion_reward = {
@@ -247,26 +245,7 @@ focus_tree = {
 		id= FBK_deepwater_harbor
 		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = { focus = FBK_river_trade }
-		x = 14
-		y = 5
-		cost = 5
-		completion_reward = {
-			455 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id= FBK_deepwater_harbor
-		icon = GFX_goal_generic_construct_naval_dockyard
-		prerequisite = { focus = FBK_river_trade }
-		x = 14
+		x = 16
 		y = 5
 		cost = 5
 		completion_reward = {
@@ -294,12 +273,12 @@ focus_tree = {
 			}
 		}
 		
-		x = 11
+		x = 13
 		y = 6
 		cost = 10
 		completion_reward = {
 			add_ideas = FBK_jewel_of_the_north_idea
-			increase_society_development = yes
+			add_ideas = big_science_base
 			455 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -336,7 +315,7 @@ focus_tree = {
 		id = FBK_bitbridle
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = FBK_jewel_of_the_north }
-		x = 7
+		x = 9
 		y = 7
 		cost = 10
 		completion_reward = {
@@ -348,10 +327,7 @@ focus_tree = {
 		id = FBK_cenhelm_academy
 		icon = GFX_focus_research2
 		prerequisite = { focus = FBK_jewel_of_the_north }
-		available = {
-			has_completed_focus = FBK_uni
-		}
-		x = 9
+		x = 11
 		y = 7
 		cost = 10
 		completion_reward = {
@@ -387,7 +363,7 @@ focus_tree = {
 		id = FBK_drill_for_oil
 		icon = GFX_goal_generic_oil_refinery
 		prerequisite = { focus = FBK_jewel_of_the_north }
-		x = 11
+		x = 13
 		y = 7
 		cost = 10
 		completion_reward = {
@@ -404,7 +380,7 @@ focus_tree = {
 		id = FBK_Farbrook_cement
 		icon = GFX_goal_generic_construction
 		prerequisite = { focus = FBK_jewel_of_the_north }
-		x = 13
+		x = 15
 		y = 7
 		cost = 10
 		completion_reward = {
@@ -416,7 +392,7 @@ focus_tree = {
 		id = FBK_republican_guard
 		icon = GFX_focus_generic_little_entente
 		prerequisite = { focus = FBK_jewel_of_the_north }
-		x = 15
+		x = 17
 		y = 7
 		cost = 10
 		completion_reward = {
@@ -440,7 +416,7 @@ focus_tree = {
 		bypass = {
 			has_idea = RIV_member_state
 		}
-		x = 9
+		x = 11
 		y = 8
 		cost = 10
 		completion_reward = {
@@ -483,7 +459,7 @@ focus_tree = {
 				has_country_flag = RIV_member_state
 			}
 		}
-		x = 13
+		x = 15
 		y = 8
 		cost = 10
 		completion_reward = {
@@ -497,7 +473,7 @@ focus_tree = {
 		prerequisite = {
 			focus = FBK_federal_statehood
 		}
-		x = 8
+		x = 10
 		y = 9
 		cost = 10
 		completion_reward = {
@@ -513,7 +489,7 @@ focus_tree = {
 			focus = FBK_seperate_but_equal
 			focus = FBK_federal_statehood
 		}
-		x = 11
+		x = 13
 		y = 9
 		cost = 10
 		completion_reward = {
@@ -527,7 +503,7 @@ focus_tree = {
 		prerequisite = {
 			focus = FBK_seperate_but_equal
 		}
-		x = 14
+		x = 16
 		y = 9
 		cost = 10
 		completion_reward = {
@@ -545,7 +521,7 @@ focus_tree = {
 		prerequisite = {
 			focus = FBK_political_participation
 		}
-		x = 10
+		x = 12
 		y = 10
 		cost = 10
 		completion_reward = {
@@ -562,7 +538,7 @@ focus_tree = {
 		prerequisite = {
 			focus = FBK_political_participation
 		}
-		x = 12
+		x = 14
 		y = 10
 		cost = 10
 		completion_reward = {
@@ -583,7 +559,7 @@ focus_tree = {
 		prerequisite = {
 			focus = FBK_open_borders
 		}
-		x = 9
+		x = 11
 		y = 11
 		cost = 10
 		completion_reward = {
@@ -601,7 +577,7 @@ focus_tree = {
 			focus = FBK_open_borders
 			focus = FBK_northern_capital
 		}
-		x = 11
+		x = 13
 		y = 11
 		cost = 10
 		completion_reward = {
@@ -615,7 +591,7 @@ focus_tree = {
 		prerequisite = {
 			focus = FBK_northern_capital
 		}
-		x = 13
+		x = 15
 		y = 11
 		cost = 10
 		completion_reward = {
@@ -632,7 +608,7 @@ focus_tree = {
 		prerequisite = {
 			focus = FBK_new_generation
 		}
-		x = 10
+		x = 12
 		y = 12
 		cost = 10
 		completion_reward = {
@@ -653,7 +629,7 @@ focus_tree = {
 		prerequisite = {
 			focus = FBK_new_generation
 		}
-		x = 12
+		x = 14
 		y = 12
 		cost = 10
 		completion_reward = {
@@ -680,7 +656,7 @@ focus_tree = {
 			focus = FBK_federation_day
 			focus = FBK_constitution
 		}
-		x = 11
+		x = 13
 		y = 13
 		cost = 10
 		completion_reward = {
@@ -772,7 +748,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = yes
 		completion_reward = {
-			add_political_power = 100
+			add_stability = 0.10
 			add_popularity = { ideology = fascism popularity = 0.05 }
 		}
 	}
@@ -818,30 +794,7 @@ focus_tree = {
 		cost = 10
 		available_if_capitulated = no
 		completion_reward = {
-			455 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			603 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			572 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
+		 country_event = {id = FBK.51}
 		}
 	}
 	
@@ -943,7 +896,7 @@ focus_tree = {
 				has_government = fascism
 				OR = {
 				has_completed_focus = LCT_blessed_sowrds_legacy
-				focus_progress = { focus = LCT_blessed_sowrds_legacy progress > 0 to 1 }
+				focus_progress = { focus = LCT_blessed_sowrds_legacy progress > 0}
 				}
 			}
 		}
@@ -1340,7 +1293,7 @@ focus_tree = {
 	
 	focus = {
 		id = FBK_for_the_empire
-		icon = GFX_focus_hun_elect_a_king
+		icon = GFX_goal_hoist_the_flag
 		x = 43
 		y = 12
 		cost = 0
@@ -1693,8 +1646,25 @@ focus_tree = {
 		y = 6
 		cost = 10
 		completion_reward = {
+			if = {
+			 limit = {
+			 has_idea = agrarian_society
+			 }
+			 add_stability = -0.20
+			}
+			else_if = {
+			 limit = {
+			 has_idea = pre_industrial_society
+			 }
+			 add_stability = -0.15
+			}
+			else_if = {
+			 limit = {
+			  has_idea = outdated_industry
+			 }
+			 add_stability = -0.10
+			}
 			add_timed_idea = { idea = FBK_ind_effort days = 365 }
-			increase_society_development = yes
 			455 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -1803,7 +1773,7 @@ focus_tree = {
 	
 	focus = {
 		id = FBK_comm_arsenal
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_goal_chn_red_military_factories
 		prerequisite = {
 			focus = FBK_red_army
 		}
@@ -1811,6 +1781,18 @@ focus_tree = {
 		y = 7
 		cost = 10
 		completion_reward = {
+				if = {
+			 limit = {
+			 has_idea = agrarian_society
+			 }
+			 add_stability = -0.10
+			}
+			else_if = {
+			 limit = {
+			 has_idea = pre_industrial_society
+			 }
+			 add_stability = -0.05
+			}
 			603 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -1829,15 +1811,28 @@ focus_tree = {
 			}
 		}
 	}
-	
+		focus = {
+		id = FBK_NESU
+		icon = GFX_goal_support_fourth_int
+		prerequisite = {
+			focus = FBK_new_manifesto
+		}
+
+		x = 21
+		y = 9
+		cost = 10
+		completion_reward = {
+			create_faction = "N.E.S.U."
+		}
+	}
 	focus = {
 		id = FBK_looking_outward
 		icon = GFX_goal_anschluss
 		prerequisite = {
-			focus = FBK_new_manifesto
+			focus = FBK_NESU
 		}
 		x = 21
-		y = 9
+		y = 10
 		cost = 10
 		completion_reward = {
 			add_stability = 0.1
@@ -1860,7 +1855,7 @@ focus_tree = {
 			}
 		}
 		x = 19
-		y = 10
+		y = 11
 		cost = 10
 		completion_reward = {
 			if = {
@@ -1900,7 +1895,7 @@ focus_tree = {
 			}
 		}
 		x = 23
-		y = 10
+		y = 11
 		cost = 10
 		completion_reward = {
 			if = {
@@ -1941,7 +1936,7 @@ focus_tree = {
 		}
 		will_lead_to_war_with = MNC
 		x = 19
-		y = 11
+		y = 12
 		cost = 10
 		completion_reward = {
 			if = {
@@ -1983,7 +1978,7 @@ focus_tree = {
 		will_lead_to_war_with = HLQ
 		
 		x = 23
-		y = 11
+		y = 12
 		cost = 10
 		completion_reward = {
 			create_wargoal = {
@@ -1993,42 +1988,7 @@ focus_tree = {
 		}
 	}
 	
-	focus = {
-		id = FBK_NESU
-		icon = GFX_goal_support_fourth_int
-		prerequisite = {
-			focus = FBK_crush_sunstriker
-		}
-		prerequisite = {
-			focus = FBK_crush_knights
-		}
-		available = {
-			OR = {
-				AND = {
-					HLQ = { OR = { is_subject_of = ROOT is_in_faction_with = ROOT has_country_flag = accepted_NESU }}
-					MNC = { OR = { is_subject_of = ROOT is_in_faction_with = ROOT has_country_flag = accepted_NESU } }
-				}
-				AND = {
-					owns_state = 581
-					owns_state = 537
-				}
-			}
-		}
-		x = 21
-		y = 12
-		cost = 10
-		completion_reward = {
-			create_faction = "N.E.S.U."
-			every_other_country = {
-				limit = {
-					has_country_flag = accepted_NESU
-				}
-				ROOT = {
-					add_to_faction = PREV
-				}
-			}
-		}
-	}
+
 	
 	focus = {
 		id = FBK_economic_dev
@@ -2036,10 +1996,19 @@ focus_tree = {
 		prerequisite = {
 			focus = FBK_NESU
 		}
-		x = 18
-		y = 13
-		cost = 20
-		
+		x = 21
+		y = 11
+		cost = 10
+		ai_will_do = {
+		 factor = 1
+		 modifier = {
+			num_faction_members < 1
+			factor = 0
+		 }
+		}
+		available = {
+			is_faction_leader = yes
+		}
 		completion_reward = {
 			every_other_country = {
 				limit = {
@@ -2049,12 +2018,12 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = arms_factory
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 					add_building_construction = {
 						type = industrial_complex
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -2066,11 +2035,14 @@ focus_tree = {
 		id = FBK_arm_revolution
 		icon = GFX_goal_HOL_military_union
 		prerequisite = {
-			focus = FBK_NESU
+			focus = FBK_looking_outward
 		}
-		x = 24
-		y = 13
-		cost = 20
+		x = 21
+		y = 12
+		cost = 10
+		available = {
+			is_faction_leader = yes
+		}
 		completion_reward = {
 			every_other_country = {
 				limit = {
@@ -2085,7 +2057,8 @@ focus_tree = {
 		id = FBK_strike_empire
 		icon = GFX_goal_generic_major_war
 		prerequisite = {
-			focus = FBK_NESU
+			focus = FBK_crush_knights
+			focus = FBK_crush_sunstriker
 		}
 		will_lead_to_war_with = GRI
 		mutually_exclusive = {
@@ -2106,7 +2079,8 @@ focus_tree = {
 		id = FBK_workers_paradise
 		icon = GFX_goal_continuous_boost_freedom
 		prerequisite = {
-			focus = FBK_NESU
+			focus = FBK_crush_knights
+			focus = FBK_crush_sunstriker
 		}
 		will_lead_to_war_with = GRI
 		mutually_exclusive = {
@@ -2162,7 +2136,7 @@ focus_tree = {
 	
 	focus = {
 		id = FBK_peace
-		icon = GFX_goal_continuous_increase_nu
+		icon = GFX_goal_break_rifle
 		prerequisite = { focus = FBK_tribal }
 		x = 25
 		y = 7

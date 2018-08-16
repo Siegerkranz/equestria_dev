@@ -1,5 +1,7 @@
 ﻿add_namespace = equestria
 add_namespace = equestriachn
+add_namespace = equestria_flavour
+
 country_event = {
 	id = equestria.1
 	immediate = {log = "[Root.GetName]: event equestria.1"}#Auto-logging
@@ -1081,9 +1083,9 @@ country_event = { #### Civil War EQS Events: Confederates Break Free
 				#add_ideas = communist_civil_war
 				country_event = civwar.110
 				country_event = { id = civwar.2 days = 7 }
-				change_tag_from = ROOT
 			}
 		}
+		SCS = { change_tag_from = ROOT }
 	}
 }
 country_event = { #### 1st Focus
@@ -1156,6 +1158,7 @@ country_event = { #### 1st Focus
 		controls_state = 45
 		controls_state = 72
 	}
+	
 	fire_only_once = yes
 	option = { ##
 		name = equestria.38.a
@@ -1166,6 +1169,15 @@ country_event = { #### 1st Focus
 			hidden_effect = {
 				country_event = civwar.110
 				country_event = { id = civwar.3 days = 7 }
+				CHN = {
+					if = {
+						limit = {
+							exists = yes
+							has_completed_focus = demand_equestria
+						}
+						country_event = { id = changelings.10 days = 1 }
+					}
+				}
 			}
 		}
 	}
@@ -1304,12 +1316,12 @@ country_event = { #### Civil War EQS Events: Confederates Break Free
 				add_state_core = 43
 				add_state_core = 91
 				add_state_core = 49
-				change_tag_from = ROOT
 				#add_ideas = eqs_civil_war
 				country_event = civwar.110
 				country_event = { id = civwar.2 days = 7 }
 			}
 		}
+		SCS = { change_tag_from = ROOT }
 	}
 }
 country_event = { #### 1st Focus
@@ -1419,6 +1431,7 @@ country_event = { #### Celestia Abdicates
 			retire_country_leader = yes
 		}
 		add_stability = -0.1
+		remove_ideas = alicorn_sisters
 		create_country_leader = {
 			name = "Princess Luna"
 			desc = "LUNA_DESC"
@@ -1436,7 +1449,11 @@ country_event = { #### Celestia Abdicates
 		trigger = { has_unit_leader = 9999 }
 		hidden_effect = { retire_country_leader = yes }
 		add_stability = -0.1
-		remove_unit_leader = 9999
+		if = {
+			limit = { has_unit_leader = 9999 }
+			remove_unit_leader = 9999
+		}
+		remove_ideas = alicorn_sisters
 		create_country_leader = {
 			name = "Princess Luna"
 			desc = "LUNA_DESC"
@@ -1690,7 +1707,7 @@ country_event = { #### Return of Sombra
 	is_triggered_only = yes
 
 	option = { ## Ask to join
-		name = equestria.54.a
+		name = equestria.54.b
 		random_other_country = {
 			limit = {
 				original_tag = CRY
@@ -1701,7 +1718,7 @@ country_event = { #### Return of Sombra
 		ai_chance = { factor = 50 }
 	}
 	option = { ## Ask to join
-		name = equestria.54.b
+		name = equestria.54.a
 		add_ideas = sombra_defenses
 		ai_chance = { factor = 50 }
 	}
@@ -2249,12 +2266,13 @@ country_event = {
 		has_idea = alicorn_sisters
 		has_country_flag = nightmare_moon
 		has_war = no
+		NOT = { has_country_leader = { ruling_only = yes name = "Princess Luna" } }
 	}
 
 	immediate = {
 		hidden_effect = {
 			clr_country_flag = nightmare_moon
-			modify_country_flag = { flag = celestia_evil_meter value = 10 }
+			modify_country_flag = { flag = celestia_evil_meter value = 12 }
 		}
 	}
 
@@ -2271,13 +2289,12 @@ country_event = {
 			news_event = { hours = 6 id = news.200 }
 			EQS_NLR_civil_war = yes
 			NLR = {
-				add_threat = 25
 				country_event = civwar.110
 				change_tag_from = ROOT
-			}
-			if = {
-				limit = { is_ai = yes }
-				Evil_unicorn_magic = yes
+				if = {
+					limit = { is_ai = yes }
+					Evil_unicorn_magic = yes
+				}
 			}
 		}
 		custom_effect_tooltip = luna_chosen
@@ -2291,12 +2308,11 @@ country_event = {
 			news_event = { hours = 6 id = news.200 }
 			EQS_NLR_civil_war = yes
 			NLR = {
-				add_threat = 25
 				country_event = civwar.110
-			}
-			if = {
-				limit = { is_ai = yes }
-				Evil_unicorn_magic = yes
+				if = {
+					limit = { is_ai = yes }
+					Evil_unicorn_magic = yes
+				}
 			}
 		}
 	}
@@ -2348,7 +2364,10 @@ country_event = { #### Civil War EQS Events: Remove Luna
 
 	option = {
 		name = equestria.104.a
-		remove_unit_leader = 9999
+		if = {
+			limit = { has_unit_leader = 9999 }
+			remove_unit_leader = 9999
+		}
 	}
 }
 country_event = { #### Prior NLR EVENT
@@ -2584,8 +2603,8 @@ country_event = { #### Civil War EQS Events: Confederates Break Free
 				country_event = civwar.110
 				country_event = { id = civwar.2 days = 7 }
 			}
-			SCS = { change_tag_from = ROOT }
 		}
+		SCS = { change_tag_from = ROOT }
 	}
 }
 country_event = { #### Civil War EQS Events: Vanhoover Breaks Free
@@ -2612,7 +2631,6 @@ country_event = { #### Civil War EQS Events: Vanhoover Breaks Free
 	}
 	mean_time_to_happen = { days = 15 }
 	fire_only_once = yes
-
 	option = {
 		name = equestria.106.a
 		hidden_effect = {
@@ -2621,6 +2639,15 @@ country_event = { #### Civil War EQS Events: Vanhoover Breaks Free
 				transfer_state = 14
 				transfer_state = 45
 				country_event = civwar.110
+			}
+			CHN = {
+				if = {
+					limit = {
+						exists = yes
+						has_completed_focus = demand_equestria
+					}
+					country_event = { id = changelings.10 days = 1 }
+				}
 			}
 		}
 	}
@@ -2633,9 +2660,18 @@ country_event = { #### Civil War EQS Events: Vanhoover Breaks Free
 				transfer_state = 14
 				transfer_state = 45
 				country_event = civwar.110
-				change_tag_from = ROOT
+			}
+			CHN = {
+				if = {
+					limit = {
+						exists = yes
+						has_completed_focus = demand_equestria
+					}
+					country_event = { id = changelings.10 days = 1 }
+				}
 			}
 		}
+		VAN = { change_tag_from = ROOT }
 	}
 }
 country_event = { #### Civil War EQS Events: Tall Tales Counterrevolt
@@ -3701,7 +3737,6 @@ country_event = { ## Conscription
 	option = {
 		name = equestria.139.a
 		add_political_power = 20
-		hidden_effect = { clr_country_flag = manpower_laws_blocked }
 		ai_chance = {
 			factor = 5
 			modifier = {
@@ -5153,5 +5188,158 @@ country_event ={
 
 	option = {
 		add_to_tech_sharing_group = equestrian_research
+	}
+}
+### Fall of Acornage
+country_event = {
+	id = equestria_flavour.1
+	immediate = {
+	log = "[Root.GetName]: event equestria_flavour.1"
+	136 = { set_state_flag = acornage_taken_chn }
+	136 = { set_state_flag = acornage_taken_chn_timeout }
+	}
+	title = equestria_flavour.1.t
+	desc = equestria_flavour.1.d
+	picture = GFX_event_apartment_club
+	fire_only_once = yes
+	trigger = {
+		tag = EQS
+		has_war_with = CHN
+		136 = {
+			is_controlled_by = CHN
+			is_owned_by = EQS
+		}
+		NOT = {
+			has_government = fascism
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = equestria_flavour.1.a
+		add_stability = -0.015
+		hidden_effect = {
+			country_event = { days = 70 id = utility.4 }
+		}
+	}
+}
+country_event = {
+	id = equestria_flavour.2
+	immediate = {
+	log = "[Root.GetName]: event equestria_flavour.2"
+	136 = { clr_state_flag = acornage_taken_chn }
+	}
+	title = equestria_flavour.2.t
+	desc = equestria_flavour.2.d
+	picture = GFX_event_apartment_club
+	fire_only_once = yes
+	trigger = {
+		tag = EQS
+		has_war_with = CHN
+		136 = {
+			is_controlled_by = EQS
+			is_owned_by = EQS
+			has_state_flag = acornage_taken_chn
+			NOT = { has_state_flag = acornage_taken_chn_timeout }
+		}
+		NOT = {
+			has_government = fascism
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = equestria_flavour.2.a
+		add_stability = 0.01
+	}
+}
+## Liberation of Tall Tales
+country_event = {
+	id = equestria_flavour.3
+	immediate = {log = "[Root.GetName]: event equestria_flavour.3"}
+	title = equestria_flavour.3.t
+	desc = equestria_flavour.3.d
+	picture = GFX_event_apartment_club
+	fire_only_once = yes
+	trigger = {
+		tag = EQS
+		has_war_with = CHN
+		has_global_flag = fall_of_tall_tales_chn
+		59 = {
+			is_controlled_by = EQS
+			is_owned_by = EQS
+			NOT = { has_state_flag = tall_tales_taken_chn_timeout }
+		}
+		NOT = {
+			has_government = fascism
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = equestria_flavour.3.a
+		add_stability = 0.01
+	}
+}
+## Liberation of Vanhoover
+country_event = {
+	id = equestria_flavour.4
+	immediate = {log = "[Root.GetName]: event equestria_flavour.4"}
+	title = equestria_flavour.4.t
+	desc = {
+		text = equestria_flavour.4.d_princess
+		trigger = { has_country_leader = { ruling_only = yes name = "Princess Celestia"} }
+	}
+	desc = {
+		text = equestria_flavour.4.d_com
+		trigger = { has_government = communism }
+	}
+	desc = {
+		text = equestria_flavour.4.d_rest
+		trigger = { NOT = {
+			has_country_leader = { ruling_only = yes name = "Princess Celestia"}
+			has_government = communism
+		} }
+	}
+	picture = GFX_event_apartment_club
+	fire_only_once = yes
+	trigger = {
+		tag = EQS
+		has_war_with = CHN
+		14 = {
+			is_controlled_by = EQS
+			is_owned_by = EQS
+			has_state_flag = vanhoover_taken_chn
+			NOT = { has_state_flag = vanhoover_taken_chn_timeout }
+		}
+		NOT = {
+			has_government = fascism
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = equestria_flavour.4.a_princess
+		trigger = { has_country_leader = { ruling_only = yes name = "Princess Celestia"} }
+		add_stability = 0.01
+	}
+	option = {
+		name = equestria_flavour.4.a_com
+		trigger = { has_government = communism }
+		add_stability = 0.01
+	}
+	option = {
+		name = equestria_flavour.4.a_rest
+		trigger = {
+			NOT = {
+				has_country_leader = { ruling_only = yes name = "Princess Celestia"}
+				has_government = communism
+			}
+		}
+		add_stability = 0.01
 	}
 }

@@ -349,6 +349,10 @@ GRI_SUBJECT = {
 	color = rgb { 229 138 47 }
 	color_ui = rgb { 229 138 47 }
 }
+FEA_PvdA_old_flag_GRI_Puppet = {
+	color = rgb { 229 138 47 }
+	color_ui = rgb { 229 138 47 }
+}
 GRIF_REPUBLIC = {
 	color = rgb { 212 123 64  }
 	color_ui = rgb { 212 123 64 }
@@ -456,4 +460,28 @@ LCT_prince_ally = {
 LCT_prince_army_ally = {
 	color = rgb { 58 190 95 }
 	color_ui = rgb { 58 190 95 }
+}
+FEA_c_takeover_tag = {
+color = rgb { 242 71 94 }
+color_ui = rgb { 242 71 94 }
+}
+FEA_nazbol_takeover_tag = {
+color = rgb { 83 0 0 }
+color_ui = rgb { 83 0 0 }
+}
+RCT_YUGO = {
+	color = rgb { 170 64 86 }
+	color_ui = rgb { 170 64 86 }
+}
+LUS_civil_war = {
+	color = rgb { 160 170 160 }
+	color_ui = rgb { 160 170 160 }
+}
+LUS_kingdom = {
+	color = rgb { 190 226 172 }
+	color_ui = rgb { 190 226 172 }
+}
+LUS_prywhen_kingdom = {
+	color = rgb { 190 226 172 }
+	color_ui = rgb { 190 226 172 }
 }

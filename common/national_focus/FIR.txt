@@ -11,8 +11,11 @@ focus_tree = {
 	}
 	continuous_focus_position = { x = 50 y = 1475 }
 	
-	shared_focus = FBK_start_modernise
-	shared_focus = FBK_buy_guns
+	shared_focus = FBK_gradual_approach
+	shared_focus = FBK_rapid_industrialisation
+	shared_focus = FBK_standard_recruitment
+	shared_focus = FBK_state_weaponry
+	shared_focus = FBK_proper_pay
 	shared_focus = FBK_navy
 	shared_focus = FBK_airforce
 	
@@ -345,7 +348,7 @@ focus_tree = {
 		available = {
 			has_government = democratic
 		}
-		x = 7
+		x = 8
 		y = 6
 		cost = 10
 		completion_reward = {
@@ -616,7 +619,7 @@ focus_tree = {
 		prerequisite = {
 			focus = FIR_harmony_isolation
 		}
-		x = 6
+		x = 7
 		y = 7
 		cost = 10
 		completion_reward = {
@@ -630,7 +633,7 @@ focus_tree = {
 		prerequisite = {
 			focus = FIR_harmony_isolation
 		}
-		x = 8
+		x = 9
 		y = 7
 		cost = 10
 		completion_reward = {
@@ -655,7 +658,7 @@ focus_tree = {
 		prerequisite = {
 			focus = FIR_guardians_of_peace
 		}
-		x = 7
+		x = 8
 		y = 8
 		cost = 10
 		completion_reward = {

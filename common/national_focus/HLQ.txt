@@ -2805,10 +2805,9 @@ focus = {
 		cost = 8.00
 		available = { 
 		OR = {
-		has_completed_focus = HLQ_enter_industrial_age
-		has_completed_focus = HLQ_industrial_revolution
-		has_completed_focus = HLQ_the_industrial_revolution
-		   }
+		has_idea = outdated_industry
+		has_idea = modern_society
+		    }
 		}
 
 		ai_will_do = {

@@ -46,6 +46,13 @@ shared_focus = {
 			tag = LCT
 		}
 	}
+	offset = {
+		x = 13
+		y = 0
+		trigger = {
+			tag = DMT
+		}
+	}
 
 	allow_branch = {
 		is_river_fed_member = yes
@@ -54,13 +61,13 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
-		factor = 2
+		factor = 4
 		modifier = {
-			factor = 3
+			factor = 2
 			original_tag = LCT
 		}
 		modifier = {
-			factor = 3
+			factor = 2
 			original_tag = RCT
 		}
 		modifier = {
@@ -103,7 +110,7 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
 		modifier = {
 			factor = 3
 			original_tag = LCT
@@ -168,7 +175,7 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
 		modifier = {
 			factor = 3
 			original_tag = LCT
@@ -194,8 +201,8 @@ shared_focus = {
 
 	available = {
 		num_of_civilian_factories > 5
-		has_tribal_society = no
-		has_agrarian_society = no
+		does_not_have_tribal_society = yes
+		does_not_have_agrarian_society = yes
 	}
 	
 	bypass = {
@@ -243,7 +250,7 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
 		modifier = {
 			factor = 3
 			original_tag = LCT
@@ -263,8 +270,8 @@ shared_focus = {
 	available = {
 		NOT = { original_tag = DEP }
 		num_of_civilian_factories > 5
-		has_tribal_society = no
-		has_agrarian_society = no
+		does_not_have_tribal_society = yes
+		does_not_have_agrarian_society = yes
 	}
 	
 	bypass = {
@@ -335,7 +342,7 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
 		modifier = {
 			factor = 3
 			original_tag = LCT
@@ -355,8 +362,8 @@ shared_focus = {
 	available = {
 		NOT = { original_tag = DEP }
 		num_of_civilian_factories > 5
-		has_tribal_society = no
-		has_agrarian_society = no
+		does_not_have_tribal_society = yes
+		does_not_have_agrarian_society = yes
 	}
 	
 	bypass = {
@@ -424,7 +431,7 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
 		modifier = {
 			factor = 3
 			original_tag = LCT
@@ -444,8 +451,8 @@ shared_focus = {
 	available = {
 		NOT = { original_tag = DEP }
 		num_of_civilian_factories > 5
-		has_tribal_society = no
-		has_agrarian_society = no
+		does_not_have_tribal_society = yes
+		does_not_have_agrarian_society = yes
 	}
 	
 	bypass = {
@@ -489,7 +496,7 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
 		modifier = {
 			factor = 1.5
 			original_tag = LCT
@@ -513,8 +520,8 @@ shared_focus = {
 	available = {
 		NOT = { original_tag = FRE }
 		num_of_civilian_factories > 5
-		has_tribal_society = no
-		has_agrarian_society = no
+		does_not_have_tribal_society = yes
+		does_not_have_agrarian_society = yes
 	}
 	
 	bypass = {
@@ -582,7 +589,7 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
 		modifier = {
 			factor = 2
 			original_tag = LCT
@@ -606,8 +613,8 @@ shared_focus = {
 	available = {
 		NOT = { original_tag = FRE }
 		num_of_civilian_factories > 5
-		has_tribal_society = no
-		has_agrarian_society = no
+		does_not_have_tribal_society = yes
+		does_not_have_agrarian_society = yes
 	}
 	
 	bypass = {
@@ -671,7 +678,7 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
 		modifier = {
 			factor = 2
 			original_tag = LCT
@@ -695,8 +702,8 @@ shared_focus = {
 	available = {
 		NOT = { original_tag = FRE }
 		num_of_civilian_factories > 5
-		has_tribal_society = no
-		has_agrarian_society = no
+		does_not_have_tribal_society = yes
+		does_not_have_agrarian_society = yes
 	}
 	
 	bypass = {
@@ -737,7 +744,7 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
-		factor = 2
+		factor = 3
 		modifier = {
 			factor = 2
 			original_tag = LCT
@@ -763,8 +770,8 @@ shared_focus = {
 
 	available = {
 		num_of_civilian_factories > 5
-		has_tribal_society = no
-		has_agrarian_society = no
+		does_not_have_tribal_society = yes
+		does_not_have_agrarian_society = yes
 	}
 	
 	bypass = {
@@ -811,7 +818,7 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
-		factor = 2
+		factor = 3
 		modifier = {
 			factor = 2
 			original_tag = LCT
@@ -839,8 +846,8 @@ shared_focus = {
 		has_idea = RIV_rcsc_member
 		has_idea = RIV_rdc
 		num_of_civilian_factories > 5
-		has_tribal_society = no
-		has_agrarian_society = no
+		does_not_have_tribal_society = yes
+		does_not_have_agrarian_society = yes
 	}
 	
 	bypass = {
@@ -884,7 +891,7 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
-		factor = 4
+		factor = 5
 	}
 
 	available = {
@@ -930,7 +937,7 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
-		factor = 4
+		factor = 5
 	}
 
 	available = {
@@ -991,7 +998,7 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
-		factor = 4
+		factor = 5
 	}
 
 	available = {
@@ -1054,7 +1061,7 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
-		factor = 2
+		factor = 3
 		modifier = {
 			factor = 2
 			original_tag = LCT
@@ -1081,13 +1088,13 @@ shared_focus = {
 	available = {
 		has_idea = RIV_rdc
 		num_of_civilian_factories > 5
-		has_tribal_society = no
-		has_agrarian_society = no
+		does_not_have_tribal_society = yes
+		does_not_have_agrarian_society = yes
 	}
 	
 	bypass = {
 		any_other_country = {
-			has_completed_focus = RIV_found_the_rdc
+			has_completed_focus = RIV_eastern_transport_fund
 		}
 	}
 
@@ -1133,7 +1140,7 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
-		factor = 2
+		factor = 3
 		modifier = {
 			factor = 2
 			original_tag = LCT
@@ -1159,8 +1166,8 @@ shared_focus = {
 	available = {
 		has_idea = RIV_rec_member1
 		num_of_civilian_factories > 5
-		has_tribal_society = no
-		has_agrarian_society = no
+		does_not_have_tribal_society = yes
+		does_not_have_agrarian_society = yes
 	}
 	
 	bypass = {
@@ -1204,7 +1211,7 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
 		modifier = {
 			factor = 2
 			original_tag = LCT
@@ -1230,8 +1237,8 @@ shared_focus = {
 	}
 
 	available = {
-		has_tribal_society = no
-		has_agrarian_society = no
+		does_not_have_tribal_society = yes
+		does_not_have_agrarian_society = yes
 	}
 	
 	bypass = {
@@ -1276,7 +1283,7 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
-		factor = 2
+		factor = 3
 		modifier = {
 			factor = 2
 			original_tag = LCT
@@ -1305,8 +1312,8 @@ shared_focus = {
 		has_idea = RIV_rec_member2
 		has_idea = RIV_rdc2
 		num_of_civilian_factories > 5
-		has_tribal_society = no
-		has_agrarian_society = no
+		does_not_have_tribal_society = yes
+		does_not_have_agrarian_society = yes
 	}
 	
 	bypass = {
@@ -1351,7 +1358,7 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
-		factor = 2
+		factor = 3
 		modifier = {
 			factor = 2
 			original_tag = LCT
@@ -1379,8 +1386,8 @@ shared_focus = {
 	available = {
 		has_idea = RIV_rec_member3
 		num_of_civilian_factories > 5
-		has_tribal_society = no
-		has_agrarian_society = no
+		does_not_have_tribal_society = yes
+		does_not_have_agrarian_society = yes
 	}
 	
 	bypass = {
@@ -1425,7 +1432,7 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
-		factor = 2
+		factor = 3
 		modifier = {
 			factor = 2
 			original_tag = LCT
@@ -1452,8 +1459,8 @@ shared_focus = {
 
 	available = {
 		num_of_civilian_factories > 10
-		has_tribal_society = no
-		has_agrarian_society = no
+		does_not_have_tribal_society = yes
+		does_not_have_agrarian_society = yes
 	}
 	
 	bypass = {
@@ -1494,7 +1501,7 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
-		factor = 2
+		factor = 3
 		modifier = {
 			factor = 2
 			original_tag = LCT
@@ -1522,8 +1529,8 @@ shared_focus = {
 	available = {
 		has_idea = RIV_centeral_bank_idea
 		num_of_civilian_factories > 10
-		has_tribal_society = no
-		has_agrarian_society = no
+		does_not_have_tribal_society = yes
+		does_not_have_agrarian_society = yes
 	}
 	
 	bypass = {
@@ -1570,7 +1577,7 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
-		factor = 2
+		factor = 3
 		modifier = {
 			factor = 2
 			original_tag = LCT
@@ -1599,8 +1606,8 @@ shared_focus = {
 		has_idea = RIV_rec_member4
 		has_idea = RIV_rivbit_idea
 		num_of_civilian_factories > 10
-		has_tribal_society = no
-		has_agrarian_society = no
+		does_not_have_tribal_society = yes
+		does_not_have_agrarian_society = yes
 	}
 	
 	bypass = {
@@ -1635,7 +1642,7 @@ shared_focus = {
 
 shared_focus = {
 	id = RIV_river_army
-	icon = GFX_goal_constitutional_guarantees
+	icon = GFX_focus_generic_little_entente
 	prerequisite = { focus = RIV_the_river_union }
 	x = -1
 	y = 1
@@ -1644,7 +1651,7 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
-		factor = 2
+		factor = 3
 		modifier = {
 			factor = 2
 			original_tag = LCT
@@ -1678,8 +1685,8 @@ shared_focus = {
 			}	
 		}
 		num_of_civilian_factories > 10
-		has_tribal_society = no
-		has_agrarian_society = no	
+		does_not_have_tribal_society = yes
+		does_not_have_agrarian_society = yes	
 	}
 	
 	bypass = {
@@ -1714,7 +1721,7 @@ shared_focus = {
 
 shared_focus = {
 	id = RIV_river_government
-	icon = GFX_goal_constitutional_guarantees
+	icon = GFX_goal_government_icon
 	prerequisite = { focus = RIV_the_river_union }
 	x = 1
 	y = 1
@@ -1723,7 +1730,7 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
-		factor = 2
+		factor = 3
 		modifier = {
 			factor = 2
 			original_tag = LCT
@@ -1751,8 +1758,8 @@ shared_focus = {
 	available = {
 		has_idea = RIV_river_union_member1
 		num_of_civilian_factories > 10
-		has_tribal_society = no
-		has_agrarian_society = no
+		does_not_have_tribal_society = yes
+		does_not_have_agrarian_society = yes
 	}
 	
 	bypass = {
@@ -1788,7 +1795,7 @@ shared_focus = {
 
 shared_focus = {
 	id = RIV_the_federation
-	icon = GFX_goal_constitutional_guarantees
+	icon = GFX_focus_chi_examination_yuan
 	prerequisite = { focus = RIV_river_government }
 	prerequisite = { focus = RIV_river_army }
 	x = 1
@@ -1798,7 +1805,7 @@ shared_focus = {
 	cost = 20
 
 	ai_will_do = {
-		factor = 2
+		factor = 3
 		modifier = {
 			factor = 2
 			original_tag = LCT
@@ -1866,7 +1873,7 @@ shared_focus = {
 			country_event = riverfed.25
 		}
 
-		#hidden_effect = {
+		hidden_effect = {
 			every_other_country = {
 				limit = { is_in_faction_with = ROOT }
 				set_country_flag = riv_fed_faction_member
@@ -1878,10 +1885,279 @@ shared_focus = {
 				clr_country_flag = riv_fed_faction_member
 				ROOT = { add_to_faction = PREV }
 			} 
-		#}
+		}
 		effect_tooltip = {
 			create_faction = river_united_faction
 		}
+	}
+}
+
+shared_focus = {
+	id = RIV_atomic_energy_community
+	icon = GFX_focus_wonderweapons
+	prerequisite = { focus = RIV_the_federation }
+	x = 2
+	y = 1
+	relative_position_id = RIV_the_federation
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 4
+	}
+
+	available = {
+
+	}
+	
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+		add_research_slot = 1
+		add_tech_bonus = {
+			name = RIV_atomic_energy_community
+			bonus = 0.5
+			uses = 2
+			category = nuclear
+		}
+	}
+}
+
+shared_focus = {
+	id = RIV_pacify_the_south
+	icon = GFX_goal_generic_major_war
+	prerequisite = { focus = RIV_the_federation }
+	x = 0
+	y = 1
+	relative_position_id = RIV_the_federation
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+
+	}
+	
+	bypass = {
+		BAR = {
+			OR = {
+				exists = no
+				has_government = democratic
+				is_in_faction_with = ROOT
+			}
+		}
+		ZES = {
+			OR = {
+				exists = no
+				has_government = democratic
+				is_in_faction_with = ROOT
+			}
+		}
+		OLV = {
+			OR = {
+				exists = no
+				has_government = democratic
+				is_in_faction_with = ROOT
+			}
+		}
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+		if = {
+			limit = {
+				BAR = {
+					exists = yes
+					NOT = {
+						has_government = democratic						
+					}
+					NOT = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BAR
+			}
+		}
+		if = {
+			limit = {
+				ZES = {
+					exists = yes
+					NOT = {
+						has_government = democratic						
+					}
+					NOT = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = ZES
+			}
+		}
+		if = {
+			limit = {
+				OLV = {
+					exists = yes
+					NOT = {
+						has_government = democratic						
+					}
+					NOT = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = OLV
+			}
+		}
+		
+	}
+}
+
+shared_focus = {
+	id = RIV_pacify_the_north
+	icon = GFX_focus_generic_strike_at_democracy1
+	prerequisite = { focus = RIV_the_federation }
+	x = -2
+	y = 1
+	relative_position_id = RIV_the_federation
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+
+	}
+	
+	bypass = {
+		FBK = {
+			OR = {
+				exists = no
+				has_government = democratic
+				is_in_faction_with = ROOT
+			}
+		}
+		FIR = {
+			OR = {
+				exists = no
+				has_government = democratic
+				is_in_faction_with = ROOT
+			}
+		}
+		WAT = {
+			OR = {
+				exists = no
+				has_government = democratic
+				has_government = communism
+				is_in_faction_with = ROOT
+			}
+		}
+		NCH = {
+			OR = {
+				exists = no
+				has_government = democratic
+				has_government = communism
+				is_in_faction_with = ROOT
+			}
+		}
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+		if = {
+			limit = {
+				FBK = {
+					exists = yes
+					NOT = {
+						has_government = democratic
+					}
+					NOT = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = FBK
+			}
+		}
+		if = {
+			limit = {
+				FIR = {
+					exists = yes
+					NOT = {
+						has_government = democratic						
+					}
+					NOT = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = FIR
+			}
+		}
+		if = {
+			limit = {
+				WAT = {
+					exists = yes
+					NOT = {
+						has_government = democratic
+					}
+					NOT = {
+						has_government = communism
+					}
+					NOT = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = WAT
+			}
+		}
+		if = {
+			limit = {
+				NCH = {
+					exists = yes
+					NOT = {
+						has_government = democratic
+					}
+					NOT = {
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = NCH
+			}
+		}		
 	}
 }
 
@@ -1900,7 +2176,7 @@ shared_focus = {
 	cost = 5
 
 	ai_will_do = {
-		factor = 2
+		factor = 3
 		modifier = {
 			factor = 1.5
 			original_tag = LCT
@@ -2028,12 +2304,12 @@ shared_focus = {
 			original_tag = FIR
 		}
 		num_of_civilian_factories > 5
-		has_tribal_society = no
-		has_agrarian_society = no
+		does_not_have_tribal_society = yes
+		does_not_have_agrarian_society = yes
 	}
 	
 	ai_will_do = {
-		factor = 2
+		factor = 3
 		modifier = {
 			factor = 1.5
 			original_tag = LCT
@@ -2134,12 +2410,12 @@ shared_focus = {
 			original_tag = FBK
 		}
 		num_of_civilian_factories > 5
-		has_tribal_society = no
-		has_agrarian_society = no
+		does_not_have_tribal_society = yes
+		does_not_have_agrarian_society = yes
 	}
 	
 	ai_will_do = {
-		factor = 2
+		factor = 3
 		modifier = {
 			factor = 2
 			original_tag = LCT
@@ -2241,11 +2517,11 @@ shared_focus = {
 			original_tag = WAT
 		}
 		num_of_civilian_factories > 5
-		has_tribal_society = no
-		has_agrarian_society = no
+		does_not_have_tribal_society = yes
+		does_not_have_agrarian_society = yes
 	}
 	ai_will_do = {
-		factor = 2
+		factor = 3
 		modifier = {
 			factor = 1.5
 			original_tag = LCT
@@ -2349,7 +2625,7 @@ shared_focus = {
 	}
 
 	ai_will_do = {
-		factor = 2
+		factor = 3
 		modifier = {
 			factor = 2
 			original_tag = LCT

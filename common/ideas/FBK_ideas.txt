@@ -376,6 +376,438 @@ ideas = {
 		}
 	}
 	country = {
+	
+	FBK_army_loyalty_low = {
+		allowed = {
+		 OR = {
+			original_tag = FBK
+			original_tag = FIR
+			original_tag = WAT
+		 }
+		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		modifier = {
+		 political_power_gain = -0.05
+		}
+		picture = GFX_idea_chi_war_of_resistance3
+	}
+	FBK_army_loyalty_medium = {
+		allowed = {
+		 OR = {
+			original_tag = FBK
+			original_tag = FIR
+			original_tag = WAT
+		 }
+		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		picture = GFX_idea_chi_war_of_resistance2
+
+	}
+	FBK_army_loyalty_high = {
+		allowed = {
+		 OR = {
+			original_tag = FBK
+			original_tag = FIR
+			original_tag = WAT
+		 }
+		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		modifier = {
+		 political_power_gain = 0.05
+		}
+		picture = GFX_idea_chi_war_of_resistance
+	}
+	FBK_army_power_low = {
+		allowed = {
+		 OR = {
+			original_tag = FBK
+			original_tag = FIR
+			original_tag = WAT
+		 }
+		allowed_civil_war = {
+		 always = yes
+		}		
+		modifier = {
+			command_power_gain_mult = -0.1
+			experience_gain_army = -0.03
+			conscription_factor = -0.05
+		 }
+		}
+	}
+	FBK_army_power_medium = {
+		allowed = {
+		 OR = {
+			original_tag = FBK
+			original_tag = FIR
+			original_tag = WAT
+		 }
+		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+	}
+	FBK_army_power_high = {
+		allowed = {
+		 OR = {
+			original_tag = FBK
+			original_tag = FIR
+			original_tag = WAT
+		 }
+		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		modifier = {
+			command_power_gain_mult = 0.1
+			experience_gain_army = 0.03
+			conscription_factor = 0.05
+		}
+	}
+	
+	FBK_incompetent_generals = {
+		allowed = {
+			OR = {
+				original_tag = FBK
+				original_tag = FIR
+				original_tag = WAT
+			}
+		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		modifier = {
+		 command_power_gain_mult = -0.1
+		 max_command_power = -0.1
+		 max_planning = -0.1
+		 planning_speed = -0.1
+		}
+	}
+	
+	FBK_bright_generals = {
+		allowed = {
+			OR = {
+				original_tag = FBK
+				original_tag = FIR
+				original_tag = WAT
+			}
+		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		modifier = {
+		 command_power_gain_mult = 0.1
+		 max_command_power = 0.1
+		 max_planning = 0.1
+		 planning_speed = 0.1
+		}
+	}
+	
+		FBK_soldier_pay = {
+		allowed = {
+			OR = {
+				original_tag = FBK
+				original_tag = FIR
+				original_tag = WAT
+			}
+		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		modifier = {
+			consumer_goods_factor = 0.07
+		}
+	}
+	
+		FBK_soldier_pay2 = {
+		allowed = {
+			OR = {
+				original_tag = FBK
+				original_tag = FIR
+				original_tag = WAT
+			}
+		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		modifier = {
+			consumer_goods_factor = 0.14
+		}
+	}
+		FBK_soldier_pay3 = {
+		allowed = {
+			OR = {
+				original_tag = FBK
+				original_tag = FIR
+				original_tag = WAT
+			}
+		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		modifier = {
+			consumer_goods_factor = 0.21
+		}
+	}
+	FBK_slowed_modernisation = {
+			allowed = {
+			OR = {
+				original_tag = FBK
+				original_tag = FIR
+				original_tag = WAT
+			}
+		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+	}
+		FBK_lazy_soldiers = {
+		allowed = {
+			OR = {
+				original_tag = FBK
+				original_tag = FIR
+				original_tag = WAT
+			}
+		}
+		allowed_civil_war = {
+		 always = yes
+		}
+		modifier = {
+		 army_org_Factor = -0.05
+		 army_org_regain = -0.05
+		}
+	}
+
+	FBK_purged_communism = {
+		allowed = {
+			OR = {
+				original_tag = FBK
+				original_tag = FIR
+				original_tag = WAT
+			}
+		 has_government = communism
+		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+	 modifier = {
+	  	 command_power_gain_mult = -0.15
+		 max_command_power = -0.15
+		 max_planning = -0.15
+		 planning_speed = -0.15
+		 army_morale_factor = -0.10
+	 }	
+	}
+	
+	FBK_loyal_paramilitaries = {
+	 	allowed = {
+			OR = {
+				original_tag = FBK
+				original_tag = FIR
+				original_tag = WAT
+			}
+		 has_government = fascism
+		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+	 modifier = {
+		 army_morale_factor = 0.05
+		 conscription_factor = 0.05
+	 }	
+	}
+	
+	FBK_modernisation_resistance_1 = {
+		allowed = {
+			OR = {
+				original_tag = FBK
+				original_tag = FIR
+			}
+		}
+		modifier = {
+			production_speed_buildings_factor = -0.1
+			political_power_gain = -0.1
+			consumer_goods_factor = 0.1
+			conscription_factor = -0.05
+			stability_factor = -0.05
+			industrial_capacity_factory = -0.05
+		}
+		removal_cost = -1
+		picture = idea_chi_war_of_resistance
+	}
+	FBK_modernisation_resistance_2 = {
+		allowed = {
+			OR = {
+				original_tag = FBK
+				original_tag = FIR
+			}
+		}
+		modifier = {
+			production_speed_buildings_factor = -0.2
+			political_power_gain = -0.2
+			consumer_goods_factor = 0.2
+			conscription_factor = -0.10
+			stability_factor = -0.1
+			industrial_capacity_factory = -0.1
+		}
+		removal_cost = -1
+		picture = idea_chi_war_of_resistance
+	}
+	
+	FBK_modernisation_resistance_3 = {
+		allowed = {
+			OR = {
+				original_tag = FBK
+				original_tag = FIR
+			}
+		}
+		modifier = {
+			production_speed_buildings_factor = -0.3
+			political_power_gain = -0.3
+			consumer_goods_factor = 0.3
+			conscription_factor = -0.15
+			stability_factor = -0.15
+			industrial_capacity_factory = -0.15
+		}
+		removal_cost = -1
+		picture = idea_chi_war_of_resistance
+	}
+	
+	FBK_modernisation_resistance_4 = {
+		allowed = {
+			OR = {
+				original_tag = FBK
+				original_tag = FIR
+			}
+		}
+		modifier = {
+			production_speed_buildings_factor = -0.4
+			political_power_gain = -0.4
+			consumer_goods_factor = 0.4
+			conscription_factor = -0.20
+			stability_factor = -0.20
+			industrial_capacity_factory = -0.20
+		}
+		removal_cost = -1
+		picture = idea_chi_war_of_resistance2
+	}
+	FBK_modernisation_resistance_5 = {
+		allowed = {
+			OR = {
+				original_tag = FBK
+				original_tag = FIR
+			}
+		}
+		modifier = {
+			production_speed_buildings_factor = -0.5
+			political_power_gain = -0.5
+			consumer_goods_factor = 0.5
+			conscription_factor = -0.25
+			stability_factor = -0.25
+			industrial_capacity_factory = -0.25
+		}
+		removal_cost = -1
+		picture = idea_chi_war_of_resistance2
+	}
+	
+	FBK_modernisation_resistance_6 = {
+		allowed = {
+			OR = {
+				original_tag = FBK
+				original_tag = FIR
+			}
+		}
+		modifier = {
+			production_speed_buildings_factor = -0.6
+			political_power_gain = -0.6
+			consumer_goods_factor = 0.6
+			conscription_factor = -0.30
+			stability_factor = -0.3
+			industrial_capacity_factory = -0.3
+		}
+		removal_cost = -1
+		picture = idea_chi_war_of_resistance2
+	}
+
+	FBK_modernisation_resistance_7 = {
+		allowed = {
+			OR = {
+				original_tag = FBK
+				original_tag = FIR
+			}
+		}
+		modifier = {
+			production_speed_buildings_factor = -0.7
+			political_power_gain = -0.7
+			consumer_goods_factor = 0.7
+			conscription_factor = -0.35
+			stability_factor = -0.35
+			industrial_capacity_factory = -0.35
+		}
+		removal_cost = -1
+		picture = idea_chi_war_of_resistance3
+	}	
+	FBK_modernisation_resistance_8 = {
+		allowed = {
+			OR = {
+				original_tag = FBK
+				original_tag = FIR
+			}
+		}
+		modifier = {
+			production_speed_buildings_factor = -0.8
+			political_power_gain = -0.8
+			consumer_goods_factor = 0.8
+			conscription_factor = -0.4
+			stability_factor = -0.40
+			industrial_capacity_factory = -0.40
+		}
+		removal_cost = -1
+		picture = idea_chi_war_of_resistance3
+	}	
+	FBK_modernisation_resistance_9 = {
+		allowed = {
+			OR = {
+				original_tag = FBK
+				original_tag = FIR
+			}
+		}
+		modifier = {
+			production_speed_buildings_factor = -0.9
+			political_power_gain = -0.9
+			consumer_goods_factor = 0.9
+			conscription_factor = -0.45
+			stability_factor = -0.45
+			industrial_capacity_factory = -0.45
+		}
+		removal_cost = -1
+		picture = idea_chi_war_of_resistance3
+	}
+
+	FBK_modernisation_resistance_10 = {
+		allowed = {
+			OR = {
+				original_tag = FBK
+				original_tag = FIR
+			}
+		}
+		modifier = {
+			production_speed_buildings_factor = -1
+			political_power_gain = -1
+			consumer_goods_factor = -1
+			conscription_factor = -0.50
+			stability_factor = -0.50
+			industrial_capacity_factory = -0.50
+		}
+		removal_cost = -1
+		picture = idea_chi_war_of_resistance3
+	}		
+	
 		FBK_NCH_trade = {
 			allowed = {
 				OR = {
@@ -383,57 +815,149 @@ ideas = {
 					original_tag = NCH
 				}
 			}
+	allowed_civil_war = {
+		 always = yes
+	}
 			modifier = {
 				production_speed_buildings_factor = 0.1
 				local_resources_factor = 0.1
 				political_power_gain = 0.1
 			}
-			removal_cost = -1
-			
+
 		}
 		
 		FBK_tractors_idea = {
-		picture = idea_generic_exploit_mines
 		modifier = {		
 		local_resources_factor = 0.05
 		production_factory_max_efficiency_factor = 0.05
 		}
+		allowed_civil_war = { always = yes }
+		removal_cost = -1
+		picture = generic_exploit_mines
 		}
 		
-		FBK_crops_idea = {
+		FBK_crops_idea_weak = {
 		modifier = {
-		MONTHLY_POPULATION = 0.15
+		MONTHLY_POPULATION = 0.05
 		}
+		allowed_civil_war = { always = yes }
+		removal_cost = -1
+		picture = GRW_potato_farming
 		}
+		
+		FBK_crops_idea_medium = {
+		modifier = {
+		MONTHLY_POPULATION = 0.10
+		}
+		allowed_civil_war = { always = yes }
+		removal_cost = -1
+		picture = GRW_potato_farming
+		}
+		
+		FBK_crops_idea_strong = {
+		modifier = {
+		MONTHLY_POPULATION = 0.20
+		}
+		allowed_civil_war = { always = yes }
+		removal_cost = -1
+		picture = GRW_potato_farming
+		}
+		
+		FBK_reformed_landowning_idea = {
+		modifier = {
+			consumer_goods_factor = -0.05
+		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		removal_cost = -1
+		picture = generic_goods_red_bonus
+		}
+		
+		FBK_supported_landowners = {
+		allowed_civil_war = {
+		 always = yes
+		}		
+		 modifier = {
+		  consumer_goods_factor = 0.05
+		  stability_factor = 0.10
+		 }
+		}
+		
+		FBK_traditional_society = {
+		allowed_civil_war = {
+		 always = yes
+		}		
+		 modifier = {
+		  stability_weekly = 0.05
+		  political_power_gain = 0.05
+		 }
+		}
+		
 		FBK_start_trade_idea = {
 		modifier = {
 		trade_opinion_factor = 0.3
 		improve_relations_maintain_cost_factor = -0.5
 		production_speed_buildings_factor = 0.1
 		}
+		allowed_civil_war = { always = yes }
+		removal_cost = -1
+		picture = can_wartime_prices_and_trade_board
 		}
 
+	
+		FBK_national_strengthening_idea	= {
+		allowed_civil_war = {
+		 always = yes
+		}		
+		modifier = {
+			production_speed_buildings_factor = 0.05
+			production_speed_infrastructure_factor = 0.05
+		}
+		removal_cost -1
+		picture = generic_production_bonus
+		}
+		
 		FBK_schools_idea = {
+
 		modifier = {
 		research_time_factor = -0.05
 		}
+		allowed_civil_war = { always = yes }
+		removal_cost = -1
+		picture = generic_research_bonus
 		}
 		
 		FBK_fascist_influence = {
+		allowed_civil_war = {
+		 always = yes
+		}		
 		modifier = {
 		fascism_drift = 0.03
 		}
+		removal_cost = -1
+		picture = generic_fascism_drift_bonus
 		}
 		FBK_communist_influence = {
+		allowed_civil_war = {
+		 always = yes
+		}		
 		modifier = {
 		communism_drift = 0.02
 		}
+		removal_cost = -1
+		picture = generic_communism_drift_bonus
 		}
 		FBK_officer_school = {
+		allowed_civil_war = {
+		 always = yes
+		}		
 		modifier = {
 		army_morale_factor = 0.10
 		experience_gain_army = 0.05
 		}
+		removal_cost = -1
+		picture = general_staff
 		}
 		FBK_we_ourselves = {
 		modifier = {
@@ -441,18 +965,33 @@ ideas = {
 		army_core_attack_factor = 0.05
 		conscription = 0.02
 		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		removal_cost = -1
+		picture = YUG_federal_defense_council
 		}
 		FBK_final_struggle_idea = {
 		modifier = {
-		planning_speed = 0.20
-		max_planning = 0.20
 		army_morale_factor = 0.15
+		army_attack_factor = 0.10
+		army_defence_factor = 0.10
 		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		removal_cost = -1
+		picture = FRA_army_of_aggression_focus
 		}
 		FBK_hill_dominance = {
 		modifier = {
 		non_core_manpower = 0.2
 		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		removal_cost = -1
+		picture = FRA_national_mobilization_focus
 		}
 		FBK_national_glory = {
 		modifier = {
@@ -461,6 +1000,11 @@ ideas = {
 		war_support_factor = 0.005
 		stability_factor = 0.005
 		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		removal_cost = -1
+		picture = porsche
 		}
 		FBK_hold_to_the_last = {
 				modifier = {
@@ -479,24 +1023,44 @@ ideas = {
 		consumer_goods_factor = 0.3
 		political_power_gain = -0.1
 		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		removal_cost = -1
+		picture = FRA_factory_strikes
 		}
 		FBK_rev_army = {
 		modifier = {
 		conscription = 0.05
 		training_time_factor = -0.20
 		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		removal_cost = -1
+		picture = saf_soviet_advisers
 		}
 		FBK_consolidated = {
 		modifier = {
 		political_power_gain = 0.1
 		stability_weekly = 0.05
 		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		removal_cost = -1
+		picture = generic_pp_unity_bonus
 		}
 		FBK_new_soviet_pony_idea = {
 		modifier = {
 		army_morale_factor = 0.05
 		##another bonus, later
 		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		removal_cost = -1
+		picture = stg_secret_police
 		}
 		FBK_workers_paradise_idea = {
 		modifier = {
@@ -507,12 +1071,22 @@ ideas = {
 		send_volunteer_divisions_required = -0.25
 		send_volunteer_size = 3
 		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		removal_cost = -1
+		picture = home_of_revolution
 		}
 		
 		FBK_rural_elec = {
 		modifier = {
 		production_speed_infrastructure_factor = 0.15
 		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		removal_cost = -1
+		picture = generic_build_infrastructure
 		}
 		FBK_terrible_famine = {
 		modifier = {
@@ -521,24 +1095,49 @@ ideas = {
 		consumer_goods_factor = 1
 		conscription = -0.5
 		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		removal_cost = -1
+		picture = severe_famine
 		}
 		FBK_traded_water = {
 		modifier = {
 		stability_factor = 0.05
 		MONTHLY_POPULATION = 0.05
 		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		removal_cost = -1
+		picture = WAT_holy_srings
 		}
 		FBK_lumber = {
 		modifier = {
 		consumer_goods_factor = -0.02
 		production_speed_buildings_factor = 0.05
 		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		removal_cost = -1
+		picture = free_trade
 		}
 		FBK_changeling_workforce = {
 		modifier = {
 		local_resources_factor = 0.05
 		industrial_capacity_factory = 0.05
 		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		available = {
+		 NOT = {NCH = {
+		  has_country_flag = NCH_having_crisis_flag
+		 }}
+		}
+		removal_cost = -1
+		picture = changeling_race
 		}
 		FBK_nimbusian_officers_idea = {
 		modifier = {
@@ -546,6 +1145,11 @@ ideas = {
 		max_planning = 0.10
 		planning_speed = 0.10
 		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		removal_cost = -1
+		picture = nimbusia
 		}
 		FBK_jewel_of_the_north_idea = {
 		modifier = {
@@ -553,6 +1157,11 @@ ideas = {
 		production_speed_infrastructure_factor = 0.05
 		production_speed_buildings_factor = 0.05
 		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		removal_cost = -1
+		picture = sunrise_sparkle
 		}
 		
 		FBK_river_trade_idea = {
@@ -560,15 +1169,25 @@ ideas = {
 		consumer_goods_factor = -0.03
 		trade_opinion_factor = 0.25	
 		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		removal_cost = -1
+		picture = river_city
 		}
 		
 		FBK_fishing_tradition_idea = {
 		modifier = {
 		experience_gain_navy = 0.05
 		}
+		allowed_civil_war = {
+		 always = yes
+		}		
 		research_bonus = {
 		naval_doctrine = 0.10
 		}
+		removal_cost = -1
+		picture = generic_sea_focused_navy
 		}
 		FBK_bitbridle_rifles = {
 		equipment_bonus = {
@@ -576,13 +1195,24 @@ ideas = {
 		instant = yes
 		build_cost_ic = -0.1
 		}
-	}
-	}
+		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		removal_cost = -1
+		picture = osaka_army_arsenal
+		}
+		
 		FBK_cement = {
 		modifier = {
 		production_speed_buildings_factor = 0.10
 		industry_repair_factor = 0.15
 		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		removal_cost = -1
+		picture = generic_local_self_management
 		}
 		
 		FBK_republican_guard_idea = {
@@ -591,18 +1221,33 @@ ideas = {
 		experience_gain_army = 0.02
 		army_leader_start_level = 1
 		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		removal_cost = -1
+		picture = generic_manpower_bonus
 		}
 		FBK_immigration = {
 		modifier = {
 		MONTHLY_POPULATION = 0.15
 		consumer_goods_factor = -0.05
 		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		removal_cost = -1
+		picture = griffon_passport
 		}
 		FBK_hill_warriors = {
 		modifier = {
 		army_attack_factor = 0.05
 		army_defence_factor = 0.05
 		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		removal_cost = -1
+		picture = HUN_secret_rearmament
 		}
 		FBK_expanded_republican_guard = {
 		modifier = {
@@ -611,6 +1256,11 @@ ideas = {
 		army_leader_start_level = 1
 		conscription = 0.02
 		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		removal_cost = -1
+		picture = generic_manpower_bonus
 		}
 		FBK_constitution_idea = {
 		modifier = {
@@ -618,6 +1268,11 @@ ideas = {
 		democratic_drift = 0.02
 		army_core_defence_factor = 0.15
 		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		removal_cost = -1
+		picture = generic_victors_of_ww1
 		}
 		FBK_star_north_idea = {
 		modifier = {
@@ -627,52 +1282,393 @@ ideas = {
 		send_volunteer_divisions_required = -1
 		send_volunteer_size = 5
 		}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		removal_cost = -1
+		picture = starpoint
 		}
+		
 		FBK_tribal_army_idea = {
 		modifier = {
-		army_morale_factor = -0.15
-		planning_speed = -0.25
-		training_time_factor = -0.25
+			army_morale_factor = -0.20
+			planning_speed = -0.25
+			conscription_factor = -0.10
+			training_time_factor = -0.25
 		}
-		picture = idea_raj_indian_gentlemen_officers
+		allowed_civil_war = {
+		 always = yes
+		}		
+        equipment_bonus = {
+			    infantry_equipment = {
+                    reliability  = -0.1
+					build_cost_ic = 0.1 
+                    instant = yes
+        }
 		}
-		FBK_post_tribal_army_idea = {
+			removal_cost = -1
+			picture = raj_indian_gentlemen_officers
+		}
+		
+		FBK_tribal_army_standard_recruitment_idea = {
+			modifier = {
+				army_morale_factor = -0.15
+				planning_speed = -0.20
+				conscription_factor = -0.05
+				training_time_factor = -0.15
+			}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		    equipment_bonus = {
+			    infantry_equipment = {
+                    reliability  = -0.1
+					build_cost_ic = 0.1 
+                    instant = yes
+						}
+					}
+		removal_cost = -1
+		picture = raj_indian_gentlemen_officers
+		}
+		
+		FBK_tribal_army_proper_pay_idea = {
+			modifier = {
+				army_morale_factor = -0.10
+				planning_speed = -0.20
+				conscription_factor = -0.05
+				training_time_factor = -0.15
+			}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		    equipment_bonus = {
+			    infantry_equipment = {
+                    reliability  = -0.1
+					build_cost_ic = 0.1 
+                    instant = yes
+						}
+			}
+		removal_cost = -1
+		picture = raj_indian_gentlemen_officers
+		}
+		
+		FBK_tribal_army_state_guns_idea = {
 		modifier = {
-		planning_speed = 0.05
-		training_time_factor = -0.10
+			army_morale_factor = -0.20
+			planning_speed = -0.25
+			conscription_factor = -0.10
+			training_time_factor = -0.25
 		}
-		picture = BUF_workshop3
+		allowed_civil_war = {
+		 always = yes
+		}		
+
+        equipment_bonus = {
+			    infantry_equipment = {
+                    reliability  = 0.05 
+                    instant = yes
+        }
 		}
-		FBK_industrial_army_idea = {
+			removal_cost = -1
+			picture = raj_indian_gentlemen_officers
+		}
+		
+		FBK_tribal_army_standard_recruitment_and_guns_idea  = {
 		modifier = {
-		army_morale_factor = 0.1
-		planning_speed = 0.15
-		training_time_factor = 0.1
+				army_morale_factor = -0.15
+				planning_speed = -0.25
+				conscription_factor = -0.05
+				training_time_factor = -0.10
 		}
-		picture = idea_ast_volunteer_defence_corps
+		allowed_civil_war = {
+		 always = yes
+		}		
+
+        equipment_bonus = {
+			    infantry_equipment = {
+                    reliability  = 0.05 
+                    instant = yes
+        }
 		}
-		FBK_modern_army_idea = {
+			removal_cost = -1
+			picture = raj_indian_gentlemen_officers
+		}
+		
+		FBK_tribal_army_standard_recruitment_and_pay_idea  = {
 		modifier = {
-		army_morale_factor = 0.15
-		planning_speed = 0.30
-		training_time_factor = 0.2
+				army_morale_factor = -0.05
+				planning_speed = -0.15
+				training_time_factor = -0.05
 		}
-		picture = idea_generic_war_preparation
+		allowed_civil_war = {
+		 always = yes
+		}		
+		    equipment_bonus = {
+			    infantry_equipment = {
+                    reliability  = -0.1
+					build_cost_ic = 0.1 
+                    instant = yes
+						}
+			}
+			removal_cost = -1
+			picture = raj_indian_gentlemen_officers
 		}
+		
+		FBK_tribal_army_proper_pay_and_guns_idea  = {
+			modifier = {
+				army_morale_factor = -0.10
+				planning_speed = -0.20
+				conscription_factor = -0.05
+				training_time_factor = -0.15
+			}
+		allowed_civil_war = {
+		 always = yes
+		}		
+        equipment_bonus = {
+			    infantry_equipment = {
+                    reliability  = 0.05 
+                    instant = yes
+        }
+		}
+			removal_cost = -1
+			picture = raj_indian_gentlemen_officers
+		}
+		
+		FBK_tribal_army_first_reform_complete_idea = {
+			modifier = {
+				army_morale_factor = 0.05
+				conscription_factor = 0.05
+				training_time_factor = 0.05
+			}
+		allowed_civil_war = {
+		 always = yes
+		}		
+        equipment_bonus = {
+			    infantry_equipment = {
+                    reliability  = 0.05 
+                    instant = yes
+        }
+		}
+			removal_cost = -1
+			picture = raj_indian_gentlemen_officers		
+		
+		}
+		
+		FBK_first_standing_army = {
+			modifier = {
+				army_morale_factor = 0.10
+				army_org_Factor = 0.10
+				planning_speed = 0.10
+				conscription_factor = -0.05
+				training_time_factor = 0.10
+			}
+		allowed_civil_war = {
+		 always = yes
+		}		
+        equipment_bonus = {
+			    infantry_equipment = {
+                    reliability  = 0.05 
+                    instant = yes
+        }
+		}
+			removal_cost = -1
+			picture = raj_indian_gentlemen_officers		
+		
+		}
+		
+		FBK_standardised_uniforms_idea = {
+			modifier = {
+				army_morale_factor = 0.10
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_org_Factor = 0.10
+				planning_speed = 0.15
+				conscription_factor = -0.10
+				training_time_factor = 0.15
+			}
+		allowed_civil_war = {
+		 always = yes
+		}		
+        equipment_bonus = {
+			    infantry_equipment = {
+                    reliability  = 0.05 
+                    instant = yes
+        }
+		}
+			removal_cost = -1
+			picture = raj_indian_gentlemen_officers		
+		
+		}
+	
+		FBK_chain_of_command_idea = {
+			modifier = {
+				army_morale_factor = 0.10
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_org_Factor = 0.10
+				army_org_regain = 0.05
+				max_planning = 0.10
+				planning_speed = 0.15
+				conscription_factor = -0.10
+				training_time_factor = 0.15
+			}
+		allowed_civil_war = {
+		 always = yes
+		}		
+        equipment_bonus = {
+			    infantry_equipment = {
+                    reliability  = 0.05 
+                    instant = yes
+        }
+		}
+			removal_cost = -1
+			picture = raj_indian_gentlemen_officers		
+		
+		}
+		FBK_modern_discipline_idea = {
+			modifier = {
+				army_morale_factor = 0.10
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_org_Factor = 0.10
+				army_org_regain = 0.05
+				max_planning = 0.20
+				planning_speed = 0.20
+				conscription_factor = -0.15
+				training_time_factor = 0.20
+			}
+		allowed_civil_war = {
+		 always = yes
+		}		
+        equipment_bonus = {
+			    infantry_equipment = {
+                    reliability  = 0.05 
+                    instant = yes
+        }
+		}
+			removal_cost = -1
+			picture = raj_indian_gentlemen_officers		
+		
+		}
+		
+		FBK_reforming_militia = {
+			modifier = {
+				army_morale_factor = 0.05
+				Mobilization_speed = 0.1
+				conscription_factor = 0.1
+				training_time_factor = -0.05
+			}
+		allowed_civil_war = {
+		 always = yes
+		}		
+        equipment_bonus = {
+			    infantry_equipment = {
+                    reliability  = 0.05 
+                    instant = yes
+        }
+		}
+			removal_cost = -1
+			picture = raj_indian_gentlemen_officers		
+		
+		}
+		
+		FBK_militia_and_mercenaries = {
+			modifier = {
+				army_morale_factor = 0.10
+				Mobilization_speed = 0.15
+				army_speed_factor = 0.10
+				conscription_factor = 0.15
+				training_time_factor = -0.05
+			}
+		allowed_civil_war = {
+		 always = yes
+		}		
+        equipment_bonus = {
+			    infantry_equipment = {
+                    reliability  = 0.05 
+                    instant = yes
+        }
+		}
+			removal_cost = -1
+			picture = raj_indian_gentlemen_officers		
+		
+		
+		}
+		FBK_guerilla_warfare_idea = {
+			modifier = {
+				army_morale_factor = 0.10
+				Mobilization_speed = 0.20
+				army_speed_factor = 0.15
+				army_core_attack_factor = 0.075
+				army_core_defence_factor = 0.075
+				conscription_factor = 0.15
+				training_time_factor = -0.05
+			}
+		allowed_civil_war = {
+		 always = yes
+		}		
+        equipment_bonus = {
+			    infantry_equipment = {
+                    reliability  = 0.05 
+                    instant = yes
+        }
+		}
+			removal_cost = -1
+			picture = raj_indian_gentlemen_officers		
+		
+		
+		}
+		
+		FBK_flying_columns_idea = {
+
+			modifier = {
+				army_morale_factor = 0.10
+				Mobilization_speed = 0.25
+				army_speed_factor = 0.25
+				army_core_attack_factor = 0.125
+				army_core_defence_factor = 0.125
+				conscription_factor = 0.15
+				training_time_factor = -0.05
+			}
+		allowed_civil_war = {
+		 always = yes
+		}		
+        equipment_bonus = {
+			    infantry_equipment = {
+                    reliability  = 0.05 
+                    instant = yes
+        }
+		}
+			removal_cost = -1
+			picture = raj_indian_gentlemen_officers		
+		
+				
+		}
+		
 		FBK_imperial_aid = {
 		modifier = {
 		war_support_factor = 0.05
 		}
+		allowed_civil_war = {
+		 always = yes
+		}		
 		equipment_bonus = {
         infantry_equipment = {
         build_cost_ic = -0.1 instant = yes
           }
          }
+		removal_cost = -1
+		picture = german_advisors
 		}
 		FBK_the_final_war = {
 			modifier = {
 				war_support_factor = 0.25
 			}
+		allowed_civil_war = {
+		 always = yes
+		}		
+		removal_cost = -1
+		picture = jap_militarism_shogun
 		}
 		
 		FBK_free_people = {
@@ -681,6 +1677,11 @@ ideas = {
 				army_core_defence_factor = 0.05
 				conscription = 0.02
 			}
+		allowed_civil_war = {
+		 always = yes
+		}		
+			removal_cost = -1
+			picture = YUG_federal_defense_council
 		}
 		
 		FBK_we_ourselves_2 = {
@@ -689,6 +1690,11 @@ ideas = {
 				army_core_defence_factor = 0.1
 				conscription = 0.04
 			}
+		allowed_civil_war = {
+		 always = yes
+		}		
+			removal_cost = -1
+			picture = YUG_federal_defense_council
 		}
 		
 		FBK_king_north = {
@@ -697,6 +1703,12 @@ ideas = {
 				stability_factor = 0.05
 				war_support_factor = 0.05
 			}
+		allowed_civil_war = {
+		 always = yes
+		}		
+			removal_cost = -1
+			picture = ger_revive_the_kaiserreich
 		}
 
+}
 }

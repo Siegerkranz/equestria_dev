@@ -17,7 +17,7 @@ set_technology = {
 	tech_pegasi = 1
 	transport = 1
 }
-set_stability = 0.77
+set_stability = 0.57
 set_war_support = 0.08
 
 add_ideas = {
@@ -27,35 +27,39 @@ add_ideas = {
 	RIV_member_state
 	lack_of_scientists3
 	poverty4
+	RCT_Hostile_Socialists
+	RCT_deficit_spending1
 }
-
+set_country_flag = have_regular_puppets
 set_country_flag = better_science_base_unlocked
-
 set_cosmetic_tag = RIV_federation_mem
+
+country_event = { id = rivercity.2 days = 1 }
+
 set_politics = {
 
 	parties = {
 		democratic = { 
-			popularity = 80
+			popularity = 50
 		}
 
 		fascism = {
-			popularity = 1
+			popularity = 5
 		}
 		
 		communism = {
-			popularity = 10
+			popularity = 40
 		}
 		
 		neutrality = {
-			popularity = 9
+			popularity = 5
 		}
 	}
 	
 	ruling_party = democratic
 	last_election = "1003.2.01"
-	election_frequency = 48
-	elections_allowed = yes
+	election_frequency = 100
+	elections_allowed = no
 }
 
 create_country_leader = {
@@ -79,7 +83,16 @@ create_country_leader = {
 		
 	}
 }
-
+create_corps_commander = {
+	name = "Artemis Rosamund"
+	portrait_path = "gfx/leaders/RCT/Artemis_Rosamund.tga"
+	traits = { }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 4
+}
 create_corps_commander = {
 	name = "Spring Rain"
 	portrait_path = "gfx/leaders/Europe/portrait_pony_generic_land_1.dds"

@@ -31,9 +31,9 @@ BAR_make_zombies = {
 		remove_effect = {
 		if = { 
 		limit = { has_country_flag = BAR_pufferbombs }
-		add_manpower = 15000
-		else = {
 		add_manpower = 20000
+		else = {
+		add_manpower = 15000
 		    }
 		}
 		hidden_effect = {
@@ -56,7 +56,7 @@ BAR_gather_subjects = {
 		}
 		available = {
 			any_owned_state = {
-		    has_manpower > 35000
+		    state_population > 35000
 		    }
 		}
 		cost = 50
@@ -214,7 +214,7 @@ BAR_flying_pig_daemons = {
 
 		visible = {
 			original_tag = BAR
-			has_completed_focus = BAR_when_pigs_fly
+			has_country_flag = BAR_flying_pigs_flag
 		}
 		available = {
 			check_variable = { BAR_test_subjects > 1 }
@@ -229,6 +229,34 @@ BAR_flying_pig_daemons = {
 		subtract_from_variable = {
         var = BAR_test_subjects 
         value = 2
+                }
+			}
+		}
+	ai_will_do = {
+		factor = 100
+		}
+	}
+
+BAR_clockwerk_lives = {
+		icon = griffon
+
+		visible = {
+			original_tag = BAR
+			has_country_flag = BAR_the_spirits_are_ours_flag
+		}
+		available = {
+			check_variable = { BAR_test_subjects > 3 }
+		}
+		days_remove = 60
+		cost = 30
+		
+		remove_effect = {
+		custom_effect_tooltip = BAR_clockwerk_units_tp
+		hidden_effect = {
+		load_oob = "BAR_tank_shit"
+		subtract_from_variable = {
+        var = BAR_test_subjects 
+        value = 4
                 }
 			}
 		}
