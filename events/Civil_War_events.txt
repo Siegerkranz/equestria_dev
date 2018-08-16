@@ -348,7 +348,9 @@ country_event = {
 	#Yep, let's join
 	option = {
 		name = civwar.103.a
+		set_country_flag = bypass_on_peaceconference_ended
 		white_peace = FROM
+		clr_country_flag = bypass_on_peaceconference_ended
 		hidden_effect = {
 			FROM = {save_event_target_as = faction_lead}
 			country_event = { id = civwar.104 days = 7 }
@@ -553,6 +555,7 @@ country_event = {
 				add_state_core = 37
 				add_state_core = 81
 				add_state_core = 35
+				add_state_core = 221
 				country_event = civwar.110
 			}
 			load_oob = "NMS_Civil_War"
