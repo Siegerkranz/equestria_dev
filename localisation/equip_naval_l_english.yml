@@ -1615,11 +1615,11 @@
  NLR_destroyer_5_short:0 "LND-1019 Class"
  NLR_destroyer_5_desc:0 "Another standalone destroyer [unfinished]"
 
- NLR_destroyer_6:0 "Noir Class"
- NLR_destroyer_6_short:0 "Noir Class"
+ NLR_destroyer_6:0 "LND-1023 Class"
+ NLR_destroyer_6_short:0 "LND-1023 Class"
 
- NLR_destroyer_7:0 "Mangle Class"
- NLR_destroyer_7_short:0 "Mangle Class"
+ NLR_destroyer_7:0 "LND-1027 Class"
+ NLR_destroyer_7_short:0 "LND-1027 Class"
 
 
  NLR_light_cruiser_1:0 "Stoat Class"
@@ -1628,38 +1628,38 @@
  NLR_light_cruiser_2:0 "Midnight Castle"
  NLR_light_cruiser_2_desc:0 "A very powerful early light cruiser of the Lunar Republic Naval Service. The Midnight Castle-class' artillery and torpedo armament were powerful for her size. With decent speed, and with comparable to other ships of other navies in terms of armor."
 
- NLR_light_cruiser_3:0 "Death Class"
+ NLR_light_cruiser_3:0 "Drackenridge Class"
 
- NLR_light_cruiser_4:0 "Kill Class"
+ NLR_light_cruiser_4:0 "Drackenridge II Class"
 
- NLR_light_cruiser_5:0 "Merciless Class"
- NLR_light_cruiser_5_short:0 "Merciless Class"
+ NLR_light_cruiser_5:0 "Stableside Class"
+ NLR_light_cruiser_5_short:0 "Stableside Class"
 
- NLR_light_cruiser_6:0 "Hellfire Class"
- NLR_light_cruiser_6_short:0 "Hellfire Class"
+ NLR_light_cruiser_6:0 "Ravenholm Class"
+ NLR_light_cruiser_6_short:0 "Ravenholm Class"
 
- NLR_light_cruiser_7:0 "Torture Class"
+ NLR_light_cruiser_7:0 "Albion Class"
  NLR_light_cruiser_7_short:0 "Torture Class"
 
 
- NLR_heavy_cruiser_1:0 "Manehatten Class"
- NLR_heavy_cruiser_1_desc:0 "The Manehatten class of protected cruisers was an early foray into larger ships for the Lunar Guard Naval Service. Due to the relative lack of inexperience in Naval Warfare doctrine, the Manehatten class was normally used as either a raiding ship, or as protection against enemy destroyers."
+ NLR_heavy_cruiser_1:0 "Baltimare Class"
+ NLR_heavy_cruiser_1_desc:0 "The Baltimare class of protected cruisers was an early foray into larger ships for the Lunar Guard Naval Service. Due to the relative lack of inexperience in Naval Warfare doctrine, the Baltimare class was normally used as either a raiding ship, or as protection against enemy destroyers."
 
  NLR_heavy_cruiser_2:0 "Mareheim Class"
  NLR_heavy_cruiser_2_desc:0 "The Royal Lunar Navy's first foray into their very own protected cruiser, developed from the Manehatten-class raiding cruiser. Unlike her previous cruiser sisters, the Mareheim-class was larger, faster, and with more powerful artillery."
 
- NLR_heavy_cruiser_3:0 "Hate Class"
+ NLR_heavy_cruiser_3:0 "Flare Class"
 
- NLR_heavy_cruiser_4:0 "Anger Class"
+ NLR_heavy_cruiser_4:0 "Janeway Class"
 
- NLR_heavy_cruiser_5:0 "Terror Class"
- NLR_heavy_cruiser_5_short:0 "Terror Class"
+ NLR_heavy_cruiser_5:0 "Mizuki Class"
+ NLR_heavy_cruiser_5_short:0 "Mizuki Class"
 
- NLR_heavy_cruiser_6:0 "Scorn Class"
- NLR_heavy_cruiser_6_short:0 "Scorn Class"
+ NLR_heavy_cruiser_6:0 "Fillydelphia Class"
+ NLR_heavy_cruiser_6_short:0 "Fillydelphia Class"
 
- NLR_heavy_cruiser_7:0 "Fear Class"
- NLR_heavy_cruiser_7_short:0 "Fear Class"
+ NLR_heavy_cruiser_7:0 "Manehatten Class"
+ NLR_heavy_cruiser_7_short:0 "Manehatten Class"
 
 
  NLR_battle_cruiser_1:0 "Tenebrosity Class"
@@ -1667,8 +1667,8 @@
 
  NLR_battle_cruiser_2:0 "Midsummer Night Class"
 
- NLR_battle_cruiser_3:0 "Swift Eradication Class"
- NLR_battle_cruiser_3_short:0 "Swift Eradication Class"
+ NLR_battle_cruiser_3:0 "Dappleshore Class"
+ NLR_battle_cruiser_3_short:0 "Dappleshore Class"
 
 
  NLR_battleship_1:0 "Gallopfrey Class"
@@ -1677,27 +1677,27 @@
  NLR_battleship_2:0 "Princess Class"
  NLR_battleship_2_desc:0 "The Princess-class, a direct development off the Prince-class, was quite similar. She featured her predecessors' armor and armament, however the turrets were rearranged in a more conventional manner, allowing more of the guns to be used in a broadside."
 
- NLR_battleship_3:0 "Nemesis Class"
+ NLR_battleship_3:0 "Dream Valley Class"
 
- NLR_battleship_4:0 "Devastation Class"
+ NLR_battleship_4:0 "Panacea Class"
 
- NLR_battleship_5:0 "Despoiler Class"
- NLR_battleship_5_short:0 "Despoiler Class"
+ NLR_battleship_5:0 "Shank Class"
+ NLR_battleship_5_short:0 "Shank Class"
 
- NLR_battleship_6:0 "Merciless Death Class"
- NLR_battleship_6_short:0 "Merciless Death Class"
+ NLR_battleship_6:0 "Spice Class"
+ NLR_battleship_6_short:0 "Spice Class"
 
- NLR_battleship_7:0 "Doom Class"
- NLR_battleship_7_short:0 "Doom Class"
-
-
- NLR_battleship_nuc:0 "Innocence’s End Class"
- NLR_battleship_nuc_short:0 "Innocence’s End Class"
+ NLR_battleship_7:0 "Frost Class"
+ NLR_battleship_7_short:0 "Frost Class"
 
 
- NLR_SH_battleship_1:0 "Apocalypse Class"
+ NLR_battleship_nuc:0 "New Moon Class"
+ NLR_battleship_nuc_short:0 "New Moon Class"
 
- NLR_SH_battleship_2:0 "Unending Damnation Class"
+
+ NLR_SH_battleship_1:0 "Vanity Class"
+
+ NLR_SH_battleship_2:0 "Night Mother Class"
 
  NLR_SH_battleship_3:0 "Tantabis Class"
  NLR_SH_battleship_3_short:0 "Tantabis Class"
