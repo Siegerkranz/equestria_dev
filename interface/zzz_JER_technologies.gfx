@@ -1,7 +1,31 @@
 spriteTypes = {
 	
-	### Equipment images for Griffon Empire and surrounding nations ###
-	
+	### Equipment images for AQUILEIA and surrounding nations ###
+	SpriteType = {
+		name = "GFX_JER_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_JER_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_JER_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_JER_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_JER_advanced_infantry_weapons_b_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_JER_advanced_infantry_weapons_e_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_5.dds"
+	}
+
 	SpriteType = {
 		name = "GFX_JER_gwtank_medium"
 		texturefile = "gfx/interface/technologies/JER_gw_tank.dds"
@@ -75,12 +99,49 @@ spriteTypes = {
 		name = "GFX_JER_super_heavy_tank_medium"
 		texturefile = "gfx/interface/technologies/GRI_super_heavy.dds"
 	}
+	SpriteType = {
+		name = "GFX_JER_mechanised_infantry3_medium"
+		texturefile = "gfx/interface/technologies/JER_motorized_equipment_3.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_JER_mechanised_infantry2_medium"
+		texturefile = "gfx/interface/technologies/JER_motorized_equipment_2.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_JER_mechanised_infantry_medium"
+		texturefile = "gfx/interface/technologies/JER_motorized_equipment_2.dds"
+	}
 	#################################################################
 	#################################################################
 	#################################################################
 	#################################################################
 	#################################################################
-
+	SpriteType = {
+		name = "GFX_JEB_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_JEB_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_JEB_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_JEB_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_JEB_advanced_infantry_weapons_b_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_JEB_advanced_infantry_weapons_e_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_5.dds"
+	}
 	SpriteType = {
 		name = "GFX_JEB_gwtank_medium"
 		texturefile = "gfx/interface/technologies/JER_gw_tank.dds"
@@ -160,6 +221,30 @@ spriteTypes = {
 	#################################################################
 	#################################################################
 	SpriteType = {
+		name = "GFX_JRR_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_JRR_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_JRR_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_JRR_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_JRR_advanced_infantry_weapons_b_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_JRR_advanced_infantry_weapons_e_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_5.dds"
+	}
+	SpriteType = {
 		name = "GFX_JRR_gwtank_medium"
 		texturefile = "gfx/interface/technologies/JER_gw_tank.dds"
 	}
@@ -237,6 +322,30 @@ spriteTypes = {
 	#################################################################
 	#################################################################
 	#################################################################
+	SpriteType = {
+		name = "GFX_VIN_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_VIN_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_VIN_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_VIN_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_VIN_advanced_infantry_weapons_b_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_VIN_advanced_infantry_weapons_e_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_5.dds"
+	}
 	SpriteType = {
 		name = "GFX_VIN_gwtank_medium"
 		texturefile = "gfx/interface/technologies/JER_gw_tank.dds"
@@ -316,6 +425,30 @@ spriteTypes = {
 	#################################################################
 	#################################################################
 	SpriteType = {
+		name = "GFX_JFT_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_JFT_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_JFT_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_JFT_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_JFT_advanced_infantry_weapons_b_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_JFT_advanced_infantry_weapons_e_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_5.dds"
+	}
+	SpriteType = {
 		name = "GFX_JFT_gwtank_medium"
 		texturefile = "gfx/interface/technologies/JER_gw_tank.dds"
 	}
@@ -393,6 +526,30 @@ spriteTypes = {
 	#################################################################
 	#################################################################
 	#################################################################
+	SpriteType = {
+		name = "GFX_JES_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_JES_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_JES_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_JES_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_JES_advanced_infantry_weapons_b_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_JES_advanced_infantry_weapons_e_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_5.dds"
+	}
 	SpriteType = {
 		name = "GFX_JES_gwtank_medium"
 		texturefile = "gfx/interface/technologies/JER_gw_tank.dds"
