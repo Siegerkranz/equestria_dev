@@ -1,0 +1,5 @@
+national_formation_efforts = {
+    allowed = {
+        tag = OLV
+    }
+}

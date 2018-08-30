@@ -1,5 +1,10 @@
 ﻿l_english:
 
+### Nation Names
+OLV_neutrality: "Cervasii Tribes"
+OLV_democracy: "Republic of Cervasia"
+OLV_fascism: "Cervasii Empire"
+
 ### Misc Shit
 will_lead_to_war:0 "Will lead to war."
 OLV_D_insurrection: "Completing this focus will open up a new path in the focus tree."

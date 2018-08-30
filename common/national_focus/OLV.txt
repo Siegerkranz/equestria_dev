@@ -215,17 +215,6 @@ focus_tree = {
     }
 
     focus = {
-        id = olv_fascistunify
-        relative_position_id = olv_fascist2
-        x = -1
-        y = 1
-        cost = 5
-        prerequisite = {
-            focus = olv_fascist2
-        }
-    }
-
-    focus = {
         id = olv_zeebpurge
         relative_position_id = olv_fascist2
         x = 0
@@ -473,5 +462,16 @@ focus_tree = {
         }
         completion_reward = {
             country_event = {days = 1 id = olv.1}
+        }
+    }
+
+    focus = {
+        id = olv_education2
+        relative_position_id = olv_education
+        x = 0
+        y = 1
+        cost = 5
+        prerequisite = {
+            focus = olv_education
         }
     }
