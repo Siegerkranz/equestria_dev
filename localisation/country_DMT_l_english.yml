@@ -12,6 +12,15 @@
  DMT_neutrality_ADJ:0 "Diamond Dog"
  DMT_communism_ADJ:0 "Diamond Dog"
 
+ DMT_neutrality_party:0 "PANT"
+ DMT_neutrality_party_long:0 "Party National"
+ DMT_communism_party:0 "WUF"
+ DMT_communism_party_long:0 "Workers' United Front"
+ DMT_democratic_party:0 "BARK"
+ DMT_democratic_party_long:0 "Bread and Recreation Kinship"
+ DMT_fascism_party:0 "GROWL"
+ DMT_fascism_party_long:0 "Glory to the Royal Will"
+
  #### IDEAS ####
  DMT_revanchism:0 "Revanchism"
  DMT_revanchism_desc:0 "A few decades ago, the griffons of Hellquill did the unthinkable. They breached the impenetrable walls of Diamond Mountain and sacked the city, making off with the King's Horde. This act of humiliation has remained in the hearts and minds of Diamond Dogs everywhere and will not be extinguished until Hellquill pays."
@@ -115,7 +124,7 @@
  DMT_time_to_moeve_on:0 "Time to Move On"
  DMT_time_to_moeve_on_desc:0 "We shouldn’t keep ourselves stuck on grudges from the past. Of course it would be nice to get our treasure back, but by fixating on revenge, we have forgotten what is truly important. The real treasures underneath Diamond Mountain aren’t the ores, or even the gems. The treasures are the lights of the dogs themselves and we should take care of them!"
 
- DMT_rebuild_the_holds:0 "Reubild the Holds"
+ DMT_rebuild_the_holds:0 "Rebuild the Holds"
  DMT_rebuild_the_holds_desc:0 "Many of the Holds are underdeveloped or still devastated from the Knights’ attacks so many years ago. With everything in order and stable, we can start working on the rest of our country, turning every hold into a marvel of dog architecture!"
 
  DMT_free_schoolbooks:0 "Free Schoolbooks"
@@ -336,8 +345,8 @@
 
  #Communism
  diamond_mountain.98.t:0 "The Rising Tide"
- diamond_mountain.98.d:0 "Communist movemnts grow"
- diamond_mountain.98.a:0 "Oh no"
+ diamond_mountain.98.d:0 "Clifford the Red and his closest friends had been running for days. They were sure that the Royal Guards would come after them, but it appeared that their plan worked. Nodog came and by hiding from soldiers and relying on the help of dogs sympathetic to them, the group of ex-slaves evaded capture. But everywhere they went, the dogs talked with the local slaves and the commondogs. They preached about the future that could come if all that beautiful wealth they worked so hard to create, would be shared with everydog, instead of hoarded by the nobility and the King.\n\nCompletely to the surprise of Clifford, many dogs actually agreed. They listened enthusiastically when Clifford told of the paradise predicted by the pony from the other side of the world called Caramel Marks. They cheered in agreement when he told them the King would not protect the commondogs. He was in fact exploiting them and the slaves. In secret, red pieces of cloth became a signal for those who supported communism and the movement began to arm itself. A soldier turned here, an armoury raided there. Soon the slaves would be free. . ."
+ diamond_mountain.98.a:0 "Our movement grows"
 
  diamond_mountain.99.t:0 "The Battle of the Underbark"
  diamond_mountain.99.d:0 "Epic Fight"
