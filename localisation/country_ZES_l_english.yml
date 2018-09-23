@@ -1,5 +1,73 @@
 ﻿l_english:
 
+### Focuses 
+## The Raid ones. 
+ZES_raid_gryphus:0 "Raid the Free Towns"
+ZES_raid_gryphus_desc:0 ""
+ZES_raid_minotauria:0 "Raids on Minotauria"
+ZES_raid_minotauria_desc:0 ""
+ZES_raid_nytt_radjur:0 "Raid the Deer!"
+ZES_raid_nytt_radjur_desc:0 ""
+
+## This is where the good stuff starts.
+ZES_grand_auction:0 "The Grand Auction"
+ZES_grand_auction_desc:0 ""
+ZES_increase_trade_with_barrad:0 "Increased Trade with Barrad"
+ZES_increase_trade_with_barrad_desc:0 ""
+ZES_continental_diplomacy:0 "Continental Diplomacy"
+ZES_continental_diplomacy_desc:0 ""
+ZES_a_deal_with_skyfall:0 "A Deal with Skyfall"
+ZES_a_deal_with_skyfall_desc:0 ""
+ZES_eastern_pony_slaves:0 "Eastern Pony Slaves"
+ZES_eastern_pony_slaves_desc:0 ""
+
+
+## Shit dealing with Equestria
+ZES_over_seas_markets:0 "Overseas Markets"
+ZES_over_seas_markets_desc:0 ""
+ZES_a_deal_with_luna:0 "A Deal With Luna"
+ZES_a_deal_with_luna_desc:0 ""
+ZES_slaves_for_crystals:0 "Slaves for Crystals"
+ZES_slaves_for_crystals_desc:0 ""
+
+## Diamond Doggos
+ZES_envoy_to_diamond_mountain:0 "Envoy to Diamond Mountain"
+ZES_envoy_to_diamond_mountain_desc:0 ""
+ZES_griffon_slave_trade:0 "The Griffon Slave Trade"
+ZES_griffon_slave_trade_desc:0 ""
+
+ZES_stormy_waters:0 "Stormy Waters"
+ZES_stormy_waters_desc:0 ""
+
+##Polital Path!
+ZES_the_great_debate:0 "The Great Debate"
+ZES_the_great_debate_desc:0 ""
+ZES_internal_discussions:0 "Internal Discussions"
+ZES_internal_discussions_desc:0 ""
+ZES_listen_to_harmonists:0 "Listen to the Harmonists"
+ZES_listen_to_harmonists_desc:0 ""
+ZES_listen_to_captains:0 "Listen to the Captains"
+ZES_listen_to_captains_desc:0 ""
+
+## Industrial Path
+ZES_industrial_development:0 "Industrial Development"
+ZES_industrial_development_desc:0 ""
+ZES_update_ports:0 "Update our Ports"
+ZES_update_ports_desc:0 ""
+ZES_bigger_shipyards:0 "Bigger Shipyards"
+ZES_bigger_shipyards_desc:0 ""
+ZES_countryside_roads:0 "Countryside Roads"
+ZES_countryside_roads_desc:0 ""
+ZES_railroads:0 "Railroads"
+ZES_railroads_desc:0 ""
+ZES_naval_academy:0 "Nyumbampya Naval Academy"
+ZES_naval_academy_desc:0 ""
+ZES_open_mines:0 "Open the Mines"
+ZES_open_mines_desc:0 ""
+ZES_synthetic_oil_experiments:0 "Synthetic Oil Experiments"
+ZES_synthetic_oil_experiments_desc:0 ""
+
+ 
 ### Ideas
 ZES_unrest_neutral:0 "Unrest - Neutral"
 ZES_unrest_neutral_desc:0 "Pro-Slavery and Anti-Slavery groups are currently content."
