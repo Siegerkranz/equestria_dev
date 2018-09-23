@@ -87,7 +87,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus DMT_in_the_hall_of_the_mountain_king"
-			add_political_power = 120
+			add_political_power = 150
 		}
 	}
 
@@ -209,6 +209,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus DMT_dig_deep"
+			set_country_flag = DMT_dug_deep
 			random_owned_controlled_state = {
 				add_resource = {
 					type = crystals
@@ -334,6 +335,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus DMT_crackdown_on_dissent"
 			add_popularity = { ideology = democratic popularity = -0.1 }
 			add_popularity = { ideology = communism popularity = -0.1 }
+			add_political_power = 100
 			hidden_effect = {
 				RCT = {
 					country_event = diamond_mountain.1
@@ -527,6 +529,12 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 4
+			modifier = {
+				factor = 0
+				HLQ = {
+					has_government = democratic
+				}
+			}
 		}
 
 		available = {
@@ -616,6 +624,21 @@ focus_tree = {
 
 		available = {
 			has_government = fascism
+			OR = {
+				AND = {
+					NOT = {
+						is_in_faction_with = RCT
+					}	
+					HLQ = {
+						has_government = democratic
+					}
+				}
+				HLQ = {
+					NOT = {
+						has_government = democratic
+					}
+				}	
+			}	
 		}
 		
 		bypass = {

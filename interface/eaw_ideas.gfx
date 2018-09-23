@@ -2262,6 +2262,10 @@ spriteTypes = {
 		name = "GFX_idea_griffon_race"
 		texturefile = "gfx/interface/ideas/griffon_race.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_diamond_dog_race"
+		texturefile = "gfx/interface/ideas/diamond_dog_race.dds"
+	}
 	SpriteType = {
 		name = "GFX_idea_idol_of_boreas_lost"
 		texturefile = "gfx/interface/ideas/idol_of_boreas_lost.dds"
@@ -3309,6 +3313,26 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/JER_generic_advisor.dds"
 	}
 	SpriteType = {
+		name = "GFX_idea_generic_griffon_with_monocle"
+		texturefile = "gfx/interface/ideas/generic_griffon_with_monocle.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_generic_griffon_with_glasses"
+		texturefile = "gfx/interface/ideas/generic_griffon_with_glasses.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_generic_griffon_with_cap"
+		texturefile = "gfx/interface/ideas/generic_griffon_with_cap.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_generic_griffon_politician"
+		texturefile = "gfx/interface/ideas/generic_griffon_politician.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_capital_outflow"
+		texturefile = "gfx/interface/ideas/idea_capital_outflow.tga"
+	}
+	SpriteType = {
 		name = "GFX_idea_LUS_karkarich"
 		texturefile = "gfx/interface/ideas/LUS_karkarich.dds"
 	}
@@ -3347,5 +3371,9 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_idea_LUS_crovin_laar"
 		texturefile = "gfx/interface/ideas/LUS_crovin_laar.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_LUS_BRF_marriage"
+		texturefile = "gfx/interface/ideas/LUS_BRF_marriage.dds"
 	}
 }

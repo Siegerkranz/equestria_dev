@@ -32,20 +32,19 @@ set_politics = {
 
 	parties = {
 		democratic = { 
-			popularity = 48
+			popularity = 15
 		}
 
 		fascism = {
-			popularity = 2
+			popularity = 15
 		}
 		
 		communism = {
 			popularity = 0
-			banned = yes
 		}
 		
 		neutrality = {
-			popularity = 60
+			popularity = 70
 		}
 	}
 	
@@ -61,4 +60,88 @@ create_country_leader = {
 	traits = {
 		
 	}
+}
+
+create_country_leader = {
+	name = "Honoria"
+	desc = "POLITICS_HONORIA_DESC"
+	picture = "Honoria.tga"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Comrade Voliare"
+	desc = "POLITICS_VOLIARE_DESC"
+	picture = "Volaire.tga"
+	expire = "1965.1.1"
+	ideology = leninism
+	traits = {
+		
+	}
+}
+
+create_field_marshal = {
+	name = "TZO's Cat"
+	picture = "MyCat.tga"
+	traits = { old_guard defensive_doctrine }
+	skill = 2
+	
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "The Doom of Man"
+	picture = "TheDiscord.tga"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Duncan Mactrot"
+	picture = "Duncan.tga"
+	traits = { career_officer organizer }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "The fountain of blood from dominions 4"
+	picture = "FountainOfBlood.tga"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "A rhombus"
+	picture = "ARhombus.tga"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Marigold"
+	picture = "General_Marigold.tga"
+	traits = { panzer_leader  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
 }

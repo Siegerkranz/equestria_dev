@@ -6,6 +6,9 @@ ideas = {
 			allowed = {
 				original_tag = LUS
 			}
+			ai_will_do = {
+				factor = 0
+			}
 			available = {
 				NOT = {
 					has_government = communism
@@ -26,6 +29,9 @@ ideas = {
 				NOT = { has_government = communism }
 			}
 			traits = { captain_of_industry state_investor }
+			ai_will_do = {
+				factor = 100
+			}
 			modifier = {
 				
 			}
@@ -37,6 +43,9 @@ ideas = {
 			}
 			available = {
 			}
+			ai_will_do = {
+				factor = 7
+			}
 			traits = { war_industrialist }
 			modifier = {
 			}
@@ -47,6 +56,9 @@ ideas = {
 				original_tag = LUS
 			}
 			available = {
+			}
+			ai_will_do = {
+				factor = 1
 			}
 			traits = { prince_of_terror }
 			modifier = {
@@ -64,7 +76,7 @@ ideas = {
 			traits = { army_chief_organizational_2 }
 			
 			ai_will_do = {
-				factor = 1
+				factor = 5
 			}
 		}
 		LUS_Lord_Drak_Army_chief = {
@@ -79,7 +91,7 @@ ideas = {
 			traits = { army_chief_morale_2 }
 			
 			ai_will_do = {
-				factor = 1
+				factor = 5
 			}
 		}
 	}
@@ -114,6 +126,21 @@ ideas = {
 			allowed = {
 				original_tag = LUS
 			}
+			ai_will_do = {
+				factor = 5
+				modifier = {
+					OR = {
+						has_war = yes
+						any_other_country = {
+							OR = {
+								has_wargoal_against = ROOT
+								is_justifying_wargoal_against = ROOT
+							}
+						}
+					}
+					factor = 100
+				}
+			}
 			available = {
 			}
 			traits = { army_infantry_3 }
@@ -122,11 +149,41 @@ ideas = {
 			allowed = {
 				original_tag = LUS
 			}
+			ai_will_do = {
+				factor = 5
+				modifier = {
+					OR = {
+						has_war = yes
+						any_other_country = {
+							OR = {
+								has_wargoal_against = ROOT
+								is_justifying_wargoal_against = ROOT
+							}
+						}
+					}
+					factor = 50
+				}
+			}
 			traits = { army_regrouping_2 }
 		}
 		LUS_barto_miroven = {
 			allowed = {
 				original_tag = LUS
+			}
+			ai_will_do = {
+				factor = 5
+				modifier = {
+					OR = {
+						has_war = yes
+						any_other_country = {
+							OR = {
+								has_wargoal_against = ROOT
+								is_justifying_wargoal_against = ROOT
+							}
+						}
+					}
+					factor = 30
+				}
 			}
 			traits = { army_logistics_3 }
 		}
@@ -138,6 +195,9 @@ ideas = {
 			}
 			research_bonus = {
 				land_doctrine = 0.07
+			}
+			ai_will_do = {
+				factor = 8
 			}
 			traits = { military_theorist }
 		}
@@ -193,6 +253,9 @@ ideas = {
 			research_bonus = {
 				industry = 0.10
 			}
+			ai_will_do = {
+				factor = 10
+			}
 			traits = { industrial_concern }
 			modifier = {
 			}
@@ -222,6 +285,9 @@ ideas = {
 			allowed = {
 				original_tag = LUS
 			}
+			available = {
+				has_completed_focus = LUS_tanks
+			}
 			research_bonus = {
 				armor = 0.10
 			}
@@ -235,6 +301,9 @@ ideas = {
 			picture = generic_air_bonus
 			allowed = {
 				original_tag = LUS
+			}
+			available = {
+				has_completed_focus = LUS_griffon_aviation_effort
 			}
 			research_bonus = {
 				air_equipment = 0.10
@@ -372,6 +441,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			available = {
+				is_subject = no
+			}
 			modifier = {
 				conscription = -0.01
 			}
@@ -382,6 +454,9 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			available = {
+				is_subject = no
+			}
 			modifier = {
 				local_resources_factor = -0.1
 			}
@@ -391,6 +466,9 @@ ideas = {
 		LUS_talvonia_lord = {
 			allowed = {
 				always = no
+			}
+			available = {
+				is_subject = no
 			}
 			modifier = {
 				consumer_goods_factor = 0.05
@@ -403,27 +481,15 @@ ideas = {
 			allowed = {
 				always = no
 			}
+			available = {
+				is_subject = no
+			}
 			modifier = {
 				stability_factor = 0.075
 			}
 		}
 	}
-	country = {
-		LUS_peasant_army = {
-			picture = nkvd_2
-			allowed = {
-				always = no
-			}
-			available = {
-				has_civil_war = yes
-			}
-			modifier = {
-				conscription = 0.15
-				mobilization_speed = 0.1
-				army_org_Factor = -0.25
-			}
-		}
-	}
+	
 	country = {
 		LUS_army_of_nobles = {
 			picture = vittoria_mutilata
@@ -618,6 +684,7 @@ ideas = {
 					}
 					has_added_tension_amount > 10
 				}
+				is_subject = no
 			}
 			modifier = {
 				research_time_factor = -0.15
@@ -630,6 +697,9 @@ ideas = {
 			picture = general_staff
 			allowed = {
 				always = no
+			}
+			available = {
+				NOT = { has_government = communism }
 			}
 			modifier = {
 				war_support_factor = 0.1
@@ -799,24 +869,7 @@ ideas = {
 			}
 		}
 	}
-	country = {
-		LUS_state_of_anarchy = {
-			
-			allowed = {
-				always = no
-			}
-			modifier = {
-				war_support_factor = -0.25
-				production_factory_max_efficiency_factor = -0.5
-				industrial_capacity_factory = -0.5
-				industrial_capacity_dockyard = -0.5
-				production_speed_buildings_factor = -0.5
-				research_time_factor = 0.9
-				global_building_slots_factor = -0.13
-				local_resources_factor = -0.45
-			}
-		}
-	}
+	
 	country = {
 		LUS_BRF_marriage = {
 			
@@ -1167,4 +1220,309 @@ ideas = {
 			}
 		}
 	}
+
+	#############################################
+	###########COMMUNIST IDEAS#################
+	#############################################
+	country = {
+		LUS_peasant_army = {
+			picture = nkvd_2
+			allowed = {
+				always = no
+			}
+			available = {
+				has_civil_war = yes
+			}
+			modifier = {
+				conscription = 0.15
+				mobilization_speed = 0.1
+				army_org_Factor = -0.25
+			}
+		}
+	}
+	country = {
+		LUS_fighting_for_liberty = {
+			picture = the_final_push_GRW
+			allowed = {
+				always = no
+			}
+			available = {
+				has_civil_war = yes
+			}
+			modifier = {
+				army_morale_factor = 0.1
+			}
+		}
+	}
+	country = {
+		LUS_state_of_anarchy = {
+			picture = chaos_idea
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_weekly = -0.007
+				war_support_factor = -0.25
+				production_factory_max_efficiency_factor = -0.5
+				industrial_capacity_factory = -0.5
+				industrial_capacity_dockyard = -0.5
+				production_speed_buildings_factor = -0.5
+				research_time_factor = 0.9
+				global_building_slots_factor = -0.13
+				local_resources_factor = -0.45
+			}
+		}
+	}
+	country = {
+		LUS_state_of_anarchy2 = {
+			picture = chaos_idea
+			allowed = {
+				always = no
+			}
+			modifier = {
+				war_support_factor = -0.25
+				production_factory_max_efficiency_factor = -0.2
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+				production_speed_buildings_factor = -0.2
+				research_time_factor = 0.5
+				global_building_slots_factor = -0.1
+				local_resources_factor = -0.2
+			}
+		}
+	}
+	country = {
+		LUS_banditry = {
+			picture = griffon_army_unhappy
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.25
+			}
+		}
+	}
+	country = {
+		LUS_banditry_2 = {
+			picture = griffon_army_unhappy
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.10
+			}
+		}
+	}
+	country = {
+		LUS_uncontrolled_army = {
+			picture = griffon_army_unhappy
+			allowed = {
+				always = no
+			}
+			modifier = {
+				army_attack_factor = -0.4
+				army_defence_factor = -0.4
+				army_org_Factor = -0.2
+			}
+		}
+	}
+	country = {
+		LUS_new_lushi_idea = {
+			picture = clover_idea
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_weekly = 0.005
+			}
+		}
+	}
+	country = {
+		LUS_red_army = {
+			picture = LUS_prywhen_communist_influence
+			allowed = {
+				always = no
+			}
+			modifier = {
+				conscription = 0.02
+			}
+		}
+	}
+	country = {
+		LUS_red_army_atc = {
+			picture = LUS_prywhen_communist_influence
+			allowed = {
+				always = no
+			}
+			modifier = {
+				conscription = 0.02
+				army_attack_factor = 0.075
+			}
+		}
+	}
+	country = {
+		LUS_red_army_def = {
+			picture = LUS_prywhen_communist_influence
+			allowed = {
+				always = no
+			}
+			modifier = {
+				conscription = 0.02
+				army_defence_factor = 0.075
+			}
+		}
+	}
+	country = {
+		LUS_red_army_def_org = {
+			picture = LUS_prywhen_communist_influence
+			allowed = {
+				always = no
+			}
+			modifier = {
+				conscription = 0.02
+				army_defence_factor = 0.075
+				army_org_Factor = 0.08
+			}
+		}
+	}
+	country = {
+		LUS_red_army_atc_org = {
+			picture = LUS_prywhen_communist_influence
+			allowed = {
+				always = no
+			}
+			modifier = {
+				conscription = 0.02
+				army_attack_factor = 0.075
+				army_org_Factor = 0.08
+			}
+		}
+	}
+	country = {
+		LUS_red_army_def_train = {
+			picture = LUS_prywhen_communist_influence
+			allowed = {
+				always = no
+			}
+			modifier = {
+				conscription = 0.02
+				army_defence_factor = 0.075
+				training_time_factor = -0.1
+			}
+		}
+	}
+	country = {
+		LUS_red_army_atc_train = {
+			picture = LUS_prywhen_communist_influence
+			allowed = {
+				always = no
+			}
+			modifier = {
+				conscription = 0.02
+				army_attack_factor = 0.075
+				training_time_factor = -0.1
+			}
+		}
+	}
+	##################################################
+	#################################################
+	country = {
+		LUS_red_army_def_org_youth = {
+			picture = LUS_prywhen_communist_influence
+			allowed = {
+				always = no
+			}
+			modifier = {
+				conscription = 0.04
+				army_defence_factor = 0.075
+				army_org_Factor = 0.08
+			}
+		}
+	}
+	country = {
+		LUS_red_army_atc_org_youth = {
+			picture = LUS_prywhen_communist_influence
+			allowed = {
+				always = no
+			}
+			modifier = {
+				conscription = 0.04
+				army_attack_factor = 0.075
+				army_org_Factor = 0.08
+			}
+		}
+	}
+	country = {
+		LUS_red_army_def_train_youth = {
+			picture = LUS_prywhen_communist_influence
+			allowed = {
+				always = no
+			}
+			modifier = {
+				conscription = 0.04
+				army_defence_factor = 0.075
+				training_time_factor = -0.1
+			}
+		}
+	}
+	country = {
+		LUS_red_army_atc_train_youth = {
+			picture = LUS_prywhen_communist_influence
+			allowed = {
+				always = no
+			}
+			modifier = {
+				conscription = 0.04
+				army_attack_factor = 0.075
+				training_time_factor = -0.1
+			}
+		}
+	}
+	country = {
+		LUS_communist_griffon = {
+			picture = Ast_abandon_the_westminster_system_communism
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+			}
+		}
+	}
+	country = {
+		LUS_prywhen_research_com = {
+			picture = SOV_scientist_defect
+			allowed = {
+				always = no
+			}
+			available = {
+				NOT = {
+					has_war_with = GRW
+				}
+			}
+			modifier = {
+				research_time_factor = -0.1
+			}
+		}
+	}
+	country = {
+		LUS_GRW_lushi_research_com = {
+			picture = SOV_scientist_defect
+			allowed = {
+				always = no
+			}
+			available = {
+				NOT = {
+					has_war_with = LUS
+				}
+			}
+			modifier = {
+				research_time_factor = -0.05
+			}
+		}
+	}
+	##################################################
+	#################################################
 }

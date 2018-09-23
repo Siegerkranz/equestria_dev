@@ -433,7 +433,7 @@ ideas = {
 
 		DMT_major_slave_rebellion = {
 
-			picture = generic_volunteer_expedition_bonus		
+			picture = FRA_matignon_agreements		
 
 			allowed = {
 				OR = {
@@ -456,7 +456,7 @@ ideas = {
 
 		DMT_mild_slave_rebellion = {
 
-			picture = generic_volunteer_expedition_bonus		
+			picture = FRA_matignon_agreements		
 
 			allowed = {
 				OR = {
@@ -519,7 +519,7 @@ ideas = {
 
 		DMT_means_of_production_seized = {
 
-			#picture = generic_volunteer_expedition_bonus		
+			picture = generic_goods_red_bonus		
 
 			allowed = {
 				has_government = communism
@@ -540,7 +540,7 @@ ideas = {
 
 		DMT_red_army = {
 
-			#picture = generic_volunteer_expedition_bonus		
+			picture = nkvd_2		
 
 			allowed = {
 				has_government = communism
@@ -608,7 +608,7 @@ ideas = {
 			
 			removal_cost = -1
 
-			picture = generic_exploit_mines
+			picture = home_of_revolution
 			
 			modifier = {
 				stability_factor = 0.05
@@ -630,13 +630,46 @@ ideas = {
 			
 			removal_cost = -1
 
-			picture = generic_exploit_mines
+			picture = home_of_revolution
 			
 			modifier = {
 				war_support_factor = 0.2
 				surrender_limit = 0.2
 				production_factory_max_efficiency_factor = 0.1
 				army_attack_factor = 0.05
+			}
+		}
+
+		DMT_harmonie_grows = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_democratic_drift_bonus
+
+			modifier = {
+				democratic_drift = 0.05
+			}
+		}
+
+		DMT_communism_grows = {
+
+			picture = generic_communism_drift_bonus		
+
+			allowed = {
+				has_government = communism
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				communism_drift = 0.1
 			}
 		}
 	}

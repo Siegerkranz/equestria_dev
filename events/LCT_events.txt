@@ -170,6 +170,7 @@ country_event = {
 
 	option = {
 		name = lakecity.6.a
+		remove_unit_leader = 902
 	}
 }
 
@@ -186,6 +187,7 @@ country_event = {
 	option = { #Allow Elections
 		name = lakecity.7.a
 		add_stability = 0.1
+		remove_unit_leader = 902
 		hidden_effect = {
 			news_event = { days = 1 id = lakecity_news.1 }
 		}
@@ -199,7 +201,7 @@ country_event = {
 			popularity = 0.2
 		}
 		set_politics = { ruling_party = fascism elections_allowed = no }
-
+		remove_unit_leader = 902
 		hidden_effect = {
 			news_event = { days = 1 id = lakecity_news.3 }
 			set_global_flag = LCT_vanguard_chosen
@@ -223,7 +225,7 @@ country_event = {
 			create_country_leader = {
 				name = "Wild Tree"
 				desc = "POLITICS_WILDTREE_DESC"
-				picture = "WildTree.dds"
+				picture = "Wild_Tree.tga"
 				expire = "1989.1.1"
 				ideology = fascism_ideology
 				traits = {
@@ -283,8 +285,7 @@ country_event = {
 	is_triggered_only = yes 
 	
 	immediate = {
-		hidden_effect = {
-			set_country_flag = LCT_election_1007
+		hidden_effect = {			
 			create_country_leader = {
 				name = "Wavebreaker"
 				desc = "POLITICS_WAVEBREAKER_DESC"
@@ -301,6 +302,7 @@ country_event = {
 	
 	option = { #Wavebreaaker
 		name = lakecity.9.a
+		set_country_flag = LCT_election_1007
 		ai_chance = {
 			factor = 10
 		}
@@ -310,6 +312,7 @@ country_event = {
 	
 	option = { #Westerly
 		name = lakecity.9.b
+		set_country_flag = LCT_election_1007
 		ai_chance = {
 			factor = 6
 			modifier = {
@@ -322,6 +325,96 @@ country_event = {
 		set_political_party = { ideology = fascism popularity = 20 }
 		set_politics = { ruling_party = fascism elections_allowed = no }
 		set_global_flag = LCT_westerly_elected
+	}
+}
+# Election of Puppet Wavebreaker
+country_event = {
+	id = lakecity.901
+	immediate = {log = "[Root.GetName]: event lakecity.901"}#Auto-logging
+	title = lakecity.901.t
+	desc = lakecity.901.d
+	picture = GFX_report_event_usa_election_generic
+	
+	trigger = {
+		original_tag = LCT
+		has_government = neutrality
+		has_country_flag =  LCT_election_1007
+	}
+	
+	is_triggered_only = yes 
+	
+	immediate = {
+		
+	}
+	
+	option = { #Wavebreaaker
+		name = lakecity.901.a
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = { #Wavebreaaker
+		name = lakecity.901.b
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+# Free Elections
+country_event = {
+	id = lakecity.902
+	immediate = {log = "[Root.GetName]: event lakecity.902"}#Auto-logging
+	title = lakecity.902.t
+	desc = lakecity.902.d
+	picture = GFX_report_event_usa_election_generic
+	
+	trigger = {
+		original_tag = LCT
+		has_government = democratic
+		has_country_flag =  LCT_election_1007
+	}
+	
+	is_triggered_only = yes 
+	
+	immediate = {
+		
+	}
+	
+	option = { #Wavebreaaker
+		name = lakecity.902.a
+		ai_chance = {
+			factor = 10
+		}
+		create_country_leader = {
+			name = "Wavebreaker"
+			desc = "POLITICS_WAVEBREAKER_DESC"
+			picture = "WaveBreaker.tga"
+			expire = "1965.1.1"
+			ideology = liberalism
+			traits = {
+				dislikes_griffon_empire
+			}
+			id = 903
+		}
+	}
+	
+	option = { #Skye
+		name = lakecity.902.b
+		ai_chance = {
+			factor = 5
+		}
+		create_country_leader = {
+			name = "Deirdra Skye"
+			desc = "POLITICS_DEIRDRA_SKYE_DESC"
+			picture = "DeirdraSkye.tga"
+			expire = "1965.1.1"
+			ideology = liberalism
+			traits = {
+				diehard_environmentalist
+			}
+		}
 	}
 }
 
@@ -749,7 +842,7 @@ country_event = {
 			}
 		}
 		FROM = {
-			set_country_flag = LCT_OHI_help
+			add_to_variable = { LCT_risk_of_assassination = 1 }
 		}
 	}
 	option = { # We should leave them to their own divices
@@ -775,37 +868,47 @@ country_event = {
 	hidden = yes
 	
 	option = {
-		trigger = {
-			has_country_flag = LCT_OHI_help
-			RCT = { NOT = { has_completed_focus = RCT_expand_ohi } }
-		}
-		random_list = {
-			70 = {
-				country_event = { id = lakecity.25 hours = 6 }
+		if = {
+			limit = {
+				check_variable = { LCT_risk_of_assassination < 1 }
 			}
-			30 = {
-				country_event = { id = lakecity.26 hours = 6 }
+			random_list = {
+				70 = {
+					country_event = { id = lakecity.26 hours = 6 }
+				}
+				30 = {
+					country_event = { id = lakecity.25 hours = 6 }
+				}
 			}
 		}
-	}
-	option = {
-		trigger = {
-			has_country_flag = LCT_OHI_help
-			RCT = { has_completed_focus = RCT_expand_ohi }
-		}
-		country_event = { id = lakecity.25 hours = 6 }
-	}
-	option = { # yes
-		trigger = {
-			NOT = { has_country_flag = LCT_OHI_help }
-		}
-		random_list = {
-			70 = {
-				country_event = { id = lakecity.26 hours = 6 }
+		else_if = {
+			limit = {
+				check_variable = { LCT_risk_of_assassination = 1 }
 			}
-			30 = {
-				country_event = { id = lakecity.25 hours = 6 }
+			random_list = {
+				50 = {
+					country_event = { id = lakecity.26 hours = 6 }
+				}
+				50 = {
+					country_event = { id = lakecity.25 hours = 6 }
+				}
 			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { LCT_risk_of_assassination = 2 }
+			}
+			random_list = {
+				30 = {
+					country_event = { id = lakecity.26 hours = 6 }
+				}
+				70 = {
+					country_event = { id = lakecity.25 hours = 6 }
+				}
+			}
+		}
+		else = {
+			country_event = { id = lakecity.25 hours = 6 }
 		}
 	}
 }
@@ -1535,6 +1638,358 @@ news_event = {
 		name = lakecity_news.9.b
 		trigger = {
 			NOT = { tag = LCT }
+		}
+	}
+}
+
+
+###########################
+####  Lakecity Flavour ####
+###########################
+
+# lake festival preperation event, can't host during wartime
+country_event = {
+	id = lakecity.93
+	immediate = {log = "[Root.GetName]: event lakecity.93"}#Auto-logging
+	title = lakecity.93.t
+	desc = lakecity.93.d
+	picture = GFX_event_lake_city
+	is_triggered_only = yes
+	
+	# the holiday is upon us!
+	option = {
+		name = lakecity.93.a
+		trigger = {
+			has_war = no
+		}
+		hidden_effect = {		
+			country_event = { 
+				id = lakecity.94
+				days = 20
+			}
+		}
+	}
+	
+	# Can't fire the event during war.
+	option = {
+		name = lakecity.93.b
+		trigger = {
+			has_war = yes
+		}
+		country_event = { 
+			id = lakecity.93
+			days = 380
+		}
+	}
+}
+
+# Lake festival celebration
+# Annual festival that happens every year, old traditions that celebrate
+# the importance of the lake to the city
+
+country_event = {
+	id = lakecity.94
+	immediate = {log = "[Root.GetName]: event lakecity.94"}#Auto-logging
+	title = lakecity.94.t
+	desc = lakecity.94.d
+	picture = GFX_event_lake_city
+	is_triggered_only = yes
+	
+	# festival next year
+	option = {
+		name = lakecity.94.a
+		add_political_power = 5
+		hidden_effect = {
+			country_event = { 
+				id = lakecity.93
+				days = 340
+			}
+		}
+	}
+
+	# "This event is a waste of time" #never fires again#
+	option = {
+		name = lakecity.94.b
+		country_event = { 
+			id = lakecity.95
+			days = 2
+		}
+	}
+}
+
+# Lake festival cancled
+# you chose to end the yearly festival
+
+country_event = {
+	id = lakecity.95
+	immediate = {log = "[Root.GetName]: event lakecity.95"}#Auto-logging
+	title = lakecity.95.t
+	desc = lakecity.95.d
+	picture = GFX_event_lake_city
+	is_triggered_only = yes
+	
+	# festivals are over
+	option = {
+		name = lakecity.95.a
+		add_political_power = -10
+	}
+}
+
+# Lost fishers
+country_event = {
+	id = lakecity.96
+	immediate = {log = "[Root.GetName]: event lakecity.96"}#Auto-logging
+	title = lakecity.96.t
+	desc = lakecity.96.d
+	picture = GFX_event_lake_city
+	
+	trigger = {
+		tag = LCT
+		has_stability = 0.5
+		has_war = no
+	}
+	
+	mean_time_to_happen = { days = 25 random = 30 }
+	fire_only_once = yes
+	
+	# investigate
+	option = {
+		name = lakecity.96.a
+		add_political_power = -5
+		country_event = { 
+			id = lakecity.97 
+			days = 30
+			random = 30
+		}
+	}
+	
+	# ignore
+	option = {
+		name = lakecity.96.b
+		add_stability = -0.05
+	}
+}
+
+# second event in the chain, they are not found yet
+country_event = {
+	id = lakecity.97
+	immediate = {log = "[Root.GetName]: event lakecity.97"}#Auto-logging
+	title = lakecity.97.t
+	desc = lakecity.97.d
+	picture = GFX_event_lake_city
+	is_triggered_only = yes
+	
+	# continue the search
+	option = {
+		name = lakecity.97.a
+		add_political_power = -5
+		country_event = {
+			id = lakecity.98
+			days = 17
+			random = 22
+		}
+	}
+	
+	# give up
+	option = {
+		name = lakecity.97.b
+		add_stability = -0.05
+	}
+}
+
+# Third and final event, payoff
+country_event = {
+	id = lakecity.98
+	immediate = {log = "[Root.GetName]: event lakecity.98"}#Auto-logging
+	title = lakecity.98.t
+	desc = lakecity.98.d
+	picture = GFX_event_lake_city
+	is_triggered_only = yes
+	
+	# Fishermen found!
+	option = {
+		name = lakecity.98.a
+		add_political_power = 20
+		add_stability = 0.05
+	}
+}
+
+# Guild dispute minichain (three events)
+country_event = {
+	id = lakecity.99
+	immediate = {log = "[Root.GetName]: event lakecity.99"}#Auto-logging
+	title = lakecity.99.t
+	desc = lakecity.99.d
+	picture = GFX_event_lake_city
+	
+	trigger = {
+		tag = LCT
+		has_war = no
+		OR = {
+			has_completed_focus = LCT_support_the_guilds
+			has_completed_focus = LCT_empower_the_guilds
+		}
+	}
+	
+	fire_only_once = yes
+	mean_time_to_happen = { days = 40 random = 50 }
+	
+	# Mediate negotiations
+	option = {
+		name = lakecity.99.a
+		country_event = {
+			id = lakecity.100
+			days = 26
+		}
+	}
+	
+	# Let them Squabble
+	option = {
+		name = lakecity.99.b
+		hidden_effect = {
+			random_list = {
+				50 = {
+					country_event = {
+						id = lakecity.101
+						days = 15
+						random = 25
+					}
+				}
+				50 = {
+					country_event = {
+						id = lakecity.103
+						days = 15
+						random = 25
+					}
+				}
+			}
+		}
+	}
+}
+
+# Guild dispute mediate
+country_event = {
+	id = lakecity.100
+	immediate = {log = "[Root.GetName]: event lakecity.100"}#Auto-logging
+	title = lakecity.100.t
+	desc = lakecity.100.d
+	picture = GFX_event_lake_city
+	is_triggered_only = yes
+	
+	# Guilds placated empowered
+	option = {
+		name = lakecity.100.a
+		trigger = {
+			has_completed_focus = LCT_empower_the_guilds
+		}
+		
+		add_timed_idea = {
+			idea = LTC_temp_guild_empower_bonus
+			days = 90
+		}
+	}
+	
+	# Guilds placated supported
+	option = {
+		name = lakecity.100.b
+		trigger = {
+			has_completed_focus = LCT_support_the_guilds
+		}
+		
+		add_timed_idea = {
+			idea = LTC_temp_guild_support_bonus
+			days = 90
+		}
+	}
+}	
+	
+# Guild dispute squabble
+country_event = {
+	id = lakecity.101
+	immediate = {log = "[Root.GetName]: event lakecity.101"}#Auto-logging
+	title = lakecity.101.t
+	desc = lakecity.101.d
+	picture = GFX_event_lake_city
+	is_triggered_only = yes
+	
+	# empowered guilds option
+	option = {
+		name = lakecity.101.a
+		trigger = {
+			has_completed_focus = LCT_empower_the_guilds
+		}
+		
+		add_timed_idea = {
+			idea = LTC_temp_guild_empower_bonus
+			days = 150
+		}
+	}
+	
+	# supported guilds option
+	option = {
+		name = lakecity.101.b
+		trigger = {
+			has_completed_focus = LCT_support_the_guilds
+		}
+		
+		add_timed_idea = {
+			idea = LTC_temp_guild_support_bonus
+			days = 150
+		}
+	}
+}
+
+# Military conflict with lake city
+# Unruly soldiers causing issues
+country_event = {
+	id = lakecity.102
+	immediate = {log = "[Root.GetName]: event lakecity.102"}#Auto-logging
+	title = lakecity.102.t
+	desc = lakecity.102.d
+	picture = GFX_event_lake_city
+
+	trigger = {
+		has_completed_focus = LCT_westerly_takes_control
+		has_war_support > 0.8
+		has_stability > 0.65		
+	}
+
+	mean_time_to_happen = { days 35 random = 50 }
+
+	fire_only_once = yes
+	
+	# Punish the military
+	option = {
+		name = lakecity.102.a
+		add_political_power = -3
+		add_war_support = -0.03
+		add_stability = 0.03
+	}
+	
+	# Lax response
+	option = {
+		name = lakecity.102.b
+		add_political_power = -3
+		add_war_support = 0.03
+		add_stability = -0.03
+	}
+}
+
+# guild dispute option squabble fail
+country_event = {
+	id = lakecity.103
+	immediate = {log = "[Root.GetName]: event lakecity.103"}#Auto-logging
+	title = lakecity.103.t
+	desc = lakecity.103.d
+	picture = GFX_event_lake_city
+	is_triggered_only = yes
+	
+	option = {
+		name = lakecity.103.a
+		set_country_flag = { 
+			flag = guild_disagreement 
+			days = 360 
+			value = 1 
 		}
 	}
 }

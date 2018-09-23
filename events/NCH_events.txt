@@ -51,7 +51,8 @@ country_event = { #FBK Response
 
          option = { #Accept     
             name = greneclyf.2.a 
-        	NCH = { country_event = { days = 8 id = greneclyf.3 } }
+            custom_effect_tooltip = NCH_FBK_trade_accept_tooltip
+        	hidden_effect = { NCH = { country_event = { days = 8 id = greneclyf.3 } } }
         	ai_chance = { factor = 90 }
    		 }
          option = { #Postpone     
@@ -220,8 +221,9 @@ country_event = { #BAK Response
          is_triggered_only = yes
 
 		 option = { #Accept     
-            name = greneclyf.8.a 
-        	NCH = { country_event = { days = 1 id = greneclyf.9 } }
+            name = greneclyf.8.a
+            custom_effect_tooltip = NCH_BAK_trade_accept_tooltip
+        	hidden_effect = { NCH = { country_event = { days = 1 id = greneclyf.9 } } }
         	ai_chance = { factor = 80 }
         }
          option = { #Refuse     
@@ -326,8 +328,9 @@ country_event = { #NIM Response
          is_triggered_only = yes
 
 		 option = { #Accept     
-            name = greneclyf.11.a 
-        	NCH = { country_event = { days = 1 id = greneclyf.12 } }
+            name = greneclyf.11.a
+            custom_effect_tooltip = NCH_NIM_trade_accept_tooltip
+        	hidden_effect = { NCH = { country_event = { days = 1 id = greneclyf.12 } } }
         	ai_chance = { factor = 80 }
         }
          option = { #Refuse     
@@ -432,8 +435,9 @@ country_event = { #RCT Response
          is_triggered_only = yes
 
 		 option = { #Accept     
-            name = greneclyf.14.a 
-        	NCH = { country_event = { days = 1 id = greneclyf.15 } }
+            name = greneclyf.14.a
+            custom_effect_tooltip = NCH_RCT_trade_accept_tooltip
+        	hidden_effect = { NCH = { country_event = { days = 1 id = greneclyf.15 } } }
         	ai_chance = { factor = 80 }
         }
          option = { #Refuse     
@@ -538,8 +542,9 @@ country_event = { #LCT Response
          is_triggered_only = yes
 
 		 option = { #Accept     
-            name = greneclyf.17.a 
-        	NCH = { country_event = { days = 1 id = greneclyf.18 } }
+            name = greneclyf.17.a
+            custom_effect_tooltip = NCH_LCT_trade_accept_tooltip
+        	hidden_effect = { NCH = { country_event = { days = 1 id = greneclyf.18 } } }
         	ai_chance = { factor = 80 }
         }
          option = { #Refuse     
@@ -644,8 +649,9 @@ country_event = { #GRI Response
          is_triggered_only = yes
 
          option = { #Accept     
-            name = greneclyf.20.a 
-        	NCH = { country_event = { days = 1 id = greneclyf.21 } }
+            name = greneclyf.20.a
+            custom_effect_tooltip = NCH_GRI_trade_accept_tooltip
+        	hidden_effect = { NCH = { country_event = { days = 1 id = greneclyf.21 } } }
            	ai_chance = { factor = 80 }
 
         }
@@ -770,8 +776,9 @@ country_event = { #EQS Response
          is_triggered_only = yes
 
          option = { #Accept     
-            name = greneclyf.24.a 
-        	NCH = { country_event = { days = 18 id = greneclyf.25 } }
+            name = greneclyf.24.a
+            custom_effect_tooltip = NCH_EQS_trade_accept_tooltip
+        	hidden_effect = { NCH = { country_event = { days = 18 id = greneclyf.25 } } }
            	ai_chance = { factor = 40 }
 
         }
@@ -879,16 +886,16 @@ country_event = { #CHN Response
          is_triggered_only = yes
 
          option = { #Accept     
-            name = greneclyf.27.a 
-        	NCH = { country_event = { days = 10 id = greneclyf.28 } }
-           	ai_chance = { factor = 100 }
-           	CHN = { destroy_ships = { type = submarine count = 1 } }
+            name = greneclyf.27.a
+            custom_effect_tooltip = NCH_CHN_trade_accept_tooltip
+        	hidden_effect = { NCH = { country_event = { days = 10 id = greneclyf.28 } } 
+           	CHN = { destroy_ships = { type = submarine count = 1 } } }
 
         }
 
          option = { #Refuse     
             name = greneclyf.27.b 
-        		ai_chance = { factor = 0 }
+        	ai_chance = { factor = 0 }
         }
 	}
 
@@ -952,6 +959,147 @@ country_event = { #Crazy Gytha
 	}
 }
 
+country_event = { #Council Convenes
+    id = greneclyf.30
+    title = greneclyf.30.t
+    desc = greneclyf.30.d
+    picture = GFX_event_maddened_gytha
+	fire_only_once = yes
+	is_triggered_only = yes
+    
+    option = {      
+        name = greneclyf.30.a
+
+		random_list = {
+			60 = {
+				country_event = greneclyf.31
+			}
+			40 = {
+				country_event = greneclyf.69
+			}
+		}
+	}
+	 option = {      
+        name = greneclyf.30.b
+		country_event = greneclyf.68
+	}
+}
+
+country_event = { #Keep Gytha
+    id = greneclyf.31
+    title = greneclyf.31.t
+    desc = greneclyf.31.d
+    picture = GFX_event_maddened_gytha
+	fire_only_once = yes
+	is_triggered_only = yes
+    
+    option = {      
+        name = greneclyf.31.a
+	}
+}
+
+country_event = { #New queen
+	id = greneclyf.68
+	title = greneclyf.68.t
+    desc = greneclyf.68.d
+    picture = GFX_event_maddened_gytha
+	fire_only_once = yes
+	is_triggered_only = yes
+    
+    option = {      
+        name = greneclyf.68.a
+        remove_ideas = NCH_crisis_of_faith_idea
+        kill_country_leader = yes
+
+			set_politics = {
+				parties = {
+					democratic = { 
+						popularity = 20
+					}
+				
+					fascism = {
+						popularity = 0
+					}
+					
+					communism = {
+						popularity = 20
+					}
+					
+					neutrality = { 
+						popularity = 60
+					}
+				}
+					
+				ruling_party = neutrality
+			}
+			
+				
+			hidden_effect = {
+				create_country_leader = {
+					name = "Queen Oiren"
+					desc = ""
+					picture = "Oiren.tga"
+					expire = "1965.1.1"
+					ideology = moderatism
+					traits = {
+						
+					}
+				}
+			}
+	}
+}
+
+country_event = { #Gyrtha offs herself
+	id = greneclyf.69
+	title = greneclyf.69.t
+    desc = greneclyf.69.d
+    picture = GFX_event_maddened_gytha
+	fire_only_once = yes
+	is_triggered_only = yes
+    
+    option = {      
+        name = greneclyf.69.a
+        remove_ideas = NCH_crisis_of_faith_idea
+        kill_country_leader = yes
+		add_stability = -0.05
+			set_politics = {
+				parties = {
+					democratic = { 
+						popularity = 20
+					}
+				
+					fascism = {
+						popularity = 0
+					}
+					
+					communism = {
+						popularity = 20
+					}
+					
+					neutrality = { 
+						popularity = 60
+					}
+				}
+					
+				ruling_party = neutrality
+			}
+			
+				
+			hidden_effect = {
+				create_country_leader = {
+					name = "Queen Oiren"
+					desc = ""
+					picture = "Oiren.tga"
+					expire = "1965.1.1"
+					ideology = moderatism
+					traits = {
+						
+					}
+				}
+			}
+	}
+}
+
 #####Fascist Farbrook Interaction
 
 country_event = { #NCH must decide how they are going to act
@@ -965,26 +1113,14 @@ country_event = { #NCH must decide how they are going to act
     
     option = { #Lets cause a civil war
         name = greneclyf.32.a
-		set_country_flag = NCH_support_white_hooves_flag
-		complete_national_focus = NCH_support_the_white_hooves
-		hidden_effect = {
-			FBK = {
-				country_event = {id = greneclyf.33 days = 1}
-			}
-		}
-		trigger = { #we should really only be doing this if farbrook isn't fascist
-			FBK = {
-				NOT = {has_government = fascism}
-			}
-		}
+		set_country_flag = NCH_Plan_White_Flag
 	}
 	option = { #Lets support the conservatives
         name = greneclyf.32.a
-		set_country_flag = NCH_support_conservative_flag
-		complete_national_focus = NCH_support_the_conservatives
-		hidden_effect = {
+		set_country_flag = NCH_FBK_Alliance_Fascist_Flag
+		trigger = { #we should really only be doing this if farbrook is fascist
 			FBK = {
-				country_event = {id = greneclyf.33 days = 1}
+				has_government = fascism
 			}
 		}
 	}
@@ -1032,10 +1168,21 @@ country_event = { #NCH supported the white hooves
     is_triggered_only = yes
 	
     
-    option = { #send an event to FBK
+    option = { #Decide to Ally
         name = greneclyf.35.a
 		FBK = {
-			country_event = {id = greneclyf.36 days = 1}
+			country_event = greneclyf.70
+		}
+		trigger = {
+			FBK = {
+				NOT = { has_government = fascism }
+			}
+		}
+	}
+	option = { #Civil war
+        name = greneclyf.35.b
+		FBK = {
+			country_event = greneclyf.34
 		}
 	}
 
@@ -1096,6 +1243,89 @@ country_event = { #NCH supported the white hooves so FBK reacts
 
 }
 
+country_event = { #Send an alliance request
+    id = greneclyf.70
+    title = greneclyf.70.t
+    desc = greneclyf.70.d
+    picture = GFX_event_maddened_gytha
+    
+    is_triggered_only = yes
+	 
+    option = { 
+        name = greneclyf.70.a
+		FBK = {
+			country_event = greneclyf.71
+		}
+	}
+
+}
+
+country_event = { #NCH Wants to ally
+    id = greneclyf.71
+    title = greneclyf.71.t
+    desc = greneclyf.71.d
+    picture = GFX_event_maddened_gytha
+    
+    is_triggered_only = yes
+	 
+    option = { 
+        name = greneclyf.71.a
+		NCH = {
+			set_country_flag = NCH_Plan_White_Flag
+			hidden_effect = {
+				country_event = greneclyf.72
+			}
+		}
+
+	}
+	option = { 
+        name = greneclyf.71.b
+		NCH = {
+			give_guarantee = FBK
+		}
+		FBK = {
+			give_guarantee = NCH
+		}
+		hidden_effect = {
+			country_event = greneclyf.73
+		}
+	}
+
+}
+
+country_event = { #they didn't accept
+    id = greneclyf.72
+    title = greneclyf.72.t
+    desc = greneclyf.72.d
+    picture = GFX_event_maddened_gytha
+    
+    is_triggered_only = yes
+	 
+    option = { 
+        name = greneclyf.72.a
+
+	}
+
+}
+
+
+country_event = { #yay they accepted
+    id = greneclyf.73
+    title = greneclyf.73.t
+    desc = greneclyf.73.d
+    picture = GFX_event_maddened_gytha
+    
+    is_triggered_only = yes
+	 
+    option = { 
+        name = greneclyf.73.a
+
+	}
+
+}
+
+
+#QUE? WHERE IS THIS FIRED AGAIN???
 country_event = { #NCH Civil war is over fascists won
     id = greneclyf.37
     title = greneclyf.37.t
@@ -1650,7 +1880,7 @@ country_event = { #Can haz research buff EQS plz
 
 #Contact our kind event chain
 
-country_event = { 
+country_event = { #Contact CHN
     id = greneclyf.57
     title = greneclyf.57.t
     desc = greneclyf.57.d

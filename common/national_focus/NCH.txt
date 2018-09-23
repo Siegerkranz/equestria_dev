@@ -1252,11 +1252,12 @@ focus_tree = {
 		}
 		x = 21
 		y = 1
-			ai_will_do = {
+		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
 			add_political_power = 50
+			country_event = {id = greneclyf.30 days = 1}
 		}
 	}
 
@@ -1773,26 +1774,32 @@ focus_tree = {
 		}
 	}
 
-	focus = {
+	focus = { ###Coup FBK
 		id = NCH_plan_white
 		text = NCH_plan_white
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		cost = 10.00
+		available = {
+			has_country_flag = NCH_Plan_White_Flag
+		}
 		prerequisite = {
 			focus = NCH_take_the_initiative
 		}
 		x = 24
 		y = 8
 		completion_reward = {
-			country_event = {id = greneclyf.19 days = 1}
+			country_event = greneclyf.32
 		}
 	}
 
-	focus = {
+	focus = { ### Alliance
 		id = NCH_support_the_white_hooves
 		text = NCH_support_the_white_hooves
 		icon = GFX_goal_generic_major_war
 		cost = 10.00
+		available = {
+			has_country_flag = NCH_FBK_Alliance_Fascist_Flag
+		}
 		prerequisite = {
 			focus = NCH_plan_white
 		}
@@ -1802,7 +1809,7 @@ focus_tree = {
 		x = 25
 		y = 9
 		completion_reward = {
-			country_event = {id = greneclyf.22 days = 1}
+			country_event = greneclyf.35
 		}
 	}
 
@@ -1820,7 +1827,7 @@ focus_tree = {
 		x = 23
 		y = 9
 		completion_reward = {
-			country_event = {id = greneclyf.21 days = 1}
+			country_event = greneclyf.70
 		}
 
 	}
@@ -1838,11 +1845,7 @@ focus_tree = {
 			}
 			
 		}
-		
-		bypass = {
-			has_country_flag = NCH_Out_Coup_Failed_Flag
-		}
-		
+			
 		prerequisite = {
 			focus = NCH_support_the_conservatives
 			focus = NCH_support_the_white_hooves
@@ -2332,7 +2335,7 @@ focus_tree = {
 	focus = {
 		id = NCH_reorganize_the_army
 		text = NCH_reorganize_the_army
-		icon = GFX_goal_chn_hives
+		icon = GFX_goal_nch_soldier
 		cost = 10.00
 		available = {
 			has_country_flag = NCH_military_available 
@@ -2549,7 +2552,7 @@ focus_tree = {
 	focus = {
 		id = NCH_form_a_dedicated_officer_corps
 		text = NCH_form_a_dedicated_officer_corps
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_goal_chn_hives
 		cost = 10.00
 		prerequisite = {
 			focus = NCH_reorganize_the_army
