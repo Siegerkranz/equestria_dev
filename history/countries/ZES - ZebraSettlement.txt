@@ -38,11 +38,9 @@ set_politics = {
 	elections_allowed = no
 }
 add_ideas = {
-	agrarian_society
+	outdated_industry
 	lack_of_scientists
-	ZES_board_of_captains
-	ZES_raids
-	ZES_slave_trade
+	ZES_unrest_neutral
 }
 
 set_stability = 0.50
@@ -119,4 +117,11 @@ create_navy_leader = {
 	picture = "August.tga"
 	traits = { ironside }
 	skill = 3
+}
+
+create_navy_leader = {
+	name = "Tari Isabi"
+	picture = ""
+	traits = {  }
+	skill = 2
 }

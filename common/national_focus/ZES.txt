@@ -1,0 +1,65 @@
+focus_tree = {
+	id = zebra_colony
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = ZES
+		}
+	}
+	continuous_focus_position = { x = 290 y = 2500 }
+	
+	### Political Start ###
+	
+	focus = {
+		id = ZES_raid_gryphus
+		icon = GFX_goal_constitutional_guarantees
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = 4
+		y = 0
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = ZES_raid_minotauria
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = ZES_raid_gryphus }
+		relative_position_id = ZES_raid_gryphus
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = 1
+		y = 1
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = ZES_raid_nytt_radjur
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = ZES_raid_gryphus }
+		relative_position_id = ZES_raid_gryphus
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = -1
+		y = 1
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = ZES_grand_auction
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = ZES_raid_minotauria focus = ZES_raid_nytt_radjur }
+		relative_position_id = ZES_raid_gryphus
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = 0
+		y = 2
+		completion_reward = {
+		}
+	}
+}
