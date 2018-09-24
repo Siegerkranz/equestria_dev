@@ -22,20 +22,21 @@ ZES_eastern_pony_slaves:0 "Eastern Pony Slaves"
 ZES_eastern_pony_slaves_desc:0 ""
 
 
-## Shit dealing with Equestria
+## General Slave Stuff
 ZES_over_seas_markets:0 "Overseas Markets"
 ZES_over_seas_markets_desc:0 ""
 ZES_a_deal_with_luna:0 "A Deal With Luna"
 ZES_a_deal_with_luna_desc:0 ""
 ZES_slaves_for_crystals:0 "Slaves for Crystals"
 ZES_slaves_for_crystals_desc:0 ""
-
-## Diamond Doggos
 ZES_envoy_to_diamond_mountain:0 "Envoy to Diamond Mountain"
 ZES_envoy_to_diamond_mountain_desc:0 ""
 ZES_griffon_slave_trade:0 "The Griffon Slave Trade"
 ZES_griffon_slave_trade_desc:0 ""
+ZES_expand_the_markets:0 "Expand the Markets"
+ZES_expand_the_markets_desc:0 ""
 
+## The introductory political focus
 ZES_stormy_waters:0 "Stormy Waters"
 ZES_stormy_waters_desc:0 ""
 
@@ -48,6 +49,8 @@ ZES_listen_to_harmonists:0 "Listen to the Harmonists"
 ZES_listen_to_harmonists_desc:0 ""
 ZES_listen_to_captains:0 "Listen to the Captains"
 ZES_listen_to_captains_desc:0 ""
+ZES_the_vote:0 "The Vote"
+ZES_the_vote_desc:0 ""
 
 ## Industrial Path
 ZES_industrial_development:0 "Industrial Development"
@@ -66,6 +69,42 @@ ZES_open_mines:0 "Open the Mines"
 ZES_open_mines_desc:0 ""
 ZES_synthetic_oil_experiments:0 "Synthetic Oil Experiments"
 ZES_synthetic_oil_experiments_desc:0 ""
+
+## The Captains win the Vote
+ZES_captains_win_majority:0 "Captains win the Majority"
+ZES_captains_win_majority_desc:0 ""
+ZES_reinforce_slavery:0 "Reinforce Slavery"
+ZES_reinforce_slavery_desc:0 ""
+ZES_increase_raids:0 "Increase the Raids"
+ZES_increase_raids_desc:0 ""
+ZES_give_owners_more_freedoms:0 "Give Slavers more Freedoms"
+ZES_give_owners_more_freedoms_desc:0 ""
+ZES_men_at_work:0 "Men at Work"
+ZES_men_at_work_desc:0 ""
+ZES_growth_of_industry:0 "Growth of Industry"
+ZES_growth_of_industry_desc:0 ""
+ZES_fund_the_schools:0 "Fund the Schools"
+ZES_fund_the_schools_desc:0 ""
+ZES_propaganda_for_slaves:0 "Slave Propaganda"
+ZES_propaganda_for_slaves_desc:0 ""
+ZES_invest_in_fireshore:0 "Invest in Fireshore"
+ZES_invest_in_fireshore_desc:0 ""
+ZES_allow_nonzebra_slavers:0 "Allow Nonzebra Slavers"
+ZES_allow_nonzebra_slavers_desc:0 ""
+ZES_modern_nation:0 "Modern Nation"
+ZES_modern_nation_desc:0 ""
+ZES_arrest_harmony_leaders:0 "Arrest Harmony Leaders"
+ZES_arrest_harmony_leaders_desc:0 ""
+ZES_end_the_debate:0 "End the Debate"
+ZES_end_the_debate_desc:0 ""
+ZES_open_the_army:0 "Open the Army"
+ZES_open_the_army_desc:0 ""
+ZES_found_the_NSS:0 "Found the NSS"
+ZES_found_the_NSS_desc:0 ""
+ZES_take_back_stripeport:0 "Take Back Stripeport"
+ZES_take_back_stripeport_desc:0 ""
+ZES_declare_the_northern_empire:0 "Declare the Northern Empire"
+ZES_declare_the_northern_empire_desc:0 ""
 
  
 ### Ideas

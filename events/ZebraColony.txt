@@ -1,15 +1,103 @@
-﻿add_namespace = zeeb
+﻿add_namespace = zebra_raid_events
 
 
-country_event = { ### Yeet
-	id = zeeb.1
-	immediate = {log = "[Root.GetName]: event zeeb.1"}#Auto-logging
-	title = zeeb.1.t
-	desc = zeeb.1.d
+country_event = { ## How hard should we Gryphus?
+	id = zebra_raid_events.1
+	immediate = {log = "[Root.GetName]: event zebra_raid_events.1"}#Auto-logging
+	title = zebra_raid_events.1.t
+	desc = zebra_raid_events.1.d
 	picture = GFX_event_canterlot
 	is_triggered_only = yes
 	
-	option = {
-		name = zeeb.1.a
+	option = { ## Gently
+		name = zebra_raid_events.1.a
+		set_country_flag = ZES_light_gryphus
+		
+		random_list = {
+			40 = { ## Win
+				country_event = {
+					id = zebra_raid_events.2
+					days = 70
+					random = 15
+				}
+			}
+			
+			60 = { ## Fail
+				country_event = {
+					id = zebra_raid_events.3
+					days = 70
+					random = 15
+				}
+			}
+		}
+	}
+	
+	option = { ## Somewhat Rough
+		name = zebra_raid_events.1.b
+		set_country_flag = ZES_medium_gryphus
+	}
+	
+	option = { ## Pound that ass
+		name = zebra_raid_events.1.b
+		set_country_flag = ZES_hard_gryphus
+	}
+}
+
+
+country_event = { ## Light Raid WIN
+	id = zebra_raid_events.2
+	immediate = {log = "[Root.GetName]: event zebra_raid_events.2"}#Auto-logging
+	title = zebra_raid_events.2.t
+	desc = zebra_raid_events.2.d
+	picture = GFX_event_canterlot
+	is_triggered_only = yes
+	
+	option = { ## Gently
+		name = zebra_raid_events.2.a
+		
+		add_political_power = -40
+		ZES_raid_500_inf_equip = yes
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = ZES
+				is_coastal = yes
+			}
+			add_manpower = 1000
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = ZES
+				is_coastal = yes
+			}
+			add_manpower = 1000
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = ZES
+				is_coastal = yes
+			}
+			add_manpower = 1000
+		}
+		
+		
+		hidden_effect = {
+			
+		}
+	}
+}
+
+country_event = { ## Light Raid lose
+	id = zebra_raid_events.3
+	immediate = {log = "[Root.GetName]: event zebra_raid_events.3"}#Auto-logging
+	title = zebra_raid_events.3.t
+	desc = zebra_raid_events.3.d
+	picture = GFX_event_canterlot
+	is_triggered_only = yes
+	
+	option = { ## Gently
+		name = zebra_raid_events.3.a
+		
+		add_political_power = -40
+		add_manpower = -1000
 	}
 }
