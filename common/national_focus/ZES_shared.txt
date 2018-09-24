@@ -235,6 +235,7 @@
 		x = 3
 		y = 6
 		completion_reward = {
+			load_focus_tree = zebra_harmonists
 		}
 	}
 	
@@ -249,6 +250,7 @@
 		x = 5
 		y = 6
 		completion_reward = {
+			load_focus_tree = zebra_captains
 		}
 	}
 	
@@ -262,7 +264,6 @@
 		x = 4
 		y = 7
 		completion_reward = {
-			load_focus_tree = zebra_captains
 		}
 	}
 	
@@ -598,4 +599,183 @@
 		completion_reward = {
 		}
 	}
+	
+	
+	
+	### Harmonists Win
+	shared_focus = {
+		id = ZES_harmonists_win_the_vote
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = 19
+		y = 0
+		completion_reward = {
+		}
+	}
+	
+	shared_focus = {
+		id = ZES_emancipate_the_slaves
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = ZES_harmonists_win_the_vote }
+		relative_position_id = ZES_harmonists_win_the_vote
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = 0
+		y = 1
+		completion_reward = {
+		}
+	}
+	
+	shared_focus = {
+		id = ZES_freedom_and_liberty_for_all
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = ZES_emancipate_the_slaves }
+		relative_position_id = ZES_harmonists_win_the_vote
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = -1
+		y = 2
+		completion_reward = {
+		}
+	}
+	
+	shared_focus = {
+		id = ZES_equal_rights
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = ZES_freedom_and_liberty_for_all }
+		relative_position_id = ZES_harmonists_win_the_vote
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = -2
+		y = 3
+		completion_reward = {
+		}
+	}
+	
+	shared_focus = {
+		id = ZES_arrest_slave_owners
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = ZES_emancipate_the_slaves }
+		relative_position_id = ZES_harmonists_win_the_vote
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = 1
+		y = 2
+		completion_reward = {
+		}
+	}
+	
+	shared_focus = {
+		id = ZES_dealing_with_the_black_market
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = ZES_arrest_slave_owners }
+		relative_position_id = ZES_harmonists_win_the_vote
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = 2
+		y = 3
+		completion_reward = {
+		}
+	}
+	
+	shared_focus = {
+		id = ZES_strike_at_barrad
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = ZES_dealing_with_the_black_market }
+		prerequisite = { focus = ZES_cut_ties_with_barrad }
+		relative_position_id = ZES_harmonists_win_the_vote
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = 2
+		y = 4
+		completion_reward = {
+		}
+	}
+	
+	
+	shared_focus = {
+		id = ZES_cut_ties_with_barrad
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = ZES_arrest_slave_owners }
+		prerequisite = { focus = ZES_freedom_and_liberty_for_all }
+		relative_position_id = ZES_harmonists_win_the_vote
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = 0
+		y = 3
+		completion_reward = {
+		}
+	}
+	
+	shared_focus = {
+		id = ZES_free_tickets_home
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = ZES_cut_ties_with_barrad }
+		relative_position_id = ZES_harmonists_win_the_vote
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = 0
+		y = 4
+		completion_reward = {
+		}
+	}
+	
+	shared_focus = {
+		id = ZES_looking_abroad
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = ZES_free_tickets_home }
+		prerequisite = { focus = ZES_equal_rights }
+		relative_position_id = ZES_harmonists_win_the_vote
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = -1
+		y = 5
+		completion_reward = {
+		}
+	}
+	
+	shared_focus = {
+		id = ZES_petition_the_coalition
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = ZES_looking_abroad }
+		mutually_exclusive = { focus = ZES_southern_protection_pact }
+		relative_position_id = ZES_harmonists_win_the_vote
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = -2
+		y = 6
+		completion_reward = {
+		}
+	}
+	
+	shared_focus = {
+		id = ZES_southern_protection_pact
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = ZES_looking_abroad }
+		mutually_exclusive = { focus = ZES_petition_the_coalition }
+		relative_position_id = ZES_harmonists_win_the_vote
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = 0
+		y = 6
+		completion_reward = {
+		}
+	}
+	
+	shared_focus = {
+		id = ZES_northern_republic
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = ZES_southern_protection_pact focus = ZES_petition_the_coalition }
+		relative_position_id = ZES_harmonists_win_the_vote
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = -1
+		y = 7
+		completion_reward = {
+		}
+	}
+	
+	
+	
 	

@@ -31,3 +31,21 @@ focus_tree = {
 	shared_focus = ZES_raid_gryphus
 	shared_focus = ZES_captains_win_majority
 }
+
+focus_tree = {
+	id = zebra_harmonists
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = ZES
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 250 y = 1650 }
+	
+	shared_focus = ZES_raid_gryphus
+	shared_focus = ZES_harmonists_win_the_vote
+}
