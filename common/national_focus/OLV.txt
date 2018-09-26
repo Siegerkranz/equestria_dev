@@ -10,6 +10,8 @@ focus_tree = {
             tag = OLV
         }
     }
+
+    continuous_focus_position = { x = 1250 y = 1250 }
     
     #################################################
 	###### Focus Start ##############################
@@ -395,55 +397,248 @@ focus_tree = {
         }
     }
 
-    #################################################
-	###### Civilian Industry ########################
-	#################################################
+    #navy
 
     focus = {
-        id = olv_civ_industry
-        relative_position_id = olv_situation
-        x = 5
+        id = olv_navy
+        relative_position_id = olv_military
+        x = -2
         y = 1
-        cost = 5
+        cost = 10
         prerequisite = {
-            focus = olv_situation
+            focus = olv_military
         }
         completion_reward = {
-            random_owned_controlled_state = {
-                add_extra_state_shared_building_slots = 4
-				add_building_construction = {
-				    type = industrial_complex
-				    level = 4
-				    instant_build = yes
-                }
+            navy_experience = 20
+            add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
             }
-            log = "[Root.GetName]: Focus olv_civ_industry"#Auto-logging
         }
     }
 
-    #################################################
-	###### Military Focus Tree ######################
-	#################################################
-    
     focus = {
-        id = olv_mil_industry
-        relative_position_id = olv_situation
-        x = 10
+        id = olv_navalbase
+        relative_position_id = olv_navy
+        x = 0
         y = 1
-        cost = 5
+        cost = 10
         prerequisite = {
-            focus = olv_situation
+            focus = olv_navy
         }
         completion_reward = {
-            random_owned_controlled_state = {
-                add_extra_state_shared_building_slots = 2
-                add_building_construction = {
-                    type = arms_factory
-                    level = 2
-                    instant_build = yes
-                }
+            add_building_construction = {
+                type = naval_base
+                level = 2
+                instant_build = yes
+                province = 10900
             }
-            log = "[Root.GetName]: Focus olv_civ_industry"#Auto-logging
+        }
+    }
+
+    focus = {
+        id = olv_dds
+        relative_position_id = olv_navalbase
+        x = 0
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_navalbase
+        }
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 7.50
+                uses = 1
+                technology = basic_destroyer
+            }
+        }
+    }
+
+    focus = {
+        id = olv_truefleet
+        relative_position_id = olv_dds
+        x = 0
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_dds
+        }
+        available = {
+            has_completed_focus = olv_industryage
+        }
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 0.75
+                uses = 2
+                technology = early_light_cruiser
+                technology = early_heavy_cruiser
+            }
+        }
+    }
+
+    #airforce
+
+    focus = {
+        id = olv_chairforce
+        relative_position_id = olv_military
+        x = 0
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_military
+        }
+    }
+
+    focus = {
+        id = olv_foreignplanes
+        relative_position_id = olv_chairforce
+        x = 0
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_chairforce
+        }
+    }
+
+    focus = {
+        id = olv_domesticplanes
+        relative_position_id = olv_foreignplanes
+        x = 0
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_foreignplanes
+        }
+        available = {
+            has_completed_focus = olv_industryage
+        }
+    }
+
+    focus = {
+        id = olv_monoplanes
+        relative_position_id = olv_domesticplanes
+        x = 0
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_domesticplanes
+        }
+    }
+
+    focus = {
+        id = olv_carrierplanes
+        relative_position_id = olv_monoplanes
+        x = 0
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_monoplanes
+        }
+    }
+
+    focus = {
+        id = olv_torpedobombers
+        relative_position_id = olv_carrierplanes
+        x = 1
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_carrierplanes
+        }
+    }
+
+    focus = {
+        id = olv_lightcarrier
+        relative_position_id = olv_carrierplanes
+        x = -1
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_carrierplanes
+        }
+        prerequisite = {
+            focus = olv_truefleet
+        }
+    }
+
+    focus = {
+        id = olv_fleetcarrier
+        relative_position_id = olv_lightcarrier
+        x = 0
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_lightcarrier
+        }
+    }
+
+    #army
+
+    focus = {
+        id = olv_army
+        relative_position_id = olv_military
+        x = 2
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_military
+        }
+    }
+
+    focus = {
+        id = olv_rifles
+        relative_position_id = olv_army
+        x = 0
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_army
+        }
+    }
+
+    focus = {
+        id = olv_automatics
+        relative_position_id = olv_rifles
+        x = 0
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_rifles
+        }
+    }
+
+    focus = {
+        id = olv_arty
+        relative_position_id = olv_automatics
+        x = 0
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_automatics
+        }
+    }
+
+    focus = {
+        id = olv_antitank
+        relative_position_id = olv_arty
+        x = 0
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_arty
+        }
+    }
+
+    focus = {
+        id = olv_trucks
+        relative_position_id = olv_arty
+        x = 2
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_arty
         }
     }
 
@@ -454,7 +649,7 @@ focus_tree = {
     focus = {
         id = olv_education
         relative_position_id = olv_situation
-        x = 0
+        x = 5
         y = 1
         cost = 10
         prerequisite = {
@@ -473,5 +668,173 @@ focus_tree = {
         cost = 5
         prerequisite = {
             focus = olv_education
+        }
+    }
+
+    focus = {
+        id = olv_adulteducate
+        relative_position_id = olv_education2
+        x = -1
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_education2
+        }
+    }
+
+    focus = {
+        id = olv_unify
+        relative_position_id = olv_education2
+        x = 1
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_education2
+        }
+    }
+
+    focus = {
+        id = olv_university
+        relative_position_id = olv_adulteducate
+        x = -1
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_adulteducate
+        }
+    }
+
+    focus = {
+        id = olv_childeducate
+        relative_position_id = olv_education2
+        x = 0
+        y = 2
+        cost = 10
+        prerequisite = {
+            focus = olv_adulteducate
+        }
+        prerequisite = {
+            focus = olv_unify
+        }
+    }
+
+    focus = {
+        id = olv_finaliseunity
+        relative_position_id = olv_unify
+        x = 1
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_unify
+        }
+    }
+
+    #################################################
+	############### Industrial Tree #################
+	#################################################
+
+    focus = {
+        id = olv_industry
+        relative_position_id = olv_situation
+        x = 10
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_situation
+        }
+    }
+
+    focus = {
+        id = olv_cottagecivi
+        relative_position_id = olv_industry
+        x = 0
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_industry
+        }
+    }
+
+    focus = {
+        id = olv_cottagemili
+        relative_position_id = olv_cottagecivi
+        x = 0
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_cottagecivi
+        }
+    }
+
+    focus = {
+        id = olv_infrastructure
+        relative_position_id = olv_industry
+        x = 2
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_industry
+        }
+    }
+
+    focus = {
+        id = olv_newcervustrains
+        relative_position_id = olv_infrastructure
+        x = 0
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_infrastructure
+        }
+    }
+
+    focus = {
+        id = olv_basicmines
+        relative_position_id = olv_cottagemili
+        x = 1
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_cottagemili
+        }
+        prerequisite = {
+            focus = olv_newcervustrains
+        }
+    }
+
+
+    focus = {
+        id = olv_moderntrading
+        relative_position_id = olv_basicmines
+        x = 0
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_basicmines
+        }
+    }
+
+    focus = {
+        id = olv_dedicatedcivi
+        relative_position_id = olv_cottagemili
+        x = -1
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_cottagemili
+        }
+    }
+
+    focus = {
+        id = olv_industryage
+        relative_position_id = olv_moderntrading
+        x = -1
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = olv_dedicatedcivi
+        }
+        prerequisite = {
+            focus = olv_moderntrading
         }
     }
