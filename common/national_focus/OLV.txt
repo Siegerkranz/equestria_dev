@@ -16,6 +16,8 @@ focus_tree = {
     #################################################
 	###### Focus Start ##############################
 	#################################################
+
+    #First event focus, essentially a "Welcome Screen', gives 50 political power upon selecting the "acknowledge" of the event.
     focus = {
         id = olv_situation
         x = 5
@@ -31,8 +33,9 @@ focus_tree = {
 	###### Political Tree ###########################
 	#################################################
 
+    ###100 PP, opens up political tree.
     focus = {
-        id = olv_political
+        id = olv_political 
         relative_position_id = olv_situation
         x = -10
         y = 1
@@ -46,6 +49,7 @@ focus_tree = {
         }
     }
 
+    ###Requires education focuses, enables fascist demagogue and democratic reformer advisors.
     focus = {
         id = olv_democracy
         relative_position_id = olv_political
@@ -64,6 +68,7 @@ focus_tree = {
         }
     }
 
+    ###Harmony takes charge. One of two events may happen dependent upon fascist popularity. If above a certain threshold (20%), the fascist supporters start a civil war, and if under 10%, the democracy takes charge smoothly. Requires 25% harmony popularity.
     focus = {
         id = olv_harmony1
         relative_position_id = olv_democracy
@@ -94,17 +99,19 @@ focus_tree = {
     
             if = {
                 limit = {
-                    democratic < 0.20
+                    fascism < 0.20
                 }
         
                 country_event = {
-                    id = blablahcivilwar
+                    id = 
                     }
                 }
             }
         }
     }
 
+
+    #While this focus is labelled "Establish Regular Elections", it's more akin to a harmony and stability boost.
     focus = {
         id = olv_harmony2
         relative_position_id = olv_harmony1
@@ -116,6 +123,7 @@ focus_tree = {
         }
     }
 
+    #Opens up the unification focuses and decisions under olv_unify
     focus = {
         id = olv_harmonyunify
         relative_position_id = olv_harmony2
@@ -127,6 +135,7 @@ focus_tree = {
         }
     }
 
+    #Opens up the olv_adulteducate focus for removing illiteracy - but adding child illiteracy
     focus = {
         id = olv_harmonyeducate
         relative_position_id = olv_harmony2
@@ -138,6 +147,7 @@ focus_tree = {
         }
     }
 
+    #ZES gets an event where they can either accept and get a mutual guarantee (and non-aggression pact) with OLV, but be unable to perform repeatable raids against OLV, or decline and continue unabated.
     focus = {
         id = olv_reconcile
         relative_position_id = olv_harmony2
@@ -152,6 +162,7 @@ focus_tree = {
         }
     }
 
+    #In a potential OLV expansion - no promises - this'll open up the harmony extended tree. For now this just gives a harmony popularity per week/whatever, and a "peace" focused national spirit (industrial/electrical research time, civilian factory build speed boosts, just ideas for future me.)
     focus = {
         id = olv_newage
         relative_position_id = olv_reconcile
@@ -163,6 +174,7 @@ focus_tree = {
         }
     }
 
+    #See olv_harmony1 but reverse it for fascism
     focus = {
         id = olv_fascist1
         relative_position_id = olv_democracy
@@ -183,6 +195,7 @@ focus_tree = {
         }
     }
     
+    #Consolidation of power. Stability, party popularity.
     focus = {
         id = olv_fascist2
         relative_position_id = olv_fascist1
@@ -194,6 +207,7 @@ focus_tree = {
         }
     }
 
+    #See olv_harmonyunify. It's not creative, but it fits.
     focus = {
         id = olv_fascistunify
         relative_position_id = olv_fascist2
@@ -205,6 +219,7 @@ focus_tree = {
         }
     }
 
+    #As above, the same as olv_harmonyeducate
     focus = {
         id = olv_fascisteducate
         relative_position_id = olv_fascist2
@@ -216,6 +231,7 @@ focus_tree = {
         }
     }
 
+    #An annex wargoal against those damn filthy zebras.
     focus = {
         id = olv_zeebpurge
         relative_position_id = olv_fascist2
@@ -230,6 +246,7 @@ focus_tree = {
         }
     }
 
+    #War focused national spirit. Military construction, maybe recruitable population, and - a big, BIG maybe - faster war goals.
     focus = {
         id = olv_newempire
         relative_position_id = olv_zeebpurge
@@ -241,6 +258,7 @@ focus_tree = {
         }
     }
 
+    #This path is the Deer Switzerland path where isolationism is the name of the game.
     focus = {
         id = olv_statusquo
         relative_position_id = olv_political
@@ -256,6 +274,7 @@ focus_tree = {
         }
     }
 
+    #The High Jarl fights the Jarls of the smaller tribes and "forces" capitulation and puts himself as the Jarl of every tribe. Taking this focus bypasses the olv_unify focus, and opens up a few event driven decisions.
     focus = {
         id = olv_challengejarls
         relative_position_id = olv_statusquo
@@ -267,6 +286,7 @@ focus_tree = {
         }
     }
 
+    #Opens up olv_adulteducate
     focus = {
         id = olv_tribaleducation
         relative_position_id = olv_challengejarls
@@ -278,6 +298,7 @@ focus_tree = {
         }
     }
 
+    #Boosts land fort construction speed, and gives a few land forts on the ZES-OLV border.
     focus = {
         id = olv_zebraphobia
         relative_position_id = olv_tribaleducation
@@ -289,6 +310,7 @@ focus_tree = {
         }
     }
 
+    #Boosts land forts a little bit more, and adds some division defense on core territory too. I like these "Age of" national spirits.
     focus = {
         id = olv_isolationism
         relative_position_id = olv_zebraphobia
@@ -300,6 +322,7 @@ focus_tree = {
         }
     }
 
+    #This is the event driven path. Every focus pulls up an event which determines the end result of the focus, whether you get "good" or "evil"
     focus = {
         id = olv_relgion
         relative_position_id = olv_political
@@ -315,6 +338,7 @@ focus_tree = {
         }
     }
 
+    #This determines whether Cervasii will embrace the more evil, older gods, or whether they'll renounce them and focus on the benevolent gods. Also acts as the unification focus, opening olv_unify
     focus = {
         id = olv_beliefs
         relative_position_id = olv_relgion
@@ -326,6 +350,7 @@ focus_tree = {
         }
     }
 
+    #Do you teach everyone the ways of peace, or the ways of war, or something like that. Opens up olv_adulteducate
     focus = {
         id = olv_religiouseducation
         relative_position_id = olv_beliefs
@@ -337,6 +362,7 @@ focus_tree = {
         }
     }
 
+    #You can either offer ZES a peaceful unification as a war puppet and their Master, or you can just outright declare war and puppet them anyway. If ZES declines, you can declare war without having penalties to your "good vs evil" path way.
     focus = {
         id = olv_missionaries
         relative_position_id = olv_religiouseducation
@@ -348,6 +374,7 @@ focus_tree = {
         }
     }
 
+    #Evil religion path. Brainstorming bonuses for this.
     focus = {
         id = olv_darkage
         relative_position_id = olv_missionaries
@@ -362,6 +389,7 @@ focus_tree = {
         }
     }
 
+    #Good religion path, also brainstorming for this.
     focus = {
         id = olv_brightage
         relative_position_id = olv_missionaries
@@ -380,6 +408,7 @@ focus_tree = {
 	###### Military Tree ############################
 	#################################################
 
+    #Start of the military tree, oh boy oh boy!
     focus = {
         id = olv_military
         relative_position_id = olv_situation
@@ -397,8 +426,7 @@ focus_tree = {
         }
     }
 
-    #navy
-
+    #Cervasii are Deer Vikings. Navy operations are in their blood.
     focus = {
         id = olv_navy
         relative_position_id = olv_military
@@ -419,6 +447,7 @@ focus_tree = {
         }
     }
 
+    #You can't have a good fleet without a home base with the ability to care for the fleet.
     focus = {
         id = olv_navalbase
         relative_position_id = olv_navy
@@ -438,6 +467,7 @@ focus_tree = {
         }
     }
 
+    #Okay, this one is more convoluted. If the player has progressed to beyond the tribal society and successfully reaches the industrial society, they get a more normal research booster for DD tier 2s, but if they are a tribal society, they get a wopping 750% research booster. Why? Well, that only brings the time it takes down to 150-something days. It's not fun to spend ages researching something.
     focus = {
         id = olv_dds
         relative_position_id = olv_navalbase
@@ -456,6 +486,7 @@ focus_tree = {
         }
     }
 
+    #This one requires actually being an industrial society, as you can't have modern cruisers as a tribal society.
     focus = {
         id = olv_truefleet
         relative_position_id = olv_dds
@@ -478,8 +509,7 @@ focus_tree = {
         }
     }
 
-    #airforce
-
+    #The whole idea around the Olenian airforce are fighters only, to engage in honorable one on one combat. Unfortunately this is more "purchasing" foreign designs as a focus
     focus = {
         id = olv_chairforce
         relative_position_id = olv_military
@@ -491,6 +521,7 @@ focus_tree = {
         }
     }
 
+    #This focus actually adds license production with events from neighbours, ala Yugoslavia. If the DLC isn't had then it adds some fighters from the nation that wins the competition.
     focus = {
         id = olv_foreignplanes
         relative_position_id = olv_chairforce

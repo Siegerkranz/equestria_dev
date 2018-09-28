@@ -47,9 +47,9 @@ add_ideas = { tribal_society lack_of_scientists }
 set_stability = 0.70
 
 create_country_leader = {
-	name = "High Jarl Einir Solmarsson"
+	name = "High Jarl Kalevipoeg"
 	desc = ""
-	picture = "Leader.tga"
+	picture = "Deer.tga"
 	expire = "1965.1.1"
 	ideology = despotism
 	traits = {
@@ -58,7 +58,7 @@ create_country_leader = {
 
 create_country_leader = {
 	name = "Allsherjagoði Herlaugur"
-	
+	desc = ""
 	picture = "Herlaugur.tga"
 	expire = "1965.1.1"
 	ideology = falangism
