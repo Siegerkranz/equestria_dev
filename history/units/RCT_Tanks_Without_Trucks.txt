@@ -1,0 +1,25 @@
+division_template = {
+	name = "Armor Division"			
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry= { x = 2 y = 0 }
+	}
+}
+units = {
+	division = {
+		location = 5013
+		division_template = "Armor Division"
+		start_experience_factor = 0.3 }
+	division = {
+		location = 5013
+		division_template = "Armor Division"
+		start_experience_factor = 0.3 } 
+	division = {
+		location = 5013
+		division_template = "Armor Division"
+		start_experience_factor = 0.3 } 
+}

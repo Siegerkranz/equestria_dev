@@ -234,3 +234,56 @@ country_event = { #New Treasury Officer
 		}
 	}
 }
+
+country_event = { #spawning divisions for Mobile6
+	id = rivercity.100
+	immediate = {log = "[Root.GetName]: event rivercity.10"}#Auto-logging
+	title = rivercity.100.t
+	desc = rivercity.100.d
+	picture = GFX_event_river_city
+
+	is_triggered_only = yes
+
+	option = {
+		name = rivercity.100.a
+		if = {
+            limit = { has_tech = motorised_infantry }
+            load_oob = RCT_Tanks_With_Trucks
+            else = { load_oob = RCT_Tanks_Without_Trucks }
+		}
+	}
+}
+
+country_event = { #spawning divisions for Sup6
+	id = rivercity.101
+	immediate = {log = "[Root.GetName]: event rivercity.10"}#Auto-logging
+	title = rivercity.101.t
+	desc = rivercity.101.d
+	picture = GFX_event_river_city
+
+	is_triggered_only = yes
+
+	option = {
+		name = rivercity.101.a
+		if = {
+            limit = { has_tech = interwar_antitank }
+            load_oob = RCT_sup1
+            else = { load_oob = RCT_sup2 }
+		}
+	}
+}
+
+country_event = { #spawning divisions for Sup6
+	id = rivercity.102
+	immediate = {log = "[Root.GetName]: event rivercity.10"}#Auto-logging
+	title = rivercity.102.t
+	desc = rivercity.102.d
+	picture = GFX_event_river_city
+
+	is_triggered_only = yes
+
+	option = {
+		name = rivercity.102.a
+		load_oob = RCT_grand
+	}
+}

@@ -3216,3 +3216,965 @@
 
 		}
 	}
+	
+##########################################################
+#############Military Tree################################
+##########################################################
+	shared_focus = {
+		id = RCT_military1
+		icon = GFX_goal_generic_axis_build_infantry
+		x = 6
+		y = 2
+		relative_position_id = RCT_Undying_Loyalty_To_The_Republic
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		set_technology = {
+				infantry_weapons = 1
+			}
+			log = "[Root.GetName]: Focus RCT_military1"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_mobile1
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = RCT_military1 }
+		x = -6
+		y = 1
+		relative_position_id = RCT_military1
+		
+		mutually_exclusive = { 
+		focus = RCT_mass1 
+		}
+		
+		mutually_exclusive = { 
+		focus = RCT_grand1 
+		}
+		
+		mutually_exclusive = { 
+		focus = RCT_sup1 
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = inf_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_mobile_warfare
+			}
+			set_technology = {
+				gwtank = 1
+			}
+			log = "[Root.GetName]: Focus RCT_mobile1"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_sup1
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = RCT_military1 }
+		x = -2
+		y = 1
+		relative_position_id = RCT_military1
+
+		mutually_exclusive = { 
+		focus = RCT_mass1 
+		}
+		
+		mutually_exclusive = { 
+		focus = RCT_grand1 
+		}
+		
+		mutually_exclusive = { 
+		focus = RCT_mobile1 
+		}
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = cat_superior_firepower
+			}
+			log = "[Root.GetName]: Focus RCT_sup1"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_mass1
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = RCT_military1 }
+		x = 2
+		y = 1
+		relative_position_id = RCT_military1
+
+		mutually_exclusive = { 
+		focus = RCT_sup1 
+		}
+		
+		mutually_exclusive = { 
+		focus = RCT_grand1 
+		}
+		
+		mutually_exclusive = { 
+		focus = RCT_mobile1 
+		}
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = cat_mass_assault
+			}
+			log = "[Root.GetName]: Focus RCT_mass1"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_grand1
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = RCT_military1 }
+		x = 6
+		y = 1
+		relative_position_id = RCT_military1
+
+		mutually_exclusive = { 
+		focus = RCT_mass1 
+		}
+		
+		mutually_exclusive = { 
+		focus = RCT_sup1 
+		}
+		
+		mutually_exclusive = { 
+		focus = RCT_mobile1 
+		}
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = cat_grand_battle_plan
+			}
+			log = "[Root.GetName]: Focus RCT_grand1"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_mobile2
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = RCT_mobile1 }
+		x = -1
+		y = 1
+		relative_position_id = RCT_mobile1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_ideas = RCT_mobile1
+		log = "[Root.GetName]: Focus RCT_mobile2"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_mobile3
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = RCT_mobile1 }
+		x = 1
+		y = 1
+		relative_position_id = RCT_mobile1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = motorized_equipment
+			}
+			log = "[Root.GetName]: Focus RCT_mobile3"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_mobile4
+		icon = GFX_goal_planning_bonus
+		prerequisite = { focus = RCT_mobile2 }
+		x = 0
+		y = 1
+		relative_position_id = RCT_mobile2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = cat_light_armor
+			}
+			log = "[Root.GetName]: Focus RCT_mobile4"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_mobile5
+		icon = GFX_focus_generic_license_production
+		prerequisite = { focus = RCT_mobile3 }
+		x = 0
+		y = 1
+		relative_position_id = RCT_mobile3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+			log = "[Root.GetName]: Focus RCT_mobile5"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_mobile6
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = RCT_mobile4 }
+		x = 0
+		y = 1
+		relative_position_id = RCT_mobile4
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		    country_event = rivercity.100
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_mobile7
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = RCT_mobile5 }
+		x = 0
+		y = 1
+		relative_position_id = RCT_mobile5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = cat_medium_armor
+			}
+			log = "[Root.GetName]: Focus RCT_mobile7"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_mobile8
+		icon = GFX_focus_generic_tank_production
+		prerequisite = { focus = RCT_mobile7 }
+		prerequisite = { focus = RCT_mobile6 }
+		x = -1
+		y = 1
+		relative_position_id = RCT_mobile7
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_ideas = RCT_tanks
+		log = "[Root.GetName]: Focus RCT_mobile8"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_sup2
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = RCT_sup1 }
+		x = -1
+		y = 1
+		relative_position_id = RCT_sup1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_ideas = RCT_sup
+		log = "[Root.GetName]: Focus RCT_sup2"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_sup3
+		icon = GFX_goal_national_artillery
+		prerequisite = { focus = RCT_sup1 }
+		x = 1
+		y = 1
+		relative_position_id = RCT_sup1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}
+		log = "[Root.GetName]: Focus RCT_sup3"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_sup4
+		icon = GFX_goal_military_academy
+		prerequisite = { focus = RCT_sup2 }
+		x = 0
+		y = 1
+		relative_position_id = RCT_sup2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+			log = "[Root.GetName]: Focus RCT_sup4"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_sup5
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = RCT_sup3 }
+		x = 0
+		y = 1
+		relative_position_id = RCT_sup3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+			log = "[Root.GetName]: Focus RCT_sup5"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_sup6
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = RCT_sup4 }
+		x = 0
+		y = 1
+		relative_position_id = RCT_sup4
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		country_event = rivercity.101
+		log = "[Root.GetName]: Focus RCT_sup6"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_sup7
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = RCT_sup5 }
+		x = 0
+		y = 1
+		relative_position_id = RCT_sup5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = support_tech
+			}
+			log = "[Root.GetName]: Focus RCT_sup7"#Auto-loggin
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_sup8
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = RCT_sup6 }
+		prerequisite = { focus = RCT_sup7 }
+		x = 1
+		y = 1
+		relative_position_id = RCT_sup6
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cat_superior_firepower
+			}
+			log = "[Root.GetName]: Focus RCT_sup8"#Auto-loggin
+		}
+	}
+
+	shared_focus = {
+		id = RCT_mass2
+		icon = GFX_goal_conscription
+		prerequisite = { focus = RCT_mass1 }
+		x = -1
+		y = 1
+		relative_position_id = RCT_mass1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_ideas = RCT_mass
+		log = "[Root.GetName]: Focus RCT_mass2"#Auto-loggin
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_mass3
+		icon = GFX_goal_national_arsenal
+		prerequisite = { focus = RCT_mass1 }
+		x = 1
+		y = 1
+		relative_position_id = RCT_mass1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_manpower = 50000
+		log = "[Root.GetName]: Focus RCT_mass3"#Auto-loggin
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_mass4
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = RCT_mass2 }
+		x = 0
+		y = 1
+		relative_position_id = RCT_mass2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
+			log = "[Root.GetName]: Focus RCT_mass4"#Auto-loggin
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_mass5
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = RCT_mass3 }
+		x = 0
+		y = 1
+		relative_position_id = RCT_mass3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			log = "[Root.GetName]: Focus RCT_mass5"#Auto-loggin
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_mass6
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = RCT_mass4 }
+		x = 0
+		y = 1
+		relative_position_id = RCT_mass4
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = cat_mass_assault
+			}
+		log = "[Root.GetName]: Focus RCT_mass6"#Auto-loggin
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_mass7
+		icon = GFX_goal_authority
+		prerequisite = { focus = RCT_mass5 }
+		x = 0
+		y = 1
+		relative_position_id = RCT_mass5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_ideas = RCT_conscription
+		log = "[Root.GetName]: Focus RCT_mass7"#Auto-loggin
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_mass8
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = RCT_mass6 }
+		prerequisite = { focus = RCT_mass7 }
+		x = 1
+		y = 1
+		relative_position_id = RCT_mass6
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cat_mass_assault
+			}
+		log = "[Root.GetName]: Focus RCT_mass8"#Auto-loggin
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_grand2
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = RCT_grand1 }
+		x = -1
+		y = 1
+		relative_position_id = RCT_grand1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_ideas = RCT_grand
+		log = "[Root.GetName]: Focus RCT_grand2"#Auto-loggin
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_grand3
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = RCT_grand1 }
+		x = 1
+		y = 1
+		relative_position_id = RCT_grand1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		log = "[Root.GetName]: Focus RCT_grand3"#Auto-loggin
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_grand4
+		icon = GFX_goal_national_artillery
+		prerequisite = { focus = RCT_grand2 }
+		x = 0
+		y = 1
+		relative_position_id = RCT_grand2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = support_tech
+			}
+		log = "[Root.GetName]: Focus RCT_grand4"#Auto-loggin
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_grand5
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = RCT_grand3 }
+		x = 0
+		y = 1
+		relative_position_id = RCT_grand3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_ideas = RCT_conscription
+		log = "[Root.GetName]: Focus RCT_grand5"#Auto-loggin
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_grand6
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = RCT_grand4 }
+		x = 0
+		y = 1
+		relative_position_id = RCT_grand4
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		completion_reward = {
+		country_event = rivercity.102
+		log = "[Root.GetName]: Focus RCT_grand6"#Auto-loggin
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_grand7
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = RCT_grand5 }
+		x = 0
+		y = 1
+		relative_position_id = RCT_grand5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		
+		log = "[Root.GetName]: Focus RCT_grand7"#Auto-loggin
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_grand8
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = RCT_grand6 }
+		prerequisite = { focus = RCT_grand7 }
+		x = 1
+		y = 1
+		relative_position_id = RCT_grand6
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cat_grand_battle_plan
+			}
+		log = "[Root.GetName]: Focus RCT_grand8"#Auto-loggin
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_army_buffs
+		icon = GFX_goal_national_populism
+		prerequisite = { focus = RCT_mass8 }
+		prerequisite = { focus = RCT_grand8 }
+		prerequisite = { focus = RCT_mobile8 }
+		prerequisite = { focus = RCT_sup8 }
+		x = -2
+		y = 1
+		relative_position_id = RCT_mass8
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_ideas = RCT_army_buff
+		log = "[Root.GetName]: Focus RCT_grand8"#Auto-loggin
+		}
+	}
