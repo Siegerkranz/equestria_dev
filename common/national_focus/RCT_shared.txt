@@ -4118,7 +4118,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-		
+		add_ideas = RCT_entrnechment
 		log = "[Root.GetName]: Focus RCT_grand7"#Auto-loggin
 		}
 	}
@@ -4176,5 +4176,455 @@
 		completion_reward = {
 		add_ideas = RCT_army_buff
 		log = "[Root.GetName]: Focus RCT_grand8"#Auto-loggin
+		}
+	}
+###############################################################
+####################### Naval #################################
+###############################################################
+
+	shared_focus = {
+		id = RCT_naval1
+		icon = GFX_goal_generic_build_navy
+		x = 6
+		y = 0
+		relative_position_id = RCT_grand1
+
+		available = {
+            any_state = {
+                is_coastal = yes
+                is_controlled_by = ROOT
+            }
+        }
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		random_owned_state = {
+			limit = {
+				is_coastal =  yes
+			}
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			log = "[Root.GetName]: Focus RCT_Naval1"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_naval2
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = RCT_naval1}
+		x = 0
+		y = 1
+		relative_position_id = RCT_naval1
+
+		available = {
+            any_state = {
+                is_coastal = yes
+                is_controlled_by = ROOT
+            }
+        }
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		random_owned_state = {
+			limit = {
+				is_coastal =  yes
+			}
+				add_building_construction = {
+					type = naval_base
+					level = 4
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 4
+					instant_build = yes
+				}
+			}
+			log = "[Root.GetName]: Focus RCT_Naval2"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_naval3
+		icon = GFX_focus_generic_navy_battleship2
+		prerequisite = { focus = RCT_naval2}
+		x = 0
+		y = 1
+		relative_position_id = RCT_naval2
+
+		available = {
+            any_state = {
+                is_coastal = yes
+                is_controlled_by = ROOT
+            }
+        }
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_technology = {
+				early_destroyer = 1
+			}
+		log = "[Root.GetName]: Focus RCT_Naval3"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_naval4
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = RCT_naval3}
+		x = -1
+		y = 1
+		relative_position_id = RCT_naval3
+
+		available = {
+            any_state = {
+                is_coastal = yes
+                is_controlled_by = ROOT
+            }
+        }
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_technology = {
+				early_carrier = 1
+			}
+		log = "[Root.GetName]: Focus RCT_Naval4"#Auto-logging
+		}
+	}
+
+shared_focus = {
+		id = RCT_naval5
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = RCT_naval3}
+		x = 1
+		y = 1
+		relative_position_id = RCT_naval3
+
+		available = {
+            any_state = {
+                is_coastal = yes
+                is_controlled_by = ROOT
+            }
+        }
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_technology = {
+				early_battleship = 1
+			}
+		log = "[Root.GetName]: Focus RCT_Naval4"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_naval6
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = RCT_naval4}
+		x = -2
+		y = 1
+		relative_position_id = RCT_naval4
+
+		available = {
+            any_state = {
+                is_coastal = yes
+                is_controlled_by = ROOT
+            }
+        }
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = aircraftcarrier
+				bonus = 0.5
+				uses = 1
+				category =cv_tech
+			}
+		log = "[Root.GetName]: Focus RCT_Naval4"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_naval7
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = RCT_naval4}
+		x = 0
+		y = 1
+		relative_position_id = RCT_naval4
+
+		available = {
+            any_state = {
+                is_coastal = yes
+                is_controlled_by = ROOT
+            }
+        }
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fleet_doctrine
+				bonus = 0.5
+				uses = 2
+				category = cat_base_strike
+			}
+		log = "[Root.GetName]: Focus RCT_Naval4"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_naval8
+		icon = GFX_focus_generic_cruiser2
+		prerequisite = { focus = RCT_naval5}
+		x = 0
+		y = 1
+		relative_position_id = RCT_naval5
+
+		available = {
+            any_state = {
+                is_coastal = yes
+                is_controlled_by = ROOT
+            }
+        }
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fleet_doctrine
+				bonus = 0.5
+				uses = 2
+				category = cat_fleet_in_being
+			}
+		log = "[Root.GetName]: Focus RCT_Naval4"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_naval9
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = RCT_naval5}
+		x = 2
+		y = 1
+		relative_position_id = RCT_naval5
+
+		available = {
+            any_state = {
+                is_coastal = yes
+                is_controlled_by = ROOT
+            }
+        }
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fleet_doctrine
+				bonus = 0.5
+				uses = 1
+				category = bb_tech
+			}
+		log = "[Root.GetName]: Focus RCT_Naval4"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_naval10
+		icon = GFX_focus_generic_cruiser2
+		prerequisite = { focus = RCT_naval6 focus = RCT_naval8 }
+		prerequisite = { focus = RCT_naval7 focus = RCT_naval9 }
+		x = 1
+		y = 1
+		relative_position_id = RCT_naval6
+
+		available = {
+            any_state = {
+                is_coastal = yes
+                is_controlled_by = ROOT
+            }
+        }
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fleet_doctrine
+				bonus = 0.5
+				uses = 1
+				category = bc_tech
+			}
+		log = "[Root.GetName]: Focus RCT_Naval4"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_naval11
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = RCT_naval6 focus = RCT_naval8 }
+		prerequisite = { focus = RCT_naval7 focus = RCT_naval9 }
+		x = 3
+		y = 1
+		relative_position_id = RCT_naval6
+
+		available = {
+            any_state = {
+                is_coastal = yes
+                is_controlled_by = ROOT
+            }
+        }
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fleet_doctrine
+				bonus = 0.5
+				uses = 1
+				technology = early_light_cruiser
+				technology = basic_light_cruiser
+				technology = improved_light_cruiser
+				technology = advanced_light_cruiser
+			}
+		log = "[Root.GetName]: Focus RCT_Naval4"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_naval12
+		icon = GFX_focus_generic_navy_battleship2
+		prerequisite = { focus = RCT_naval6 focus = RCT_naval8 }
+		prerequisite = { focus = RCT_naval7 focus = RCT_naval9 }
+		x = 5
+		y = 1
+		relative_position_id = RCT_naval6
+
+		available = {
+            any_state = {
+                is_coastal = yes
+                is_controlled_by = ROOT
+            }
+        }
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = dd_tech
+			}
+		log = "[Root.GetName]: Focus RCT_Naval4"#Auto-logging
 		}
 	}

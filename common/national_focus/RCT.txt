@@ -55,40 +55,7 @@ focus_tree = {
 	shared_focus = RCT_Reinforce_The_Chancellorship
 	shared_focus = RCT_expand_ohi
 	shared_focus = RCT_military1
-	shared_focus = RCT_mobile1
-	shared_focus = RCT_mobile2
-	shared_focus = RCT_mobile3
-	shared_focus = RCT_mobile4
-	shared_focus = RCT_mobile5
-	shared_focus = RCT_mobile6
-	shared_focus = RCT_mobile7
-	shared_focus = RCT_mobile8
-	shared_focus = RCT_grand1
-	shared_focus = RCT_grand2
-	shared_focus = RCT_grand3
-	shared_focus = RCT_grand4
-	shared_focus = RCT_grand5
-	shared_focus = RCT_grand6
-	shared_focus = RCT_grand7
-	shared_focus = RCT_grand8
-	shared_focus = RCT_mass1
-	shared_focus = RCT_mass2
-	shared_focus = RCT_mass3
-	shared_focus = RCT_mass4
-	shared_focus = RCT_mass5
-	shared_focus = RCT_mass6
-	shared_focus = RCT_mass7
-	shared_focus = RCT_mass8
-	shared_focus = RCT_sup1
-	shared_focus = RCT_sup2
-	shared_focus = RCT_sup3
-	shared_focus = RCT_sup4
-	shared_focus = RCT_sup5
-	shared_focus = RCT_sup6
-	shared_focus = RCT_sup7
-	shared_focus = RCT_sup8
-	shared_focus = RCT_army_buffs
-
+	shared_focus = RCT_naval1
 	################################
 	####Harmonic Swirl Focuses	####
 	################################

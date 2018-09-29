@@ -538,4 +538,18 @@ ideas = {
 			conscription_factor = 0.05
 		}
 	}
+	RCT_entrnechment = {
+	
+		allowed = {
+			always = no
+		}
+		
+		picture = FRA_factory_strikes
+		
+		removal_cost = -1
+		
+		modifier = {
+			max_dig_in = 1
+		}
+	}
     
