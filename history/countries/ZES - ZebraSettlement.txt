@@ -41,6 +41,7 @@ add_ideas = {
 	pre_industrial_society
 	lack_of_scientists
 	ZES_unrest_neutral
+	ZES_admirality_board
 }
 
 set_stability = 0.50

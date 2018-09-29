@@ -4,7 +4,7 @@
 		icon = GFX_goal_zes_raid
 		cost = 10
 		ai_will_do = { factor = 100 }
-		x = 5
+		x = 3
 		y = 0
 		completion_reward = {
 		}
@@ -56,7 +56,20 @@
 		relative_position_id = ZES_raid_gryphus
 		cost = 10
 		ai_will_do = { factor = 100 }
-		x = 2
+		x = 1
+		y = 3
+		completion_reward = {
+		}
+	}
+	
+	shared_focus = {
+		id = ZES_zebrican_slave_trade
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = ZES_grand_auction }
+		relative_position_id = ZES_raid_gryphus
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = -2
 		y = 3
 		completion_reward = {
 		}
@@ -69,7 +82,7 @@
 		relative_position_id = ZES_raid_gryphus
 		cost = 10
 		ai_will_do = { factor = 100 }
-		x = 2
+		x = 1
 		y = 4
 		completion_reward = {
 		}
@@ -83,7 +96,7 @@
 		relative_position_id = ZES_raid_gryphus
 		cost = 10
 		ai_will_do = { factor = 100 }
-		x = 1
+		x = 0
 		y = 5
 		completion_reward = {
 		}
@@ -96,47 +109,8 @@
 		relative_position_id = ZES_raid_gryphus
 		cost = 10
 		ai_will_do = { factor = 100 }
-		x = 1
+		x = 0
 		y = 6
-		completion_reward = {
-		}
-	}
-	
-	shared_focus = {
-		id = ZES_over_seas_markets
-		icon = GFX_goal_generic_consumer_goods
-		prerequisite = { focus = ZES_grand_auction }
-		relative_position_id = ZES_raid_gryphus
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = -3
-		y = 3
-		completion_reward = {
-		}
-	}
-	
-	shared_focus = {
-		id = ZES_a_deal_with_luna
-		icon = GFX_goal_cry_som_marry_luna
-		prerequisite = { focus = ZES_over_seas_markets }
-		relative_position_id = ZES_raid_gryphus
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = -3
-		y = 4
-		completion_reward = {
-		}
-	}
-	
-	shared_focus = {
-		id = ZES_slaves_for_crystals
-		icon = GFX_goal_sombra_return
-		prerequisite = { focus = ZES_over_seas_markets }
-		relative_position_id = ZES_raid_gryphus
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = -5
-		y = 4
 		completion_reward = {
 		}
 	}
@@ -149,7 +123,7 @@
 		relative_position_id = ZES_raid_gryphus
 		cost = 10
 		ai_will_do = { factor = 100 }
-		x = 0
+		x = -1
 		y = 4
 		completion_reward = {
 		}
@@ -159,10 +133,11 @@
 		id = ZES_griffon_slave_trade
 		icon = GFX_goal_jer_eagle
 		prerequisite = { focus = ZES_envoy_to_diamond_mountain }
+		prerequisite = { focus = ZES_zebrican_slave_trade }
 		relative_position_id = ZES_raid_gryphus
 		cost = 10
 		ai_will_do = { factor = 100 }
-		x = -1
+		x = -2
 		y = 5
 		completion_reward = {
 		}
@@ -176,13 +151,13 @@
 		relative_position_id = ZES_raid_gryphus
 		cost = 10
 		ai_will_do = { factor = 100 }
-		x = -0
+		x = -1
 		y = 7
 		completion_reward = {
 		}
 	}
 	
-	
+	### Political Path
 	shared_focus = {
 		id = ZES_stormy_waters
 		icon = GFX_focus_generic_coastal_fort
@@ -190,31 +165,42 @@
 		relative_position_id = ZES_raid_gryphus
 		cost = 10
 		ai_will_do = { factor = 100 }
-		x = 6
+		x = 5
 		y = 3
 		completion_reward = {
 		}
 	}
 	
-	
-	### Political Path
 	shared_focus = {
-		id = ZES_the_great_debate
-		icon = GFX_goal_generic_forceful_treaty
+		id = ZES_punishments
+		icon = GFX_goal_LEC_monkey
 		prerequisite = { focus = ZES_stormy_waters }
 		relative_position_id = ZES_raid_gryphus
 		cost = 10
 		ai_will_do = { factor = 100 }
-		x = 4
+		x = 3
 		y = 4
 		completion_reward = {
 		}
 	}
 	
 	shared_focus = {
-		id = ZES_internal_discussions
-		icon = GFX_goal_generic_dangerous_deal
-		prerequisite = { focus = ZES_the_great_debate }
+		id = ZES_deal_with_underground_railroad
+		icon = GFX_goal_rct_fancy_train
+		prerequisite = { focus = ZES_punishments }
+		relative_position_id = ZES_raid_gryphus
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = 2
+		y = 5
+		completion_reward = {
+		}
+	}
+	
+	shared_focus = {
+		id = ZES_slave_conscription
+		icon = GFX_goal_conscription
+		prerequisite = { focus = ZES_punishments }
 		relative_position_id = ZES_raid_gryphus
 		cost = 10
 		ai_will_do = { factor = 100 }
@@ -225,156 +211,208 @@
 	}
 	
 	shared_focus = {
-		id = ZES_listen_to_harmonists
-		icon = GFX_goal_generic_major_alliance
-		prerequisite = { focus = ZES_internal_discussions }
-		mutually_exclusive = { focus = ZES_listen_to_captains }
+		id = ZES_slave_brands
+		icon = GFX_goal_skull_treaty
+		prerequisite = { focus = ZES_slave_conscription }
+		prerequisite = { focus = ZES_deal_with_underground_railroad }
 		relative_position_id = ZES_raid_gryphus
 		cost = 10
 		ai_will_do = { factor = 100 }
 		x = 3
 		y = 6
 		completion_reward = {
-			load_focus_tree = zebra_harmonists
 		}
 	}
 	
 	shared_focus = {
-		id = ZES_listen_to_captains
-		icon = GFX_focus_generic_support_the_left_right
-		prerequisite = { focus = ZES_internal_discussions }
-		mutually_exclusive = { focus = ZES_listen_to_harmonists }
-		relative_position_id = ZES_raid_gryphus
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = 5
-		y = 6
-		completion_reward = {
-			load_focus_tree = zebra_captains
-		}
-	}
-	
-	shared_focus = {
-		id = ZES_the_vote
-		icon = GFX_focus_generic_support_the_left_right
-		prerequisite = { focus = ZES_listen_to_captains focus = ZES_listen_to_harmonists }
-		relative_position_id = ZES_raid_gryphus
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = 4
-		y = 7
-		completion_reward = {
-		}
-	}
-	
-	
-	
-	### Industrial Path
-	shared_focus = {
-		id = ZES_industrial_development
-		icon = GFX_goal_generic_fortify_city
+		id = ZES_political_corruption
+		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = ZES_stormy_waters }
 		relative_position_id = ZES_raid_gryphus
 		cost = 10
 		ai_will_do = { factor = 100 }
-		x = 8
+		x = 7
 		y = 4
 		completion_reward = {
 		}
 	}
 	
 	shared_focus = {
-		id = ZES_update_ports
-		icon = GFX_goal_generic_construct_naval_dockyard
-		prerequisite = { focus = ZES_industrial_development }
+		id = ZES_outlaw_bribery
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = ZES_political_corruption }
 		relative_position_id = ZES_raid_gryphus
 		cost = 10
 		ai_will_do = { factor = 100 }
-		x = 7
+		x = 6
 		y = 5
 		completion_reward = {
 		}
 	}
 	
 	shared_focus = {
-		id = ZES_bigger_shipyards
-		icon = GFX_goal_generic_navy_cruiser
-		prerequisite = { focus = ZES_update_ports }
+		id = ZES_administrative_transparency
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = ZES_political_corruption }
+		relative_position_id = ZES_raid_gryphus
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = 8
+		y = 5
+		completion_reward = {
+		}
+	}
+	
+	shared_focus = {
+		id = ZES_political_reform
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = ZES_administrative_transparency }
+		prerequisite = { focus = ZES_outlaw_bribery }
 		relative_position_id = ZES_raid_gryphus
 		cost = 10
 		ai_will_do = { factor = 100 }
 		x = 7
 		y = 6
+		completion_reward = {
+		}
+	}
+	
+	
+	shared_focus = {
+		id = ZES_boiling_point
+		icon = GFX_goal_purge_opposition
+		prerequisite = { focus = ZES_political_reform }
+		prerequisite = { focus = ZES_slave_brands }
+		relative_position_id = ZES_raid_gryphus
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = 5
+		y = 7
+		completion_reward = {
+			load_focus_tree = zebra_captains
+		}
+	}
+	
+	### Industrial Tree
+	
+	shared_focus = {
+		id = ZES_path_to_modernity
+		icon = GFX_goal_purge_opposition
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = 14
+		y = 0
+		completion_reward = {
+		}
+	}
+	
+	shared_focus = {
+		id = ZES_industrial_growth
+		icon = GFX_goal_purge_opposition
+		prerequisite = { focus = ZES_path_to_modernity }
+		relative_position_id = ZES_path_to_modernity
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = -1
+		y = 1
 		completion_reward = {
 		}
 	}
 	
 	shared_focus = {
 		id = ZES_countryside_roads
-		icon = GFX_goal_generic_army_motorized
-		prerequisite = { focus = ZES_industrial_development }
-		relative_position_id = ZES_raid_gryphus
+		icon = GFX_goal_purge_opposition
+		prerequisite = { focus = ZES_industrial_growth }
+		relative_position_id = ZES_path_to_modernity
 		cost = 10
 		ai_will_do = { factor = 100 }
-		x = 9
-		y = 5
+		x = -2
+		y = 2
 		completion_reward = {
 		}
 	}
 	
 	shared_focus = {
-		id = ZES_railroads
-		icon = GFX_goal_generic_construct_infrastructure
+		id = ZES_dockyard_upgrades
+		icon = GFX_goal_purge_opposition
+		prerequisite = { focus = ZES_path_to_modernity }
+		relative_position_id = ZES_path_to_modernity
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = 1
+		y = 1
+		completion_reward = {
+		}
+	}
+	
+	shared_focus = {
+		id = ZES_nyumbaisland_oil
+		icon = GFX_goal_purge_opposition
+		prerequisite = { focus = ZES_dockyard_upgrades }
+		relative_position_id = ZES_path_to_modernity
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = 2
+		y = 2
+		completion_reward = {
+		}
+	}
+	
+	shared_focus = {
+		id = ZES_fireshore_mines
+		icon = GFX_goal_purge_opposition
+		prerequisite = { focus = ZES_dockyard_upgrades }
+		prerequisite = { focus = ZES_industrial_growth }
+		relative_position_id = ZES_path_to_modernity
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = 0
+		y = 2
+		completion_reward = {
+		}
+	}
+	
+	shared_focus = {
+		id = ZES_electronics_research
+		icon = GFX_goal_purge_opposition
+		prerequisite = { focus = ZES_fireshore_mines }
+		prerequisite = { focus = ZES_nyumbaisland_oil }
+		relative_position_id = ZES_path_to_modernity
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = 1
+		y = 3
+		completion_reward = {
+		}
+	}
+	
+	shared_focus = {
+		id = ZES_industrial_research
+		icon = GFX_goal_purge_opposition
+		prerequisite = { focus = ZES_fireshore_mines }
 		prerequisite = { focus = ZES_countryside_roads }
-		relative_position_id = ZES_raid_gryphus
+		relative_position_id = ZES_path_to_modernity
 		cost = 10
 		ai_will_do = { factor = 100 }
-		x = 9
-		y = 6
-		completion_reward = {
-		}
-	}
-	
-	shared_focus = { ## Unlocks Better naval tech
-		id = ZES_naval_academy
-		icon = GFX_goal_tfv_generic_tech_sharing
-		prerequisite = { focus = ZES_railroads }
-		prerequisite = { focus = ZES_bigger_shipyards }
-		relative_position_id = ZES_raid_gryphus
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = 8
-		y = 7
+		x = -1
+		y = 3
 		completion_reward = {
 		}
 	}
 	
 	shared_focus = {
-		id = ZES_open_mines
-		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = ZES_naval_academy }
-		relative_position_id = ZES_raid_gryphus
+		id = ZES_engineering_academy
+		icon = GFX_goal_purge_opposition
+		prerequisite = { focus = ZES_industrial_research }
+		prerequisite = { focus = ZES_electronics_research }
+		relative_position_id = ZES_path_to_modernity
 		cost = 10
 		ai_will_do = { factor = 100 }
-		x = 7
-		y = 8
+		x = 0
+		y = 4
 		completion_reward = {
 		}
 	}
-	
-	shared_focus = {
-		id = ZES_synthetic_oil_experiments
-		icon = GFX_goal_generic_oil_refinery
-		prerequisite = { focus = ZES_naval_academy }
-		relative_position_id = ZES_raid_gryphus
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = 9
-		y = 8
-		completion_reward = {
-		}
-	}
-	
 	
 	### Captains Focus Tree
 	shared_focus = {

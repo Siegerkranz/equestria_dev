@@ -88,6 +88,20 @@ ideas = {
 			modifier = {
 			}
 		}
+		
+		ZES_admirality_board = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = GFX_idea_generic_pp_unity_bonus
+			modifier = {
+			}
+		}
+		
 	}
 	
 	navy_chief = {

@@ -12,6 +12,7 @@ focus_tree = {
 	continuous_focus_position = { x = 250 y = 1650 }
 	
 	shared_focus = ZES_raid_gryphus
+	shared_focus = ZES_path_to_modernity
 }
 
 focus_tree = {
