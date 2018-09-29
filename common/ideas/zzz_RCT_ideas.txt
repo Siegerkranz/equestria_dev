@@ -552,4 +552,22 @@ ideas = {
 			max_dig_in = 1
 		}
 	}
-    
+    RCT_planes = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_air_bonus
+
+			equipment_bonus = {
+				fighter_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				tactical_bomber_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+	}

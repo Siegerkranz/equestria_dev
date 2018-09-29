@@ -56,6 +56,7 @@ focus_tree = {
 	shared_focus = RCT_expand_ohi
 	shared_focus = RCT_military1
 	shared_focus = RCT_naval1
+	shared_focus = RCT_air1
 	################################
 	####Harmonic Swirl Focuses	####
 	################################

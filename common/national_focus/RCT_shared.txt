@@ -738,7 +738,7 @@
 	shared_focus = {
 		id = RCT_undermine_the_OHS
 		icon = GFX_goal_revolution
-		x = -2
+		x = -10
 		y = 0
 
 		cost = 5
@@ -4626,5 +4626,342 @@ shared_focus = {
 				category = dd_tech
 			}
 		log = "[Root.GetName]: Focus RCT_Naval4"#Auto-logging
+		}
+	}
+##################################################################
+############################Air###################################
+##################################################################
+	shared_focus = {
+		id = RCT_air1
+		icon = GFX_goal_generic_build_airforce
+		x = 0
+		y = 3
+		relative_position_id = RCT_Arrest_Nova_Whirl
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			air_experience = 50
+		log = "[Root.GetName]: Focus RCT_air1"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_air2
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		
+		ai_will_do = {
+			factor = 
+		}
+		
+		relative_position_id = RCT_air1
+		x = 0
+		y = 1
+		
+		prerequisite = { 
+			focus = RCT_air1
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			log = "[Root.GetName]: Focus RCT_air2"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_air3
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10.00
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		relative_position_id = RCT_air2
+		x = 0
+		y = 1
+		
+		prerequisite = { 
+			focus = RCT_air2
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_doctrines
+				bonus = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+			log = "[Root.GetName]: Focus RCT_air3"#Auto-logging
+		}
+	}
+
+	shared_focus = {
+		id = RCT_air4
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		
+		mutually_exclusive = {
+		focus = RCT_air5
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		relative_position_id = RCT_air3
+		x = 1
+		y = 1
+		
+		prerequisite = { 
+			focus = RCT_air3
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_doctrines
+				bonus = 0.5
+				uses = 1
+				category = cat_battlefield_support
+			}
+			log = "[Root.GetName]: Focus RCT_air3"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_air5
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		
+		mutually_exclusive = {
+		focus = RCT_air4
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		relative_position_id = RCT_air3
+		x = -1
+		y = 1
+		
+		prerequisite = { 
+			focus = RCT_air3
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_doctrines
+				bonus = 0.5
+				uses = 1
+				category = cat_strategic_destruction
+			}
+			log = "[Root.GetName]: Focus RCT_air3"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_air6
+		icon = GFX_goal_poland_goal
+		cost = 7.00
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		relative_position_id = RCT_air5
+		x = -1
+		y = 1
+		
+		prerequisite = { 
+			focus = RCT_air5
+		}
+		
+		completion_reward = {
+			set_technology = {
+				early_bomber = 1
+			}
+			log = "[Root.GetName]: Focus RCT_air3"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_air7
+		icon = GFX_goal_generic_occupy_start_war
+		cost = 10.00
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		relative_position_id = RCT_air6
+		x = 0
+		y = 1
+		
+		prerequisite = { 
+			focus = RCT_air6
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = bombers
+				bonus = 0.5
+				uses = 1
+				category = tactical_bomber
+				ahead_reduction = 1
+			}
+			log = "[Root.GetName]: Focus RCT_air3"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_air8
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		relative_position_id = RCT_air6
+		x = -2
+		y = 1
+		
+		prerequisite = { 
+			focus = RCT_air6
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = cas_bomber
+			}
+			log = "[Root.GetName]: Focus RCT_air3"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_air9
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10.00
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		relative_position_id = RCT_air4
+		x = 1
+		y = 1
+		
+		prerequisite = { 
+			focus = RCT_air4
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = light_fighter
+			}
+			log = "[Root.GetName]: Focus RCT_air3"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_air10
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		relative_position_id = RCT_air9
+		x = 0
+		y = 1
+		
+		prerequisite = { 
+			focus = RCT_air9
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = light_fighter
+			}
+			log = "[Root.GetName]: Focus RCT_air3"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_air11
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		relative_position_id = RCT_air9
+		x = 2
+		y = 1
+		
+		prerequisite = { 
+			focus = RCT_air9
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cat_heavy_fighter
+			}
+			log = "[Root.GetName]: Focus RCT_air3"#Auto-logging
+		}
+	}
+	
+	shared_focus = {
+		id = RCT_air12
+		icon = GFX_goal_generic_build_airforce
+		cost = 10.00
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		relative_position_id = RCT_air7
+		x = 2
+		y = 1
+		
+		prerequisite = { 
+			focus = RCT_air10
+			focus = RCT_air8
+		}
+		
+		prerequisite = { 
+			focus = RCT_air11
+			focus = RCT_air7
+		}
+		
+		completion_reward = {
+			add_ideas = RCT_planes
+			log = "[Root.GetName]: Focus RCT_air3"#Auto-logging
 		}
 	}
