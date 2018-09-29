@@ -16,7 +16,7 @@ focus_tree = {
 }
 
 focus_tree = {
-	id = zebra_captains
+	id = zebra_slave_revolt
 	
 	country = {
 		factor = 0
@@ -30,23 +30,6 @@ focus_tree = {
 	continuous_focus_position = { x = 250 y = 1650 }
 	
 	shared_focus = ZES_raid_gryphus
-	shared_focus = ZES_captains_win_majority
-}
-
-focus_tree = {
-	id = zebra_harmonists
-	
-	country = {
-		factor = 0
-		
-		modifier = {
-			add = 10
-			tag = ZES
-		}
-	}
-	default = no
-	continuous_focus_position = { x = 250 y = 1650 }
-	
-	shared_focus = ZES_raid_gryphus
-	shared_focus = ZES_harmonists_win_the_vote
+	shared_focus = ZES_path_to_modernity
+	shared_focus = ZES_secure_nyumbampya
 }

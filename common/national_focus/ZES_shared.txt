@@ -4,7 +4,7 @@
 		icon = GFX_goal_zes_raid
 		cost = 10
 		ai_will_do = { factor = 100 }
-		x = 3
+		x = 8
 		y = 0
 		completion_reward = {
 		}
@@ -20,6 +20,7 @@
 		x = 1
 		y = 1
 		completion_reward = {
+			load_focus_tree = zebra_slave_revolt
 		}
 	}
 	
@@ -297,18 +298,18 @@
 	
 	shared_focus = {
 		id = ZES_path_to_modernity
-		icon = GFX_goal_purge_opposition
+		icon = GFX_focus_generic_industry_3
 		cost = 10
 		ai_will_do = { factor = 100 }
-		x = 14
+		x = 2
 		y = 0
 		completion_reward = {
 		}
 	}
 	
 	shared_focus = {
-		id = ZES_industrial_growth
-		icon = GFX_goal_purge_opposition
+		id = ZES_agricultural_growth
+		icon = GFX_goal_agrarian_reform
 		prerequisite = { focus = ZES_path_to_modernity }
 		relative_position_id = ZES_path_to_modernity
 		cost = 10
@@ -320,21 +321,21 @@
 	}
 	
 	shared_focus = {
-		id = ZES_countryside_roads
-		icon = GFX_goal_purge_opposition
-		prerequisite = { focus = ZES_industrial_growth }
+		id = ZES_cotton_farms
+		icon = GFX_goal_coffee_boom
+		prerequisite = { focus = ZES_agricultural_growth }
 		relative_position_id = ZES_path_to_modernity
 		cost = 10
 		ai_will_do = { factor = 100 }
-		x = -2
+		x = -1
 		y = 2
 		completion_reward = {
 		}
 	}
 	
 	shared_focus = {
-		id = ZES_dockyard_upgrades
-		icon = GFX_goal_purge_opposition
+		id = ZES_fledgling_industry
+		icon = GFX_goal_generic_production
 		prerequisite = { focus = ZES_path_to_modernity }
 		relative_position_id = ZES_path_to_modernity
 		cost = 10
@@ -346,65 +347,49 @@
 	}
 	
 	shared_focus = {
-		id = ZES_nyumbaisland_oil
-		icon = GFX_goal_purge_opposition
-		prerequisite = { focus = ZES_dockyard_upgrades }
+		id = ZES_first_factories
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = ZES_fledgling_industry }
 		relative_position_id = ZES_path_to_modernity
 		cost = 10
 		ai_will_do = { factor = 100 }
-		x = 2
+		x = 1
 		y = 2
 		completion_reward = {
 		}
 	}
 	
 	shared_focus = {
-		id = ZES_fireshore_mines
-		icon = GFX_goal_purge_opposition
-		prerequisite = { focus = ZES_dockyard_upgrades }
-		prerequisite = { focus = ZES_industrial_growth }
+		id = ZES_growing_economy
+		icon = GFX_goal_state_economy
+		prerequisite = { focus = ZES_first_factories }
+		prerequisite = { focus = ZES_cotton_farms }
 		relative_position_id = ZES_path_to_modernity
 		cost = 10
 		ai_will_do = { factor = 100 }
 		x = 0
-		y = 2
-		completion_reward = {
-		}
-	}
-	
-	shared_focus = {
-		id = ZES_electronics_research
-		icon = GFX_goal_purge_opposition
-		prerequisite = { focus = ZES_fireshore_mines }
-		prerequisite = { focus = ZES_nyumbaisland_oil }
-		relative_position_id = ZES_path_to_modernity
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = 1
 		y = 3
 		completion_reward = {
 		}
 	}
 	
 	shared_focus = {
-		id = ZES_industrial_research
-		icon = GFX_goal_purge_opposition
-		prerequisite = { focus = ZES_fireshore_mines }
-		prerequisite = { focus = ZES_countryside_roads }
+		id = ZES_griffon_investors
+		icon = GFX_goal_GRF_immigration
+		prerequisite = { focus = ZES_growing_economy }
 		relative_position_id = ZES_path_to_modernity
 		cost = 10
 		ai_will_do = { factor = 100 }
-		x = -1
-		y = 3
+		x = -2
+		y = 4
 		completion_reward = {
 		}
 	}
 	
 	shared_focus = {
-		id = ZES_engineering_academy
-		icon = GFX_goal_purge_opposition
-		prerequisite = { focus = ZES_industrial_research }
-		prerequisite = { focus = ZES_electronics_research }
+		id = ZES_technology_for_slaves
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = ZES_growing_economy }
 		relative_position_id = ZES_path_to_modernity
 		cost = 10
 		ai_will_do = { factor = 100 }
@@ -414,9 +399,90 @@
 		}
 	}
 	
+	shared_focus = {
+		id = ZES_electronics_research
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = ZES_technology_for_slaves }
+		relative_position_id = ZES_path_to_modernity
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = -1
+		y = 5
+		completion_reward = {
+		}
+	}
+	
+	shared_focus = {
+		id = ZES_stripe_academy
+		icon = GFX_focus_research
+		prerequisite = { focus = ZES_electronics_research }
+		prerequisite = { focus = ZES_griffon_investors }
+		relative_position_id = ZES_path_to_modernity
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = -2
+		y = 6
+		completion_reward = {
+		}
+	}
+	
+	shared_focus = {
+		id = ZES_industrial_technology
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = ZES_technology_for_slaves }
+		relative_position_id = ZES_path_to_modernity
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = 1
+		y = 5
+		completion_reward = {
+		}
+	}
+	
+	shared_focus = {
+		id = ZES_national_development_program
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = ZES_growing_economy }
+		relative_position_id = ZES_path_to_modernity
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = 2
+		y = 4
+		completion_reward = {
+		}
+	}
+	
+	shared_focus = {
+		id = ZES_fireshore_mining_company
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = ZES_national_development_program }
+		prerequisite = { focus = ZES_industrial_technology }
+		relative_position_id = ZES_path_to_modernity
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = 2
+		y = 6
+		completion_reward = {
+		}
+	}
+	
+	shared_focus = {
+		id = ZES_kisasa_jumuiya
+		icon = GFX_goal_technological_supremacy
+		prerequisite = { focus = ZES_fireshore_mining_company }
+		prerequisite = { focus = ZES_stripe_academy }
+		relative_position_id = ZES_path_to_modernity
+		cost = 10
+		ai_will_do = { factor = 100 }
+		x = 0
+		y = 7
+		completion_reward = {
+		}
+	}
+	
 	### Captains Focus Tree
 	shared_focus = {
-		id = ZES_captains_win_majority
+		id = ZES_secure_nyumbampya
 		icon = GFX_goal_generic_defence
 		cost = 10
 		ai_will_do = { factor = 100 }
@@ -427,389 +493,14 @@
 	}
 	
 	shared_focus = {
-		id = ZES_reinforce_slavery
+		id = ZES_find_hideouts
 		icon = GFX_goal_tfv_saf_support_ossebrandwag
-		prerequisite = { focus = ZES_captains_win_majority }
-		relative_position_id = ZES_captains_win_majority
+		prerequisite = { focus = ZES_secure_nyumbampya }
+		relative_position_id = ZES_secure_nyumbampya
 		cost = 10
 		ai_will_do = { factor = 100 }
 		x = -1
 		y = 1
-		completion_reward = {
-		}
-	}
-	
-	shared_focus = {
-		id = ZES_increase_raids
-		icon = GFX_goal_generic_occupy_start_war
-		prerequisite = { focus = ZES_captains_win_majority }
-		relative_position_id = ZES_captains_win_majority
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = 1
-		y = 1
-		completion_reward = {
-		}
-	}
-	
-	shared_focus = {
-		id = ZES_give_owners_more_freedoms
-		icon = GFX_goal_tripartite_pact
-		prerequisite = { focus = ZES_reinforce_slavery }
-		relative_position_id = ZES_captains_win_majority
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = -2
-		y = 2
-		completion_reward = {
-		}
-	}
-	
-	shared_focus = {
-		id = ZES_men_at_work
-		icon = GFX_goal_generic_construct_civilian
-		prerequisite = { focus = ZES_increase_raids focus = ZES_reinforce_slavery }
-		relative_position_id = ZES_captains_win_majority
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = 0
-		y = 2
-		completion_reward = {
-		}
-	}
-	
-	shared_focus = {
-		id = ZES_growth_of_industry
-		icon = GFX_goal_rhineland
-		prerequisite = { focus = ZES_men_at_work }
-		prerequisite = { focus = ZES_give_owners_more_freedoms }
-		relative_position_id = ZES_captains_win_majority
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = -1
-		y = 3
-		completion_reward = {
-		}
-	}
-	
-	shared_focus = {
-		id = ZES_fund_the_schools
-		icon = GFX_goal_generic_scientific_exchange
-		prerequisite = { focus = ZES_growth_of_industry }
-		relative_position_id = ZES_captains_win_majority
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = -2
-		y = 4
-		completion_reward = {
-		}
-	}
-	
-	shared_focus = {
-		id = ZES_propaganda_for_slaves
-		icon = GFX_goal_generic_propaganda
-		prerequisite = { focus = ZES_fund_the_schools }
-		relative_position_id = ZES_captains_win_majority
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = -2
-		y = 5
-		completion_reward = {
-		}
-	}
-	
-	shared_focus = {
-		id = ZES_invest_in_fireshore
-		icon = GFX_goal_generic_oil_refinery
-		prerequisite = { focus = ZES_growth_of_industry }
-		relative_position_id = ZES_captains_win_majority
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = 0
-		y = 4
-		completion_reward = {
-		}
-	}
-	
-	shared_focus = {
-		id = ZES_allow_nonzebra_slavers
-		icon = GFX_goal_generic_improve_relations
-		prerequisite = { focus = ZES_invest_in_fireshore }
-		relative_position_id = ZES_captains_win_majority
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = 0
-		y = 5
-		completion_reward = {
-		}
-	}
-	
-	shared_focus = {
-		id = ZES_modern_nation
-		icon = GFX_goal_rct_fancy_train
-		prerequisite = { focus = ZES_allow_nonzebra_slavers }
-		prerequisite = { focus = ZES_propaganda_for_slaves }
-		relative_position_id = ZES_captains_win_majority
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = -1
-		y = 6
-		completion_reward = {
-		}
-	}
-	
-	shared_focus = {
-		id = ZES_arrest_harmony_leaders
-		icon = GFX_focus_generic_strike_at_democracy2
-		prerequisite = { focus = ZES_increase_raids }
-		relative_position_id = ZES_captains_win_majority
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = 2
-		y = 2
-		completion_reward = {
-		}
-	}
-	
-	shared_focus = {
-		id = ZES_end_the_debate
-		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = ZES_arrest_harmony_leaders }
-		relative_position_id = ZES_captains_win_majority
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = 2
-		y = 3
-		completion_reward = {
-		}
-	}
-	
-	shared_focus = {
-		id = ZES_open_the_army
-		icon = GFX_focus_generic_little_entente
-		prerequisite = { focus = ZES_end_the_debate }
-		relative_position_id = ZES_captains_win_majority
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = 2
-		y = 4
-		completion_reward = {
-		}
-	}
-	
-	shared_focus = {
-		id = ZES_found_the_NSS
-		icon = GFX_goal_generic_defence
-		prerequisite = { focus = ZES_end_the_debate }
-		relative_position_id = ZES_captains_win_majority
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = 4
-		y = 4
-		completion_reward = {
-		}
-	}
-	
-	shared_focus = {
-		id = ZES_take_back_stripeport
-		icon = GFX_goal_generic_major_war
-		prerequisite = { focus = ZES_found_the_NSS }
-		prerequisite = { focus = ZES_open_the_army }
-		relative_position_id = ZES_captains_win_majority
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = 3
-		y = 5
-		completion_reward = {
-		}
-	}
-	
-	shared_focus = {
-		id = ZES_declare_the_northern_empire
-		icon = GFX_goal_generic_more_territorial_claims
-		prerequisite = { focus = ZES_take_back_stripeport }
-		prerequisite = { focus = ZES_modern_nation }
-		relative_position_id = ZES_captains_win_majority
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = 1
-		y = 7
-		completion_reward = {
-		}
-	}
-	
-	
-	
-	### Harmonists Win
-	shared_focus = {
-		id = ZES_harmonists_win_the_vote
-		icon = GFX_focus_generic_the_giant_wakes
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = 19
-		y = 0
-		completion_reward = {
-		}
-	}
-	
-	shared_focus = {
-		id = ZES_emancipate_the_slaves
-		icon = GFX_goal_generic_more_territorial_claims
-		prerequisite = { focus = ZES_harmonists_win_the_vote }
-		relative_position_id = ZES_harmonists_win_the_vote
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = 0
-		y = 1
-		completion_reward = {
-		}
-	}
-	
-	shared_focus = {
-		id = ZES_freedom_and_liberty_for_all
-		icon = GFX_goal_generic_more_territorial_claims
-		prerequisite = { focus = ZES_emancipate_the_slaves }
-		relative_position_id = ZES_harmonists_win_the_vote
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = -1
-		y = 2
-		completion_reward = {
-		}
-	}
-	
-	shared_focus = {
-		id = ZES_equal_rights
-		icon = GFX_goal_generic_more_territorial_claims
-		prerequisite = { focus = ZES_freedom_and_liberty_for_all }
-		relative_position_id = ZES_harmonists_win_the_vote
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = -2
-		y = 3
-		completion_reward = {
-		}
-	}
-	
-	shared_focus = {
-		id = ZES_arrest_slave_owners
-		icon = GFX_goal_generic_more_territorial_claims
-		prerequisite = { focus = ZES_emancipate_the_slaves }
-		relative_position_id = ZES_harmonists_win_the_vote
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = 1
-		y = 2
-		completion_reward = {
-		}
-	}
-	
-	shared_focus = {
-		id = ZES_dealing_with_the_black_market
-		icon = GFX_goal_generic_more_territorial_claims
-		prerequisite = { focus = ZES_arrest_slave_owners }
-		relative_position_id = ZES_harmonists_win_the_vote
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = 2
-		y = 3
-		completion_reward = {
-		}
-	}
-	
-	shared_focus = {
-		id = ZES_strike_at_barrad
-		icon = GFX_goal_generic_more_territorial_claims
-		prerequisite = { focus = ZES_dealing_with_the_black_market }
-		prerequisite = { focus = ZES_cut_ties_with_barrad }
-		relative_position_id = ZES_harmonists_win_the_vote
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = 2
-		y = 4
-		completion_reward = {
-		}
-	}
-	
-	
-	shared_focus = {
-		id = ZES_cut_ties_with_barrad
-		icon = GFX_goal_generic_more_territorial_claims
-		prerequisite = { focus = ZES_arrest_slave_owners }
-		prerequisite = { focus = ZES_freedom_and_liberty_for_all }
-		relative_position_id = ZES_harmonists_win_the_vote
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = 0
-		y = 3
-		completion_reward = {
-		}
-	}
-	
-	shared_focus = {
-		id = ZES_free_tickets_home
-		icon = GFX_goal_generic_more_territorial_claims
-		prerequisite = { focus = ZES_cut_ties_with_barrad }
-		relative_position_id = ZES_harmonists_win_the_vote
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = 0
-		y = 4
-		completion_reward = {
-		}
-	}
-	
-	shared_focus = {
-		id = ZES_looking_abroad
-		icon = GFX_goal_generic_more_territorial_claims
-		prerequisite = { focus = ZES_free_tickets_home }
-		prerequisite = { focus = ZES_equal_rights }
-		relative_position_id = ZES_harmonists_win_the_vote
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = -1
-		y = 5
-		completion_reward = {
-		}
-	}
-	
-	shared_focus = {
-		id = ZES_petition_the_coalition
-		icon = GFX_goal_generic_more_territorial_claims
-		prerequisite = { focus = ZES_looking_abroad }
-		mutually_exclusive = { focus = ZES_southern_protection_pact }
-		relative_position_id = ZES_harmonists_win_the_vote
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = -2
-		y = 6
-		completion_reward = {
-		}
-	}
-	
-	shared_focus = {
-		id = ZES_southern_protection_pact
-		icon = GFX_goal_generic_more_territorial_claims
-		prerequisite = { focus = ZES_looking_abroad }
-		mutually_exclusive = { focus = ZES_petition_the_coalition }
-		relative_position_id = ZES_harmonists_win_the_vote
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = 0
-		y = 6
-		completion_reward = {
-		}
-	}
-	
-	shared_focus = {
-		id = ZES_northern_republic
-		icon = GFX_goal_generic_more_territorial_claims
-		prerequisite = { focus = ZES_southern_protection_pact focus = ZES_petition_the_coalition }
-		relative_position_id = ZES_harmonists_win_the_vote
-		cost = 10
-		ai_will_do = { factor = 100 }
-		x = -1
-		y = 7
 		completion_reward = {
 		}
 	}
