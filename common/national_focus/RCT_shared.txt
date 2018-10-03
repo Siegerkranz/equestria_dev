@@ -68,45 +68,10 @@
 	}
 
 	shared_focus = {
-		id = RCT_Schools_For_The_Ponies
-		prerequisite = { focus = RCT_Reinforce_The_Chancellorship }
-		icon = GFX_goal_rct_riverswirl
-		x = -1
-		y = 1
-		relative_position_id = RCT_Reinforce_The_Chancellorship
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
 		id = RCT_Merge_State_And_Party_Bureaucracy
 		prerequisite = { focus = RCT_Reinforce_The_Chancellorship }
 		icon = GFX_goal_rct_riverswirl
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = RCT_Reinforce_The_Chancellorship
 
@@ -138,10 +103,11 @@
 	}
 
 	shared_focus = {
-		id = RCT_Welfare_State
-		prerequisite = { focus = RCT_Schools_For_The_Ponies focus = RCT_Merge_State_And_Party_Bureaucracy }
+		id = RCT_Chancellors_New_Plan
+		prerequisite = { focus = RCT_Merge_State_And_Party_Bureaucracy }
+		mutually_exclusive = { focus = RCT_Status_Quo }
 		icon = GFX_goal_rct_riverswirl
-		x = 0
+		x = 3
 		y = 2
 		relative_position_id = RCT_Reinforce_The_Chancellorship
 
@@ -173,11 +139,46 @@
 	}
 
 	shared_focus = {
-		id = RCT_Friends_In_The_Banks
-		prerequisite = { focus = RCT_Welfare_State }
-		mutually_exclusive = { focus = RCT_Land_Reform }
+		id = RCT_Status_Quo
+		prerequisite = { focus = RCT_Merge_State_And_Party_Bureaucracy }
+		mutually_exclusive = { focus = RCT_Chancellors_New_Plan }
 		icon = GFX_goal_rct_riverswirl
-		x = 1
+		x = -3
+		y = 2
+		relative_position_id = RCT_Reinforce_The_Chancellorship
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_National_Austerity
+		prerequisite = { focus = RCT_Status_Quo focus = RCT_Chancellors_New_Plan }
+		icon = GFX_goal_rct_riverswirl
+		x = 0
 		y = 3
 		relative_position_id = RCT_Reinforce_The_Chancellorship
 
@@ -209,291 +210,10 @@
 	}
 
 	shared_focus = {
-		id = RCT_Economic_Power_Into_Political_Power
-		prerequisite = { focus = RCT_Friends_In_The_Banks }
-		icon = GFX_goal_rct_riverswirl
-		x = 2
-		y = 4
-		relative_position_id = RCT_Reinforce_The_Chancellorship
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Federal_Law_Over_State
-		prerequisite = { focus = RCT_Welfare_State }
+		id = RCT_
+		prerequisite = { focus = RCT_Status_Quo focus = RCT_Chancellors_New_Plan }
 		icon = GFX_goal_rct_riverswirl
 		x = 0
-		y = 4
-		relative_position_id = RCT_Reinforce_The_Chancellorship
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Undying_Loyalty_To_The_Republic
-		prerequisite = { focus = RCT_Federal_Law_Over_State }
-		icon = GFX_goal_rct_riverswirl
-		x = 0
-		y = 5
-		relative_position_id = RCT_Reinforce_The_Chancellorship
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Land_Reform
-		prerequisite = { focus = RCT_Welfare_State }
-		mutually_exclusive = { focus = RCT_Friends_In_The_Banks }
-		icon = GFX_goal_rct_riverswirl
-		x = -1
-		y = 3
-		relative_position_id = RCT_Reinforce_The_Chancellorship
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Reinforce_The_Agricultural_Sector
-		prerequisite = { focus = RCT_Land_Reform }
-		icon = GFX_goal_rct_riverswirl
-		x = -2
-		y = 4
-		relative_position_id = RCT_Reinforce_The_Chancellorship
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Railways_Across_Rijeka
-		prerequisite = { focus = RCT_Reinforce_The_Chancellorship }
-		icon = GFX_goal_rct_riverswirl
-		x = -3
-		y = 1
-		relative_position_id = RCT_Reinforce_The_Chancellorship
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Coltstream
-		prerequisite = { focus = RCT_Railways_Across_Rijeka }
-		icon = GFX_goal_rct_riverswirl
-		x = -4
-		y = 2
-		relative_position_id = RCT_Reinforce_The_Chancellorship
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Mountain_Oil
-		prerequisite = { focus = RCT_Railways_Across_Rijeka }
-		icon = GFX_goal_rct_riverswirl
-		x = -2
-		y = 2
-		relative_position_id = RCT_Reinforce_The_Chancellorship
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Friends_In_The_Industry
-		prerequisite = { focus = RCT_Railways_Across_Rijeka }
-		icon = GFX_goal_rct_riverswirl
-		x = -3
 		y = 3
 		relative_position_id = RCT_Reinforce_The_Chancellorship
 
@@ -774,6 +494,7 @@
 	shared_focus = {
 		id = RCT_Battle_For_Coltstream
 		prerequisite = { focus = RCT_undermine_the_OHS }
+		allow_branch = { has_country_flag = RCT_Communist1 }
 		icon = GFX_goal_generic_major_war
 		x = -1
 		y = 1
@@ -817,6 +538,7 @@
 	shared_focus = {
 		id = RCT_Take_Ponezega
 		prerequisite = { focus = RCT_undermine_the_OHS }
+		allow_branch = { has_country_flag = RCT_Communist1 }
 		icon = GFX_goal_generic_more_territorial_claims
 		x = 1
 		y = 1
@@ -1266,6 +988,7 @@
 	shared_focus = {
 		id = RCT_Proletariat_Dictatorship
 		prerequisite = { focus = RCT_Socialist_Meeting }
+		allow_branch = { has_country_flag = RCT_Communism2 }
 		mutually_exclusive = { focus = RCT_New_Chancellor }
 		icon = GFX_goal_ideology_totalist
 		x = -5
@@ -1303,6 +1026,7 @@
 	shared_focus = {
 		id = RCT_New_Chancellor
 		prerequisite = { focus = RCT_Socialist_Meeting }
+		allow_branch = { has_country_flag = RCT_Communism2 }
 		mutually_exclusive = { focus = RCT_Proletariat_Dictatorship }
 		icon = GFX_goal_ideology_syndicalist
 		x = 5
@@ -2618,7 +2342,7 @@
 		}
 
 		completion_reward = {
-
+			add_ideas = RCT_Harmony_Is_Non_Negiotable 
 		}
 	}
 
@@ -2688,7 +2412,7 @@
 		}
 
 		completion_reward = {
-
+		LCT = { country_event = rivercity.52 }
 		}
 	}
 
@@ -2723,7 +2447,7 @@
 		}
 
 		completion_reward = {
-
+		custom_effect_tooltip = RCT_River_Swirl1
 		}
 	}
 
@@ -2758,7 +2482,8 @@
 		}
 
 		completion_reward = {
-
+		custom_effect_tooltip = RIV_fed_race_plus_tt
+		add_to_variable = { var = RIV_fed_race value = 1 }
 		}
 	}
 
@@ -2793,7 +2518,8 @@
 		}
 
 		completion_reward = {
-
+		custom_effect_tooltip = RIV_fed_race_plus_tt
+		add_to_variable = { var = RIV_fed_race value = 1 }
 		}
 	}
 
@@ -2828,7 +2554,8 @@
 		}
 
 		completion_reward = {
-
+		custom_effect_tooltip = RIV_fed_race_plus_tt
+		add_to_variable = { var = RIV_fed_race value = 1 }
 		}
 	}
 
@@ -2863,7 +2590,7 @@
 		}
 
 		completion_reward = {
-
+		custom_effect_tooltip = RCT_River_Swirl3
 		}
 	}
 
@@ -3015,7 +2742,7 @@
 		y = 3
 		relative_position_id = RCT_expand_ohi
 
-		cost = 10
+		cost = 1.5
 
 		ai_will_do = {
 			factor = 1
@@ -3073,7 +2800,11 @@
 		}
 
 		completion_reward = {
-
+		custom_effect_tooltip = RCT_River_Swirl2
+		create_wargoal = {
+    		type = puppet_wargoal_focus
+   			target = LCT
+			}
 		}
 	}
 
@@ -3108,7 +2839,11 @@
 		}
 
 		completion_reward = {
-
+		custom_effect_tooltip = RCT_River_Swirl2
+		create_wargoal = {
+    		type = puppet_wargoal_focus
+   			target = NIM
+			}
 		}
 	}
 
@@ -3143,7 +2878,11 @@
 		}
 
 		completion_reward = {
-
+		custom_effect_tooltip = RCT_River_Swirl2
+		create_wargoal = {
+    		type = puppet_wargoal_focus
+   			target = BAK
+			}
 		}
 	}
 
@@ -3178,7 +2917,11 @@
 		}
 
 		completion_reward = {
-
+		custom_effect_tooltip = RCT_River_Swirl2
+		create_wargoal = {
+    		type = puppet_wargoal_focus
+   			target = DEP
+			}
 		}
 	}
 
@@ -3213,7 +2956,11 @@
 		}
 
 		completion_reward = {
-
+		custom_effect_tooltip = RCT_River_Swirl2
+		create_wargoal = {
+    		type = puppet_wargoal_focus
+   			target = FRE
+			}
 		}
 	}
 	
@@ -3223,9 +2970,9 @@
 	shared_focus = {
 		id = RCT_military1
 		icon = GFX_goal_generic_axis_build_infantry
-		x = 6
-		y = 2
-		relative_position_id = RCT_Undying_Loyalty_To_The_Republic
+		x = 4
+		y = 6
+		relative_position_id = RCT_Reinforce_The_Chancellorship
 
 		cost = 10
 

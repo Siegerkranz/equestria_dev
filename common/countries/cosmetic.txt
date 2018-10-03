@@ -521,3 +521,7 @@ LUS_bandit_state = {
 	color = rgb { 43 51 22 }
 	color_ui = rgb { 43 51 22 }
 }
+RCT_communism = {
+	color = rgb { 178 34 52 }
+	color_ui = rgb { 178 34 52 }
+}

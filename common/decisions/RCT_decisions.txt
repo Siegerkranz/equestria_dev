@@ -93,10 +93,12 @@ RCT_SIEGE = {
 		icon = generic_civil_support
 
 		available = {
-			NOT = { has_completed_focus = RCT_Land_Stand_At_The_Chancellory }
+			has_completed_focus = RCT_Land_Stand_At_The_Chancellory
 		}
 
 		days_mission_timeout = 10
+
+		days_re_enable = 1
 
 		activation = {
 			has_country_flag = RCT_Siege_Ongoing

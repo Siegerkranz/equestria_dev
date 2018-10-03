@@ -74,7 +74,21 @@ RCT_INF_01 =
 		7 = { "%d. 'Divlji-Vodina' Gardijska Brigada" }
 		8 = { "%d. 'Coltonia' Gardijska Brigada" }
 		9 = { "%d. 'Neighretva' Gardijska Brigada" }
-		10 = { "%d. 'Coltovac' Gardijska Brigada" }
+		10 = { "%d. 'Škorpioni' Gardijska Brigada" }
+		11 = { "%d. 'Šakali' Gardijska Brigada" }
+		12 = { "%d. 'Panteri' Gardijska Brigada" }
+		13 = { "%d. 'Mauzer' Gardijska Brigada" }
+		14 = { "%d. 'Knindže' Gardijska Brigada" }
+		15 = { "%d. 'Vojvodina' Gardijska Brigada" }
+		16 = { "%d. 'Vukovi' Gardijska Brigada" }
+		17 = { "%d. 'Benkovac' Gardijska Brigada" }
+		18 = { "%d. 'Sokolovi' Gardijska Brigada" }
+		19 = { "%d. 'Tretinjak' Gardijska Brigada" }
+		20 = { "%d. 'Tokić' Gardijska Brigada" }
+		21 = { "%d. 'Lipizzan' Gardijska Brigada" }
+		22 = { "%d. 'Čorak' Gardijska Brigada" }
+		23 = { "%d. 'Gadžić' Gardijska Brigada" }
+		24 = { "%d. 'Mhow' Gardijska Brigada" }
 	}
 }
 

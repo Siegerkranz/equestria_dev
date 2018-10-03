@@ -70,14 +70,25 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Apple Rose"
-	desc = "POLITICS_APPLE_ROSE_DESC"
-	picture = "gfx/leaders/Pony/portrait_pony_generic_6.dds"
+	name = "Nova Whirl"
+	desc = "POLITICS_NOVAWHIRL_DESC"
+	picture = "gfx/leaders/RCT/Nova_Whirl.tga"
 	expire = "1965.1.1"
 	ideology = leninism
 	traits = {
 		
 	}
+}
+create_field_marshal = {
+	name = "Hector Lipizzan"
+	portrait_path = "gfx/leaders/RCT/Hector_Lipizzan.tga"
+	traits = { infantry_officer guerilla_fighter old}
+	skill = 3
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 1
+	id = 650
 }
 create_corps_commander = {
 	name = "Katerina Kaffenhoof"
@@ -88,6 +99,7 @@ create_corps_commander = {
 	defense_skill = 1
 	planning_skill = 2
 	logistics_skill = 3
+	id = 651
 }
 create_corps_commander = {
 	name = "Artemis Rosamund"
@@ -95,7 +107,7 @@ create_corps_commander = {
 	traits = { promising_general }
 	skill = 2
 	attack_skill = 3
-	defense_skill = 1
+	defense_skill = 2
 	planning_skill = 1
 	logistics_skill = 2
 }
@@ -130,24 +142,15 @@ create_corps_commander = {
 	logistics_skill = 2
 }
 create_corps_commander = {
-	name = "Twist Lipizzan"
-	portrait_path = "gfx/leaders/Pony/portrait_pony_generic_land_2.dds"
+	name = "Caramel Haze"
+	portrait_path = "gfx/leaders/RCT/Caramel_Haze.tga"
 	traits = { infantry_officer organizer }
 	skill = 2
 	attack_skill = 2
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Caramel Haze"
-	portrait_path = "gfx/leaders/Pony/portrait_pony_generic_land_2.dds"
-	traits = { infantry_officer guerilla_fighter }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
+	id = 652
 }
 
 create_faction = "river_coalition_faction"

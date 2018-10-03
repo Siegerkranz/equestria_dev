@@ -303,5 +303,12 @@ opinion_modifiers = {
 	#DMT
 	DMT_refused_help = { value = -35 }
 	DMT_help = { value = 20 }
-
+	#RCT
+	LCT_Refused_Pact = {
+		value = -50
+		months = 36
+	}
+	RCT_LCT_Pact = {
+		value = 25
+	}
 }

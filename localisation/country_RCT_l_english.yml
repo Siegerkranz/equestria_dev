@@ -119,6 +119,11 @@
  ### PARTIES ###
  
  #### TOOL TIPS ####
+
+ RCT_River_Swirl1:0 "If The Coup fails Diamond Mountain §Rwill leave the Coalition§!, and you will lose §R2§! to your standing in the §YRace to form the River Federation§!§!"
+ RCT_River_Swirl2:0 "Subtracts §R5§! to your standing in the §YRace to form the River Federation§!§!\n"
+ RCT_River_Swirl3:0 "Adds §G3§! to your standing in the §YRace to form the River Federation§\n!"
+
  RCT_Military_Coup:0 "§RDisgrunteled Officers will prepare to remove Chancellor River Swirl.§!"
  RCT_Military_Coup2:0 "§RRepublican Guards force us to retreat to the countryside, The war will rage on in the countryside!§!"
  RCT_Military_Coup3:0 "§RThe Outer Defenses of Rijekogard will crumble!§!"
