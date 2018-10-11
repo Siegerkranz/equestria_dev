@@ -710,7 +710,7 @@ LUS_red_army:0 "Lushian Red Army"
 LUS_red_army_atc:0 "Lushian Red Army"
 LUS_red_army_def:0 "Lushian Red Army"
 ## ADVISORS ###################################
-LUS_karkarich:0 "Karkarich"
+LUS_karkarich:0 "Karka Rich"
 LUS_war_industrialist:0 "Reka Aumont"
 LUS_prince_of_terror:0 "Rabec Renouf"
 LUS_Lord_Drak_Army_chief:0 "Marven Drak"
@@ -733,6 +733,7 @@ LUS_GRW_lushi_research_com:0 "Research with Lushi"
 ##########################################################
 ### FLAGS AND TOOLTIPS ###################################
 ##########################################################
+lord_drak_killed:0 "Marvin Drak is killed."
 daughter_married:0 "Princess Mira married"
 BRFprince_is_well:0 "Prince Tomado de Kissau is not killed or captured"
 LUS_risk_of_famine_timeout:0 "Looming economic recession"
