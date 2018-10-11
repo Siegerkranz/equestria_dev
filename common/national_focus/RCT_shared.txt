@@ -35,9 +35,9 @@
 #	}
 
 	shared_focus = {
-		id = RCT_Reinforce_The_Chancellorship
+		id = RCT_Federal_Mandate
 		icon = GFX_goal_support_democracy
-		x = 10
+		x = 9
 		y = 0
 
 		cost = 10
@@ -68,12 +68,12 @@
 	}
 
 	shared_focus = {
-		id = RCT_Merge_State_And_Party_Bureaucracy
-		prerequisite = { focus = RCT_Reinforce_The_Chancellorship }
-		icon = GFX_goal_rct_riverswirl
+		id = RCT_Ban_Socalist_Parties
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = RCT_Federal_Mandate }
 		x = 0
 		y = 1
-		relative_position_id = RCT_Reinforce_The_Chancellorship
+		relative_position_id = RCT_Federal_Mandate
 
 		cost = 10
 
@@ -103,491 +103,14 @@
 	}
 
 	shared_focus = {
-		id = RCT_Chancellors_New_Plan
-		prerequisite = { focus = RCT_Merge_State_And_Party_Bureaucracy }
-		mutually_exclusive = { focus = RCT_Status_Quo }
-		icon = GFX_goal_rct_riverswirl
-		x = 3
-		y = 2
-		relative_position_id = RCT_Reinforce_The_Chancellorship
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Status_Quo
-		prerequisite = { focus = RCT_Merge_State_And_Party_Bureaucracy }
-		mutually_exclusive = { focus = RCT_Chancellors_New_Plan }
-		icon = GFX_goal_rct_riverswirl
-		x = -3
-		y = 2
-		relative_position_id = RCT_Reinforce_The_Chancellorship
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
-		id = RCT_National_Austerity
-		prerequisite = { focus = RCT_Status_Quo focus = RCT_Chancellors_New_Plan }
-		icon = GFX_goal_rct_riverswirl
-		x = 0
-		y = 3
-		relative_position_id = RCT_Reinforce_The_Chancellorship
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
-		id = RCT_
-		prerequisite = { focus = RCT_Status_Quo focus = RCT_Chancellors_New_Plan }
-		icon = GFX_goal_rct_riverswirl
-		x = 0
-		y = 3
-		relative_position_id = RCT_Reinforce_The_Chancellorship
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Promote_Lipizzan_To_Field_Marshal
-		prerequisite = { focus = RCT_Reinforce_The_Chancellorship }
-		icon = GFX_goal_generic_army_doctrines
-		x = -7
-		y = 1
-		relative_position_id = RCT_Reinforce_The_Chancellorship
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Coordinate_With_The_OHS
-		prerequisite = { focus = RCT_Promote_Lipizzan_To_Field_Marshal }
-		icon = GFX_goal_rct_riverswirl
-		x = -8
-		y = 2
-		relative_position_id = RCT_Reinforce_The_Chancellorship
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Arrest_Haze
-		prerequisite = { focus = RCT_Coordinate_With_The_OHS }
-		icon = GFX_goal_rct_riverswirl
-		x = -8
-		y = 3
-		relative_position_id = RCT_Reinforce_The_Chancellorship
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Arrest_Nova_Whirl
-		prerequisite = { focus = RCT_Arrest_Haze }
-		prerequisite = { focus = RCT_Up_The_Talzar_Mountain }
-		icon = GFX_goal_rct_riverswirl
-		x = -7
-		y = 4
-		relative_position_id = RCT_Reinforce_The_Chancellorship
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Up_The_Talzar_Mountain
-		prerequisite = { focus = RCT_SWIRL_Skirmish_In_The_Highlands }
-		icon = GFX_goal_broken_red_star
-		x = -6
-		y = 3
-		relative_position_id = RCT_Reinforce_The_Chancellorship
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
-		id = RCT_SWIRL_Skirmish_In_The_Highlands
-		prerequisite = { focus = RCT_Promote_Lipizzan_To_Field_Marshal }
-		icon = GFX_focus_generic_provoke_border_clashes
-		x = -6
-		y = 2
-		relative_position_id = RCT_Reinforce_The_Chancellorship
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
-		id = RCT_undermine_the_OHS
-		icon = GFX_goal_revolution
-		x = -10
-		y = 0
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-		custom_effect_tooltip = RCT_Military_Coup
-		hidden_effect = {
-		country_event = { id = rivercity.2 days = 70 random = 90 }
-			}
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Battle_For_Coltstream
-		prerequisite = { focus = RCT_undermine_the_OHS }
-		allow_branch = { has_country_flag = RCT_Communist1 }
-		icon = GFX_goal_generic_major_war
-		x = -1
-		y = 1
-		relative_position_id = RCT_undermine_the_OHS
-
-		cost = 3
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-		country_event = rivercity.4
-		add_political_power = 25
-		army_experience = 10
-		add_stability = -0.03
-		add_popularity = {
-			ideology = communism
-			popularity = 0.03
-		}
-		add_war_support = 0.05
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Take_Ponezega
-		prerequisite = { focus = RCT_undermine_the_OHS }
-		allow_branch = { has_country_flag = RCT_Communist1 }
-		icon = GFX_goal_generic_more_territorial_claims
-		x = 1
-		y = 1
-		relative_position_id = RCT_undermine_the_OHS
-
-		cost = 3
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-		country_event = rivercity.5
-		add_political_power = 25
-		army_experience = 10
-		add_stability = -0.03
-		add_popularity = {
-			ideology = communism
-			popularity = 0.03
-		}
-		add_war_support = 0.05
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Marching_Straight_To_Coltovac
-		prerequisite = { focus = RCT_Take_Ponezega }
-		icon = GFX_goal_generic_propaganda
+		id = RCT_Combat_Poverty
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = RCT_Federal_Mandate }
 		x = 2
-		y = 2
-		relative_position_id = RCT_undermine_the_OHS
+		y = 1
+		relative_position_id = RCT_Federal_Mandate
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -610,211 +133,17 @@
 		}
 
 		completion_reward = {
-		effect_tooltip = { country_event = rivercity.8 }
-		hidden_effect = { country_event = rivercity.9 }
+
 		}
 	}
 
 	shared_focus = {
-		id = RCT_Skirmish_In_The_Highlands
-		prerequisite = { focus = RCT_Battle_For_Coltstream }
-		icon = GFX_focus_generic_provoke_border_clashes
+		id = RCT_Status_Of_The_Mountain_Commune
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = RCT_Federal_Mandate }
 		x = -2
-		y = 2
-		relative_position_id = RCT_undermine_the_OHS
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-		add_political_power = 25
-		army_experience = 10
-		add_stability = -0.03
-		add_popularity = {
-			ideology = communism
-			popularity = 0.03
-		}
-		add_war_support = 0.05
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Capture_Zagrep
-		prerequisite = { focus = RCT_Skirmish_In_The_Highlands }
-		prerequisite = { focus = RCT_Storm_Rijekogard }
-		icon = GFX_goal_generic_attack_allies
-		x = -2
-		y = 3
-		relative_position_id = RCT_undermine_the_OHS
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-		add_political_power = 25
-		army_experience = 10
-		add_stability = -0.03
-		add_popularity = {
-			ideology = communism
-			popularity = 0.03
-		}
-		add_war_support = 0.05
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Annhilate_The_Loyalist_Regiments
-		prerequisite = { focus = RCT_Marching_Straight_To_Coltovac }
-		prerequisite = { focus = RCT_Storm_Rijekogard }
-		icon = GFX_goal_generic_political_pressure
-		x = 2
-		y = 3
-		relative_position_id = RCT_undermine_the_OHS
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Storm_Rijekogard
-		prerequisite = { focus = RCT_Battle_For_Coltstream focus = RCT_Take_Ponezega }
-		icon = GFX_goal_generic_territory_or_war
-		x = 0
-		y = 2
-		relative_position_id = RCT_undermine_the_OHS
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = RCT_Military_Coup3
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Land_Stand_At_The_Chancellory
-		prerequisite = { focus = RCT_Storm_Rijekogard }
-		icon = GFX_focus_generic_strike_at_democracy3
-		x = 0
-		y = 3
-		relative_position_id = RCT_undermine_the_OHS
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			custom_effect_tooltip = RCT_Military_Coup4
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Hunt_Down_The_OHS
-		prerequisite = { focus = RCT_Land_Stand_At_The_Chancellory }
-		prerequisite = { focus = RCT_Capture_Zagrep }
-		prerequisite = { focus = RCT_Annhilate_The_Loyalist_Regiments }
-		icon = GFX_goal_step_on_skull
-		x = -2
-		y = 4
-		relative_position_id = RCT_undermine_the_OHS
+		y = 1
+		relative_position_id = RCT_Federal_Mandate
 
 		cost = 10
 
@@ -839,341 +168,17 @@
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = RCT_Military_Coup5
-			custom_effect_tooltip = RCT_Military_Coup6
+
 		}
 	}
 
 	shared_focus = {
-		id = RCT_Purge_The_Harmonists
-		prerequisite = { focus = RCT_Land_Stand_At_The_Chancellory }
-		prerequisite = { focus = RCT_Capture_Zagrep }
-		prerequisite = { focus = RCT_Annhilate_The_Loyalist_Regiments }
-		icon = GFX_goal_secret_agents_red
-		x = 2
-		y = 4
-		relative_position_id = RCT_undermine_the_OHS
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_stability = 0.10
-			add_political_power = -75
-			add_popularity = {
-				ideology = democratic
-				popularity = -0.10
-			}
-			add_popularity = {
-				ideology = fascism
-				popularity = -0.10
-			}
-			add_popularity = {
-				ideology = neutrality
-				popularity = -0.10
-			}
-		619 = {
-		    add_manpower = -2500
-		    }
-		620 = {
-		    add_manpower = -2500
-		    }
-		577 = {
-		    add_manpower = -2500
-		    }
-		646 = {
-		    add_manpower = -2500
-		    }
-		682 = {
-		    add_manpower = -2500
-		    }
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Ban_Non_Socialists_Parties
-		prerequisite = { focus = RCT_Land_Stand_At_The_Chancellory }
-		prerequisite = { focus = RCT_Capture_Zagrep }
-		prerequisite = { focus = RCT_Annhilate_The_Loyalist_Regiments }
-		icon = GFX_goal_skull_treaty
-		x = 0
-		y = 4
-		relative_position_id = RCT_undermine_the_OHS
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_stability = 0.10
-			add_popularity = {
-				ideology = communism
-				popularity = 0.25
-			}
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Socialist_Meeting
-		prerequisite = { focus = RCT_Ban_Non_Socialists_Parties }
-		icon = GFX_goal_red_star_gold_wreath
-		x = 0
-		y = 5
-		relative_position_id = RCT_undermine_the_OHS
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_political_power = 50
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Proletariat_Dictatorship
-		prerequisite = { focus = RCT_Socialist_Meeting }
-		allow_branch = { has_country_flag = RCT_Communism2 }
-		mutually_exclusive = { focus = RCT_New_Chancellor }
-		icon = GFX_goal_ideology_totalist
-		x = -5
-		y = 6
-		relative_position_id = RCT_undermine_the_OHS
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_political_power = 20
-			custom_effect_tooltip = RCT_COM_Caramel_Haze
-		}
-	}
-
-	shared_focus = {
-		id = RCT_New_Chancellor
-		prerequisite = { focus = RCT_Socialist_Meeting }
-		allow_branch = { has_country_flag = RCT_Communism2 }
-		mutually_exclusive = { focus = RCT_Proletariat_Dictatorship }
-		icon = GFX_goal_ideology_syndicalist
-		x = 5
-		y = 6
-		relative_position_id = RCT_undermine_the_OHS
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_political_power = 20
-			custom_effect_tooltip = RCT_COM_Nova_Whirl
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Modernizing_The_Countryside
-		prerequisite = { focus = RCT_Proletariat_Dictatorship focus = RCT_New_Chancellor }
-		icon = GFX_goal_rct_train
-		x = -3
-		y = 7
-		relative_position_id = RCT_undermine_the_OHS
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			646 = { add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-					} }
-			682 = { add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-					} }
-			577 = { add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-					} }
-			620 = { add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-					} }
-			619 = { add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-					} }
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Oil_In_The_Hills
-		prerequisite = { focus = RCT_Modernizing_The_Countryside }
-		icon = GFX_goal_oil_derrick
-		x = -2
-		y = 8
-		relative_position_id = RCT_undermine_the_OHS
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_resource = {
-				type = oil
-				amount = 25
-				state = 646
-			}
-		646 = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Neighretva_Industry
-		prerequisite = { focus = RCT_Modernizing_The_Countryside }
-		icon = GFX_goal_generic_construct_civ_factory
+		id = RCT_Emergency_Powers
+		prerequisite = { focus = RCT_Federal_Mandate }
+		icon = GFX_goal_support_democracy
 		x = -4
-		y = 8
-		relative_position_id = RCT_undermine_the_OHS
+		y = 1
+		relative_position_id = RCT_Federal_Mandate
 
 		cost = 10
 
@@ -1198,148 +203,17 @@
 		}
 
 		completion_reward = {
-		577 = {
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			add_tech_bonus = {
-				name = industrial_bonus
-				bonus = 0.40
-				uses = 1
-				category = industry
-			}
+
 		}
 	}
 
 	shared_focus = {
-		id = RCT_Comissariat_Of_Resource_Management
-		prerequisite = { focus = RCT_Modernizing_The_Countryside }
-		icon = GFX_focus_generic_soviet_politics
-		x = -3
-		y = 9
-		relative_position_id = RCT_undermine_the_OHS
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_ideas = RCT_CRM
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Replace_Bureaucrats
-		prerequisite = { focus = RCT_Proletariat_Dictatorship focus = RCT_New_Chancellor }
-		icon = GFX_focus_generic_soviet_politics
-		x = 3
-		y = 7
-		relative_position_id = RCT_undermine_the_OHS
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-		add_ideas = RCT_State_Bureaucracy
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Neighs_Industrialization
-		prerequisite = { focus = RCT_Replace_Bureaucrats }
-		icon = GFX_goal_generic_construct_mil_factory
-		x = 2
-		y = 8
-		relative_position_id = RCT_undermine_the_OHS
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-		620 = {
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			add_tech_bonus = {
-				name = industrial_bonus
-				bonus = 0.40
-				uses = 1
-				category = industry
-			}
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Construction_Speed_Focus
-		prerequisite = { focus = RCT_Replace_Bureaucrats }
-		icon = GFX_goal_generic_production2
+		id = RCT_Infustructure_Issue
+		prerequisite = { focus = RCT_Federal_Mandate }
+		icon = GFX_goal_support_democracy
 		x = 4
-		y = 8
-		relative_position_id = RCT_undermine_the_OHS
+		y = 1
+		relative_position_id = RCT_Federal_Mandate
 
 		cost = 10
 
@@ -1364,100 +238,18 @@
 		}
 
 		completion_reward = {
-		add_ideas = RCT_CSB
+
 		}
 	}
 
 	shared_focus = {
-		id = RCT_Coltstream_Steel_Production
-		prerequisite = { focus = RCT_Neighs_Industrialization }
-		prerequisite = { focus = RCT_Construction_Speed_Focus }
-		icon = GFX_focus_generic_steel
-		x = 3
-		y = 9
-		relative_position_id = RCT_undermine_the_OHS
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_resource = {
-				type = steel
-				amount = 18
-				state = 682
-			}
-			682 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Education_And_Reform
-		prerequisite = { focus = RCT_Proletariat_Dictatorship focus = RCT_New_Chancellor }
-		icon = GFX_goal_KTG_Bookstack
-		x = -1
-		y = 7
-		relative_position_id = RCT_undermine_the_OHS
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			decrease_illiteracy = yes
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Put_A_Cap_On_Wealth
-		prerequisite = { focus = RCT_Proletariat_Dictatorship focus = RCT_New_Chancellor }
-		icon = GFX_goal_gold_reserve
+		id = RCT_The_Show_Must_Go_On
+		prerequisite = { focus = RCT_Ban_Socalist_Parties focus = RCT_Combat_Poverty focus = RCT_Status_Of_The_Mountain_Commune focus = RCT_Infustructure_Issue focus = RCT_Emergency_Powers }
+		mutually_exclusive = { focus = RCT_The_Mandate_Fails }
+		icon = GFX_goal_support_democracy
 		x = 1
-		y = 7
-		relative_position_id = RCT_undermine_the_OHS
+		y = 2
+		relative_position_id = RCT_Federal_Mandate
 
 		cost = 10
 
@@ -1482,53 +274,18 @@
 		}
 
 		completion_reward = {
-			decrease_poverty = yes
+
 		}
 	}
 
 	shared_focus = {
-		id = RCT_Found_The_CIC
-		prerequisite = { focus = RCT_Put_A_Cap_On_Wealth focus = RCT_Education_And_Reform }
-		icon = GFX_goal_secret_agents_red
-		x = 0
-		y = 8
-		relative_position_id = RCT_undermine_the_OHS
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-		add_ideas = RCT_CIC
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Dubrovneigh_Scientific_Center
-		prerequisite = { focus = RCT_Found_The_CIC }
-		prerequisite = { focus = RCT_Education_And_Reform }
-		icon = GFX_focus_generic_socialist_science
+		id = RCT_The_Mandate_Fails
+		prerequisite = { focus = RCT_Ban_Socalist_Parties focus = RCT_Combat_Poverty focus = RCT_Status_Of_The_Mountain_Commune focus = RCT_Infustructure_Issue focus = RCT_Emergency_Powers }
+		mutually_exclusive = { focus = RCT_The_Show_Must_Go_On }
+		icon = GFX_goal_support_democracy
 		x = -1
-		y = 9
-		relative_position_id = RCT_undermine_the_OHS
+		y = 2
+		relative_position_id = RCT_Federal_Mandate
 
 		cost = 10
 
@@ -1553,19 +310,18 @@
 		}
 
 		completion_reward = {
-			increase_science_base = yes
-			add_research_slot = 1
+
 		}
 	}
 
 	shared_focus = {
-		id = RCT_Workers_Cooperative
-		prerequisite = { focus = RCT_Found_The_CIC }
-		prerequisite = { focus = RCT_Put_A_Cap_On_Wealth }
-		icon = GFX_goal_industrial_pony
-		x = 1
-		y = 9
-		relative_position_id = RCT_undermine_the_OHS
+		id = RCT_General_Secretary_Caramel_Haze
+		prerequisite = { focus = RCT_The_Mandate_Fails focus = RCT_The_Show_Must_Go_On }
+		mutually_exclusive = { focus = RCT_Chancellor_River_Swirl focus = RCT_Chancellor_Nova_Whirl focus = RCT_The_Goverment_Has_Betrayed_Us }
+		icon = GFX_goal_support_democracy
+		x = -2
+		y = 3
+		relative_position_id = RCT_Federal_Mandate
 
 		cost = 10
 
@@ -1590,18 +346,17 @@
 		}
 
 		completion_reward = {
-		add_ideas = RCT_WCI
+
 		}
 	}
 
 	shared_focus = {
-		id = RCT_Statewide_Projects
-		prerequisite = { focus = RCT_Dubrovneigh_Scientific_Center }
-		prerequisite = { focus = RCT_Workers_Cooperative }
-		icon = GFX_goal_state_economy
-		x = 0
-		y = 10
-		relative_position_id = RCT_undermine_the_OHS
+		id = RCT_Political_Commissars
+		prerequisite = { focus = RCT_General_Secretary_Caramel_Haze }
+		icon = GFX_goal_support_democracy
+		x = -3
+		y = 1
+		relative_position_id = RCT_General_Secretary_Caramel_Haze
 
 		cost = 10
 
@@ -1626,41 +381,17 @@
 		}
 
 		completion_reward = {
-		decrease_poverty = yes
-		619 = {
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-		577 = {
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		682 = {
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
+
 		}
 	}
 
 	shared_focus = {
-		id = RCT_Totalist_Economy
-		prerequisite = { focus = RCT_Proletariat_Dictatorship }
-		icon = GFX_focus_generic_soviet_politics
-		x = -7
-		y = 7
-		relative_position_id = RCT_undermine_the_OHS
+		id = RCT_Establish_Additional_Communes
+		prerequisite = { focus = RCT_Political_Commissars }
+		icon = GFX_goal_support_democracy
+		x = -3
+		y = 2
+		relative_position_id = RCT_General_Secretary_Caramel_Haze
 
 		cost = 10
 
@@ -1685,17 +416,17 @@
 		}
 
 		completion_reward = {
-			add_ideas = RCT_Totalism
+
 		}
 	}
 
 	shared_focus = {
-		id = RCT_Military_In_Congress
-		prerequisite = { focus = RCT_Totalist_Economy }
-		icon = GFX_goal_commune_politics
-		x = -6
-		y = 8
-		relative_position_id = RCT_undermine_the_OHS
+		id = RCT_Enlarge_The_Military_Complex
+		prerequisite = { focus = RCT_Establish_Additional_Communes }
+		icon = GFX_goal_support_democracy
+		x = -3
+		y = 3
+		relative_position_id = RCT_General_Secretary_Caramel_Haze
 
 		cost = 10
 
@@ -1720,17 +451,17 @@
 		}
 
 		completion_reward = {
-			add_ideas = RCT_MIC
+
 		}
 	}
 
 	shared_focus = {
-		id = RCT_Our_Own_Red_Army
-		prerequisite = { focus = RCT_Military_In_Congress }
-		icon = GFX_focus_generic_combined_arms
-		x = -6
-		y = 9
-		relative_position_id = RCT_undermine_the_OHS
+		id = RCT_Local_Collectivization
+		prerequisite = { focus = RCT_General_Secretary_Caramel_Haze }
+		icon = GFX_goal_support_democracy
+		x = -1
+		y = 1
+		relative_position_id = RCT_General_Secretary_Caramel_Haze
 
 		cost = 10
 
@@ -1755,17 +486,17 @@
 		}
 
 		completion_reward = {
-			add_ideas = RCT_RED	
+
 		}
 	}
 
 	shared_focus = {
-		id = RCT_Nationalize_Industry
-		prerequisite = { focus = RCT_Totalist_Economy }
-		icon = GFX_goal_generic_political_pressure
-		x = -8
-		y = 8
-		relative_position_id = RCT_undermine_the_OHS
+		id = RCT_Further_Collectivization
+		prerequisite = { focus = RCT_Local_Collectivization }
+		icon = GFX_goal_support_democracy
+		x = -1
+		y = 2
+		relative_position_id = RCT_General_Secretary_Caramel_Haze
 
 		cost = 10
 
@@ -1790,32 +521,17 @@
 		}
 
 		completion_reward = {
-		619 = {
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-		619 = {
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
+
 		}
 	}
 
 	shared_focus = {
-		id = RCT_Fortify_Rijekaland
-		prerequisite = { focus = RCT_Nationalize_Industry }
-		icon = GFX_goal_generic_fortify_city
-		x = -8
-		y = 9
-		relative_position_id = RCT_undermine_the_OHS
+		id = RCT_The_Common_Land
+		prerequisite = { focus = RCT_Further_Collectivization }
+		icon = GFX_goal_support_democracy
+		x = -1
+		y = 3
+		relative_position_id = RCT_General_Secretary_Caramel_Haze
 
 		cost = 10
 
@@ -1840,15 +556,18 @@
 		}
 
 		completion_reward = {
+
 		}
 	}
+
 	shared_focus = {
-		id = RCT_Under_Crimson_Skies
-		prerequisite = { focus = RCT_Our_Own_Red_Army focus = RCT_Fortify_Rijekaland }
-		icon = GFX_goal_generic_war_with_comintern
-		x = -7
-		y = 10
-		relative_position_id = RCT_undermine_the_OHS
+		id = RCT_Communism_With_Rijekan_Characteristics
+		prerequisite = { focus = RCT_The_Common_Land }
+		prerequisite = { focus = RCT_Enlarge_The_Military_Complex }
+		icon = GFX_goal_support_democracy
+		x = -2
+		y = 4
+		relative_position_id = RCT_General_Secretary_Caramel_Haze
 
 		cost = 10
 
@@ -1873,309 +592,53 @@
 		}
 
 		completion_reward = {
-			every_state = {
-				limit = {
-					OR = {
-						is_core_of = WIT
-						is_core_of = BAR
-						is_core_of = DEP
-						is_core_of = LCT
-						is_core_of = NIM
-						is_core_of = FRE
-						is_core_of = BAK
-						is_core_of = OLV
-						is_core_of = ZES
-					}					
-				}
-				add_claim_by = RCT
-			}
-		declare_war_on = {
-    		target = LCT
-    		type = annex_everything
+
 		}
-		declare_war_on = {
-    		target = DEP
-    		type = annex_everything
+	}
+
+	shared_focus = {
+		id = RCT_Chancellor_Nova_Whirl
+		prerequisite = { focus = RCT_The_Mandate_Fails focus = RCT_The_Show_Must_Go_On }
+		mutually_exclusive = { focus = RCT_Chancellor_River_Swirl focus = RCT_General_Secretary_Caramel_Haze focus = RCT_The_Goverment_Has_Betrayed_Us }
+		icon = GFX_goal_support_democracy
+		x = 2
+		y = 3
+		relative_position_id = RCT_Federal_Mandate
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
 		}
-		declare_war_on = {
-    		target = WIT
-    		type = annex_everything
+
+		available = {
+
 		}
-		declare_war_on = {
-    		target = FRE
-    		type = annex_everything
+		
+		bypass = {
+
 		}
-		declare_war_on = {
-    		target = NIM
-    		type = annex_everything
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
 		}
-		declare_war_on = {
-    		target = BAK
-    		type = annex_everything
-		}
-		add_ideas = RCT_Liberation_Of_The_Riverlands
+
+		completion_reward = {
+
 		}
 	}
 
 	shared_focus = {
 		id = RCT_Market_Socalism
-		prerequisite = { focus = RCT_New_Chancellor }
-		icon = GFX_focus_generic_soviet_politics
-		x = 7
-		y = 7
-		relative_position_id = RCT_undermine_the_OHS
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_ideas = RCT_Market_Socalism
-			custom_effect_tooltip = RCT_COM_Nova_Whirl2
-			custom_effect_tooltip = RCT_COM_Nova_Whirl3
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Arsenal_Of_Socalism
-		prerequisite = { focus = RCT_Market_Socalism }
-		icon = GFX_goal_chn_red_military_factories
-		x = 8
-		y = 8
-		relative_position_id = RCT_undermine_the_OHS
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-		}
-	}
-
-	shared_focus = {
-		id = RCT_A_Grand_Militia
-		prerequisite = { focus = RCT_Market_Socalism }
-		icon = GFX_focus_secret_rearmament
-		x = 6
-		y = 8
-		relative_position_id = RCT_undermine_the_OHS
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-		add_ideas = RCT_AGM
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Organize_The_Militias
-		prerequisite = { focus = RCT_A_Grand_Militia }
-		icon = GFX_goal_generic_allies_build_infantry
-		x = 6
-		y = 9
-		relative_position_id = RCT_undermine_the_OHS
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-		custom_effect_tooltip = RCT_COM_Nova_Whirl4
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Unity
-		prerequisite = { focus = RCT_Arsenal_Of_Socalism }
-		icon = GFX_focus_generic_support_the_left_right
-		x = 8
-		y = 9
-		relative_position_id = RCT_undermine_the_OHS
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-		add_ideas = RCT_WARMONGERING
-		add_stability = 0.1
-		add_war_support = 0.1
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Let_Slip_The_Dogs_Of_War
-		prerequisite = { focus = RCT_Unity focus = RCT_Organize_The_Militias }
-		icon = GFX_goal_generic_attack_allies
-		x = 7
-		y = 10
-		relative_position_id = RCT_undermine_the_OHS
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			every_state = {
-				limit = {
-					OR = {
-						is_core_of = WIT
-						is_core_of = BAR
-						is_core_of = DEP
-						is_core_of = LCT
-						is_core_of = NIM
-						is_core_of = FRE
-						is_core_of = BAK
-						is_core_of = OLV
-						is_core_of = ZES
-					}					
-				}
-				add_claim_by = RCT
-			}
-		declare_war_on = {
-    		target = LCT
-    		type = annex_everything
-		}
-		declare_war_on = {
-    		target = DEP
-    		type = annex_everything
-		}
-		declare_war_on = {
-    		target = WIT
-    		type = annex_everything
-		}
-		declare_war_on = {
-    		target = FRE
-    		type = annex_everything
-		}
-		declare_war_on = {
-    		target = NIM
-    		type = annex_everything
-		}
-		declare_war_on = {
-    		target = BAK
-    		type = annex_everything
-		}
-		add_ideas = RCT_Liberation_Of_The_Riverlands
-		}
-	}
-
-	shared_focus = {
-		id = RCT_expand_ohi
-		icon = GFX_goal_RIV_ofi
-		prerequisite = { focus = RCT_Reinforce_The_Chancellorship }
-		x = 25
+		prerequisite = { focus = RCT_Chancellor_Nova_Whirl }
+		icon = GFX_goal_support_democracy
+		x = 1
 		y = 1
+		relative_position_id = RCT_Chancellor_Nova_Whirl
 
 		cost = 10
 
@@ -2205,13 +668,609 @@
 	}
 
 	shared_focus = {
-		id = RCT_The_Great_Threat
-		prerequisite = { focus = RCT_expand_ohi }
-		mutually_exclusive = { focus = RCT_Harmony_In_The_Riverlands }
-		icon = GFX_goal_hoist_the_flag
-		x = -3
+		id = RCT_Agrarian_Cooperatives
+		prerequisite = { focus = RCT_Market_Socalism }
+		icon = GFX_goal_support_democracy
+		x = 1
+		y = 2
+		relative_position_id = RCT_Chancellor_Nova_Whirl
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Finalize_Our_Economic_Reforms
+		prerequisite = { focus = RCT_Agrarian_Cooperatives }
+		icon = GFX_goal_support_democracy
+		x = 1
+		y = 3
+		relative_position_id = RCT_Chancellor_Nova_Whirl
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Autarky
+		prerequisite = { focus = RCT_Chancellor_Nova_Whirl }
+		icon = GFX_goal_support_democracy
+		x = 3
 		y = 1
-		relative_position_id = RCT_expand_ohi
+		relative_position_id = RCT_Chancellor_Nova_Whirl
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Urbanize_Coltstream
+		prerequisite = { focus = RCT_Autarky }
+		icon = GFX_goal_support_democracy
+		x = 3
+		y = 2
+		relative_position_id = RCT_Chancellor_Nova_Whirl
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Urbanize_Rijekagard
+		prerequisite = { focus = RCT_Urbanize_Coltstream }
+		icon = GFX_goal_support_democracy
+		x = 3
+		y = 3
+		relative_position_id = RCT_Chancellor_Nova_Whirl
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Industrialize_Everything
+		prerequisite = { focus = RCT_Urbanize_Rijekagard }
+		prerequisite = { focus = RCT_Finalize_Our_Economic_Reforms }
+		icon = GFX_goal_support_democracy
+		x = 2
+		y = 4
+		relative_position_id = RCT_Chancellor_Nova_Whirl
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_A_Socialist_Education
+		prerequisite = { focus = RCT_General_Secretary_Caramel_Haze focus = RCT_Chancellor_Nova_Whirl }
+		icon = GFX_goal_support_democracy
+		x = 1
+		y = 1
+		relative_position_id = RCT_General_Secretary_Caramel_Haze
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Labour_Battalions
+		prerequisite = { focus = RCT_A_Socialist_Education }
+		icon = GFX_goal_support_democracy
+		x = 1
+		y = 2
+		relative_position_id = RCT_General_Secretary_Caramel_Haze
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_The_River_Roars_Once_More
+		prerequisite = { focus = RCT_Labour_Battalions }
+		icon = GFX_goal_support_democracy
+		x = 1
+		y = 3
+		relative_position_id = RCT_General_Secretary_Caramel_Haze
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Department_Of_Revolutionary_Propaganda
+		prerequisite = { focus = RCT_General_Secretary_Caramel_Haze focus = RCT_Chancellor_Nova_Whirl }
+		icon = GFX_goal_support_democracy
+		x = 3
+		y = 1
+		relative_position_id = RCT_General_Secretary_Caramel_Haze
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Partisan_Tactics
+		prerequisite = { focus = RCT_Department_Of_Revolutionary_Propaganda }
+		icon = GFX_goal_support_democracy
+		x = 3
+		y = 2
+		relative_position_id = RCT_General_Secretary_Caramel_Haze
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_The_Great_Red_Crusade
+		prerequisite = { focus = RCT_Partisan_Tactics }
+		icon = GFX_goal_support_democracy
+		x = 3
+		y = 3
+		relative_position_id = RCT_General_Secretary_Caramel_Haze
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Under_Crimson_Skies
+		prerequisite = { focus = RCT_The_River_Roars_Once_More focus = RCT_The_Great_Red_Crusade }
+		icon = GFX_goal_support_democracy
+		x = 2
+		y = 4
+		relative_position_id = RCT_General_Secretary_Caramel_Haze
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_A_Greater_Tomorrow
+		prerequisite = { focus = RCT_Under_Crimson_Skies }
+		icon = GFX_goal_support_democracy
+		x = 4
+		y = 5
+		relative_position_id = RCT_General_Secretary_Caramel_Haze
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Victory
+		prerequisite = { focus = RCT_Under_Crimson_Skies }
+		icon = GFX_goal_support_democracy
+		x = 2
+		y = 5
+		relative_position_id = RCT_General_Secretary_Caramel_Haze
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Call_Up_The_Militas
+		prerequisite = { focus = RCT_Under_Crimson_Skies }
+		icon = GFX_goal_support_democracy
+		x = 0
+		y = 5
+		relative_position_id = RCT_General_Secretary_Caramel_Haze
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Chancellor_River_Swirl
+		prerequisite = { focus = RCT_The_Mandate_Fails focus = RCT_The_Show_Must_Go_On }
+		mutually_exclusive = { focus = RCT_Chancellor_Nova_Whirl focus = RCT_General_Secretary_Caramel_Haze focus = RCT_The_Goverment_Has_Betrayed_Us }
+		icon = GFX_goal_support_democracy
+		x = 10
+		y = 3
+		relative_position_id = RCT_Federal_Mandate
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Expand_The_OHS
+		prerequisite = { focus = RCT_Chancellor_River_Swirl }
+		icon = GFX_goal_support_democracy
+		x = 9
+		y = 1
+		relative_position_id = RCT_Chancellor_River_Swirl
 
 		cost = 10
 
@@ -2242,12 +1301,11 @@
 
 	shared_focus = {
 		id = RCT_Harmony_In_The_Riverlands
-		prerequisite = { focus = RCT_expand_ohi }
-		mutually_exclusive = { focus = RCT_The_Great_Threat }
-		icon = GFX_goal_rct_flag
+		prerequisite = { focus = RCT_Expand_The_OHS }
+		icon = GFX_goal_support_democracy
 		x = 3
 		y = 1
-		relative_position_id = RCT_expand_ohi
+		relative_position_id = RCT_Expand_The_OHS
 
 		cost = 10
 
@@ -2277,12 +1335,117 @@
 	}
 
 	shared_focus = {
-		id = RCT_Reaffirm_The_Treaty
+		id = RCT_Great_Threat
+		prerequisite = { focus = RCT_Expand_The_OHS }
+		icon = GFX_goal_support_democracy
+		x = -3
+		y = 1
+		relative_position_id = RCT_Expand_The_OHS
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Military_Exchange_With_LCT
+		prerequisite = { focus = RCT_Great_Threat }
+		icon = GFX_goal_support_democracy
+		x = -3
+		y = 4
+		relative_position_id = RCT_Expand_The_OHS
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_OHS_MACB_Cooperation
 		prerequisite = { focus = RCT_Harmony_In_The_Riverlands }
-		icon = GFX_goal_RIV_ofi
-		x = 2
+		icon = GFX_goal_support_democracy
+		x = 3
+		y = 4
+		relative_position_id = RCT_Expand_The_OHS
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Expand_The_Koltovac_Arsenal
+		prerequisite = { focus = RCT_Great_Threat focus = RCT_Harmony_In_The_Riverlands }
+		icon = GFX_goal_support_democracy
+		x = -2
 		y = 2
-		relative_position_id = RCT_expand_ohi
+		relative_position_id = RCT_Expand_The_OHS
 
 		cost = 10
 
@@ -2312,12 +1475,12 @@
 	}
 
 	shared_focus = {
-		id = RCT_Something
-		prerequisite = { focus = RCT_Harmony_In_The_Riverlands }
-		icon = GFX_goal_RIV_ofi
-		x = 4
+		id = RCT_Lead_The_Coalition_Against_The_Knights
+		prerequisite = { focus = RCT_Great_Threat }
+		icon = GFX_goal_support_democracy
+		x = -4
 		y = 2
-		relative_position_id = RCT_expand_ohi
+		relative_position_id = RCT_Expand_The_OHS
 
 		cost = 10
 
@@ -2342,17 +1505,17 @@
 		}
 
 		completion_reward = {
-			add_ideas = RCT_Harmony_Is_Non_Negiotable 
+
 		}
 	}
 
 	shared_focus = {
-		id = RCT_Reaffirm_The_Treaty
-		prerequisite = { focus = RCT_Harmony_In_The_Riverlands }
+		id = RCT_Reaffirm_The_Treaty_Of_Coltstream
+		prerequisite = { focus = RCT_Great_Threat focus = RCT_Harmony_In_The_Riverlands }
 		icon = GFX_goal_support_democracy
 		x = 2
 		y = 2
-		relative_position_id = RCT_expand_ohi
+		relative_position_id = RCT_Expand_The_OHS
 
 		cost = 10
 
@@ -2382,12 +1545,12 @@
 	}
 
 	shared_focus = {
-		id = RCT_Doctrinal_Exchange_With_LCT
-		prerequisite = { focus = RCT_Something }
-		icon = GFX_goal_generic_major_war
-		x = 3
-		y = 3
-		relative_position_id = RCT_expand_ohi
+		id = RCT_Harmony_Is_Non_Negiotable
+		prerequisite = { focus = RCT_Harmony_In_The_Riverlands }
+		icon = GFX_goal_support_democracy
+		x = 4
+		y = 2
+		relative_position_id = RCT_Expand_The_OHS
 
 		cost = 10
 
@@ -2412,17 +1575,17 @@
 		}
 
 		completion_reward = {
-		LCT = { country_event = rivercity.52 }
+
 		}
 	}
 
 	shared_focus = {
 		id = RCT_The_Dog_Question
-		prerequisite = { focus = RCT_The_Great_Threat focus = RCT_Harmony_In_The_Riverlands}
-		icon = GFX_goal_offensive_army
+		prerequisite = { focus = RCT_Great_Threat focus = RCT_Harmony_In_The_Riverlands }
+		icon = GFX_goal_support_democracy
 		x = 0
 		y = 2
-		relative_position_id = RCT_expand_ohi
+		relative_position_id = RCT_Expand_The_OHS
 
 		cost = 10
 
@@ -2447,17 +1610,87 @@
 		}
 
 		completion_reward = {
-		custom_effect_tooltip = RCT_River_Swirl1
+
 		}
 	}
 
 	shared_focus = {
-		id = RCT_Investments_In_BAK
+		id = RCT_Invest_In_Bakara
 		prerequisite = { focus = RCT_The_Dog_Question }
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_goal_support_democracy
+		x = -2
+		y = 3
+		relative_position_id = RCT_Expand_The_OHS
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Invest_In_Deponya
+		prerequisite = { focus = RCT_The_Dog_Question }
+		icon = GFX_goal_support_democracy
+		x = 2
+		y = 3
+		relative_position_id = RCT_Expand_The_OHS
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Invest_In_Ponaidhean
+		prerequisite = { focus = RCT_The_Dog_Question }
+		icon = GFX_goal_support_democracy
 		x = 0
 		y = 3
-		relative_position_id = RCT_expand_ohi
+		relative_position_id = RCT_Expand_The_OHS
 
 		cost = 10
 
@@ -2482,90 +1715,17 @@
 		}
 
 		completion_reward = {
-		custom_effect_tooltip = RIV_fed_race_plus_tt
-		add_to_variable = { var = RIV_fed_race value = 1 }
-		}
-	}
 
-	shared_focus = {
-		id = RCT_Investments_In_DEP
-		prerequisite = { focus = RCT_The_Dog_Question }
-		icon = GFX_goal_generic_construct_civ_factory
-		x = -1
-		y = 4
-		relative_position_id = RCT_expand_ohi
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-		custom_effect_tooltip = RIV_fed_race_plus_tt
-		add_to_variable = { var = RIV_fed_race value = 1 }
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Investments_In_FRE
-		prerequisite = { focus = RCT_The_Dog_Question }
-		icon = GFX_goal_generic_construct_civ_factory
-		x = 1
-		y = 4
-		relative_position_id = RCT_expand_ohi
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-		custom_effect_tooltip = RIV_fed_race_plus_tt
-		add_to_variable = { var = RIV_fed_race value = 1 }
 		}
 	}
 
 	shared_focus = {
 		id = RCT_Intergrated_War_Economies
-		prerequisite = { focus = RCT_Investments_In_FRE focus = RCT_Investments_In_DEP focus = RCT_Investments_In_BAK }
-		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = RCT_Invest_In_Deponya focus = RCT_Invest_In_Ponaidhean focus = RCT_Invest_In_Bakara }
+		icon = GFX_goal_support_democracy
 		x = 0
-		y = 5
-		relative_position_id = RCT_expand_ohi
+		y = 4
+		relative_position_id = RCT_Expand_The_OHS
 
 		cost = 10
 
@@ -2590,17 +1750,53 @@
 		}
 
 		completion_reward = {
-		custom_effect_tooltip = RCT_River_Swirl3
+
 		}
 	}
 
 	shared_focus = {
-		id = RCT_Anti_Griffon_Propaganda
-		prerequisite = { focus = RCT_The_Great_Threat }
-		icon = GFX_focus_generic_support_the_left_right
-		x = -4
+		id = RCT_Reconcile_With_Nova
+		prerequisite = { focus = RCT_Chancellor_River_Swirl }
+		mutually_exclusive = { focus = RCT_Unleash_The_OHS }
+		icon = GFX_goal_support_democracy
+		x = -3
+		y = 1
+		relative_position_id = RCT_Chancellor_River_Swirl
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Reintergrate_The_Talzar_Commune
+		prerequisite = { focus = RCT_Reconcile_With_Nova }
+		icon = GFX_goal_support_democracy
+		x = -3
 		y = 2
-		relative_position_id = RCT_expand_ohi
+		relative_position_id = RCT_Chancellor_River_Swirl
 
 		cost = 10
 
@@ -2630,47 +1826,12 @@
 	}
 
 	shared_focus = {
-		id = RCT_Expand_The_Coltstream_Arsenal
-		prerequisite = { focus = RCT_The_Great_Threat }
-		icon = GFX_goal_generic_construct_mil_factory
-		x = -2
-		y = 2
-		relative_position_id = RCT_expand_ohi
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Pacify_The_Knights
-		prerequisite = { focus = RCT_Anti_Griffon_Propaganda }
-		icon = GFX_goal_generic_major_war
+		id = RCT_Beacon_Of_Peace_And_Prosperity
+		prerequisite = { focus = RCT_Reintergrate_The_Talzar_Commune }
+		icon = GFX_goal_support_democracy
 		x = -3
 		y = 3
-		relative_position_id = RCT_expand_ohi
+		relative_position_id = RCT_Chancellor_River_Swirl
 
 		cost = 10
 
@@ -2700,12 +1861,83 @@
 	}
 
 	shared_focus = {
-		id = RCT_RCSOCOM
-		prerequisite = { focus = RCT_Anti_Griffon_Propaganda }
-		icon = GFX_goal_RIV_ofi
-		x = -5
+		id = RCT_Unleash_The_OHS
+		prerequisite = { focus = RCT_Chancellor_River_Swirl }
+		mutually_exclusive = { focus = RCT_Reconcile_With_Nova }
+		icon = GFX_goal_support_democracy
+		x = -1
+		y = 1
+		relative_position_id = RCT_Chancellor_River_Swirl
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Up_The_Talzar_Mountain
+		prerequisite = { focus = RCT_Unleash_The_OHS }
+		icon = GFX_goal_support_democracy
+		x = -1
+		y = 2
+		relative_position_id = RCT_Chancellor_River_Swirl
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_OHS_Paramilitary_Detachments
+		prerequisite = { focus = RCT_Up_The_Talzar_Mountain }
+		icon = GFX_goal_support_democracy
+		x = -1
 		y = 3
-		relative_position_id = RCT_expand_ohi
+		relative_position_id = RCT_Chancellor_River_Swirl
 
 		cost = 10
 
@@ -2735,47 +1967,117 @@
 	}
 
 	shared_focus = {
-		id = RCT_Suffer_Not_The_Traitor
-		prerequisite = { focus = RCT_Something }
-		icon = GFX_goal_RIV_ofi
-		x = 5
+		id = RCT_The_Mandate_Endures
+		prerequisite = { focus = RCT_OHS_Paramilitary_Detachments focus = RCT_Beacon_Of_Peace_And_Prosperity }
+		icon = GFX_goal_support_democracy
+		x = -2
+		y = 4
+		relative_position_id = RCT_Chancellor_River_Swirl
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Free_Education
+		prerequisite = { focus = RCT_Chancellor_River_Swirl }
+		icon = GFX_goal_support_democracy
+		x = 1
+		y = 1
+		relative_position_id = RCT_Chancellor_River_Swirl
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Family_In_The_Industry
+		prerequisite = { focus = RCT_Free_Education }
+		icon = GFX_goal_support_democracy
+		x = 1
+		y = 2
+		relative_position_id = RCT_Chancellor_River_Swirl
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_A_New_Bureaucracy
+		prerequisite = { focus = RCT_Family_In_The_Industry }
+		icon = GFX_goal_support_democracy
+		x = 1
 		y = 3
-		relative_position_id = RCT_expand_ohi
-
-		cost = 1.5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Restore_LCT
-		prerequisite = { focus = RCT_Suffer_Not_The_Traitor }
-		icon = GFX_goal_RIV_ofi
-		x = 4
-		y = 4
-		relative_position_id = RCT_expand_ohi
+		relative_position_id = RCT_Chancellor_River_Swirl
 
 		cost = 10
 
@@ -2800,60 +2102,17 @@
 		}
 
 		completion_reward = {
-		custom_effect_tooltip = RCT_River_Swirl2
-		create_wargoal = {
-    		type = puppet_wargoal_focus
-   			target = LCT
-			}
+
 		}
 	}
 
 	shared_focus = {
-		id = RCT_Restore_NIM
-		prerequisite = { focus = RCT_Suffer_Not_The_Traitor }
-		icon = GFX_goal_RIV_ofi
-		x = 6
-		y = 4
-		relative_position_id = RCT_expand_ohi
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-		custom_effect_tooltip = RCT_River_Swirl2
-		create_wargoal = {
-    		type = puppet_wargoal_focus
-   			target = NIM
-			}
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Restore_BAK
-		prerequisite = { focus = RCT_Suffer_Not_The_Traitor }
-		icon = GFX_goal_RIV_ofi
+		id = RCT_Coltstream_Steel_Production
+		prerequisite = { focus = RCT_Chancellor_River_Swirl }
+		icon = GFX_goal_support_democracy
 		x = 3
-		y = 5
-		relative_position_id = RCT_expand_ohi
+		y = 1
+		relative_position_id = RCT_Chancellor_River_Swirl
 
 		cost = 10
 
@@ -2878,21 +2137,17 @@
 		}
 
 		completion_reward = {
-		custom_effect_tooltip = RCT_River_Swirl2
-		create_wargoal = {
-    		type = puppet_wargoal_focus
-   			target = BAK
-			}
+
 		}
 	}
 
 	shared_focus = {
-		id = RCT_Restore_DEP
-		prerequisite = { focus = RCT_Suffer_Not_The_Traitor }
-		icon = GFX_goal_RIV_ofi
-		x = 5
-		y = 5
-		relative_position_id = RCT_expand_ohi
+		id = RCT_Koltovac_Oil
+		prerequisite = { focus = RCT_Coltstream_Steel_Production }
+		icon = GFX_goal_support_democracy
+		x = 3
+		y = 2
+		relative_position_id = RCT_Chancellor_River_Swirl
 
 		cost = 10
 
@@ -2917,21 +2172,17 @@
 		}
 
 		completion_reward = {
-		custom_effect_tooltip = RCT_River_Swirl2
-		create_wargoal = {
-    		type = puppet_wargoal_focus
-   			target = DEP
-			}
+
 		}
 	}
 
 	shared_focus = {
-		id = RCT_Restore_FRE
-		prerequisite = { focus = RCT_Suffer_Not_The_Traitor }
-		icon = GFX_goal_RIV_ofi
-		x = 7
-		y = 5
-		relative_position_id = RCT_expand_ohi
+		id = RCT_Rijekan_National_Bank
+		prerequisite = { focus = RCT_Koltovac_Oil }
+		icon = GFX_goal_support_democracy
+		x = 3
+		y = 3
+		relative_position_id = RCT_Chancellor_River_Swirl
 
 		cost = 10
 
@@ -2956,11 +2207,643 @@
 		}
 
 		completion_reward = {
-		custom_effect_tooltip = RCT_River_Swirl2
-		create_wargoal = {
-    		type = puppet_wargoal_focus
-   			target = FRE
-			}
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Fill_The_Gold_Reserves
+		prerequisite = { focus = RCT_A_New_Bureaucracy }
+		prerequisite = { focus = RCT_Rijekan_National_Bank }
+		icon = GFX_goal_support_democracy
+		x = 2
+		y = 4
+		relative_position_id = RCT_Chancellor_River_Swirl
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Center_Of_Commerce
+		prerequisite = { focus = RCT_The_Mandate_Endures }
+		prerequisite = { focus = RCT_Fill_The_Gold_Reserves }
+		icon = GFX_goal_support_democracy
+		x = 0
+		y = 5
+		relative_position_id = RCT_Chancellor_River_Swirl
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_The_Goverment_Has_Betrayed_Us
+		prerequisite = { focus = RCT_The_Mandate_Fails focus = RCT_The_Show_Must_Go_On }
+		mutually_exclusive = { focus = RCT_General_Secretary_Caramel_Haze focus = RCT_Chancellor_Nova_Whirl focus = RCT_Chancellor_River_Swirl }
+		icon = GFX_goal_support_democracy
+		x = -10
+		y = 3
+		relative_position_id = RCT_Federal_Mandate
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_A_Bullet_For_The_Communists
+		prerequisite = { focus = RCT_The_Goverment_Has_Betrayed_Us }
+		icon = GFX_goal_support_democracy
+		x = 3
+		y = 1
+		relative_position_id = RCT_The_Goverment_Has_Betrayed_Us
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_A_New_Central_Command
+		prerequisite = { focus = RCT_A_Bullet_For_The_Communists }
+		icon = GFX_goal_support_democracy
+		x = 3
+		y = 2
+		relative_position_id = RCT_The_Goverment_Has_Betrayed_Us
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_The_OHS_Returns
+		prerequisite = { focus = RCT_A_New_Central_Command }
+		icon = GFX_goal_support_democracy
+		x = 3
+		y = 3
+		relative_position_id = RCT_The_Goverment_Has_Betrayed_Us
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Military_Railroads
+		prerequisite = { focus = RCT_The_Goverment_Has_Betrayed_Us }
+		icon = GFX_goal_support_democracy
+		x = 1
+		y = 1
+		relative_position_id = RCT_The_Goverment_Has_Betrayed_Us
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Military_Industry_Koltovac
+		prerequisite = { focus = RCT_Military_Railroads }
+		icon = GFX_goal_support_democracy
+		x = 1
+		y = 2
+		relative_position_id = RCT_The_Goverment_Has_Betrayed_Us
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Military_Industry_Rijekagard
+		prerequisite = { focus = RCT_Military_Industry_Koltovac }
+		icon = GFX_goal_support_democracy
+		x = 1
+		y = 3
+		relative_position_id = RCT_The_Goverment_Has_Betrayed_Us
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Corporatism
+		prerequisite = { focus = RCT_The_OHS_Returns }
+		prerequisite = { focus = RCT_Military_Industry_Rijekagard }
+		icon = GFX_goal_support_democracy
+		x = 2
+		y = 4
+		relative_position_id = RCT_The_Goverment_Has_Betrayed_Us
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_At_The_Helm_Once_More
+		prerequisite = { focus = RCT_Corporatism }
+		prerequisite = { focus = RCT_A_New_Rijekaland }
+		icon = GFX_goal_support_democracy
+		x = 0
+		y = 5
+		relative_position_id = RCT_The_Goverment_Has_Betrayed_Us
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Expel_All_Wittenlanders
+		prerequisite = { focus = RCT_The_Goverment_Has_Betrayed_Us }
+		icon = GFX_goal_support_democracy
+		x = -3
+		y = 1
+		relative_position_id = RCT_The_Goverment_Has_Betrayed_Us
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Consolidate_Power
+		prerequisite = { focus = RCT_Expel_All_Wittenlanders }
+		icon = GFX_goal_support_democracy
+		x = -3
+		y = 2
+		relative_position_id = RCT_The_Goverment_Has_Betrayed_Us
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_A_Fortress_In_The_Riverlands
+		prerequisite = { focus = RCT_Consolidate_Power }
+		icon = GFX_goal_support_democracy
+		x = -3
+		y = 3
+		relative_position_id = RCT_The_Goverment_Has_Betrayed_Us
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Compulsory_Education
+		prerequisite = { focus = RCT_The_Goverment_Has_Betrayed_Us }
+		icon = GFX_goal_support_democracy
+		x = -1
+		y = 1
+		relative_position_id = RCT_The_Goverment_Has_Betrayed_Us
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Military_Conscription
+		prerequisite = { focus = RCT_Compulsory_Education }
+		icon = GFX_goal_support_democracy
+		x = -1
+		y = 2
+		relative_position_id = RCT_The_Goverment_Has_Betrayed_Us
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_Loyalty_To_The_State_Unto_Death
+		prerequisite = { focus =  RCT_Military_Conscription }
+		icon = GFX_goal_support_democracy
+		x = -1
+		y = 3
+		relative_position_id = RCT_The_Goverment_Has_Betrayed_Us
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	shared_focus = {
+		id = RCT_A_New_Rijekaland
+		prerequisite = { focus = RCT_A_Fortress_In_The_Riverlands }
+		prerequisite = { focus = RCT_Loyalty_To_The_State_Unto_Death }
+		icon = GFX_goal_support_democracy
+		x = -2
+		y = 4
+		relative_position_id = RCT_The_Goverment_Has_Betrayed_Us
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
 		}
 	}
 	
@@ -2970,9 +2853,8 @@
 	shared_focus = {
 		id = RCT_military1
 		icon = GFX_goal_generic_axis_build_infantry
-		x = 4
-		y = 6
-		relative_position_id = RCT_Reinforce_The_Chancellorship
+		x = -22
+		y = 0
 
 		cost = 10
 
@@ -3932,9 +3814,8 @@
 	shared_focus = {
 		id = RCT_naval1
 		icon = GFX_goal_generic_build_navy
-		x = 6
+		x = -34
 		y = 0
-		relative_position_id = RCT_grand1
 
 		available = {
             any_state = {
@@ -4381,9 +4262,8 @@ shared_focus = {
 	shared_focus = {
 		id = RCT_air1
 		icon = GFX_goal_generic_build_airforce
-		x = 0
-		y = 3
-		relative_position_id = RCT_Arrest_Nova_Whirl
+		x = -10
+		y = 0
 		
 		cost = 10
 

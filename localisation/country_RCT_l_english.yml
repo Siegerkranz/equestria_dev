@@ -120,9 +120,16 @@
  
  #### TOOL TIPS ####
 
+ RCT_River_Swirl0:0 "§WThe Harmonic Party will radicalize slightly§!\n"
  RCT_River_Swirl1:0 "If The Coup fails Diamond Mountain §Rwill leave the Coalition§!, and you will lose §R2§! to your standing in the §YRace to form the River Federation§!§!"
  RCT_River_Swirl2:0 "Subtracts §R5§! to your standing in the §YRace to form the River Federation§!§!\n"
- RCT_River_Swirl3:0 "Adds §G3§! to your standing in the §YRace to form the River Federation§\n!"
+ RCT_River_Swirl3:0 "Adds §G3§! to your standing in the §YRace to form the River Federation§!\n!"
+ RCT_River_Swirl4:0 "Will Add §G1§! to your standing in the §YRace to form the River Federation§! for Coalition Member that agrees with this course of action.\n"
+ RCT_River_Swirl5:0 "Will Subtracts §R1§! to your standing in the §YRace to form the River Federation§! for Each Coalition Member that disagrees with this course of action.\n"
+ RCT_River_Swirl6:0 "§YAll Current Members of the Coalition will be allowed to weigh in on this.§!\n"
+ RCT_River_Swirl7:0 "§WIf [LCT.GetName] is still within the Coalition or our Puppet upon capitulation, the [LNS.GetName] will be granted to them.§!\n"
+ RCT_River_Swirl8:0 "§W[LCT.GetName] must agree for the effects to take place!§!\n"
+
 
  RCT_Military_Coup:0 "§RDisgrunteled Officers will prepare to remove Chancellor River Swirl.§!"
  RCT_Military_Coup2:0 "§RRepublican Guards force us to retreat to the countryside, The war will rage on in the countryside!§!"

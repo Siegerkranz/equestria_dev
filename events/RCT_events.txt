@@ -49,7 +49,7 @@ country_event = {
 	}
 }
 
-country_event = { #Coup Fails
+country_event = { #The Assault Fails
 	id = rivercity.3
 	immediate = {log = "[Root.GetName]: event rivercity.3"}#Auto-logging
 	title = rivercity.3.t
@@ -60,7 +60,7 @@ country_event = { #Coup Fails
 
 	option = {
 		name = rivercity.3.a
-		add_stability = -0.99
+		set_stability = 0.01
 		set_country_flag = RCT_Siege_Ongoing
 		set_country_flag = RCT_Communist1
 		custom_effect_tooltip = RCT_Military_Coup2
@@ -333,6 +333,92 @@ country_event = {
 	
 	option = {
 		name = rivercity.54.a
+		add_opinion_modifier = { target = LCT modifier = LCT_Refused_Pact }# no pact ;_; fukkin stupid lake ponies
+	}
+}
+
+# Lake-River Espionage Treaty (Lake)
+country_event = {
+	id = rivercity.55
+	immediate = {log = "[Root.GetName]: event rivercity.52"}#Auto-logging
+	title = rivercity.55.t
+	desc = rivercity.55.d
+	picture = GFX_report_event_physics_lab_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rivercity.55.a	#sounds good
+		FROM = {
+			country_event = { days = 1 id = rivercity.56 }
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = RCT_LCT_Pact
+			}
+		}
+		# REVISIT Balance research bonus
+		add_tech_bonus = {
+			ahead_reduction = 1
+			category = encryption_tech
+			category = decryption_tech
+		}
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 1
+			category = decryption_tech
+		}
+	}
+	
+	option = {
+		name = rivercity.55.b #no go away
+		ai_chance = { factor = 0 }
+		add_political_power = -10
+		FROM = {
+			country_event = { days = 1 id = rivercity.57 }
+		}
+	}
+}
+
+# Lake Ponies Accept River Ponies Treaty
+country_event = {
+	id = rivercity.56
+	immediate = {log = "[Root.GetName]: event rivercity.53"}#Auto-logging
+	title = rivercity.56.t
+	desc = rivercity.56.d
+	picture = GFX_report_event_physics_lab_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = rivercity.56.a	#Pso Pso was here
+		add_tech_bonus = {
+			ahead_reduction = 1
+			category = encryption_tech
+			category = decryption_tech
+		}
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 2
+			category = decryption_tech
+		}
+		LCT = {
+			add_opinion_modifier = { target = RCT modifier = RCT_LCT_Pact }
+		}
+	}
+}
+
+# Lake Ponies Refuse River Ponies Treaty
+country_event = {
+	id = rivercity.57
+	immediate = {log = "[Root.GetName]: event rivercity.54"}#Auto-logging
+	title = rivercity.57.t
+	desc = rivercity.57.d
+	picture = GFX_report_event_physics_lab_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = rivercity.57.a
 		add_opinion_modifier = { target = LCT modifier = LCT_Refused_Pact }# no pact ;_; fukkin stupid lake ponies
 	}
 }
