@@ -120,7 +120,7 @@
  
  #### TOOL TIPS ####
 
- RCT_River_Swirl0:0 "§WThe Harmonic Party will radicalize slightly§!\n"
+ RCT_River_Swirl0:0 "§WRiver Swirl has obtained complete control of the country§!\n"
  RCT_River_Swirl1:0 "If The Coup fails Diamond Mountain §Rwill leave the Coalition§!, and you will lose §R2§! to your standing in the §YRace to form the River Federation§!§!"
  RCT_River_Swirl2:0 "Subtracts §R5§! to your standing in the §YRace to form the River Federation§!§!\n"
  RCT_River_Swirl3:0 "Adds §G3§! to your standing in the §YRace to form the River Federation§!\n!"
@@ -129,19 +129,18 @@
  RCT_River_Swirl6:0 "§YAll Current Members of the Coalition will be allowed to weigh in on this.§!\n"
  RCT_River_Swirl7:0 "§WIf [LCT.GetName] is still within the Coalition or our Puppet upon capitulation, the [LNS.GetName] will be granted to them.§!\n"
  RCT_River_Swirl8:0 "§W[LCT.GetName] must agree for the effects to take place!§!\n"
-
-
- RCT_Military_Coup:0 "§RDisgrunteled Officers will prepare to remove Chancellor River Swirl.§!"
- RCT_Military_Coup2:0 "§RRepublican Guards force us to retreat to the countryside, The war will rage on in the countryside!§!"
- RCT_Military_Coup3:0 "§RThe Outer Defenses of Rijekogard will crumble!§!"
- RCT_Military_Coup4:0 "§YThe Siege of Reijkagard will end!§!"
- RCT_Military_Coup5:0 "§RThe OHS will resist violently!§!\n"
- RCT_Military_Coup6:0 "§YThe OHS and her minions will no longer threaten the proletariat!§."
+ RCT_River_Swirl9:0 "§WThe Federal Sanate will gather to vote on certain issues effecting the Republika!§!\n"
 
  RCT_COM_Nova_Whirl:0 "§YThe Civillian Goverment shall endure under the control of Chancellor Nova Whirl§!"
  RCT_COM_Nova_Whirl2:0 "§RThis Focus will disable the following Economic Laws, Partial Mobilization, War Economy and Total Mobilization!§!\n"
  RCT_COM_Nova_Whirl3:0 "§RThis Focus will disable the following Trade Laws, Closed Economy and Limited Exports!§!"
- RCT_COM_Nova_Whirl4:0 "§Y10, 10-Width Infantry Regiments will be mobilized.§!"
+ RCT_COM_Nova_Whirl4:0 "§Y10, 6-Width Infantry Regiments will be mobilized.§!\n"
+ RCT_COM_Nova_Whirl5:0 "§RIt would be such a shame if all the Anarchists happened to meet some sort of horrible accident on the frontlines...§!"
+ RCT_COM_Nova_Whirl6:0 "§WAdditonal Focuses will be unlocked.§!"
+
+ RCT_NEU_Hector_Lippizan1:0 "§RThe Traitors shall be dealt with.§!\n"
+ RCT_NEU_Hector_Lippizan2:0 "§RWittenlanders are not ponies, they are animals.§!\n"
+
 
  RCT_COM_Caramel_Haze:0 "§YA Military Goverment shall be established under the control of General-Secretary Caramel Haze§!"
  RCT_Istokponia:0 "§YThe River Republika§! will be known as §YIstokponia§!\n\n"

@@ -40,7 +40,7 @@
 		x = 9
 		y = 0
 
-		cost = 10
+		cost = 3.6
 
 		ai_will_do = {
 			factor = 1
@@ -63,26 +63,27 @@
 		}
 
 		completion_reward = {
-
+		add_political_power = 100
+		custom_effect_tooltip = RCT_River_Swirl9
 		}
 	}
 
 	shared_focus = {
 		id = RCT_Ban_Socalist_Parties
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_broken_red_star
 		prerequisite = { focus = RCT_Federal_Mandate }
-		x = 0
+		x = -4
 		y = 1
 		relative_position_id = RCT_Federal_Mandate
 
-		cost = 10
+		cost = 5.1
 
 		ai_will_do = {
 			factor = 1
 		}
 
 		available = {
-
+			has_country_flag = RCT_Ban_Socalist_Parties_Unlocked
 		}
 		
 		bypass = {
@@ -98,26 +99,26 @@
 		}
 
 		completion_reward = {
-
+		country_event = rivercity.14
 		}
 	}
 
 	shared_focus = {
 		id = RCT_Combat_Poverty
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_collaborate_local_elites_pony
 		prerequisite = { focus = RCT_Federal_Mandate }
 		x = 2
 		y = 1
 		relative_position_id = RCT_Federal_Mandate
 
-		cost = 10
+		cost = 5.1
 
 		ai_will_do = {
 			factor = 1
 		}
 
 		available = {
-
+			has_country_flag = RCT_Combat_Poverty_Unlocked
 		}
 		
 		bypass = {
@@ -133,26 +134,26 @@
 		}
 
 		completion_reward = {
-
+		country_event = rivercity.4
 		}
 	}
 
 	shared_focus = {
 		id = RCT_Status_Of_The_Mountain_Commune
-		icon = GFX_goal_support_democracy
+		icon = GFX_focus_generic_soviet_politics
 		prerequisite = { focus = RCT_Federal_Mandate }
-		x = -2
+		x = 0
 		y = 1
 		relative_position_id = RCT_Federal_Mandate
 
-		cost = 10
+		cost = 5.1
 
 		ai_will_do = {
 			factor = 1
 		}
 
 		available = {
-
+			has_country_flag = RCT_Mountain_Commune_Unlocked
 		}
 		
 		bypass = {
@@ -168,26 +169,26 @@
 		}
 
 		completion_reward = {
-
+			country_event = rivercity.6
 		}
 	}
 
 	shared_focus = {
 		id = RCT_Emergency_Powers
 		prerequisite = { focus = RCT_Federal_Mandate }
-		icon = GFX_goal_support_democracy
-		x = -4
+		icon = GFX_goal_generic_political_pressure
+		x = -2
 		y = 1
 		relative_position_id = RCT_Federal_Mandate
 
-		cost = 10
+		cost = 5.1
 
 		ai_will_do = {
 			factor = 1
 		}
 
 		available = {
-
+			has_country_flag = RCT_Emergency_Powers_Unlocked
 		}
 		
 		bypass = {
@@ -203,19 +204,21 @@
 		}
 
 		completion_reward = {
-
+		country_event = rivercity.12
+		add_political_power = 100
+		set_country_flag = RCT_Ban_Socalist_Parties_Unlocked
 		}
 	}
 
 	shared_focus = {
-		id = RCT_Infustructure_Issue
+		id = RCT_Rearrange_Goverment_Positions
 		prerequisite = { focus = RCT_Federal_Mandate }
-		icon = GFX_goal_support_democracy
+		icon = GFX_focus_generic_diplomatic_treaty_pony
 		x = 4
 		y = 1
 		relative_position_id = RCT_Federal_Mandate
 
-		cost = 10
+		cost = 5.1
 
 		ai_will_do = {
 			factor = 1
@@ -238,15 +241,16 @@
 		}
 
 		completion_reward = {
-
+		country_event = rivercity.2
+		set_country_flag = RCT_Combat_Poverty_Unlocked
 		}
 	}
 
 	shared_focus = {
 		id = RCT_The_Show_Must_Go_On
-		prerequisite = { focus = RCT_Ban_Socalist_Parties focus = RCT_Combat_Poverty focus = RCT_Status_Of_The_Mountain_Commune focus = RCT_Infustructure_Issue focus = RCT_Emergency_Powers }
+		prerequisite = { focus = RCT_Ban_Socalist_Parties focus = RCT_Combat_Poverty focus = RCT_Status_Of_The_Mountain_Commune focus = RCT_Rearrange_Goverment_Positions focus = RCT_Emergency_Powers }
 		mutually_exclusive = { focus = RCT_The_Mandate_Fails }
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_tripartite_pact_pony
 		x = 1
 		y = 2
 		relative_position_id = RCT_Federal_Mandate
@@ -274,15 +278,16 @@
 		}
 
 		completion_reward = {
-
+		add_stability = 0.1
+		add_political_power = 100
 		}
 	}
 
 	shared_focus = {
 		id = RCT_The_Mandate_Fails
-		prerequisite = { focus = RCT_Ban_Socalist_Parties focus = RCT_Combat_Poverty focus = RCT_Status_Of_The_Mountain_Commune focus = RCT_Infustructure_Issue focus = RCT_Emergency_Powers }
+		prerequisite = { focus = RCT_Ban_Socalist_Parties focus = RCT_Combat_Poverty focus = RCT_Status_Of_The_Mountain_Commune focus = RCT_Rearrange_Goverment_Positions focus = RCT_Emergency_Powers }
 		mutually_exclusive = { focus = RCT_The_Show_Must_Go_On }
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_revolution_pony
 		x = -1
 		y = 2
 		relative_position_id = RCT_Federal_Mandate
@@ -294,7 +299,8 @@
 		}
 
 		available = {
-
+		has_country_flag = RCT_Mandate_Fails_Unlocked
+		NOT = { has_completed_focus = RCT_Ban_Socalist_Parties }
 		}
 		
 		bypass = {
@@ -310,7 +316,14 @@
 		}
 
 		completion_reward = {
-
+		add_stability = -0.1
+		add_political_power = -100
+		remove_idea = RCT_OHS
+        if = {
+            limit = { has_completed_focus = RCT_Emergency_Powers }
+            country_event = rivercity.11
+            else = { }
+   		    }
 		}
 	}
 
@@ -318,7 +331,7 @@
 		id = RCT_General_Secretary_Caramel_Haze
 		prerequisite = { focus = RCT_The_Mandate_Fails focus = RCT_The_Show_Must_Go_On }
 		mutually_exclusive = { focus = RCT_Chancellor_River_Swirl focus = RCT_Chancellor_Nova_Whirl focus = RCT_The_Goverment_Has_Betrayed_Us }
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_ideology_totalist
 		x = -2
 		y = 3
 		relative_position_id = RCT_Federal_Mandate
@@ -330,7 +343,7 @@
 		}
 
 		available = {
-
+		has_country_flag = RCT_General_Secretary_Caramel_Haze_Unlocked
 		}
 		
 		bypass = {
@@ -346,14 +359,43 @@
 		}
 
 		completion_reward = {
-
+		country_event = rivercity.17
+		create_country_leader = {
+			name = "General-Secretary Caramel Haze"
+			desc = "POLITICS_HAZE_DESC"
+			picture = "Caramel_Haze_Com.tga"
+			expire = "1965.1.1"
+			ideology = stalinism
+			traits = {
+		
+			}
+		}
+		set_politics = { ruling_party = communism }
+		RIV_leave_fed = yes
+		random_unit_leader = {
+			limit = { has_id = 652 }
+			retire = yes
+		}
+		create_field_marshal = {
+			name = "Caramel Haze"
+			portrait_path = "gfx/leaders/RCT/Caramel_Haze_Com.tga"
+			traits = { infantry_officer organizer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			id = 653
+		}
+		remove_ideas = RCT_Shattered_Goverment1
+		hidden_effect = { country_event = rivercity.8 days = 100 }
 		}
 	}
 
 	shared_focus = {
 		id = RCT_Political_Commissars
 		prerequisite = { focus = RCT_General_Secretary_Caramel_Haze }
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_military_mission_pony
 		x = -3
 		y = 1
 		relative_position_id = RCT_General_Secretary_Caramel_Haze
@@ -381,14 +423,15 @@
 		}
 
 		completion_reward = {
-
+		add_war_support = 0.05
+		add_ideas = RCT_Commissars
 		}
 	}
 
 	shared_focus = {
 		id = RCT_Establish_Additional_Communes
 		prerequisite = { focus = RCT_Political_Commissars }
-		icon = GFX_goal_support_democracy
+		icon = GFX_focus_generic_support_the_left_right
 		x = -3
 		y = 2
 		relative_position_id = RCT_General_Secretary_Caramel_Haze
@@ -416,14 +459,15 @@
 		}
 
 		completion_reward = {
-
+		add_political_power = 25
+		add_stability = 0.1
 		}
 	}
 
 	shared_focus = {
 		id = RCT_Enlarge_The_Military_Complex
 		prerequisite = { focus = RCT_Establish_Additional_Communes }
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_generic_construct_mil_factory
 		x = -3
 		y = 3
 		relative_position_id = RCT_General_Secretary_Caramel_Haze
@@ -451,14 +495,15 @@
 		}
 
 		completion_reward = {
-
+		add_stability = -0.05
+		three_random_arms_factory = yes
 		}
 	}
 
 	shared_focus = {
 		id = RCT_Local_Collectivization
 		prerequisite = { focus = RCT_General_Secretary_Caramel_Haze }
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_agrarian_reform
 		x = -1
 		y = 1
 		relative_position_id = RCT_General_Secretary_Caramel_Haze
@@ -486,14 +531,15 @@
 		}
 
 		completion_reward = {
-
+		add_stability = 0.01
+			add_ideas = RCT_Totalism1
 		}
 	}
 
 	shared_focus = {
 		id = RCT_Further_Collectivization
 		prerequisite = { focus = RCT_Local_Collectivization }
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_generic_soviet_construction
 		x = -1
 		y = 2
 		relative_position_id = RCT_General_Secretary_Caramel_Haze
@@ -521,14 +567,18 @@
 		}
 
 		completion_reward = {
-
+		add_stability = 0.02
+			swap_ideas = {
+    			remove_idea = RCT_Totalism1
+    			add_idea = RCT_Totalism2
+			}
 		}
 	}
 
 	shared_focus = {
 		id = RCT_The_Common_Land
 		prerequisite = { focus = RCT_Further_Collectivization }
-		icon = GFX_goal_support_democracy
+		icon = GFX_focus_AUS_agriculture
 		x = -1
 		y = 3
 		relative_position_id = RCT_General_Secretary_Caramel_Haze
@@ -556,7 +606,11 @@
 		}
 
 		completion_reward = {
-
+		add_stability = 0.02
+			swap_ideas = {
+    			remove_idea = RCT_Totalism2
+    			add_idea = RCT_Totalism3
+			}
 		}
 	}
 
@@ -564,7 +618,7 @@
 		id = RCT_Communism_With_Rijekan_Characteristics
 		prerequisite = { focus = RCT_The_Common_Land }
 		prerequisite = { focus = RCT_Enlarge_The_Military_Complex }
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_generic_national_unity_horseshoe
 		x = -2
 		y = 4
 		relative_position_id = RCT_General_Secretary_Caramel_Haze
@@ -592,7 +646,8 @@
 		}
 
 		completion_reward = {
-
+		add_political_power = 100
+		add_stability = 0.2
 		}
 	}
 
@@ -600,7 +655,7 @@
 		id = RCT_Chancellor_Nova_Whirl
 		prerequisite = { focus = RCT_The_Mandate_Fails focus = RCT_The_Show_Must_Go_On }
 		mutually_exclusive = { focus = RCT_Chancellor_River_Swirl focus = RCT_General_Secretary_Caramel_Haze focus = RCT_The_Goverment_Has_Betrayed_Us }
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_HOL_council_communism
 		x = 2
 		y = 3
 		relative_position_id = RCT_Federal_Mandate
@@ -612,7 +667,8 @@
 		}
 
 		available = {
-
+		has_completed_focus = RCT_The_Mandate_Fails
+		NOT = { has_country_flag = Nova_Whirl_Has_Been_Assassinated }
 		}
 		
 		bypass = {
@@ -628,14 +684,27 @@
 		}
 
 		completion_reward = {
-
+		country_event = rivercity.18
+		create_country_leader = {
+			name = "Chancellor Nova Whirl"
+			desc = "POLITICS_NOVA_DESC"
+			picture = "Nova_Whirl.tga"
+			expire = "1965.1.1"
+			ideology = stalinism
+			traits = {
+		
+			}
+		}
+		set_politics = { ruling_party = communism }
+		RIV_leave_fed = yes
+		remove_idea = RCT_Shattered_Goverment1
 		}
 	}
 
 	shared_focus = {
 		id = RCT_Market_Socalism
 		prerequisite = { focus = RCT_Chancellor_Nova_Whirl }
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_generic_trade
 		x = 1
 		y = 1
 		relative_position_id = RCT_Chancellor_Nova_Whirl
@@ -663,14 +732,15 @@
 		}
 
 		completion_reward = {
-
+		add_ideas = RCT_Market_Socalism
+		custom_effect_tooltip = RCT_COM_Nova_Whirl2
 		}
 	}
 
 	shared_focus = {
 		id = RCT_Agrarian_Cooperatives
 		prerequisite = { focus = RCT_Market_Socalism }
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_agriculture
 		x = 1
 		y = 2
 		relative_position_id = RCT_Chancellor_Nova_Whirl
@@ -698,14 +768,14 @@
 		}
 
 		completion_reward = {
-
+			add_ideas = RCT_Agrarian_Cooperative_Stuff
 		}
 	}
 
 	shared_focus = {
 		id = RCT_Finalize_Our_Economic_Reforms
 		prerequisite = { focus = RCT_Agrarian_Cooperatives }
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_generic_production
 		x = 1
 		y = 3
 		relative_position_id = RCT_Chancellor_Nova_Whirl
@@ -733,14 +803,17 @@
 		}
 
 		completion_reward = {
-
+			swap_ideas = {
+    			remove_idea = RCT_Market_Socalism
+    			add_idea = RCT_Market_Socalism2
+			}
 		}
 	}
 
 	shared_focus = {
 		id = RCT_Autarky
 		prerequisite = { focus = RCT_Chancellor_Nova_Whirl }
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_generic_construct_civ_factory
 		x = 3
 		y = 1
 		relative_position_id = RCT_Chancellor_Nova_Whirl
@@ -768,14 +841,14 @@
 		}
 
 		completion_reward = {
-
+		add_ideas = closed_economy
 		}
 	}
 
 	shared_focus = {
 		id = RCT_Urbanize_Coltstream
 		prerequisite = { focus = RCT_Autarky }
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_generic_construct_civ_factory
 		x = 3
 		y = 2
 		relative_position_id = RCT_Chancellor_Nova_Whirl
@@ -810,7 +883,7 @@
 	shared_focus = {
 		id = RCT_Urbanize_Rijekagard
 		prerequisite = { focus = RCT_Urbanize_Coltstream }
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_generic_construct_civ_factory
 		x = 3
 		y = 3
 		relative_position_id = RCT_Chancellor_Nova_Whirl
@@ -846,7 +919,7 @@
 		id = RCT_Industrialize_Everything
 		prerequisite = { focus = RCT_Urbanize_Rijekagard }
 		prerequisite = { focus = RCT_Finalize_Our_Economic_Reforms }
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_chn_red_military_factories
 		x = 2
 		y = 4
 		relative_position_id = RCT_Chancellor_Nova_Whirl
@@ -881,12 +954,12 @@
 	shared_focus = {
 		id = RCT_A_Socialist_Education
 		prerequisite = { focus = RCT_General_Secretary_Caramel_Haze focus = RCT_Chancellor_Nova_Whirl }
-		icon = GFX_goal_support_democracy
+		icon = GFX_focus_generic_socialist_science
 		x = 1
 		y = 1
 		relative_position_id = RCT_General_Secretary_Caramel_Haze
 
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -909,19 +982,20 @@
 		}
 
 		completion_reward = {
-
+		decrease_illiteracy = yes
+		add_ideas = proper_science_base
 		}
 	}
 
 	shared_focus = {
-		id = RCT_Labour_Battalions
+		id = RCT_Anarchists_Into_Militias
 		prerequisite = { focus = RCT_A_Socialist_Education }
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_industrial_pony
 		x = 1
 		y = 2
 		relative_position_id = RCT_General_Secretary_Caramel_Haze
 
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -944,19 +1018,30 @@
 		}
 
 		completion_reward = {
-
+		custom_effect_tooltip = RCT_COM_Nova_Whirl4
+		create_corps_commander = {
+			name = "Miljenko Bebić"
+			portrait_path = "gfx/leaders/Pony/portrait_stg_pony_generic_8.dds"
+			traits = { trickster adaptable }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		custom_effect_tooltip = RCT_COM_Nova_Whirl5
 		}
 	}
 
 	shared_focus = {
 		id = RCT_The_River_Roars_Once_More
-		prerequisite = { focus = RCT_Labour_Battalions }
-		icon = GFX_goal_support_democracy
+		prerequisite = { focus = RCT_Anarchists_Into_Militias }
+		icon = GFX_focus_generic_coastal_fort
 		x = 1
 		y = 3
 		relative_position_id = RCT_General_Secretary_Caramel_Haze
 
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -979,19 +1064,19 @@
 		}
 
 		completion_reward = {
-
+		add_ideas = RCT_River_Roars_Idea
 		}
 	}
 
 	shared_focus = {
 		id = RCT_Department_Of_Revolutionary_Propaganda
 		prerequisite = { focus = RCT_General_Secretary_Caramel_Haze focus = RCT_Chancellor_Nova_Whirl }
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_generic_propaganda
 		x = 3
 		y = 1
 		relative_position_id = RCT_General_Secretary_Caramel_Haze
 
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -1014,19 +1099,21 @@
 		}
 
 		completion_reward = {
-
+		add_political_power = 100
+		add_stability = 0.05
+		add_war_support 0.05
 		}
 	}
 
 	shared_focus = {
 		id = RCT_Partisan_Tactics
 		prerequisite = { focus = RCT_Department_Of_Revolutionary_Propaganda }
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_generic_military_deal_pony
 		x = 3
 		y = 2
 		relative_position_id = RCT_General_Secretary_Caramel_Haze
 
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -1049,19 +1136,19 @@
 		}
 
 		completion_reward = {
-
+		add_ideas = RCT_Partisan_Idea
 		}
 	}
 
 	shared_focus = {
 		id = RCT_The_Great_Red_Crusade
 		prerequisite = { focus = RCT_Partisan_Tactics }
-		icon = GFX_goal_support_democracy
+		icon = GFX_focus_military_derpy
 		x = 3
 		y = 3
 		relative_position_id = RCT_General_Secretary_Caramel_Haze
 
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -1084,19 +1171,22 @@
 		}
 
 		completion_reward = {
-
+		add_timed_idea = {
+  		  idea = RCT_Liberation_Of_The_Riverlands
+  		  days = 360
+			}
 		}
 	}
 
 	shared_focus = {
 		id = RCT_Under_Crimson_Skies
 		prerequisite = { focus = RCT_The_River_Roars_Once_More focus = RCT_The_Great_Red_Crusade }
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_generic_attack_allies
 		x = 2
 		y = 4
 		relative_position_id = RCT_General_Secretary_Caramel_Haze
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1119,54 +1209,64 @@
 		}
 
 		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
-		id = RCT_A_Greater_Tomorrow
-		prerequisite = { focus = RCT_Under_Crimson_Skies }
-		icon = GFX_goal_support_democracy
-		x = 4
-		y = 5
-		relative_position_id = RCT_General_Secretary_Caramel_Haze
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-
+        if = {
+            limit = { country_exists = LCT }
+			declare_war_on = { target = LCT type = annex_everything }           
+            else = { }
+   		    }
+        if = {
+            limit = { country_exists = BAK }
+			declare_war_on = { target = BAK type = annex_everything }           
+            else = { }
+   		    }
+        if = {
+            limit = { country_exists = NIM }
+			declare_war_on = { target = NIM type = annex_everything }           
+            else = { }
+   		    }
+        if = {
+            limit = { country_exists = WIT }
+			declare_war_on = { target = WIT type = annex_everything }           
+            else = { }
+   		    }
+        if = {
+            limit = { country_exists = FRE }
+			declare_war_on = { target = FRE type = annex_everything }           
+            else = { }
+   		    }
+        if = {
+            limit = { country_exists = DEP }
+			declare_war_on = { target = DEP type = annex_everything }           
+            else = { }
+   		    }
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = WIT
+						is_core_of = BAR
+						is_core_of = DEP
+						is_core_of = LCT
+						is_core_of = NIM
+						is_core_of = FRE
+						is_core_of = BAK
+						is_core_of = OLV
+						is_core_of = ZES
+					}					
+				}
+				add_claim_by = RCT
+			}
 		}
 	}
 
 	shared_focus = {
 		id = RCT_Victory
 		prerequisite = { focus = RCT_Under_Crimson_Skies }
-		icon = GFX_goal_support_democracy
+		icon = GFX_focus_HOL_deal_with_left
 		x = 2
 		y = 5
 		relative_position_id = RCT_General_Secretary_Caramel_Haze
 
-		cost = 10
+		cost = 1.5
 
 		ai_will_do = {
 			factor = 1
@@ -1189,42 +1289,7 @@
 		}
 
 		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Call_Up_The_Militas
-		prerequisite = { focus = RCT_Under_Crimson_Skies }
-		icon = GFX_goal_support_democracy
-		x = 0
-		y = 5
-		relative_position_id = RCT_General_Secretary_Caramel_Haze
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-
+		custom_effect_tooltip = RCT_COM_Nova_Whirl6
 		}
 	}
 
@@ -1400,7 +1465,7 @@
 		}
 
 		completion_reward = {
-
+			LCT = { country_event = rivercity.52 }
 		}
 	}
 
@@ -1435,7 +1500,7 @@
 		}
 
 		completion_reward = {
-
+		LCT = { country_event = rivercity.55 }
 		}
 	}
 
@@ -1505,7 +1570,7 @@
 		}
 
 		completion_reward = {
-
+		country_event = rivercity.51
 		}
 	}
 
@@ -2032,7 +2097,8 @@
 		}
 
 		completion_reward = {
-
+		decrease_illiteracy = yes
+		add_ideas = proper_science_base
 		}
 	}
 
@@ -2207,7 +2273,7 @@
 		}
 
 		completion_reward = {
-
+		country_event = rivercity.50
 		}
 	}
 
@@ -2287,7 +2353,7 @@
 		id = RCT_The_Goverment_Has_Betrayed_Us
 		prerequisite = { focus = RCT_The_Mandate_Fails focus = RCT_The_Show_Must_Go_On }
 		mutually_exclusive = { focus = RCT_General_Secretary_Caramel_Haze focus = RCT_Chancellor_Nova_Whirl focus = RCT_Chancellor_River_Swirl }
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_ideology_authoritarian_democrat
 		x = -10
 		y = 3
 		relative_position_id = RCT_Federal_Mandate
@@ -2299,7 +2365,8 @@
 		}
 
 		available = {
-
+		has_stability > 0.50
+		has_completed_focus = RCT_The_Mandate_Fails
 		}
 		
 		bypass = {
@@ -2315,14 +2382,25 @@
 		}
 
 		completion_reward = {
-
+		country_event = rivercity.13
+		create_country_leader = {
+			name = "Marshal Hector Lippizan"
+			desc = "POLITICS_HECTOR_DESC"
+			picture = "Hector_Lipizzan.tga"
+			expire = "1965.1.1"
+			ideology = centrism
+			traits = {
+		
+			}
+		}
+		set_politics = { ruling_party = neutrality }
 		}
 	}
 
 	shared_focus = {
-		id = RCT_A_Bullet_For_The_Communists
+		id = RCT_A_New_Central_Command
 		prerequisite = { focus = RCT_The_Goverment_Has_Betrayed_Us }
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_generic_military_deal_pony
 		x = 3
 		y = 1
 		relative_position_id = RCT_The_Goverment_Has_Betrayed_Us
@@ -2355,9 +2433,9 @@
 	}
 
 	shared_focus = {
-		id = RCT_A_New_Central_Command
-		prerequisite = { focus = RCT_A_Bullet_For_The_Communists }
-		icon = GFX_goal_support_democracy
+		id = RCT_The_OHS_Returns
+		prerequisite = { focus = RCT_A_New_Central_Command }
+		icon = GFX_goal_RIV_ofi
 		x = 3
 		y = 2
 		relative_position_id = RCT_The_Goverment_Has_Betrayed_Us
@@ -2390,9 +2468,9 @@
 	}
 
 	shared_focus = {
-		id = RCT_The_OHS_Returns
-		prerequisite = { focus = RCT_A_New_Central_Command }
-		icon = GFX_goal_support_democracy
+		id = RCT_Protect_The_Coalition
+		prerequisite = { focus = RCT_The_OHS_Returns }
+		icon = GFX_goal_RIV_ofi
 		x = 3
 		y = 3
 		relative_position_id = RCT_The_Goverment_Has_Betrayed_Us
@@ -2420,15 +2498,14 @@
 		}
 
 		completion_reward = {
-
+		add_ideas = RCT_Protect_The_Coalition
 		}
 	}
-
 	shared_focus = {
 		id = RCT_Military_Railroads
 		prerequisite = { focus = RCT_The_Goverment_Has_Betrayed_Us }
-		icon = GFX_goal_support_democracy
-		x = 1
+		icon = GFX_goal_rct_train
+		x = -1
 		y = 1
 		relative_position_id = RCT_The_Goverment_Has_Betrayed_Us
 
@@ -2462,8 +2539,8 @@
 	shared_focus = {
 		id = RCT_Military_Industry_Koltovac
 		prerequisite = { focus = RCT_Military_Railroads }
-		icon = GFX_goal_support_democracy
-		x = 1
+		icon = GFX_goal_generic_construct_mil_factory
+		x = -1
 		y = 2
 		relative_position_id = RCT_The_Goverment_Has_Betrayed_Us
 
@@ -2497,8 +2574,8 @@
 	shared_focus = {
 		id = RCT_Military_Industry_Rijekagard
 		prerequisite = { focus = RCT_Military_Industry_Koltovac }
-		icon = GFX_goal_support_democracy
-		x = 1
+		icon = GFX_goal_generic_construct_mil_factory
+		x = -1
 		y = 3
 		relative_position_id = RCT_The_Goverment_Has_Betrayed_Us
 
@@ -2531,10 +2608,10 @@
 
 	shared_focus = {
 		id = RCT_Corporatism
-		prerequisite = { focus = RCT_The_OHS_Returns }
+		prerequisite = { focus = RCT_Land_Confiscations }
 		prerequisite = { focus = RCT_Military_Industry_Rijekagard }
-		icon = GFX_goal_support_democracy
-		x = 2
+		icon = GFX_goal_chn_economic_plan
+		x = -2
 		y = 4
 		relative_position_id = RCT_The_Goverment_Has_Betrayed_Us
 
@@ -2566,45 +2643,9 @@
 	}
 
 	shared_focus = {
-		id = RCT_At_The_Helm_Once_More
-		prerequisite = { focus = RCT_Corporatism }
-		prerequisite = { focus = RCT_A_New_Rijekaland }
-		icon = GFX_goal_support_democracy
-		x = 0
-		y = 5
-		relative_position_id = RCT_The_Goverment_Has_Betrayed_Us
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
-		id = RCT_Expel_All_Wittenlanders
+		id = RCT_A_Bullet_For_The_Communists
 		prerequisite = { focus = RCT_The_Goverment_Has_Betrayed_Us }
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_generic_political_pressure
 		x = -3
 		y = 1
 		relative_position_id = RCT_The_Goverment_Has_Betrayed_Us
@@ -2632,14 +2673,15 @@
 		}
 
 		completion_reward = {
-
+		custom_effect_tooltip = RCT_NEU_Hector_Lippizan1
+		remove_idea = RCT_Shattered_Goverment1
 		}
 	}
 
 	shared_focus = {
-		id = RCT_Consolidate_Power
-		prerequisite = { focus = RCT_Expel_All_Wittenlanders }
-		icon = GFX_goal_support_democracy
+		id = RCT_No_More_Wittenlanders
+		prerequisite = { focus = RCT_A_Bullet_For_The_Communists }
+		icon = GFX_goal_generic_political_pressure
 		x = -3
 		y = 2
 		relative_position_id = RCT_The_Goverment_Has_Betrayed_Us
@@ -2667,14 +2709,16 @@
 		}
 
 		completion_reward = {
-
+		custom_effect_tooltip = RCT_NEU_Hector_Lippizan2
+		682 = { remove_core_of = WIT }
+		WIT = { country_event = rivercity.19 }
 		}
 	}
 
 	shared_focus = {
-		id = RCT_A_Fortress_In_The_Riverlands
-		prerequisite = { focus = RCT_Consolidate_Power }
-		icon = GFX_goal_support_democracy
+		id = RCT_Land_Confiscations
+		prerequisite = { focus = RCT_No_More_Wittenlanders }
+		icon = GFX_focus_generic_steel
 		x = -3
 		y = 3
 		relative_position_id = RCT_The_Goverment_Has_Betrayed_Us
@@ -2709,8 +2753,8 @@
 	shared_focus = {
 		id = RCT_Compulsory_Education
 		prerequisite = { focus = RCT_The_Goverment_Has_Betrayed_Us }
-		icon = GFX_goal_support_democracy
-		x = -1
+		icon = GFX_goal_KTG_Bookstack
+		x = 1
 		y = 1
 		relative_position_id = RCT_The_Goverment_Has_Betrayed_Us
 
@@ -2737,15 +2781,16 @@
 		}
 
 		completion_reward = {
-
+		decrease_illiteracy = yes
+		add_ideas = proper_science_base
 		}
 	}
 
 	shared_focus = {
 		id = RCT_Military_Conscription
 		prerequisite = { focus = RCT_Compulsory_Education }
-		icon = GFX_goal_support_democracy
-		x = -1
+		icon = GFX_goal_chn_axis_build_infantry_grey
+		x = 1
 		y = 2
 		relative_position_id = RCT_The_Goverment_Has_Betrayed_Us
 
@@ -2772,15 +2817,16 @@
 		}
 
 		completion_reward = {
-
+		add_ideas = RCT_Populist_Conscription
+		add_ideas = service_by_requirement
 		}
 	}
 
 	shared_focus = {
 		id = RCT_Loyalty_To_The_State_Unto_Death
 		prerequisite = { focus =  RCT_Military_Conscription }
-		icon = GFX_goal_support_democracy
-		x = -1
+		icon = GFX_goal_chn_oppose_hitler_grey
+		x = 1
 		y = 3
 		relative_position_id = RCT_The_Goverment_Has_Betrayed_Us
 
@@ -2807,43 +2853,9 @@
 		}
 
 		completion_reward = {
-
-		}
-	}
-
-	shared_focus = {
-		id = RCT_A_New_Rijekaland
-		prerequisite = { focus = RCT_A_Fortress_In_The_Riverlands }
-		prerequisite = { focus = RCT_Loyalty_To_The_State_Unto_Death }
-		icon = GFX_goal_support_democracy
-		x = -2
-		y = 4
-		relative_position_id = RCT_The_Goverment_Has_Betrayed_Us
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-
+			add_stability = 0.2
+			add_war_support = 0.1
+			add_manpower = 50000
 		}
 	}
 	
@@ -2856,7 +2868,7 @@
 		x = -22
 		y = 0
 
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 5

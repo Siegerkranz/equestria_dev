@@ -1,6 +1,37 @@
 leader_traits = {
 	
-	
+	RCT_ideological_crusader = { #River Swirl
+		ai_get_ally_desire_factor = 20
+		opinion_gain_monthly_same_ideology_factor = 1.0
+
+		random = no
+	}
+	RCT_laissez_faire_capitalist = { #River Swirl
+		production_speed_arms_factory_factor = -0.06
+		production_speed_buildings_factor = 0.15
+		local_resources_factor = 0.05
+		political_power_gain = -0.09
+
+		random = no
+	}
+	RCT_industrialiser = { #Nova Whirl
+		industrial_capacity_factory = 0.06
+		production_speed_buildings_factor = 0.10
+		local_resources_factor = 0.07
+		conscription_factor = -0.08
+		political_power_gain = -0.17
+
+		random = no
+	}
+	RCT_supreme_ruler = { #Caramel Haze
+
+		political_power_gain = 0.15
+		local_resources_factor = 0.1
+		consumer_goods_factor = 0.05
+		conscription_factor = 0.05
+
+		random = no
+	}	
 	FBK_communist_sympathies = {
 		random = no		
 		communism_acceptance = 70

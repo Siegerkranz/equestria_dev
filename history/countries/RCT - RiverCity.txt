@@ -21,9 +21,11 @@ set_stability = 0.57
 set_war_support = 0.08
 
 add_ideas = {
+	RCT_Shattered_Goverment1
+	RCT_city_of_three_rivers
+	RCT_OHS
 	outdated_industry
 	better_science_base
-	RCT_city_of_three_rivers
 	RIV_member_state
 	lack_of_scientists3
 	poverty4
@@ -36,19 +38,19 @@ set_politics = {
 
 	parties = {
 		democratic = { 
-			popularity = 80
+			popularity = 50
 		}
 
 		fascism = {
-			popularity = 5
+			popularity = 0
 		}
 		
 		communism = {
-			popularity = 10
+			popularity = 50
 		}
 		
 		neutrality = {
-			popularity = 5
+			popularity = 0
 		}
 	}
 	
@@ -59,7 +61,7 @@ set_politics = {
 }
 
 create_country_leader = {
-	name = "River Swirl"
+	name = "Chancellor River Swirl"
 	desc = "POLITICS_RIVERSWIRL_DESC"
 	picture = "Riverswirl.tga"
 	expire = "1965.1.1"
@@ -70,7 +72,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Nova Whirl"
+	name = "Vice-Chancellor Nova Whirl"
 	desc = "POLITICS_NOVAWHIRL_DESC"
 	picture = "gfx/leaders/RCT/Nova_Whirl.tga"
 	expire = "1965.1.1"

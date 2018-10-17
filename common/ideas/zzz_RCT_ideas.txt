@@ -16,10 +16,85 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = -0.02
-				trade_opinion_factor = 0.50
+				trade_opinion_factor = 0.50f
 			}
 		}
-		RCT_Militants = {
+		RCT_Shattered_Goverment1 = {
+			
+			picture = generic_disjointed_gov
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = -0.10
+				political_power_cost = 1
+			}
+		}
+		RCT_Shattered_Goverment2 = {
+			
+			picture = generic_disjointed_gov
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = -0.05
+				political_power_cost = 0.75
+			}
+		}
+		RCT_Shattered_Goverment3 = {
+			
+			picture = generic_disjointed_gov
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.5
+			}
+		}
+		RCT_Unified_Goverment = {
+			
+			picture = generic_disjointed_gov
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = -0.10
+				political_power_cost = 0.5
+			}
+		}
+		RCT_Empowered_Chancellorship = {
 			
 			picture = generic_foreign_capital
 			
@@ -34,71 +109,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = 0.02
-				conscription_factor = -0.20
 				political_power_cost = -0.25
-			}
-		}
-		RCT_Socalists_In_Command1 = {
-			
-			picture = generic_foreign_capital
-			
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				
-			}
-			
-			removal_cost = -1
-			
-			modifier = {
-				army_org_Factor = -0.50
-				army_attack_factor = -0.1
-				army_defence_factor = -0.1
-				army_morale_factor = -0.2
-				attrition = 0.2
-			}
-		}
-		RCT_Socalists_In_Command2 = {
-			
-			picture = generic_foreign_capital
-			
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				
-			}
-			
-			removal_cost = -1
-			
-			modifier = {
-				army_org_Factor = -0.25
-				army_morale_factor = -0.1
-				attrition = 0.1
-			}
-		}
-		RCT_Disastrous_Defeat = {
-			
-			picture = generic_foreign_capital
-			
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {	
-
-			}
-			
-			removal_cost = -1
-			
-			modifier = {
-			war_support_weekly = -0.03
-			political_power_gain = -0.5
-			army_morale_factor = -0.2
+				political_power_gain = 2
+				stability_weekly = 0.01
 			}
 		}
 		RCT_State_Bureaucracy = {
@@ -120,62 +133,6 @@ ideas = {
 				political_power_cost = -0.1
 			}
 		}
-		RCT_CRM = {
-			
-			picture = FRA_factory_strikes
-			
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				
-			}
-			
-			removal_cost = -1
-			
-			modifier = {
-				supply_consumption_factor = -0.05
-				local_resources_factor = 0.1
-			}
-		}
-		RCT_CSB = {
-			
-			picture = FRA_factory_strikes
-			
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				
-			}
-			
-			removal_cost = -1
-			
-			modifier = {
-				production_speed_buildings_factor = 0.1
-			}
-		}
-		RCT_WCI = {
-			
-			picture = FRA_factory_strikes
-			
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				
-			}
-			
-			removal_cost = -1
-			
-			modifier = {
-				consumer_goods_factor = -0.03
-				production_factory_max_efficiency_factor = 0.05
-			}
-		}
 		RCT_Market_Socalism = {
 			
 			picture = FRA_factory_strikes
@@ -195,7 +152,7 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.15
 			}
 		}
-		RCT_Totalism = {
+		RCT_Market_Socalism2 = {
 			
 			picture = FRA_factory_strikes
 			
@@ -210,8 +167,114 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				production_factory_max_efficiency_factor = 0.10
-				production_speed_arms_factory_factor = 0.10
+				consumer_goods_factor = -0.15
+				production_factory_max_efficiency_factor = 0.15
+				production_speed_buildings_factor = 0.1
+				industry_repair_factor = 0.1
+				political_power_factor = 0.05
+			}
+		}
+		RCT_Agrarian_Cooperative_Stuff = {
+			
+			picture = FRA_factory_strikes
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+				local_resources_factor = 0.05
+			}
+		}
+		RCT_Totalism1 = {
+			
+			picture = FRA_factory_strikes
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		RCT_Totalism2 = {
+			
+			picture = FRA_factory_strikes
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.15
+				monthly_population = 0.05
+				min_export = -0.05
+			}
+		}
+		RCT_Totalism3 = {
+			
+			picture = FRA_factory_strikes
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.15
+				monthly_population = 0.05
+				min_export = -0.05
+				local_resources_factor = 0.10
+				global_building_slots_factor = 0.10
+				conscription = 0.01
+			}
+		}
+		RCT_Commissars = {
+			
+			picture = FRA_factory_strikes
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				land_reinforce_rate = 0.05
+				army_morale_factor = 0.05
+				supply_consumption_factor = -0.05
 			}
 		}
 		RCT_CIC = {
@@ -273,7 +336,7 @@ ideas = {
 			modifier = {
 				decryption_factor = 0.1
 				encryption_factor = 0.1
-				enemy_partisan_effect = -0.20
+				enemy_partisan_effect = -0.25
 				drift_defence_factor = 0.50
 			}
 		}
@@ -292,13 +355,15 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				subversive_activites_upkeep = -0.25
-				drift_defence_factor = 0.25
+				drift_defence_factor = 0.15
 				send_volunteer_size = 3
 				send_volunteers_tension = -1
+				ai_focus_aggressive_factor = 0.25
+				war_support_factor = 0.10
+				justify_war_goal_time = -0.25
 			}
 		}
-		RCT_AGM = {
+		RCT_Harmony_Is_Non_Negiotable2 = {
 			
 			picture = FRA_factory_strikes
 			
@@ -313,32 +378,13 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				conscription_factor = 0.10
-				max_dig_in = 1
-				army_core_defence_factor = 0.10
-				army_core_attack_factor = 0.10
-			}
-		}
-		RCT_RED = {
-			
-			picture = FRA_factory_strikes
-			
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				
-			}
-			
-			removal_cost = -1
-			
-			modifier = {
-				conscription = 0.05
-				army_morale_factor = 0.1
-				planning_speed = 0.05
-				army_attack_factor = 0.050
-				supply_consumption_factor = -0.1
+				drift_defence_factor = 0.30
+				send_volunteer_size = 5
+				send_volunteers_tension = -1
+				ai_focus_aggressive_factor = 1
+				army_morale_factor = 0.10
+				war_support_factor = 0.15
+				justify_war_goal_time = -0.30
 			}
 		}
 		RCT_Liberation_Of_The_Riverlands = {
@@ -362,40 +408,33 @@ ideas = {
 			targeted_modifier = {
 				tag = LCT
 				attack_bonus_against = 0.05
-				defense_bonus_against = 0.1
 			}
 			targeted_modifier = {
 				tag = WIT
 				attack_bonus_against = 0.05
-				defense_bonus_against = 0.1
 			}
 			targeted_modifier = {
 				tag = NIM
 				attack_bonus_against = 0.05
-				defense_bonus_against = 0.1
 			}
 			targeted_modifier = {
 				tag = BAK
 				attack_bonus_against = 0.05
-				defense_bonus_against = 0.1
 			}
 			targeted_modifier = {
 				tag = FRE
 				attack_bonus_against = 0.05
-				defense_bonus_against = 0.1
 			}
 			targeted_modifier = {
 				tag = DEP
 				attack_bonus_against = 0.05
-				defense_bonus_against = 0.1
 			}
 			targeted_modifier = {
 				tag = BAR
 				attack_bonus_against = 0.05
-				defense_bonus_against = 0.1
 			}
 		}
-		RCT_WARMONGERING = {
+		RCT_Partisan_Idea = {
 			
 			picture = FRA_factory_strikes
 			
@@ -410,13 +449,14 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			mobilization_speed = 0.25
-			offensive_war_stability_factor = 0.5
-			political_power_gain = 0.5
-			training_time_factor = -0.3
+				partisan_effect = 0.5
+				army_core_attack_factor = -0.2
+				army_core_defence_factor = 0.4
+				max_planning = -0.10
+				out_of_supply_factor = -0.2
 			}
 		}
-		RCT_MIC = {
+		RCT_River_Roars_Idea = {
 			
 			picture = FRA_factory_strikes
 			
@@ -431,16 +471,95 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				political_power_gain = -0.30
-				stability_factor = -0.15
-				war_support_factor = 0.2
-				army_morale_factor = 0.1
-				army_org_factor = 0.1
-				training_time_factor = -0.1
-				offensive_war_stability_factor = 0.5
-				mobilization_speed = 0.25
+				justify_war_goal_time = -0.2
+				army_morale_factor = 0.05
 			}
 		}
+		RCT_Populist_Conscription = {
+			
+			picture = FRA_factory_strikes
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.05
+			}
+		}
+		RCT_Protect_The_Coalition = {
+			
+			picture = FRA_factory_strikes
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				offensive_war_stability_factor = 0.4
+				defensive_war_stability_factor = 0.4
+				war_support_factor = 0.1
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		RCT_mobile1 = {
 		
 			picture = FRA_factory_strikes

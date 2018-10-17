@@ -23,53 +23,30 @@ add_namespace = rivercity_news
 #}
 
 ### Intro ###
-country_event = {
+country_event = { #Rearrange Positions
 	id = rivercity.2
-	immediate = {log = "[Root.GetName]: event rivercity.2"}#Auto-logging
+	immediate = {log = "[Root.GetName]: event rivercity.4"}#Auto-logging
 	title = rivercity.2.t
 	desc = rivercity.2.d
 	picture = GFX_event_river_city
 
 	is_triggered_only = yes
 
-	option = {
+	option = { #Harmonist Advisors
 		name = rivercity.2.a
-		add_stability = -0.2
-		add_war_support = 0.2
-		add_ideas = partial_economic_mobilisation
-		add_ideas = limited_conscription
-		set_politics = { ruling_party = communism }
-		drop_cosmetic_tag = yes
-		set_cosmetic_tag = RCT_communism
-		hidden_effect = { country_event = rivercity.3 }
-		add_popularity = {
-			ideology = communism
-			popularity = 0.3
-		}
+	}
+	option = { #Communist Advisors
+		name = rivercity.2.b
+	}
+	option = { #Deadlock
+		name = rivercity.2.c
+		add_to_variable = { var = RCT_Hatred value = 1 }
+		add_political_power = -25
+		add_stability = -0.05
 	}
 }
 
-country_event = { #The Assault Fails
-	id = rivercity.3
-	immediate = {log = "[Root.GetName]: event rivercity.3"}#Auto-logging
-	title = rivercity.3.t
-	desc = rivercity.3.d
-	picture = GFX_event_river_city
-
-	is_triggered_only = yes
-
-	option = {
-		name = rivercity.3.a
-		set_stability = 0.01
-		set_country_flag = RCT_Siege_Ongoing
-		set_country_flag = RCT_Communist1
-		custom_effect_tooltip = RCT_Military_Coup2
-		load_focus_tree = { tree = RCT_Battle_For_Coltstream keep_completed = yes }
-		load_focus_tree = { tree = RCT_Battle_For_Coltstream keep_completed = yes }
-	}
-}
-
-country_event = { #Battle for Coltstream
+country_event = { #Combatting Poverty
 	id = rivercity.4
 	immediate = {log = "[Root.GetName]: event rivercity.4"}#Auto-logging
 	title = rivercity.4.t
@@ -79,11 +56,18 @@ country_event = { #Battle for Coltstream
 	is_triggered_only = yes
 
 	option = {
-		name = rivercity.4.a
+		name = rivercity.4.a #Riverswirls New Deal Goes Ahead
+		hidden_effect = { country_event = rivercity.5 }
+	}
+	option = {
+		name = rivercity.4.b #Deadlock
+		add_to_variable = { var = RCT_Hatred value = 1 }
+		add_political_power = -25
+		add_stability = -0.05
 	}
 }
 
-country_event = { #Take Ponezega
+country_event = { #Combatting Poverty Results
 	id = rivercity.5
 	immediate = {log = "[Root.GetName]: event rivercity.5"}#Auto-logging
 	title = rivercity.5.t
@@ -92,12 +76,21 @@ country_event = { #Take Ponezega
 
 	is_triggered_only = yes
 
-	option = {
+	option = { #Riverswirls New Deal Works
 		name = rivercity.5.a
+		add_political_power = 50
+		add_stability = -0.1
+		decrease_poverty = yes
+	}
+	option = { #Riverswirls New Deal Fails to Harmonists blame Communists Sabotours for fucking their project when in reality it was just some low level idiot
+		name = rivercity.5.b
+		add_political_power = -50
+		add_to_variable = { var = RCT_Hatred value = 1 }
+		add_stability = -0.1
 	}
 }
 
-country_event = { #Besiege Rejikegard
+country_event = { #Status of The Talzar Mountain Commune
 	id = rivercity.6
 	immediate = {log = "[Root.GetName]: event rivercity.6"}#Auto-logging
 	title = rivercity.6.t
@@ -106,26 +99,39 @@ country_event = { #Besiege Rejikegard
 
 	is_triggered_only = yes
 
-	option = {
+	option = { #Declare The Illegal and demand they disperse
 		name = rivercity.6.a
+		add_to_variable = { var = RCT_Hatred value = 1 }
+		hidden_effect = { country_event = rivercity.7 }
+		add_political_power = 10
+	}
+	option = { #Leave them alone
+		name = rivercity.6.a
+		hidden_effect = { country_event = rivercity.7 }
 	}
 }
 
-country_event = { #Skirmish In the Highlands
+country_event = { #Check_Hatred
 	id = rivercity.7
 	immediate = {log = "[Root.GetName]: event rivercity.7"}#Auto-logging
 	title = rivercity.7.t
-	desc = rivercity.7.d
-	picture = GFX_event_river_city
 
 	is_triggered_only = yes
 
+	hidden = yes
+
 	option = {
 		name = rivercity.7.a
+        if = {
+            limit = { check_variable = { RCT_Hatred > 2 }
+            country_event = rivercity.11
+            else = { country_event = rivercity.10 }
+   		    }
+		}
 	}
 }
 
-country_event = { #VICTORY AT COLTOVAC #FAKE NEWS FOOLED YOU FUCKS
+country_event = { #FUCKING COMMIES OUT OF MY COUNTRY - Hector Koltovac Spawn
 	id = rivercity.8
 	immediate = {log = "[Root.GetName]: event rivercity.8"}#Auto-logging
 	title = rivercity.8.t
@@ -136,20 +142,6 @@ country_event = { #VICTORY AT COLTOVAC #FAKE NEWS FOOLED YOU FUCKS
 
 	option = {
 		name = rivercity.8.a
-	}
-}
-
-country_event = { #DISASTER AT COLTOVAC
-	id = rivercity.9
-	immediate = {log = "[Root.GetName]: event rivercity.8"}#Auto-logging
-	title = rivercity.9.t
-	desc = rivercity.9.d
-	picture = GFX_event_river_city
-
-	is_triggered_only = yes
-
-	option = {
-		name = rivercity.9.a
 
 		hidden_effect = {
 			start_civil_war = {
@@ -175,23 +167,171 @@ country_event = { #DISASTER AT COLTOVAC
 					limit = { has_id = 650 }
 					set_nationality = VAC
 				}
-
 		add_manpower = -40000
 		add_political_power = -50
 		add_war_support = -0.08
-		add_ideas = RCT_Disastrous_Defeat
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.07
-		}
 	}
 }
 
+country_event = { #The Goverment remains stable
+	id = rivercity.10
+	immediate = {log = "[Root.GetName]: event rivercity.10"}#Auto-logging
+	title = rivercity.10.t
+	desc = rivercity.10.d
+	picture = GFX_event_river_city
 
+	is_triggered_only = yes
 
+	option = { #Oh thank god
+		name = rivercity.10.a
+		set_country_flag = RCT_The_Show_Must_Go_On_Unlocked
+	}
+}
 
+country_event = { #The Goverment is still in shambles Nova Whirl moves for vote of no confidence on River Swirl
+	id = rivercity.11
+	immediate = {log = "[Root.GetName]: event rivercity.11"}#Auto-logging
+	title = rivercity.11.t
+	desc = rivercity.11.d
+	picture = GFX_event_river_city
 
+	is_triggered_only = yes
 
+	option = { #Aw fuck
+		name = rivercity.10.a
+		set_country_flag = RCT_Mandate_Fails_Unlocked
+	}
+}
+
+country_event = { #Emergency Powers : Harmonists meet in Secret with the Supreme Court give River Swirl Supreme Executive Power
+	id = rivercity.12
+	immediate = {log = "[Root.GetName]: event rivercity.12"}#Auto-logging
+	title = rivercity.12.t
+	desc = rivercity.12.d
+	picture = GFX_event_river_city
+
+	is_triggered_only = yes
+
+	option = { #Hahahaha
+		name = rivercity.12.a
+	}
+}
+
+country_event = { #Invite The Military to Restore Peace and Stability : Tldr Riverswirl and says the communists are taking over the country and invites the military to step in to safegard Rijekaland
+	id = rivercity.13
+	immediate = {log = "[Root.GetName]: event rivercity.13"}#Auto-logging
+	title = rivercity.13.t
+	desc = rivercity.13.d
+	picture = GFX_event_river_city
+
+	is_triggered_only = yes
+
+	option = { #Hahahaha
+		name = rivercity.13.a
+	}
+}
+
+country_event = { #The Communists wont play nice so I will just ban their party :^
+	id = rivercity.14
+	immediate = {log = "[Root.GetName]: event rivercity.14"}#Auto-logging
+	title = rivercity.14.t
+	desc = rivercity.14.d
+	picture = GFX_event_river_city
+
+	is_triggered_only = yes
+
+	option = { #Hahahaha
+		name = rivercity.14.a
+		set_country_flag = RCT_The_Show_Must_Go_On_Unlocked
+		custom_effect_tooltip = RCT_River_Swirl0
+	}
+}
+
+country_event = { #Final Orders from the Chancellor
+	id = rivercity.15
+	immediate = {log = "[Root.GetName]: event rivercity.15"}#Auto-logging
+	title = rivercity.15.t
+	desc = rivercity.15.d
+	picture = GFX_event_river_city
+
+	is_triggered_only = yes
+
+	option = { #Hahahaha
+		name = rivercity.15.a
+		hidden_effect = { country_event = rivercity.16 }
+	}
+}
+
+country_event = { #Nova Whirl gets shot by the OHS
+	id = rivercity.16
+	immediate = {log = "[Root.GetName]: event rivercity.16"}#Auto-logging
+	title = rivercity.16.t
+	desc = rivercity.16.d
+	picture = GFX_event_river_city
+
+	is_triggered_only = yes
+
+	option = { #Get fucked Nova -Swirly
+		name = rivercity.16.a
+		set_country_flag = Nova_Whirl_Has_Been_Assassinated
+		set_country_flag = RCT_General_Secretary_Caramel_Haze_Unlocked
+		add_political_power = -10
+		create_country_leader = {
+			name = "General-Secretary Caramel Haze"
+			desc = "POLITICS_HAZE_DESC"
+			picture = "Caramel_Haze_Com.tga"
+			expire = "1965.1.1"
+			ideology = stalinism
+			traits = {
+		
+			}
+		}		
+	}
+}
+
+country_event = { #Bringing The Revolution to Rijeka tldr Caramel Haze overthrows the Goverment and declares real communism.tm
+	id = rivercity.17
+	immediate = {log = "[Root.GetName]: event rivercity.17"}#Auto-logging
+	title = rivercity.17.t
+	desc = rivercity.17.d
+	picture = GFX_event_river_city
+
+	is_triggered_only = yes
+
+	option = { #Hahahaha
+		name = rivercity.17.a
+		add_political_power = 10
+	}
+}
+
+country_event = { #Nova Whirl sworn in as Chancellor promises Greater Rijeka and denounces the rest of the coalition
+	id = rivercity.18
+	immediate = {log = "[Root.GetName]: event rivercity.18"}#Auto-logging
+	title = rivercity.18.t
+	desc = rivercity.18.d
+	picture = GFX_event_river_city
+
+	is_triggered_only = yes
+
+	option = { #Hahahaha
+		name = rivercity.18.a
+		add_political_power = 10
+	}
+}
+
+country_event = { #For WIT informing all those weird unicorns living in Coltstream you know just dissappeaed :themoon:
+	id = rivercity.19
+	immediate = {log = "[Root.GetName]: event rivercity.19"}#Auto-logging
+	title = rivercity.19.t
+	desc = rivercity.19.d
+	picture = GFX_event_river_city
+
+	is_triggered_only = yes
+
+	option = { #Hahahaha
+		name = rivercity.19.a
+	}
+}
 
 
 
@@ -224,13 +364,13 @@ country_event = { #New Treasury Officer
 
 	option = { #Promote some low level administrator
 		name = rivercity.50.a
-		add_political_power = 100
+		add_political_power = 10
 		custom_effect_tooltip = idiot
 		custom_effect_tooltip = babushka_mad
 	}
 	option = { #Put Cousin Pumpkin Swirl Incharge
 		name = rivercity.50.b
-		add_political_power = -100
+		add_political_power = -10
 		add_ideas = Pumpkin_Swirl
 		custom_effect_tooltip = babushka
 		hidden_effect = {
@@ -239,7 +379,7 @@ country_event = { #New Treasury Officer
 	}
 }
 
-country_event = { #VICTORY AT COLTOVAC #FAKE NEWS FOOLED YOU FUCKS
+country_event = { #Death To Hellquill
 	id = rivercity.51
 	immediate = {log = "[Root.GetName]: event rivercity.51"}#Auto-logging
 	title = rivercity.51.t
