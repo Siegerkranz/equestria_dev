@@ -41,6 +41,31 @@ ideas = {
 			traits = { prince_of_terror }
 		}
 		
+		FBK_advisor_gering = {
+			allowed = {
+			 original_tag = FBK
+			}
+			available = {
+		     OR = {
+			  has_government = fascism
+			  has_completed_focus = FBK_ally_white_hooves
+			 }			
+			}
+			traits = { propaganda_expert }
+		}
+		FBK_advisor_applethorn = {
+			allowed = {
+			 original_tag = FBK
+			}
+			available = {
+			OR = {
+			  has_government = communism
+			  has_completed_focus = FBK_ally_NESP
+			 }			
+			}
+			traits = { backroom_backstabber }
+		}
+		
 	}
 	army_chief = {
 		
@@ -211,6 +236,9 @@ ideas = {
 			allowed = {
 				original_tag = FBK
 			}
+			available = {
+			 has_idea = modern_society
+			}
 			research_bonus = {
 				rocketry = 0.10
 			}
@@ -375,6 +403,15 @@ ideas = {
 			modifier = {
 			}
 		}
+		FBK_advisor30 = {
+			allowed = {
+			 original_tag = FBK
+			}
+			available = {
+			 has_completed_focus = FBK_pirates
+			}
+			 traits = { raiding_fleet_naval_manufacturer }
+		}
 	}
 	country = {
 	
@@ -475,6 +512,7 @@ ideas = {
 	}
 	
 	FBK_incompetent_generals = {
+		picture = chi_incompetent_officers
 		allowed = {
 			OR = {
 				original_tag = FBK
@@ -494,6 +532,7 @@ ideas = {
 	}
 	
 	FBK_bright_generals = {
+		picture = german_advisors
 		allowed = {
 			OR = {
 				original_tag = FBK
@@ -513,6 +552,7 @@ ideas = {
 	}
 	
 		FBK_soldier_pay = {
+		picture = generic_goods_red_bonus
 		allowed = {
 			OR = {
 				original_tag = FBK
@@ -529,6 +569,7 @@ ideas = {
 	}
 	
 		FBK_soldier_pay2 = {
+		picture = generic_goods_red_bonus
 		allowed = {
 			OR = {
 				original_tag = FBK
@@ -544,6 +585,7 @@ ideas = {
 		}
 	}
 		FBK_soldier_pay3 = {
+		picture = generic_goods_red_bonus
 		allowed = {
 			OR = {
 				original_tag = FBK
@@ -559,6 +601,7 @@ ideas = {
 		}
 	}
 	FBK_slowed_modernisation = {
+		picture = FRA_factory_strikes
 			allowed = {
 			OR = {
 				original_tag = FBK
@@ -574,6 +617,7 @@ ideas = {
 		}
 	}
 		FBK_lazy_soldiers = {
+		picture = griffon_army_unhappy
 		allowed = {
 			OR = {
 				original_tag = FBK
@@ -591,6 +635,7 @@ ideas = {
 	}
 
 	FBK_purged_communism = {
+	 picture = war_communism
 		allowed = {
 			OR = {
 				original_tag = FBK
@@ -612,6 +657,7 @@ ideas = {
 	}
 	
 	FBK_loyal_paramilitaries = {
+	 picture = ast_volunteer_defence_corps
 	 	allowed = {
 			OR = {
 				original_tag = FBK
@@ -644,7 +690,19 @@ ideas = {
 				local_resources_factor = 0.1
 				political_power_gain = 0.1
 			}
-		 picture = FBK_NCH_trade
+		 picture = FAR_NCH_trade
+		}
+		
+		FBK_utopia_idea = {
+		 allowed = {
+		  original_tag = FBK
+		 }
+		 modifier = {
+		  stability_factor = 0.25
+		  consumer_goods_factor = -0.2
+		  army_core_attack_factor = 0.25
+		  army_core_defence_factor = 0.25
+		 }
 		}
 		
 		FBK_feeling_unsafe_idea = {
@@ -1015,7 +1073,7 @@ ideas = {
 		FBK_consolidated = {
 		modifier = {
 		political_power_gain = 0.1
-		stability_weekly = 0.05
+		stability_weekly = 0.005
 		}
 		allowed_civil_war = {
 		 always = yes
@@ -1680,6 +1738,14 @@ ideas = {
 		}		
 			removal_cost = -1
 			picture = ger_revive_the_kaiserreich
+		}
+		FBK_renewed_piracy_idea = {
+			modifier = {
+			 	amphibious_invasion = 0.20
+				invasion_preparation = -0.30
+				convoy_raiding_efficiency_factor = 0.30
+			}
+			picture = fer_de_lance
 		}
 
 }

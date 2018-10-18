@@ -4,6 +4,14 @@
 	 icon = GFX_goal_griffon_knights
 	 x = 33
 	 y = 3
+	 available = {
+	  OR = {
+	   has_completed_focus = GRY_first_universale
+	   has_completed_focus = GRY_monarchy_compromise
+	   has_completed_focus = GRY_elected_hetman
+	   has_completed_focus = GRY_stronger_together
+	  }
+	 }
     offset = {
         trigger = { has_focus_tree = GRY_focus_neutral_rebellion }
         x = -14
@@ -541,6 +549,14 @@ shared_focus = {
 			is_coastal = yes
 			is_controlled_by = ROOT
 		}
+
+	  OR = {
+	   has_completed_focus = GRY_first_universale
+	   has_completed_focus = GRY_monarchy_compromise
+	   has_completed_focus = GRY_elected_hetman
+	   has_completed_focus = GRY_stronger_together
+	  }
+	 
 	}
     offset = {
         trigger = { has_focus_tree = GRY_focus_neutral_rebellion }
@@ -678,6 +694,14 @@ shared_focus = {
 	  focus = GRY_aftermath
 	  focus = GRY_hetman_has_won
 	 }
+	 available = {
+	  OR = {
+	   has_completed_focus = GRY_first_universale
+	   has_completed_focus = GRY_monarchy_compromise
+	   has_completed_focus = GRY_elected_hetman
+	   has_completed_focus = GRY_stronger_together
+	  }
+	 }
 
 	 completion_reward = {
 		add_tech_bonus = {
@@ -696,6 +720,7 @@ shared_focus = {
 	 prerequisite = {
 	  focus = GRY_kickstart_economy
 	 }
+
 	 cost = 10
 		ai_will_do = {
 			factor = 100
@@ -712,7 +737,7 @@ shared_focus = {
 	 id = GRY_better_tools
 	 icon = GFX_focus_indy_excavations
 	 x = 9
-	 y = 5
+	 y = 6
 	 prerequisite = {
 	  focus = GRY_agrarian_future
 	 }
@@ -731,7 +756,7 @@ shared_focus = {
 	 id = GRY_nation_of_farmers
 	 icon = GFX_goal_coffee_boom
 	 x = 9
-	 y = 6
+	 y = 7
 	 prerequisite = {
 	  focus = GRY_better_tools
 	 }
@@ -745,7 +770,7 @@ shared_focus = {
 	 id = GRY_infrastructure
 	 icon = GFX_goal_generic_construct_infrastructure
 	 x = 11
-	 y = 5
+	 y = 6
 	 prerequisite = {
 	  focus = GRY_agrarian_future
 	  focus = GRY_industrial_future
@@ -776,7 +801,7 @@ shared_focus = {
 	 id = GRY_steelmills
 	 icon = GFX_focus_generic_steel
 	 x = 11
-	 y = 6
+	 y = 7
 	  prerequisite = {
 	   focus = GRY_infrastructure
 	  }
@@ -812,10 +837,90 @@ shared_focus = {
 	}
 	
 	shared_focus = {
+	 id = GRY_new_industry
+	 icon = GFX_goal_generic_construct_civ_factory
+	 x = 10
+	 y = 5
+	 prerequisite = {
+	  focus = GRY_agrarian_future
+	  focus = GRY_industrial_future
+	 }
+	 cost = 10
+	 completion_reward = {
+	  	  if = {
+	   limit = {
+	    has_completed_focus = GRY_agrarian_future
+	   }
+	   random_owned_controlled_state = {
+	    add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+		type = industrial_complex
+		level = 1
+		instant_build = yes
+	   }
+	  }
+	 }
+	  if = {
+	   limit = {
+	    has_completed_focus = GRY_industrial_future
+	   }
+	   random_owned_controlled_state = {
+	    add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+		type = industrial_complex
+		level = 2
+		instant_build = yes
+	   }
+	  }
+	 }
+	 }
+	}
+
+	shared_focus = {
+	 id = GRY_new_arsenals
+	 icon = GFX_goal_generic_construct_mil_factory
+	 x = 12
+	 y = 5
+	 prerequisite = {
+	  focus = GRY_agrarian_future
+	  focus = GRY_industrial_future
+	 }
+	 cost = 10
+	 completion_reward = {
+	  	  if = {
+	   limit = {
+	    has_completed_focus = GRY_agrarian_future
+	   }
+	   random_owned_controlled_state = {
+	    add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+		type = arms_factory
+		level = 1
+		instant_build = yes
+	   }
+	  }
+	 }
+	  if = {
+	   limit = {
+	    has_completed_focus = GRY_industrial_future
+	   }
+	   random_owned_controlled_state = {
+	    add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+		type = arms_factory
+		level = 2
+		instant_build = yes
+	   }
+	  }
+	 }
+	 }
+	}
+	
+	shared_focus = {
 	 id = GRY_foreign_direct_investment
 	 icon = GFX_goal_gold_up
 	 x = 13
-	 y = 5
+	 y = 6
 	 prerequisite = {
 	  focus = GRY_industrial_future
 	 }
@@ -829,7 +934,7 @@ shared_focus = {
 	 id = GRY_factory_efficiency
 	 icon = GFX_goal_generic_production2
 	 x = 13
-	 y = 6
+	 y = 7
 	 prerequisite = {
 	  focus = GRY_foreign_direct_investment
 	 }
@@ -843,7 +948,7 @@ shared_focus = {
 		id = GRY_modernisation_effort
 		icon = GFX_goal_purchase_tech
 		x = 12
-		y = 7
+		y = 8
 		prerequisite = {
 		 focus = GRY_factory_efficiency
 		 focus = GRY_nation_of_farmers
@@ -854,14 +959,9 @@ shared_focus = {
 		cost = 10
 		completion_reward = {
 		increase_society_development = yes
-		if = {
-		 limit = {
-		  has_completed_focus = GRY_industrial_future
-		 }
 		set_country_flag = can_improve_society_development
 		unlock_decision_tooltip = improve_society_development_decision	
-		add_ideas = GRY_modernisation_woes
-		}
+		
 		}
 	}
 	
@@ -869,7 +969,7 @@ shared_focus = {
 	 id = GRY_kaiv_uni
 	 icon = GFX_focus_research
 	 x = 10
-	 y = 7
+	 y = 8
 	 prerequisite = {
 	  focus = GRY_nation_of_farmers
 	  focus = GRY_factory_efficiency
@@ -920,6 +1020,14 @@ shared_focus = {
 			has_outdated_industry = yes
 			has_idea = modern_society
 		}
+
+	  OR = {
+	   has_completed_focus = GRY_first_universale
+	   has_completed_focus = GRY_monarchy_compromise
+	   has_completed_focus = GRY_elected_hetman
+	   has_completed_focus = GRY_stronger_together
+	  }
+	 
 	}
 	cost = 10
 	completion_reward = {
