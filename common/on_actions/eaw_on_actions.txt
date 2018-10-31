@@ -10,8 +10,8 @@ on_actions = {
 					limit = { is_ai = no }
 					random_other_country = {
 						limit = { is_ai = yes }
-						change_tag_from = PREV
 						set_variable = { eaw_welcome_screen = 1 }
+						change_tag_from = PREV
 					}
 				}
 			}
@@ -148,6 +148,16 @@ on_actions = {
 				country_event = { id = mareland.19 days = 20 random = 5760 }#days to hours applied
 			}
 
+			NIM = {
+				random_list = {
+					5 = {
+						set_global_flag = NIM_have_helots_rebel
+					}
+					95 = {
+
+					}
+				}
+			}
 			every_country = {
 				if = {
 					limit = {
@@ -502,6 +512,27 @@ on_actions = {
 							}
 						}
 						country_event = { id = changelings.32 days = 1 random = 48 }#days to hours applied
+					}
+				}
+				if = {
+					limit = {
+						tag = CHN
+						has_country_leader = { ruling_only = yes name = "Queen Chrysalis" }
+						FROM = {
+							original_tag = OLE
+						}
+					}
+					every_other_country = {
+						limit = {
+							is_on_equestrian_continent = yes
+							is_major = yes
+							NOT = {
+								has_war_with = CHN
+								has_capitulated = yes
+								is_subject_of = CHN
+							}
+						}
+						country_event = { id = changeling_diplo.4 days = 2 }
 					}
 				}
 				if = {
@@ -905,6 +936,19 @@ on_actions = {
 				add_ideas = RCT_friendship_without_borders_idea
 			}
 
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = GRY
+						has_focus_tree = GRY_focus_neutral_rebellion
+						NOT = {
+							has_government = neutrality
+						}
+					}
+				}
+				GRY_load_focus_tree_on_puppet = yes
+			}
+
 			FAT_add_puppet_ideas = yes
 
 			JUN_handle_puppet = yes
@@ -1173,6 +1217,19 @@ on_actions = {
 					FROM = { NOT = { has_government = communism } }
 				}
 				country_event = prywhen.34
+			}
+
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = GRY
+						has_focus_tree = GRY_focus_neutral_rebellion
+						NOT = {
+							has_government = neutrality
+						}
+					}
+				}
+				GRY_load_focus_tree_on_puppet = yes
 			}
 
 			JER_complete_focuses_based_on_overlord = yes
@@ -1661,6 +1718,19 @@ on_actions = {
 				}
 			}
 
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = GRY
+						has_focus_tree = GRY_focus_neutral_rebellion
+						NOT = {
+							has_government = neutrality
+						}
+					}
+				}
+				GRY_load_focus_tree_on_puppet = yes
+			}
+
 			JER_complete_focuses_based_on_overlord = yes
 		}
 	}
@@ -2090,6 +2160,17 @@ on_actions = {
 					country_event = { id = wittenland.33 days = 1 }
 				}
 
+				if = {
+					limit = {
+						has_opinion_modifier = NIM_atrocities
+						FROM = { tag = NIM }
+					}
+					FROM = {
+						every_other_country = {
+							remove_opinion_modifier = { target = FROM modifier = NIM_atrocities }
+						}
+					}
+				}
 			}
 		}
 	}
@@ -2378,6 +2459,24 @@ on_actions = {
 						NOT = { has_global_flag = fall_of_sunset_city }
 					}
 					news_event = { id = cityfall.6 }
+					break = yes
+				}
+				if = {#Hellquill
+					limit = { 
+						FROM = { tag = HLQ }
+						AND = {
+							ROOT = { original_tag = DMT } 
+							OR = {
+								ROOT = { has_government = fascism }
+								ROOT = { has_government = communism }
+							}
+						}
+						FROM.FROM = { state = 537 }
+						NOT = { has_global_flag = fall_of_Hellquill_city }
+					}
+					ROOT = {
+						country_event = { id = diamond_mountain.102 }
+					}
 					break = yes
 				}
 			}
